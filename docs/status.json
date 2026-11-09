@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:59:15+01:00",
+  "generatedAt": "2026-11-09T22:02:28+01:00",
   "sourceMtime": "2026-11-09T21:45:49+01:00",
   "bots": [
     {
@@ -13,16 +13,6 @@
       "block": null
     },
     {
-      "id": "growth",
-      "name": "Growth",
-      "status": "bloqueado",
-      "task": "Product Hunt",
-      "since": null,
-      "detail": "Carlos se registró el 9-11. Perfil maker [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es, X @tabnerapp y LinkedIn https://es.linkedin.com/in/carlosjzalaya. Avatar aún no subido (sigue la C; el selector de Product Hunt no abre desde el box). Lanzamiento aplazado sin fecha pública. Self-hunt gratuito.",
-      "next": "Coordinar con Carlos antes de programar el lanzamiento. Foto opcional (Carlos dijo que le da igual).",
-      "block": "Hace falta una fecha nueva."
-    },
-    {
       "id": "qa",
       "name": "QA",
       "status": "bloqueado",
@@ -31,46 +21,6 @@
       "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
       "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
-    },
-    {
-      "id": "tabby",
-      "name": "Tabby",
-      "status": "bloqueado",
-      "task": "1.10.8 (versión)",
-      "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
-      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
-      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
-    },
-    {
-      "id": "redes",
-      "name": "Redes",
-      "status": "pausado",
-      "task": "Contenido diario / Facebook",
-      "since": null,
-      "detail": "Página de Facebook de Tabner creada (sin vincular a Instagram). Reel ENv3 publicado hoy en [Instagram](https://www.instagram.com/reel/DfhNRrio5uR/) y en [Facebook](https://www.facebook.com/reel/1794613254980192). Captación en cola propia, en paralelo al turno técnico. Vídeos 9:16 a pantalla completa, sin barras.",
-      "next": "Redes sigue publicando en IG, FB y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); cero gasto; no tocar el perfil personal ni otras páginas.",
-      "block": null
-    },
-    {
-      "id": "shorts",
-      "name": "Shorts",
-      "status": "pausado",
-      "task": "Shorts 004–007",
-      "since": null,
-      "detail": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 pertenecen al canal Luck is Math (Shorts Orquestador / `estado/luckismath.md` y el Productor). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
-      "next": "No gestionar ni concretar desde Tabner. Shorts (Luck is Math) no se consolida antes del 16-11.",
-      "block": null
-    },
-    {
-      "id": "soporte",
-      "name": "Soporte",
-      "status": "pausado",
-      "task": "Soporte",
-      "since": null,
-      "detail": "Pasada del 9-11 cerrada (~09:15): 12 carpetas de correo sin nada nuevo; CWS/AMO sin novedades. Informe en `soporte/pasada-2026-11-09.md`.",
-      "next": "Próxima pasada diaria habitual. Reenviar a Growth respuestas de Madonomori e IlSoftware si llegan.",
-      "block": null
     },
     {
       "id": "ux",
@@ -93,6 +43,36 @@
       "block": null
     },
     {
+      "id": "growth",
+      "name": "Growth",
+      "status": "bloqueado",
+      "task": "Product Hunt",
+      "since": null,
+      "detail": "Carlos se registró el 9-11. Perfil maker [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es, X @tabnerapp y LinkedIn https://es.linkedin.com/in/carlosjzalaya. Avatar aún no subido (sigue la C; el selector de Product Hunt no abre desde el box). Lanzamiento aplazado sin fecha pública. Self-hunt gratuito.",
+      "next": "Coordinar con Carlos antes de programar el lanzamiento. Foto opcional (Carlos dijo que le da igual).",
+      "block": "Hace falta una fecha nueva."
+    },
+    {
+      "id": "redes",
+      "name": "Redes",
+      "status": "pausado",
+      "task": "Contenido diario / Facebook",
+      "since": null,
+      "detail": "Página de Facebook de Tabner creada (sin vincular a Instagram). Reel ENv3 publicado hoy en [Instagram](https://www.instagram.com/reel/DfhNRrio5uR/) y en [Facebook](https://www.facebook.com/reel/1794613254980192). Captación en cola propia, en paralelo al turno técnico. Vídeos 9:16 a pantalla completa, sin barras.",
+      "next": "Redes sigue publicando en IG, FB y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); no tocar el perfil personal ni otras páginas.",
+      "block": null
+    },
+    {
+      "id": "tabby",
+      "name": "Tabby",
+      "status": "bloqueado",
+      "task": "1.10.8 (versión)",
+      "since": null,
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
+      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
+    },
+    {
       "id": "tabby-archivo",
       "name": "Tabby (archivo)",
       "status": "hecho",
@@ -100,6 +80,106 @@
       "since": null,
       "detail": "Cerrada. Código 3ce1af81, QA APTO, pasada UI 7/7 y exportación real de OneTab importada hacia las 17:36: resumen 1 tablero / 3 grupos / 6 pestañas / 0 líneas omitidas; tablero nuevo «Imported from OneTab (2)» sin mezclar los dos anteriores (7+7). El texto de `export-real-onetab.txt` coincide con la captura del export de OneTab; la importación se pegó desde el portapapeles. Observaciones no bloqueantes: orden visual 1-3-2 en dos columnas (también con el export real); texto de ayuda tenue en oscuro; título «Extensions» frente a «Extensiones» del fixture.",
       "next": "Cerrada. M1 ya está encargada a Dev.",
+      "block": null
+    },
+    {
+      "id": "soporte",
+      "name": "Soporte",
+      "status": "pausado",
+      "task": "Soporte",
+      "since": null,
+      "detail": "Pasada del 9-11 cerrada (~09:15): 12 carpetas de correo sin nada nuevo; CWS/AMO sin novedades. Informe en `soporte/pasada-2026-11-09.md`.",
+      "next": "Próxima pasada diaria habitual. Reenviar a Growth respuestas de Madonomori e IlSoftware si llegan.",
+      "block": null
+    },
+    {
+      "id": "shorts-orquestador",
+      "name": "Shorts Orquestador",
+      "status": "bloqueado",
+      "task": "Piloto The Die Decides (E01)",
+      "since": null,
+      "detail": "audition-v3 entregada (D/E/F), pendiente elección de Carlos. Short 004 r08 publicado y verificado con oEmbed en Luck is Math: (autor Luck is Math, @LuckIsMath). Una sola copia (vídeo nuevo; no había borrador coincidente).",
+      "next": "Cuando Carlos elija, encargar el montaje final al Productor.",
+      "block": "Pendiente de Carlos: audition-v3 entregada (D/E/F), pendiente elección de Carlos."
+    },
+    {
+      "id": "luck-is-math",
+      "name": "Luck is Math",
+      "status": "pausado",
+      "task": "Luck is Math: 004 publicado; 005, 006 y 007 en revisión",
+      "since": null,
+      "detail": "004 r08 publicado por el padre: (Why Your Friends Have More Friends Than You (On Average)). URL confirmada al Analista; cortes desde la publicación real (~17:15): 24 h el 10/11 ~17:15 y 48 h el 11/11 ~17:15.",
+      "next": "Revisar las entregas del Productor: 005 r03 para el M 10/11 a las 12:00; 006 r04 para el J 12/11 a las 12:00; 007 r05 para el D 15/11 a las 12:00.",
+      "block": null
+    },
+    {
+      "id": "shorts-guionista",
+      "name": "Shorts Guionista",
+      "status": "hecho",
+      "task": "Guiones entregados",
+      "since": null,
+      "detail": "Guionista: 006 (~43 s, reto «how many duplicates are in your drawer?») y 007 (~42,5 s, reto «How many times do you riffle?») recortados; los -verify.py salen con código 0. Corrección exacta del 007: 2^52 − 52 = 4.503.599.627.370.444 ≈ 4,5×10^15 (comprobado); locución y pantalla sin cambios. Del 004 al 007, todos…",
+      "next": "Sin encargo nuevo registrado.",
+      "block": null
+    },
+    {
+      "id": "shorts-productor",
+      "name": "Shorts Productor",
+      "status": "pausado",
+      "task": "Vueltas de 005, 006 y 007",
+      "since": null,
+      "detail": "Encargos pendientes: 005 r03 para el M 10/11 a las 12:00; 006 r04 para el J 12/11 a las 12:00; 007 r05 para el D 15/11 a las 12:00.",
+      "next": "Primera entrega: 005 r03 el M 10/11 a las 12:00.",
+      "block": null
+    },
+    {
+      "id": "shorts-investigador",
+      "name": "Shorts Investigador",
+      "status": "pausado",
+      "task": "Investigación de ideas",
+      "since": null,
+      "detail": "Sin parte reciente en el tablero.",
+      "next": "",
+      "block": null
+    },
+    {
+      "id": "shorts-analista",
+      "name": "Shorts Analista",
+      "status": "pausado",
+      "task": "Seguimiento del 004",
+      "since": null,
+      "detail": "004 r08 publicado por el padre: (Why Your Friends Have More Friends Than You (On Average)). URL confirmada al Analista; cortes desde la publicación real (~17:15): 24 h el 10/11 ~17:15 y 48 h el 11/11 ~17:15.",
+      "next": "Corte de 24 h el 10/11 ~17:15; 48 h el 11/11 ~17:15.",
+      "block": null
+    },
+    {
+      "id": "sabueso",
+      "name": "Sabueso",
+      "status": "pausado",
+      "task": "Investigación de startups",
+      "since": null,
+      "detail": "Equipo nocturno. Sin parte reciente en el tablero.",
+      "next": "",
+      "block": null
+    },
+    {
+      "id": "julieta",
+      "name": "Julieta",
+      "status": "pausado",
+      "task": "Julietas (thejulietas.com)",
+      "since": null,
+      "detail": "Sin parte reciente en el tablero.",
+      "next": "",
+      "block": null
+    },
+    {
+      "id": "creador",
+      "name": "Creador",
+      "status": "pausado",
+      "task": "Diseño de Grok Bots",
+      "since": null,
+      "detail": "Sin parte reciente en el tablero.",
+      "next": "",
       "block": null
     }
   ],
@@ -153,7 +233,7 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Encolada. Reducir la llamada a la nube a 1–2 sitios, sin señales de pago.",
+      "summary": "Encolada.",
       "next": "Tras M1, según la Tabby nueva.",
       "block": "No ha empezado."
     },
@@ -259,7 +339,7 @@
       "status": "pausado",
       "since": null,
       "summary": "Página de Facebook de Tabner creada (sin vincular a Instagram). Reel ENv3 publicado hoy en [Instagram](https://www.instagram.com/reel/DfhNRrio5uR/) y en [Facebook](https://www.facebook.com/reel/1794613254980192). Captación en cola propia, en paralelo al turno técnico. Vídeos 9:16 a pantalla completa, sin barras.",
-      "next": "Redes sigue publicando en IG, FB y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); cero gasto; no tocar el perfil personal ni otras páginas.",
+      "next": "Redes sigue publicando en IG, FB y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); no tocar el perfil personal ni otras páginas.",
       "block": "Prohibido interactuar con otras páginas o con lo que ya hubiera en Facebook."
     },
     {
@@ -314,7 +394,7 @@
       "status": "pausado",
       "since": null,
       "summary": "Programado por Carlos el 8-11 para el 9 de mayo de 2027 (Launch Scheduled). No atribuir la programación a Tabby.",
-      "next": "Recordatorio interno ~30 días antes (votos ≥10). No pagar Skip/Fast-track.",
+      "next": "Recordatorio interno ~30 días antes (votos ≥10).",
       "block": ""
     },
     {
@@ -331,9 +411,7 @@
     },
     {
       "name": "Shorts 004–007",
-      "bots": [
-        "Shorts"
-      ],
+      "bots": [],
       "status": "pausado",
       "since": null,
       "summary": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 pertenecen al canal Luck is Math (Shorts Orquestador / `estado/luckismath.md` y el Productor). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
@@ -342,9 +420,7 @@
     },
     {
       "name": "Audición de voz",
-      "bots": [
-        "Shorts"
-      ],
+      "bots": [],
       "status": "pausado",
       "since": null,
       "summary": "No es tubería de Tabner Redes. La audición de voz del rediseño corresponde a Luck is Math. El paquete EN v3 de Tabner ya tiene revisión audiovisual APTO y se publicó (Shorts 8-11, Reel 8-11 y 9-11).",
@@ -435,7 +511,52 @@
       "at": "2026-11-09T17:28:00+01:00",
       "actor": "Tabby (archivo)",
       "text": "Actualizado"
+    },
+    {
+      "at": "2026-11-09T17:16:00+01:00",
+      "actor": "Luck is Math",
+      "text": "004 r08 publicado por el padre: (Why Your Friends Have More Friends Than You (On Average)). URL confirmada al Analista; cortes desde la publicación real (~17:15): 24 h el 10/11 ~17:15 y 48 h el 11/11 ~17:15."
+    },
+    {
+      "at": "2026-11-09T17:16:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "Short 004 r08 publicado y verificado con oEmbed en Luck is Math: (autor Luck is Math, @LuckIsMath). Una sola copia (vídeo nuevo; no había borrador coincidente)."
+    },
+    {
+      "at": "2026-11-09T16:30:00+01:00",
+      "actor": "Luck is Math",
+      "text": "Carlos da el OK al 004 r08; el padre lo publica hoy a las 17:00 (la URL está pendiente de verificar). He revisado el 006 r03 (7/10) y el 007 r04 (7,5/10); pedí la vuelta 1/3 de los dos: el 006 r04 para el J 12/11 a las 12:00 y el 007 r05 para el D 15/11 a…"
+    },
+    {
+      "at": "2026-11-09T10:25:00+01:00",
+      "actor": "Luck is Math",
+      "text": "STOP levantado por Carlos (9/11 10:10). 004 r08 revisado: 8/10, enviado al padre para el OK de Carlos (sin publicar). 005 r02: 7,5/10, vuelta 1/3 pedida (r03 para M 10/11 12:00). 006 y 007 encargados al Productor (candidatas J 12/11 y D 15/11). Rutina del…"
+    },
+    {
+      "at": "2026-11-09T10:20:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "parada del 8/11 levantada por Carlos. 004 r06 sigue sin revisión del Orq. LiM registrada y le toca salir hoy L 9/11. 005 tiene r01 y r02 (7/11) para X 11/11, pendiente de revisión. 006 y 007 con carpeta de producción creada hoy. Analítica: último registro…"
+    },
+    {
+      "at": "2026-11-07T16:15:00+01:00",
+      "actor": "Luck is Math",
+      "text": "003 r17 publicado por el padre por orden de Carlos (S 7/11, hacia las 16:11): URL confirmada al Analista; cortes desde la publicación real (24 h, D 8/11 ~16:11; 48 h, L 9/11 ~16:11)."
+    },
+    {
+      "at": "2026-11-07T16:11:20+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "Short 003 r17 publicado y verificado con oEmbed en Luck is Math: . Una sola copia publicada reutilizando borrador; otros borradores sin tocar."
+    },
+    {
+      "at": "2026-11-07T16:10:00+01:00",
+      "actor": "Luck is Math",
+      "text": "Se retoma todo (Carlos ha recuperado uso; se retiran los ahorros temporales; se mantienen Claude Code y el tope de 3 vueltas). 004 r06 (candidata desde el 4/11, sin revisar hasta hoy): 7,5, con el gancho y las escenas del bote flojos. Pedida la r07 (vuelta…"
+    },
+    {
+      "at": "2026-11-07T16:05:00+01:00",
+      "actor": "Luck is Math",
+      "text": "Analista: la rutina del 6/11 falló por falta de uso (no es que no apuntara datos). La recuperación del 002 ahora está bloqueada por límite de solicitudes; se reintenta en la rutina de hoy hacia las 19:00, etiquetada con su edad real (sin simular el corte de…"
     }
   ],
-  "contentHash": "90d3ddb3"
+  "contentHash": "5d8c0028"
 }

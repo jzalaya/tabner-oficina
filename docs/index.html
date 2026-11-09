@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#eceef0">
-<title>Oficina Tabner</title>
+<title>Oficina de bots · Tabner, Shorts y más</title>
 <style>
 :root{
   --ink:#16181d; --ink2:#3b4049; --mut:#6d737d; --mut2:#9aa0a8;
@@ -270,7 +270,7 @@ details[open] summary .chev{transform:rotate(180deg)}
 </head>
 <body>
 <div id="app">
-  <div id="stage" aria-label="Oficina isométrica de Tabner">
+  <div id="stage" aria-label="Oficina isométrica de los bots">
     <svg id="world" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planta de la oficina"></svg>
     <div id="labels"></div>
     <div id="tip" hidden></div>
@@ -286,7 +286,7 @@ details[open] summary .chev{transform:rotate(180deg)}
   <header id="top">
     <div class="brand card">
       <span class="logo"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2.2" y="2.2" width="9.6" height="9.6" rx="2.6" fill="none" stroke="#fff" stroke-width="2"/></svg></span>
-      <b>Oficina Tabner</b>
+      <b>Oficina de bots</b>
       <span class="live"><i id="dot" class="dot"></i><span id="conn">Abriendo…</span></span>
       <span id="clock" class="clk"></span>
     </div>
@@ -344,16 +344,20 @@ const LABELS = { activo: "activo", pausado: "en espera", bloqueado: "bloqueado",
 const KNOWN = ["activo", "pausado", "bloqueado", "hecho"];
 
 const FLOORS = [
-  { id:"producto",     name:"Producto",     n:1, ids:["dev","qa","ux"],                       o:[2.4, 2.6],  cols:3, tint:"#5b7cfa" },
-  { id:"captacion",    name:"Captación",    n:2, ids:["growth","redes"],                      o:[12.6, 2.6], cols:3, tint:"#f39a3b" },
-  { id:"coordinacion", name:"Coordinación", n:3, ids:["tabby","tabby-archivo"],               o:[2.4, 8.6],  cols:3, tint:"#22b3a0" },
-  { id:"operaciones",  name:"Operaciones",  n:4, ids:["soporte","feature-analyst","shorts"], o:[12.6, 8.6], cols:3, tint:"#ef5b4b" }
+  { id:"producto",     name:"Producto",     n:1, ids:["dev","qa","ux","feature-analyst"], o:[2.4, 2.6],  cols:4, tint:"#5b7cfa" },
+  { id:"captacion",    name:"Captación",    n:2, ids:["growth","redes"],                  o:[14.6, 2.6], cols:2, tint:"#f39a3b" },
+  { id:"coordinacion", name:"Coordinación", n:3, ids:["tabby","tabby-archivo"],           o:[2.4, 8.5],  cols:2, tint:"#22b3a0" },
+  { id:"operaciones",  name:"Operaciones",  n:4, ids:["soporte"],                         o:[9.6, 8.5],  cols:1, tint:"#ef5b4b" },
+  { id:"shorts",       name:"Shorts",       n:5, ids:["shorts-orquestador","luck-is-math","shorts-guionista","shorts-productor","shorts-investigador","shorts-analista"], o:[2.4, 13.6], cols:6, tint:"#e94f9b" },
+  { id:"mas",          name:"Más",          n:6, ids:["sabueso","julieta","creador"],     o:[14.6, 8.5], cols:3, tint:"#9b6a3f" }
 ];
-const OTROS = { id:"otros", name:"Otros", n:5, ids:[], o:[4.6, 12.8], cols:4, tint:"#8a94a3" };
+const OTROS = { id:"otros", name:"Otros", n:7, ids:[], o:[2.4, 17.2], cols:6, tint:"#8a94a3" };
 const ALLF = FLOORS.concat([OTROS]);
 const FLOOR_OF = {};
 FLOORS.forEach(f => f.ids.forEach(id => { FLOOR_OF[id] = f.id; }));
 const floorOf = id => FLOOR_OF[id] || "otros";
+const SX = f => f.sx || 2.5, SY = f => f.sy || 2.4;
+const ext = (f, cols, rows) => ({ w: (cols - 1) * SX(f) + 2.25, d: (rows - 1) * SY(f) + 2.5 });
 const floorById = id => ALLF.find(f => f.id === id) || OTROS;
 
 const LOOK = {
@@ -366,7 +370,15 @@ const LOOK = {
   "redes":           { c:"#f5c21b", sh:"star" },
   "soporte":         { c:"#ef5a4b", sh:"pyramid" },
   "feature-analyst": { c:"#5f6e86", sh:"diamond" },
-  "shorts":          { c:"#e94f9b", sh:"figure" }
+  "shorts-orquestador":  { c:"#c2305a", sh:"octa" },
+  "luck-is-math":        { c:"#f1ede4", sh:"die" },
+  "shorts-guionista":    { c:"#3aa7e6", sh:"tri" },
+  "shorts-productor":    { c:"#e94f9b", sh:"figure" },
+  "shorts-investigador": { c:"#8cc63f", sh:"cone" },
+  "shorts-analista":     { c:"#0f8f84", sh:"bars" },
+  "sabueso":             { c:"#9b6a3f", sh:"egg" },
+  "julieta":             { c:"#e23d5f", sh:"heart" },
+  "creador":             { c:"#b07cf0", sh:"pent" }
 };
 const LEFTOVER = ["cone", "tri", "pent", "octa", "cube", "cylinder", "pyramid"];
 
@@ -428,7 +440,7 @@ function madridNow(){
 
 /* ---------- isometric projection ---------- */
 const S = 44, C = Math.cos(Math.PI / 6), SN = 0.5, H = 4.2, T = 0.45, WT = 0.22;
-let W = 21.2, D = 13.8, MINX = 0, MINY = 0, SVGW = 0, SVGH = 0;
+let W = 24.2, D = 17.4, MINX = 0, MINY = 0, SVGW = 0, SVGH = 0;
 function bounds(){
   MINX = -(D + WT) * C * S - 40; const maxX = (W + 0.1) * C * S + 40;
   MINY = -H * S - 2 * WT * SN * S - 40; const maxY = (W + D) * SN * S + T * S + 70;
@@ -523,6 +535,40 @@ function shapeSVG(id, x, y){
     case "tri": return R(prism(3, .47, .66, 12 * R2D), 3);
     case "pent": return R(prism(5, .42, .7, 8 * R2D), 2.5);
     case "octa": return R(bipyr(6, .38, .5, .46, .46, 0), 1.2);
+    case "die": {
+      const o = R(prism(4, .44, .62, 45 * R2D), 3), a = .44 / Math.SQRT2, pip = "#2b2e34";
+      const dotAt = (dx, dy, dz, rx, ry) => { const q = pr(dx, dy, dz); return `<ellipse cx="${f1(q[0])}" cy="${f1(q[1])}" rx="${rx}" ry="${ry}" fill="${pip}"/>`; };
+      o.svg += dotAt(-a*.5, -a*.5, .62, 2.6, 1.5) + dotAt(0, 0, .62, 2.6, 1.5) + dotAt(a*.5, a*.5, .62, 2.6, 1.5);
+      o.svg += dotAt(-a*.45, a, .46, 1.5, 2.3) + dotAt(a*.45, a, .16, 1.5, 2.3);
+      o.svg += dotAt(a, 0, .31, 1.5, 2.3);
+      return o;
+    }
+    case "bars": {
+      let svg = "", minY = Infinity;
+      [[-.25, .5], [0, .82], [.25, .64]].forEach(([dx, h]) => {
+        const g = prism(4, .15, h, 45 * R2D), sd = solid(g[0], g[1], c, (a, b, z) => pr(a + dx, b, z), 1.5);
+        svg += sd.svg; minY = Math.min(minY, sd.minY);
+      });
+      return { svg, top: y - minY };
+    }
+    case "egg": {
+      const rx = .36 * S, ry = .46 * S, cy = y - ry, d = mix(c, "#0b0d12", .35);
+      return { top: 2 * ry, svg:
+        `<ellipse cx="${f1(x - rx*.72)}" cy="${f1(cy - ry*.35)}" rx="${f1(rx*.26)}" ry="${f1(ry*.5)}" fill="${d}" transform="rotate(18 ${f1(x - rx*.72)} ${f1(cy - ry*.35)})"/>` +
+        `<ellipse cx="${f1(x + rx*.72)}" cy="${f1(cy - ry*.35)}" rx="${f1(rx*.26)}" ry="${f1(ry*.5)}" fill="${d}" transform="rotate(-18 ${f1(x + rx*.72)} ${f1(cy - ry*.35)})"/>` +
+        `<ellipse cx="${f1(x)}" cy="${f1(cy)}" rx="${f1(rx)}" ry="${f1(ry)}" fill="url(#s-${k})"/>` +
+        `<ellipse cx="${f1(x)}" cy="${f1(cy + ry*.18)}" rx="${f1(rx*.2)}" ry="${f1(rx*.14)}" fill="${d}"/>` +
+        `<ellipse cx="${f1(x - rx*.36)}" cy="${f1(cy - ry*.48)}" rx="${f1(rx*.24)}" ry="${f1(ry*.12)}" fill="#fff" opacity=".45"/>` };
+    }
+    case "heart": {
+      const sz = .98 * S, dk = mix(c, "#2a0010", .4);
+      const path = "M0,.25 C0,-.05 -.5,-.1 -.5,.25 C-.5,.55 -.1,.75 0,1 C.1,.75 .5,.55 .5,.25 C.5,-.1 0,-.05 0,.25Z";
+      const t = (dx, dy) => `matrix(${f1(sz)} 0 0 ${f1(sz)} ${f1(x + dx)} ${f1(y - sz + dy)})`;
+      return { top: sz * 1.08, svg:
+        `<path d="${path}" transform="${t(2.6, 3.2)}" fill="${dk}" stroke="${dk}" stroke-width="5" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>` +
+        `<path d="${path}" transform="${t(0, 0)}" fill="url(#s-${k})" stroke="${mix(c, "#ffffff", .15)}" stroke-width="3" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>` +
+        `<ellipse cx="${f1(x - sz*.24)}" cy="${f1(y - sz*.86)}" rx="${f1(sz*.11)}" ry="${f1(sz*.06)}" fill="#fff" opacity=".5" transform="rotate(-30 ${f1(x - sz*.24)} ${f1(y - sz*.86)})"/>` };
+    }
     case "capsule": {
       const w = .62 * S, h = 1.08 * S;
       return { top: h, svg:
@@ -577,7 +623,7 @@ function assign(list){
   FLOORS.forEach(f => byFloor[f.id].sort((a, b) => f.ids.indexOf(a.id) - f.ids.indexOf(b.id)));
   const slots = [];
   ALLF.forEach(f => byFloor[f.id].forEach((b, i) => {
-    slots.push({ b, floor: f.id, dx: f.o[0] + (i % f.cols) * 2.5, dy: f.o[1] + Math.floor(i / f.cols) * 2.4 });
+    slots.push({ b, floor: f.id, dx: f.o[0] + (i % f.cols) * SX(f), dy: f.o[1] + Math.floor(i / f.cols) * SY(f) });
   }));
   return { slots, byFloor, otrosRows: Math.ceil(byFloor.otros.length / OTROS.cols) };
 }
@@ -664,10 +710,14 @@ function buildRoom(){
   s += `<polygon class="f-wallTop" points="${Q([[-WT,-WT,H],[0,0,H],[0,D,H],[-WT,D,H]])}"/>`;
   s += `<polygon class="f-wallEnd" points="${Q([[W,-WT,-T],[W,0,-T],[W,0,H],[W,-WT,H]])}"/>`;
   s += `<polygon class="f-wallEnd2" points="${Q([[-WT,D,-T],[0,D,-T],[0,D,H],[-WT,D,H]])}"/>`;
-  FLOORS.forEach(f => { s += `<g transform="${M("floor", f.o[0] + 3.6, f.o[1] + 1.2)}"><ellipse class="nightonly" rx="${f1(4.6 * S)}" ry="${f1(2.4 * S)}" fill="url(#gLamp)"/></g>`; });
+  FLOORS.forEach(f => {
+    const cols = Math.min(f.cols, f.ids.length), rows = Math.ceil(f.ids.length / f.cols);
+    const e = ext(f, cols, rows);
+    s += `<g transform="${M("floor", f.o[0] - .55 + e.w / 2, f.o[1] - .45 + e.d / 2)}"><ellipse class="nightonly" rx="${f1((e.w / 2 + 1.2) * S)}" ry="${f1((e.d / 2 + 1) * S)}" fill="url(#gLamp)"/></g>`;
+  });
   // back wall: sign + live screen (only headcounts, nothing about money)
-  s += `<g transform="${M("back", 1.5, 0, 3.25)}"><text x="0" y="0" font-size="38" font-weight="760" letter-spacing="-1" style="fill:var(--signInk)">Oficina Tabner</text>` +
-       `<text x="2" y="24" font-size="12" font-weight="600" letter-spacing="2.4" style="fill:var(--signInk)" opacity=".42">MADRID · PLANTA ABIERTA</text></g>`;
+  s += `<g transform="${M("back", 1.5, 0, 3.25)}"><text x="0" y="0" font-size="38" font-weight="760" letter-spacing="-1" style="fill:var(--signInk)">Oficina de bots</text>` +
+       `<text x="2" y="24" font-size="12" font-weight="600" letter-spacing="2.4" style="fill:var(--signInk)" opacity=".42">TABNER · SHORTS · MÁS · MADRID</text></g>`;
   const tw = 3.7 * S, th = 1.75 * S;
   s += `<g transform="${M("back", 9.5, 0, 3.25)}">` +
        `<rect x="-3" y="-3" width="${f1(tw + 6)}" height="${f1(th + 8)}" rx="8" fill="#0f1114" opacity=".16"/>` +
@@ -675,8 +725,8 @@ function buildRoom(){
        `<rect x="5" y="5" width="${f1(tw - 10)}" height="${f1(th - 10)}" rx="3" fill="#232832"/>` +
        `<text x="14" y="23" font-size="10" font-weight="650" fill="#97a1ad" letter-spacing=".8">TRABAJANDO AHORA</text>` +
        `<text id="tvN" x="14" y="62" font-size="34" font-weight="760" fill="#ffffff">0</text>` +
-       `<g id="tvBars" transform="translate(70 62)"></g></g>`;
-  s += bookshelf(17.7, 0.04);
+       `<g id="tvBars" transform="translate(62 62)"></g></g>`;
+  s += bookshelf(W - 4.1, 0.04);
   s += wallClock();
   // counter with coffee corner under the clock
   s += box(0.04, 0.9, 0, .74, 3.8, .86, DESK);
@@ -702,13 +752,13 @@ function buildRoom(){
   s += box(0.12, 8.8, 0, .95, .26, .58, SOFA, 5);
   s += box(0.44, 9.06, 0, .62, 3.08, .44, SOFA, 5);
   s += box(0.12, 12.2, 0, .95, .26, .58, SOFA, 5);
-  s += plant(15.5, 0.72, 1.3, "#f1efea");
+  s += plant(W - .7, 0.75, 1.2, "#f1efea");
   s += plant(0.42, 4.25, .5, "#e8e3da", .92);
   return s + `</g>`;
 }
 function rugAndSign(f, n, rows){
   const cols = Math.min(f.cols, Math.max(1, n)), x = f.o[0] - .55, y = f.o[1] - .45;
-  const w = cols * 2.5 - .25, d = rows * 2.4 + .1;
+  const e = ext(f, cols, rows), w = e.w, d = e.d;
   const rug = `<g class="rug" data-floor="${f.id}"><rect transform="${M("floor", x, y)}" width="${f1(w * S)}" height="${f1(d * S)}" rx="22" fill="${f.tint}" fill-opacity=".07" stroke="${f.tint}" stroke-opacity=".22" stroke-width="1.5"/></g>`;
   const px = x - .1, py = y - .05, b = P(px, py, 0), t = P(px, py, 1.72), lab = escapeHtml(f.name), tw = f.name.length * 7.3 + 40;
   const sign = `<g class="sign" data-floor="${f.id}">` +
@@ -772,7 +822,7 @@ function deskSVG(slot, i){
 /* ---------- scene build: only when the set of bot ids changes ---------- */
 function buildScene(list){
   const a = assign(list);
-  D = a.otrosRows ? 15.6 + (a.otrosRows - 1) * 2.4 : 13.8;
+  D = a.otrosRows ? OTROS.o[1] + a.otrosRows * 2.4 + .4 : 17.4;
   bounds();
   world.setAttribute("width", SVGW); world.setAttribute("height", SVGH);
   world.setAttribute("viewBox", `0 0 ${SVGW} ${SVGH}`);
@@ -783,7 +833,8 @@ function buildScene(list){
   used.forEach(f => {
     const n = a.byFloor[f.id].length || f.ids.length || 1, rows = Math.max(1, Math.ceil(n / f.cols)), cols = Math.min(f.cols, n);
     const rs = rugAndSign(f, n, rows); rugs += rs.rug; signs += rs.sign;
-    floorCenters[f.id] = P(f.o[0] + cols * 1.25 - .3, f.o[1] + rows * 1.2, .6);
+    const e = ext(f, cols, rows);
+    floorCenters[f.id] = P(f.o[0] - .55 + e.w / 2, f.o[1] - .45 + e.d / 2, .6);
   });
   floorCenters.all = P(W / 2, D / 2, .4);
   const slots = a.slots.slice().sort((p, q) => (p.dy - q.dy) || (p.dx - q.dx));
@@ -795,7 +846,13 @@ function buildScene(list){
     bubs += `<g class="bub" data-bot="${i}" data-s="${st}" transform="translate(${f1(r.bubAt[0])} ${f1(r.bubAt[1])})"><g class="bubIn" style="animation-delay:-${((hash(slot.b.id) % 2600) / 1000).toFixed(2)}s">${bubbleInner(st)}</g></g>`;
     meta.push({ id: slot.b.id, floor: slot.floor, lab: r.lab, center: r.center, s: st });
   });
-  const front = box(9.9, 11.9, 0, .9, .9, .42, DARK, 9) + box(11.2, 12.5, 0, .9, .9, .42, DARK, 9) + plant(1.0, D - .75, 1.15, "#e8e3da");
+  const lounge = a.byFloor.otros.length ? "" :
+    `<g transform="${M("floor", 21.0, 15.4)}"><ellipse rx="${f1(2.2 * S)}" ry="${f1(1.6 * S)}" fill="#c9b8a0" fill-opacity=".18" stroke="#c9b8a0" stroke-opacity=".35" stroke-width="1.5"/></g>` +
+    box(18.9, 13.9, 0, .85, .85, .42, DARK, 9) + box(19.1, 15.9, 0, .85, .85, .42, DARK, 9) +
+    cyl(21.0, 15.3, 0, .5, .4, "#f4f2ee", 26) + cyl(20.9, 15.2, .4, .07, .14, "#3d6cf0", 12) +
+    box(22.4, 14.1, 0, .95, 2.4, .42, SOFA, 5) + box(23.05, 14.1, .42, .3, 2.4, .42, SOFA, 5) +
+    plant(W - .75, 12.7, 1.0, "#e8e3da");
+  const front = lounge + plant(1.0, D - .75, 1.15, "#e8e3da");
   world.innerHTML = staticDefs() + buildRoom() + `<g id="rugs">${rugs}</g><g id="signs">${signs}</g><g id="desks">${desks}</g><g>${front}</g><g id="bubs">${bubs}</g>`;
   labelsEl.innerHTML = meta.map((m, i) => `<div class="nm" data-bot="${i}"><i></i><span></span></div>`).join("");
   const gs = world.querySelectorAll("#desks > .bot"), bs = world.querySelectorAll("#bubs > .bub"), ls = labelsEl.querySelectorAll(".nm");
@@ -806,7 +863,7 @@ function buildScene(list){
   });
   slotOrder = slots.map(sl => sl.b.id);
   tvFloors = used;
-  const bw = 11, gap = 9, maxH = 30;
+  const bw = 9, gap = 6, maxH = 30;
   $("#tvBars").innerHTML = used.map((f, i) =>
     `<rect x="${i * (bw + gap)}" y="${-maxH}" width="${bw}" height="${maxH}" rx="3" fill="#ffffff" opacity=".06"/>` +
     `<rect class="tvb" x="${i * (bw + gap)}" y="0" width="${bw}" height="0" rx="3" fill="${f.tint}"/>` +
@@ -821,7 +878,8 @@ function updateScene(){
     const r = recs.get(b.id); if (!r) return;
     const s = statusOf(b);
     if (r.s !== s){ r.g.setAttribute("data-s", s); r.bub.setAttribute("data-s", s); r.bubIn.innerHTML = bubbleInner(s); r.s = s; }
-    const nm = b.name || b.id, span = r.label.lastElementChild, dot = r.label.firstElementChild;
+    const full = b.name || b.id, nm = r.floor === "shorts" ? full.replace(/^Shorts\s+/i, "") : full;
+    const span = r.label.lastElementChild, dot = r.label.firstElementChild;
     if (span.textContent !== nm) span.textContent = nm;
     if (dot.className !== "b-" + s) dot.className = "b-" + s;
     const sel = b.id === selectedId, dim = selectedFloor !== "all" && r.floor !== selectedFloor;
@@ -862,7 +920,8 @@ function renderPanels(){
     const list = botsOfFloor(f.id), a = list.filter(b => b.status === "activo").length;
     fh += `<button type="button" class="fl${selectedFloor === f.id ? " sel" : ""}${list.length ? "" : " zero"}" data-floor="${f.id}"><span class="num">${f.n}</span><span class="fn">${escapeHtml(f.name)}</span><span class="fc">${a}/${list.length}</span><span class="dots">${dotsOf(list)}</span></button>`;
   });
-  $("#floors").innerHTML = fh;
+  const flEl = $("#floors"), keep = flEl.scrollLeft;
+  flEl.innerHTML = fh; flEl.scrollLeft = keep;
 
   const waiting = orderedBots().filter(b => b.status === "bloqueado" && mentionsCarlos(b));
   $("#waitN").textContent = String(waiting.length);
@@ -947,6 +1006,8 @@ function setFloor(fid){
     }
   }
   updateScene(); renderPanels();
+  const chip = document.querySelector(".fl.sel");
+  if (chip && isMobile()) chip.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
   if (selectedFloor === "all") fit(true);
   else if (floorCenters[selectedFloor]) centerOn(floorCenters[selectedFloor], isMobile() ? Math.max(view.k, kFit * 1.15) : Math.max(view.k, kFit * 1.3));
 }
