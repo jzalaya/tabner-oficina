@@ -1,0 +1,431 @@
+{
+  "generatedAt": "2026-11-09T19:46:48+01:00",
+  "sourceMtime": "2026-11-09T17:46:02+01:00",
+  "bots": [
+    {
+      "id": "dev",
+      "name": "Dev",
+      "status": "activo",
+      "task": "M1 Guardar sesión unificado",
+      "since": "2026-11-09T17:42:49+01:00",
+      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid. Rama local `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push. Turno DEV cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades si cambia el defecto.",
+      "next": "Claude Code escribe; Dev ejecuta vitest/tsc y entrega el SHA a QA.",
+      "block": null
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "status": "bloqueado",
+      "task": "Product Hunt",
+      "since": null,
+      "detail": "Kit, checklist y galería preparados. Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto tras la pausa del 2-11). Maker = cuenta personal de Carlos; self-hunt gratuito.",
+      "next": "Coordinar con Carlos antes de programar. No pedir que «entre» sin esa coordinación.",
+      "block": "Hace falta la cuenta maker de Carlos y una fecha nueva."
+    },
+    {
+      "id": "qa",
+      "name": "QA",
+      "status": "bloqueado",
+      "task": "1.10.8 (versión)",
+      "since": null,
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
+      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
+    },
+    {
+      "id": "tabby",
+      "name": "Tabby",
+      "status": "bloqueado",
+      "task": "1.10.8 (versión)",
+      "since": null,
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
+      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
+    },
+    {
+      "id": "redes",
+      "name": "Redes",
+      "status": "pausado",
+      "task": "Contenido diario / Facebook",
+      "since": null,
+      "detail": "Página de Facebook de Tabner creada (sin vincular a Instagram). Reel ENv3 publicado hoy en [Instagram](https://www.instagram.com/reel/DfhNRrio5uR/) y en [Facebook](https://www.facebook.com/reel/1794613254980192). Captación en cola propia, en paralelo al turno técnico. Vídeos 9:16 a pantalla completa, sin barras.",
+      "next": "Redes sigue publicando en IG, FB y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); cero gasto; no tocar el perfil personal ni otras páginas.",
+      "block": null
+    },
+    {
+      "id": "shorts",
+      "name": "Shorts",
+      "status": "pausado",
+      "task": "Shorts 004–007",
+      "since": null,
+      "detail": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 pertenecen al canal Luck is Math (Shorts Orquestador / `estado/luckismath.md` y el Productor). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
+      "next": "No gestionar ni concretar desde Tabner. Shorts (Luck is Math) no se consolida antes del 16-11.",
+      "block": null
+    },
+    {
+      "id": "soporte",
+      "name": "Soporte",
+      "status": "pausado",
+      "task": "Soporte",
+      "since": null,
+      "detail": "Pasada del 9-11 cerrada (~09:15): 12 carpetas de correo sin nada nuevo; CWS/AMO sin novedades. Informe en `soporte/pasada-2026-11-09.md`.",
+      "next": "Próxima pasada diaria habitual. Reenviar a Growth respuestas de Madonomori e IlSoftware si llegan.",
+      "block": null
+    },
+    {
+      "id": "ux",
+      "name": "UX",
+      "status": "pausado",
+      "task": "M1 Guardar sesión unificado",
+      "since": "2026-11-09T17:42:49+01:00",
+      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid. Rama local `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push. Turno DEV cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades si cambia el defecto.",
+      "next": "Claude Code escribe; Dev ejecuta vitest/tsc y entrega el SHA a QA.",
+      "block": null
+    },
+    {
+      "id": "feature-analyst",
+      "name": "Feature Analyst",
+      "status": "hecho",
+      "task": "Investigación de funciones",
+      "since": null,
+      "detail": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst no arranca otro ciclo.",
+      "next": "Próximas rondas: Tabner UX (ronda de los martes).",
+      "block": null
+    },
+    {
+      "id": "tabby-archivo",
+      "name": "Tabby (archivo)",
+      "status": "hecho",
+      "task": "A2 Importador OneTab",
+      "since": null,
+      "detail": "Cerrada. Código 3ce1af81, QA APTO, pasada UI 7/7 y exportación real de OneTab importada hacia las 17:36: resumen 1 tablero / 3 grupos / 6 pestañas / 0 líneas omitidas; tablero nuevo «Imported from OneTab (2)» sin mezclar los dos anteriores (7+7). El texto de `export-real-onetab.txt` coincide con la captura del export de OneTab; la importación se pegó desde el portapapeles. Observaciones no bloqueantes: orden visual 1-3-2 en dos columnas (también con el export real); texto de ayuda tenue en oscuro; título «Extensions» frente a «Extensiones» del fixture.",
+      "next": "Cerrada. M1 ya está encargada a Dev.",
+      "block": null
+    }
+  ],
+  "tasks": [
+    {
+      "name": "1.10.8 (versión)",
+      "bots": [
+        "Tabby",
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
+      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
+    },
+    {
+      "name": "A2 Importador OneTab",
+      "bots": [
+        "Tabby (archivo)",
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Cerrada. Código 3ce1af81, QA APTO, pasada UI 7/7 y exportación real de OneTab importada hacia las 17:36: resumen 1 tablero / 3 grupos / 6 pestañas / 0 líneas omitidas; tablero nuevo «Imported from OneTab (2)» sin mezclar los dos anteriores (7+7). El texto de `export-real-onetab.txt` coincide con la captura del export de OneTab; la importación se pegó desde el portapapeles. Observaciones no bloqueantes: orden visual 1-3-2 en dos columnas (también con el export real); texto de ayuda tenue en oscuro; título «Extensions» frente a «Extensiones» del fixture.",
+      "next": "Cerrada. M1 ya está encargada a Dev.",
+      "block": "Fleco documental A2-1: `CAMBIO.md` aún decía «NADA EJECUTADO». No bloquea esta revisión UX."
+    },
+    {
+      "name": "M1 Guardar sesión unificado",
+      "bots": [
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "activo",
+      "since": "2026-11-09T17:42:49+01:00",
+      "summary": "En curso desde 2026-11-09T17:42:49 Europe/Madrid. Rama local `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push. Turno DEV cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades si cambia el defecto.",
+      "next": "Claude Code escribe; Dev ejecuta vitest/tsc y entrega el SHA a QA.",
+      "block": "Código en marcha."
+    },
+    {
+      "name": "O1 Menos llamadas a la nube",
+      "bots": [
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Encolada. Reducir la llamada a la nube a 1–2 sitios, sin señales de pago.",
+      "next": "Tras M1, según la Tabby nueva.",
+      "block": "No ha empezado."
+    },
+    {
+      "name": "A1 Instantáneas automáticas locales",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Encolada. Copias locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca `storage.sync`; sin permiso con aviso.",
+      "next": "Tras O1, según la Tabby nueva.",
+      "block": "No ha empezado."
+    },
+    {
+      "name": "Analítica opt-in (con idioma)",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Encolada, última de la cola de la 1.10.8. Opt-in, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente.",
+      "next": "Tras A1, según la Tabby nueva.",
+      "block": "No ha empezado. Diseño conservador ya decidido."
+    },
+    {
+      "name": "D1 (servidor)",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Abierto. QA lo describe como cambio de lado servidor, sin tocar en D3. Fuera del manifiesto de D3 (`p1TobySync.test.ts`).",
+      "next": "Decisión e implementación de servidor (sin producción hasta autorización) y QA independiente.",
+      "block": "Bloquea publicar 1.10.8, según QA. No confundir con el corte C2 de `turno.py` (ese D1 ya está aplicado)."
+    },
+    {
+      "name": "D2 / H1",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Abierto. `p1BLIntegrity.test.ts:200` en rojo (R11/R12): altas locales que se pierden sin locks / conflicto con realtime dentro del debounce. El riesgo residual H-1 de D3 está aceptado (DECISIONES 11:59), pero QA sigue dando D2 por bloqueante.",
+      "next": "Delta propio (test de rojo a verde + mutante) y QA independiente.",
+      "block": "Bloquea publicar 1.10.8, según QA."
+    },
+    {
+      "name": "P1 (preservación local)",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Abierto según QA. R07 1/1 con `P1_NOLOCKS=1` no lo cierra. Depende de que D1 deje en verde los 3 rojos originales de preservación y de que D2 cierre el hallazgo 20:1x/H1.",
+      "next": "Cerrar D1 y D2 y contrastar P1 con QA; no relanzar la matriz masiva por inercia.",
+      "block": "Bloquea publicar 1.10.8, según QA."
+    },
+    {
+      "name": "Cerrojo de pruebas (`turno.py` V3)",
+      "bots": [
+        "Dev"
+      ],
+      "status": "activo",
+      "since": "2026-11-09T17:42:49+01:00",
+      "summary": "Cogido por DEV desde 2026-11-09T17:42:49 Europe/Madrid (motivo: 1.10.8 M1 Guardar sesión unificado).",
+      "next": "No borrar locks por edad ni liberar un proceso vivo. Dev suelta al cerrar la unidad.",
+      "block": ""
+    },
+    {
+      "name": "Auditoría UX completa",
+      "bots": [
+        "UX"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "54 ID abiertos. El runner de Playwright ya no es la vía (Carlos, 9-11). Encolada. El texto del aviso «No cierres ni recargues» (5b) se revisa en esta auditoría. La UX a mano de A2 ya está cerrada.",
+      "next": "Retomarla cuando la Tabby nueva conceda hueco, sin repetir los ensayos fallidos del runner.",
+      "block": ""
+    },
+    {
+      "name": "Investigación de funciones",
+      "bots": [
+        "Feature Analyst",
+        "UX"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst no arranca otro ciclo.",
+      "next": "Próximas rondas: Tabner UX (ronda de los martes).",
+      "block": ""
+    },
+    {
+      "name": "Contenido diario / Facebook",
+      "bots": [
+        "Redes"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Página de Facebook de Tabner creada (sin vincular a Instagram). Reel ENv3 publicado hoy en [Instagram](https://www.instagram.com/reel/DfhNRrio5uR/) y en [Facebook](https://www.facebook.com/reel/1794613254980192). Captación en cola propia, en paralelo al turno técnico. Vídeos 9:16 a pantalla completa, sin barras.",
+      "next": "Redes sigue publicando en IG, FB y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); cero gasto; no tocar el perfil personal ni otras páginas.",
+      "block": "Prohibido interactuar con otras páginas o con lo que ya hubiera en Facebook."
+    },
+    {
+      "name": "Reddit `u/tabnerapp`",
+      "bots": [
+        "Redes"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Cuenta creada el 9-11 con `correo`; login en el vault). 0 posts al crear. Fecha de nacimiento del onboarding sin rellenar (no inventar). No se crea `r/tabner` de momento (Carlos, ❤️ el 9-11).",
+      "next": "Plan lento: comentarios útiles sin enlace durante unos días/semanas; `r/tabner` cuando la cuenta tenga historial. No tocar `u/PiperoJones`.",
+      "block": "Cuenta nueva: ir con calma para no parecer sospechosa."
+    },
+    {
+      "name": "LogicielPro",
+      "bots": [
+        "Growth"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Enviado el 9-11-2026 a las 17:45 Europe/Madrid desde correo a correo, con el texto aprobado (t53u de Carlos: «Logicielpro aprobado»). . Copia en INBOX.Partners.Outreach.",
+      "next": "Si llega respuesta, Soporte la pasa a Growth; no contestar desde Growth.",
+      "block": ""
+    },
+    {
+      "name": "Product Hunt",
+      "bots": [
+        "Growth"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Kit, checklist y galería preparados. Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto tras la pausa del 2-11). Maker = cuenta personal de Carlos; self-hunt gratuito.",
+      "next": "Coordinar con Carlos antes de programar. No pedir que «entre» sin esa coordinación.",
+      "block": "Hace falta la cuenta maker de Carlos y una fecha nueva."
+    },
+    {
+      "name": "Plan 2 semanas (9–22 nov)",
+      "bots": [
+        "Growth"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Entregado el 9-11. Hecho hoy: outreach a Madonomori (12:09), IlSoftware (12:20) y LogicielPro (17:45); cuenta y post de Appinn creados, pendientes de moderación.",
+      "next": "Siguiente previsto: formulario de Korben. Soporte debe reenviar a Growth las respuestas de Madonomori, IlSoftware y LogicielPro si llegan.",
+      "block": "Shareware4U aparcado; Product Hunt, coordinar con Carlos."
+    },
+    {
+      "name": "Uneed",
+      "bots": [
+        "Growth"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Programado por Carlos el 8-11 para el 9 de mayo de 2027 (Launch Scheduled). No atribuir la programación a Tabby.",
+      "next": "Recordatorio interno ~30 días antes (votos ≥10). No pagar Skip/Fast-track.",
+      "block": ""
+    },
+    {
+      "name": "Shareware4U",
+      "bots": [
+        "Tabby",
+        "Growth"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Aparcado el 8-11: el alta exige calle/CP/localidad y anuncia publicar datos personales.",
+      "next": "No reabrir con domicilio de Carlos ni inventar dirección.",
+      "block": "Domicilio público obligatorio."
+    },
+    {
+      "name": "Shorts 004–007",
+      "bots": [
+        "Shorts"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 pertenecen al canal Luck is Math (Shorts Orquestador / `estado/luckismath.md` y el Productor). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
+      "next": "No gestionar ni concretar desde Tabner. Shorts (Luck is Math) no se consolida antes del 16-11.",
+      "block": "Tubería distinta; no mezclar con Redes."
+    },
+    {
+      "name": "Audición de voz",
+      "bots": [
+        "Shorts"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "No es tubería de Tabner Redes. La audición de voz del rediseño corresponde a Luck is Math. El paquete EN v3 de Tabner ya tiene revisión audiovisual APTO y se publicó (Shorts 8-11, Reel 8-11 y 9-11).",
+      "next": "Los vídeos nuevos de Tabner siguen yendo a 9:16 a pantalla completa, con voz, música con licencia y subtítulos, a cargo de Redes. No mezclar la cola de audición de Luck is Math.",
+      "block": "Tubería distinta."
+    },
+    {
+      "name": "Métricas de tiendas",
+      "bots": [
+        "Tabby"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "La rutina de las 19:00 del rediseño es la de Shorts Analista (`analitica/luckismath/`), no la foto de las tiendas. La foto de tiendas de hoy la tomó Tabby a las 10:55 (O3 / `snapshot.py`): Chrome 255 usuarios, 4.1 de media, 19 valoraciones, v1.10.7; AMO 2 usuarios diarios; 0 issues.",
+      "next": "No relanzar `snapshot.py` desde aquí ni tratar la métrica de las 19:00 como de Tabner.",
+      "block": "No mezclar con Luck is Math."
+    },
+    {
+      "name": "Soporte",
+      "bots": [
+        "Soporte"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Pasada del 9-11 cerrada (~09:15): 12 carpetas de correo sin nada nuevo; CWS/AMO sin novedades. Informe en `soporte/pasada-2026-11-09.md`.",
+      "next": "Próxima pasada diaria habitual. Reenviar a Growth respuestas de Madonomori e IlSoftware si llegan.",
+      "block": "Lectura de correo: el relevo «fillseguro» del 7-11 quedó pendiente en su día; la pasada del 9-11 sí se completó."
+    },
+    {
+      "name": "Revisión semanal de Growth",
+      "bots": [
+        "Growth"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Entregada el 9-11 (~12:02) junto con el plan a 2 semanas.",
+      "next": "Próxima revisión en el ciclo semanal. No relanzar esta.",
+      "block": ""
+    }
+  ],
+  "log": [
+    {
+      "at": "2026-11-09T17:46:00+01:00",
+      "actor": "Growth",
+      "text": "correo a LogicielPro enviado a las 17:45 desde correo a correo. Copia en INBOX.Partners.Outreach. ."
+    },
+    {
+      "at": "2026-11-09T17:43:00+01:00",
+      "actor": "Dev",
+      "text": "turno DEV cogido a las 17:42:49; M1 en curso en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81)."
+    },
+    {
+      "at": "2026-11-09T17:39:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "A2 confirmada cerrada (informe y capturas 09–10 contrastados). Siguiente unidad: M1, encargada a Dev. El turno está libre (`turno.py ver` = libre)."
+    },
+    {
+      "at": "2026-11-09T17:38:00+01:00",
+      "actor": "Tabby archivo",
+      "text": "revisión UX a mano de A2 cerrada (pasada UI 7/7 + export real de OneTab importado como «Imported from OneTab (2)», 3 grupos / 6 pestañas / 0 omitidas). Informe `/workspace/tabner-qa/1.10.8/a2-manual/REVISION-UX-A2-3ce1af81.md`. Se suelta el turno. No se lanza M1."
+    },
+    {
+      "at": "2026-11-09T17:33:00+01:00",
+      "actor": "Tabby archivo",
+      "text": "pasada UI de A2 terminada (7/7). Informe `/workspace/tabner-qa/1.10.8/a2-manual/REVISION-UX-A2-UI-3ce1af81.md`. Siguiente de la misma unidad: exportación real de OneTab. No se lanza M1."
+    },
+    {
+      "at": "2026-11-09T17:32:24+01:00",
+      "actor": "Tabby nueva",
+      "text": "lectura diaria de ESTADO creada (lunes a viernes hacia las 9:00 Europe/Madrid). No se interrumpe la UX a mano de A2. Shorts 004–007, audición de voz y la métrica de las 19:00 no son tubería de Tabner (Luck is Math / Shorts Analista)."
+    },
+    {
+      "at": "2026-11-09T17:31:00+01:00",
+      "actor": "",
+      "text": "rutina «Coordinar entregas y publicaciones de Tabner» pausada (folder `coordinar-entregas-y-publicaciones-de-tabner`). Solo coordinaba calendario social y encargos a Redes/Growth de contenido; el relevo es la rutina de Redes «Contenido diario Tabner» (~10:00). Continuidad (9/12/15/18 laborables) y la UX a mano de A2 no se tocan."
+    },
+    {
+      "at": "2026-11-09T17:28:00+01:00",
+      "actor": "Tabby (archivo)",
+      "text": "Actualizado"
+    }
+  ],
+  "contentHash": "9a407588"
+}

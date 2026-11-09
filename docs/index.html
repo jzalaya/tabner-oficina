@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12110f">
+  <title>Oficina Tabner</title>
+  <style>
+    :root {
+      --bg: #12110f;
+      --bg-card: #1c1b18;
+      --line: #2e2c27;
+      --text: #f3efe6;
+      --muted: #9a9486;
+      --activo: #7dce6a;
+      --pausado: #e0b34a;
+      --bloqueado: #e26a56;
+      --hecho: #8b877c;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+    body {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
+      min-height: 100vh;
+      padding: 20px 16px 48px;
+    }
+    header {
+      max-width: 980px;
+      margin: 0 auto 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    h1 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin: 0 0 4px;
+    }
+    .sub { color: var(--muted); font-size: 0.95rem; }
+    .clock {
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+      text-align: right;
+    }
+    .live {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+    .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--hecho);
+    }
+    .dot.on { background: var(--activo); box-shadow: 0 0 0 0 rgba(125,206,106,0.7); animation: pulse 1.8s infinite; }
+    .dot.err { background: var(--bloqueado); animation: none; }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(125,206,106,0.55); }
+      70% { box-shadow: 0 0 0 8px rgba(125,206,106,0); }
+      100% { box-shadow: 0 0 0 0 rgba(125,206,106,0); }
+    }
+    main { max-width: 980px; margin: 0 auto; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    article {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 16px 14px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .pill {
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+    }
+    .activo { color: var(--activo); }
+    .pausado { color: var(--pausado); }
+    .bloqueado { color: var(--bloqueado); }
+    .hecho { color: var(--hecho); }
+    .task { margin: 10px 0 6px; font-size: 1.05rem; }
+    .meta { color: var(--muted); font-size: 0.92rem; line-height: 1.4; }
+    .meta p { margin: 0 0 6px; }
+    h3 {
+      margin: 28px 0 10px;
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .log { list-style: none; padding: 0; margin: 0; }
+    .log li {
+      border-top: 1px solid var(--line);
+      padding: 10px 0;
+      font-size: 0.95rem;
+    }
+    .log time { color: var(--muted); font-variant-numeric: tabular-nums; display: block; font-size: 0.82rem; margin-bottom: 2px; }
+    .empty { color: var(--muted); }
+    footer { max-width: 980px; margin: 28px auto 0; color: var(--muted); font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Oficina Tabner</h1>
+      <div class="sub">Quién está en qué, en este momento</div>
+    </div>
+    <div class="clock">
+      <div id="now"></div>
+      <div class="live"><span id="dot" class="dot"></span><span id="conn">Abriendo…</span></div>
+    </div>
+  </header>
+  <main>
+    <div id="bots" class="grid"></div>
+    <h3>Cambios recientes</h3>
+    <ul id="log" class="log"></ul>
+  </main>
+  <footer id="foot"></footer>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const DEFAULT_SRC = "https://jzalaya.github.io/tabner-oficina/status.json";
+    const src = params.get("src") || (location.hostname === "jzalaya.github.io" ? "./status.json" : DEFAULT_SRC);
+    const intervalSec = Math.max(5, Number(params.get("interval") || 15));
+    const labels = { activo: "activo", pausado: "en espera", bloqueado: "bloqueado", hecho: "hecho" };
+    let lastHash = "";
+
+    function madridClock(iso) {
+      const d = iso ? new Date(iso) : new Date();
+      if (Number.isNaN(d.getTime())) return iso || "";
+      return new Intl.DateTimeFormat("es-ES", {
+        timeZone: "Europe/Madrid",
+        hour: "2-digit",
+        minute: "2-digit",
+        day: "numeric",
+        month: "short"
+      }).format(d);
+    }
+
+    function elapsed(since) {
+      if (!since) return "";
+      const start = new Date(since);
+      if (Number.isNaN(start.getTime())) return "";
+      const mins = Math.max(0, Math.round((Date.now() - start.getTime()) / 60000));
+      if (mins < 60) return mins + " min";
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      return h + " h " + m + " min";
+    }
+
+    function escapeHtml(s) {
+      return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function render(data) {
+      const bots = document.getElementById("bots");
+      if (!data.bots || !data.bots.length) {
+        bots.innerHTML = '<p class="empty">Aún no hay datos.</p>';
+      } else {
+        bots.innerHTML = data.bots.map((b) => {
+          const waited = elapsed(b.since);
+          return `<article>
+            <h2>${escapeHtml(b.name)} <span class="pill ${escapeHtml(b.status)}">${labels[b.status] || b.status}</span></h2>
+            <div class="task">${escapeHtml(b.task || "Sin tarea")}</div>
+            <div class="meta">
+              ${b.since ? `<p>Desde las ${escapeHtml(madridClock(b.since))}${waited ? " · " + waited : ""}</p>` : ""}
+              ${b.detail ? `<p>${escapeHtml(b.detail)}</p>` : ""}
+              ${b.block ? `<p class="bloqueado">${escapeHtml(b.block)}</p>` : ""}
+            </div>
+          </article>`;
+        }).join("");
+      }
+      const log = document.getElementById("log");
+      const items = (data.log || []).slice(0, 12);
+      log.innerHTML = items.length
+        ? items.map((e) => `<li><time>${escapeHtml(madridClock(e.at))}${e.actor ? " · " + escapeHtml(e.actor) : ""}</time>${escapeHtml(e.text)}</li>`).join("")
+        : '<li class="empty">Sin cambios recientes.</li>';
+      document.getElementById("foot").textContent =
+        "Fuente actualizada " + madridClock(data.sourceMtime) + " (hora de Madrid). Se refresca cada " + intervalSec + " s.";
+    }
+
+    async function tick() {
+      const now = document.getElementById("now");
+      now.textContent = new Intl.DateTimeFormat("es-ES", {
+        timeZone: "Europe/Madrid",
+        weekday: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+      }).format(new Date()) + " Madrid";
+      try {
+        const res = await fetch(src + (src.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const data = await res.json();
+        render(data);
+        lastHash = data.contentHash || lastHash;
+        document.getElementById("dot").className = "dot on";
+        document.getElementById("conn").textContent = "En vivo";
+      } catch (err) {
+        document.getElementById("dot").className = "dot err";
+        document.getElementById("conn").textContent = lastHash ? "Sin red, última foto" : "Sin datos todavía";
+      }
+    }
+
+    tick();
+    setInterval(tick, intervalSec * 1000);
+  </script>
+</body>
+</html>
