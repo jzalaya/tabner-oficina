@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-09T22:02:28+01:00",
-  "sourceMtime": "2026-11-09T21:45:49+01:00",
+  "generatedAt": "2026-11-09T22:44:15+01:00",
+  "sourceMtime": "2026-11-09T22:43:52+01:00",
   "bots": [
     {
       "id": "dev",
@@ -108,7 +108,7 @@
       "status": "pausado",
       "task": "Luck is Math: 004 publicado; 005, 006 y 007 en revisión",
       "since": null,
-      "detail": "004 r08 publicado por el padre: (Why Your Friends Have More Friends Than You (On Average)). URL confirmada al Analista; cortes desde la publicación real (~17:15): 24 h el 10/11 ~17:15 y 48 h el 11/11 ~17:15.",
+      "detail": "Revisados 005 r04 (8/10, el r03 falló por parpadeo), 006 r04 (8/10; cifra ~6.637 corregida) y 007 r05 (8/10; Rosa/Rose corregido). Los tres se envían al padre para el OK de Carlos; no se publica nada. Propuesta: 005 el X 11/11, 006 el V 13/11 y 007 el L 16/11.",
       "next": "Revisar las entregas del Productor: 005 r03 para el M 10/11 a las 12:00; 006 r04 para el J 12/11 a las 12:00; 007 r05 para el D 15/11 a las 12:00.",
       "block": null
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-09T22:45:00+01:00",
+      "actor": "Luck is Math",
+      "text": "Revisados 005 r04 (8/10, el r03 falló por parpadeo), 006 r04 (8/10; cifra ~6.637 corregida) y 007 r05 (8/10; Rosa/Rose corregido). Los tres se envían al padre para el OK de Carlos; no se publica nada. Propuesta: 005 el X 11/11, 006 el V 13/11 y 007 el L 16/11."
+    },
+    {
       "at": "2026-11-09T21:45:00+01:00",
       "actor": "Growth",
       "text": "LinkedIn de Product Hunt guardado (https://es.linkedin.com/in/carlosjzalaya); avatar sigue pendiente."
@@ -548,15 +553,10 @@
       "text": "Short 003 r17 publicado y verificado con oEmbed en Luck is Math: . Una sola copia publicada reutilizando borrador; otros borradores sin tocar."
     },
     {
-      "at": "2026-11-07T16:10:00+01:00",
-      "actor": "Luck is Math",
-      "text": "Se retoma todo (Carlos ha recuperado uso; se retiran los ahorros temporales; se mantienen Claude Code y el tope de 3 vueltas). 004 r06 (candidata desde el 4/11, sin revisar hasta hoy): 7,5, con el gancho y las escenas del bote flojos. Pedida la r07 (vuelta…"
-    },
-    {
       "at": "2026-11-07T16:05:00+01:00",
       "actor": "Luck is Math",
       "text": "Analista: la rutina del 6/11 falló por falta de uso (no es que no apuntara datos). La recuperación del 002 ahora está bloqueada por límite de solicitudes; se reintenta en la rutina de hoy hacia las 19:00, etiquetada con su edad real (sin simular el corte de…"
     }
   ],
-  "contentHash": "5d8c0028"
+  "contentHash": "c9fe42cf"
 }
