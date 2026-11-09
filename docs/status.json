@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-09T19:46:48+01:00",
-  "sourceMtime": "2026-11-09T17:46:02+01:00",
+  "generatedAt": "2026-11-09T21:39:00+01:00",
+  "sourceMtime": "2026-11-09T21:38:18+01:00",
   "bots": [
     {
       "id": "dev",
@@ -18,9 +18,9 @@
       "status": "bloqueado",
       "task": "Product Hunt",
       "since": null,
-      "detail": "Kit, checklist y galería preparados. Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto tras la pausa del 2-11). Maker = cuenta personal de Carlos; self-hunt gratuito.",
-      "next": "Coordinar con Carlos antes de programar. No pedir que «entre» sin esa coordinación.",
-      "block": "Hace falta la cuenta maker de Carlos y una fecha nueva."
+      "detail": "Carlos se registró el 9-11. Perfil maker guardado como [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es y X @tabnerapp. Avatar aún no subido (sigue la C). Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto). Self-hunt gratuito.",
+      "next": "Subir foto de perfil (icono de Tabner o foto de Carlos). Coordinar con Carlos antes de programar el lanzamiento.",
+      "block": "Hace falta una fecha nueva y la foto."
     },
     {
       "id": "qa",
@@ -291,9 +291,9 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Kit, checklist y galería preparados. Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto tras la pausa del 2-11). Maker = cuenta personal de Carlos; self-hunt gratuito.",
-      "next": "Coordinar con Carlos antes de programar. No pedir que «entre» sin esa coordinación.",
-      "block": "Hace falta la cuenta maker de Carlos y una fecha nueva."
+      "summary": "Carlos se registró el 9-11. Perfil maker guardado como [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es y X @tabnerapp. Avatar aún no subido (sigue la C). Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto). Self-hunt gratuito.",
+      "next": "Subir foto de perfil (icono de Tabner o foto de Carlos). Coordinar con Carlos antes de programar el lanzamiento.",
+      "block": "Hace falta una fecha nueva y la foto."
     },
     {
       "name": "Plan 2 semanas (9–22 nov)",
@@ -387,6 +387,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-09T21:38:00+01:00",
+      "actor": "Growth",
+      "text": "perfil maker de Product Hunt guardado como @carlosjurado; avatar pendiente."
+    },
+    {
       "at": "2026-11-09T17:46:00+01:00",
       "actor": "Growth",
       "text": "correo a LogicielPro enviado a las 17:45 desde correo a correo. Copia en INBOX.Partners.Outreach. ."
@@ -427,5 +432,5 @@
       "text": "Actualizado"
     }
   ],
-  "contentHash": "9a407588"
+  "contentHash": "fd9d1815"
 }
