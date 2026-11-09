@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-09T21:39:00+01:00",
-  "sourceMtime": "2026-11-09T21:38:18+01:00",
+  "generatedAt": "2026-11-09T21:46:30+01:00",
+  "sourceMtime": "2026-11-09T21:45:49+01:00",
   "bots": [
     {
       "id": "dev",
@@ -18,9 +18,9 @@
       "status": "bloqueado",
       "task": "Product Hunt",
       "since": null,
-      "detail": "Carlos se registró el 9-11. Perfil maker guardado como [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es y X @tabnerapp. Avatar aún no subido (sigue la C). Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto). Self-hunt gratuito.",
-      "next": "Subir foto de perfil (icono de Tabner o foto de Carlos). Coordinar con Carlos antes de programar el lanzamiento.",
-      "block": "Hace falta una fecha nueva y la foto."
+      "detail": "Carlos se registró el 9-11. Perfil maker [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es, X @tabnerapp y LinkedIn https://es.linkedin.com/in/carlosjzalaya. Avatar aún no subido (sigue la C; el selector de Product Hunt no abre desde el box). Lanzamiento aplazado sin fecha pública. Self-hunt gratuito.",
+      "next": "Coordinar con Carlos antes de programar el lanzamiento. Foto opcional (Carlos dijo que le da igual).",
+      "block": "Hace falta una fecha nueva."
     },
     {
       "id": "qa",
@@ -291,9 +291,9 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Carlos se registró el 9-11. Perfil maker guardado como [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es y X @tabnerapp. Avatar aún no subido (sigue la C). Lanzamiento aplazado sin fecha pública (la del 17-11 quedó sin efecto). Self-hunt gratuito.",
-      "next": "Subir foto de perfil (icono de Tabner o foto de Carlos). Coordinar con Carlos antes de programar el lanzamiento.",
-      "block": "Hace falta una fecha nueva y la foto."
+      "summary": "Carlos se registró el 9-11. Perfil maker [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es, X @tabnerapp y LinkedIn https://es.linkedin.com/in/carlosjzalaya. Avatar aún no subido (sigue la C; el selector de Product Hunt no abre desde el box). Lanzamiento aplazado sin fecha pública. Self-hunt gratuito.",
+      "next": "Coordinar con Carlos antes de programar el lanzamiento. Foto opcional (Carlos dijo que le da igual).",
+      "block": "Hace falta una fecha nueva."
     },
     {
       "name": "Plan 2 semanas (9–22 nov)",
@@ -387,6 +387,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-09T21:45:00+01:00",
+      "actor": "Growth",
+      "text": "LinkedIn de Product Hunt guardado (https://es.linkedin.com/in/carlosjzalaya); avatar sigue pendiente."
+    },
+    {
       "at": "2026-11-09T21:38:00+01:00",
       "actor": "Growth",
       "text": "perfil maker de Product Hunt guardado como @carlosjurado; avatar pendiente."
@@ -432,5 +437,5 @@
       "text": "Actualizado"
     }
   ],
-  "contentHash": "fd9d1815"
+  "contentHash": "90d3ddb3"
 }
