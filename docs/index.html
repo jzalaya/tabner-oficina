@@ -1,228 +1,1129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#12110f">
-  <title>Oficina Tabner</title>
-  <style>
-    :root {
-      --bg: #12110f;
-      --bg-card: #1c1b18;
-      --line: #2e2c27;
-      --text: #f3efe6;
-      --muted: #9a9486;
-      --activo: #7dce6a;
-      --pausado: #e0b34a;
-      --bloqueado: #e26a56;
-      --hecho: #8b877c;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
-    body {
-      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", serif;
-      min-height: 100vh;
-      padding: 20px 16px 48px;
-    }
-    header {
-      max-width: 980px;
-      margin: 0 auto 22px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    h1 {
-      font-size: 1.7rem;
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      margin: 0 0 4px;
-    }
-    .sub { color: var(--muted); font-size: 0.95rem; }
-    .clock {
-      font-variant-numeric: tabular-nums;
-      color: var(--muted);
-      text-align: right;
-    }
-    .live {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-    }
-    .dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--hecho);
-    }
-    .dot.on { background: var(--activo); box-shadow: 0 0 0 0 rgba(125,206,106,0.7); animation: pulse 1.8s infinite; }
-    .dot.err { background: var(--bloqueado); animation: none; }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(125,206,106,0.55); }
-      70% { box-shadow: 0 0 0 8px rgba(125,206,106,0); }
-      100% { box-shadow: 0 0 0 0 rgba(125,206,106,0); }
-    }
-    main { max-width: 980px; margin: 0 auto; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 12px;
-    }
-    article {
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 16px 16px 14px;
-    }
-    article h2 {
-      margin: 0;
-      font-size: 1.15rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-    }
-    .pill {
-      font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid currentColor;
-    }
-    .activo { color: var(--activo); }
-    .pausado { color: var(--pausado); }
-    .bloqueado { color: var(--bloqueado); }
-    .hecho { color: var(--hecho); }
-    .task { margin: 10px 0 6px; font-size: 1.05rem; }
-    .meta { color: var(--muted); font-size: 0.92rem; line-height: 1.4; }
-    .meta p { margin: 0 0 6px; }
-    h3 {
-      margin: 28px 0 10px;
-      font-size: 1.05rem;
-      color: var(--muted);
-      font-weight: 600;
-    }
-    .log { list-style: none; padding: 0; margin: 0; }
-    .log li {
-      border-top: 1px solid var(--line);
-      padding: 10px 0;
-      font-size: 0.95rem;
-    }
-    .log time { color: var(--muted); font-variant-numeric: tabular-nums; display: block; font-size: 0.82rem; margin-bottom: 2px; }
-    .empty { color: var(--muted); }
-    footer { max-width: 980px; margin: 28px auto 0; color: var(--muted); font-size: 0.8rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#eceef0">
+<title>Oficina Tabner</title>
+<style>
+:root{
+  --ink:#16181d; --ink2:#3b4049; --mut:#6d737d; --mut2:#9aa0a8;
+  --panel:rgba(255,255,255,.84); --panelSolid:#ffffff; --line:rgba(20,24,33,.07); --hover:rgba(20,24,33,.04);
+  --shadow:0 10px 34px rgba(30,38,52,.10), 0 1px 2px rgba(30,38,52,.06);
+  --bg1:#f3f4f5; --bg2:#e2e5e9;
+  --activo:#22b25b; --pausado:#e09d2f; --bloqueado:#e5533d; --hecho:#2a9d8f;
+  --floorA:#f6f5f2; --floorB:#e8e6e1; --grid:rgba(60,50,30,.035);
+  --wallB:#f7f6f3; --wallB2:#eeece7; --wallL:#e9e7e2; --wallTop:#ffffff; --wallEnd:#d9d6cf; --wallEnd2:#cfccc5;
+  --slabL:#dad7d0; --slabR:#c8c5be; --base:#e1ded8;
+  --deskT:#fdfdfc; --deskL:#ecebe7; --deskR:#d6d4cf;
+  --chT:#3a3d43; --chL:#2a2c31; --chR:#1c1d21;
+  --dark1:#2f3238; --dark2:#23252a; --dark3:#18191c;
+  --sofaT:#dfe3e2; --sofaL:#ccd2d1; --sofaR:#b8bfbe;
+  --shelfBack:#e4e0d8; --woodT:#f2eee7; --woodL:#e2ddd3; --woodR:#cfc9be;
+  --skyA:#bfe0fa; --skyB:#eef6fd; --frame:#ffffff;
+  --signInk:#1d2026; --scrOff:#454a52; --tvBg:#1b1e24;
+  --daylight:.42; --night:0;
+}
+body.night{
+  --ink:#eef1f6; --ink2:#c9ced8; --mut:#9aa3b2; --mut2:#727b8a;
+  --panel:rgba(26,30,40,.82); --panelSolid:#232836; --line:rgba(255,255,255,.08); --hover:rgba(255,255,255,.05);
+  --shadow:0 10px 34px rgba(0,0,0,.35), 0 1px 2px rgba(0,0,0,.3);
+  --bg1:#1d2330; --bg2:#121620;
+  --floorA:#474d5a; --floorB:#3a3f4b; --grid:rgba(255,255,255,.03);
+  --wallB:#4b5262; --wallB2:#434958; --wallL:#3f4554; --wallTop:#5b6273; --wallEnd:#353a47; --wallEnd2:#2f3440;
+  --slabL:#323743; --slabR:#2a2e38; --base:#3b404d;
+  --deskT:#626a79; --deskL:#535a68; --deskR:#454b57;
+  --sofaT:#57606a; --sofaL:#4b535d; --sofaR:#3f464f;
+  --shelfBack:#3c4250; --woodT:#5e6573; --woodL:#4f5562; --woodR:#434855;
+  --skyA:#101a33; --skyB:#2a3a5e; --frame:#6a7283;
+  --signInk:#f1f3f7; --scrOff:#2f333a;
+  --daylight:0; --night:1;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink); background:radial-gradient(120% 90% at 50% 40%, var(--bg1), var(--bg2));
+  -webkit-font-smoothing:antialiased; overflow:hidden; transition:background .6s;
+  font-size:13px; line-height:1.35;
+}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+.card{background:var(--panel);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);
+  border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+
+/* stage */
+#stage{position:fixed;inset:0;overflow:hidden;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
+#stage.grabbing{cursor:grabbing}
+#world{position:absolute;left:0;top:0;transform-origin:0 0;overflow:visible}
+#world.ease{transition:transform .65s cubic-bezier(.3,.7,.2,1)}
+#labels{position:absolute;inset:0;pointer-events:none}
+#labels.ease .nm{transition:transform .65s cubic-bezier(.3,.7,.2,1)}
+.nm{position:absolute;left:0;top:0;pointer-events:auto;cursor:pointer;white-space:nowrap;
+  font-size:11px;font-weight:600;letter-spacing:.01em;color:var(--ink2);
+  padding:2px 7px 2px 6px;border-radius:999px;background:var(--panel);border:1px solid var(--line);
+  box-shadow:0 2px 8px rgba(30,38,52,.08);display:flex;align-items:center;gap:5px;transition:opacity .35s, background .2s}
+.nm i{width:6px;height:6px;border-radius:50%;background:var(--mut2)}
+.nm.sel{background:var(--ink);color:var(--panelSolid);border-color:transparent}
+body.night .nm.sel{background:#f1f3f7;color:#1b1f29}
+.nm.dim{opacity:.28}
+#tip{position:absolute;left:0;top:0;z-index:5;pointer-events:none;max-width:240px;padding:7px 10px;border-radius:10px;
+  background:rgba(22,24,29,.92);color:#fff;font-size:12px;line-height:1.3;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+#tip b{display:block;font-size:12px;margin-bottom:1px}
+#tip span{opacity:.75}
+#empty{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);max-width:320px;text-align:center;padding:18px 20px;pointer-events:none}
+#empty b{display:block;font-size:15px;margin-bottom:4px}
+#empty span{color:var(--mut)}
+#zoom{position:absolute;right:342px;bottom:14px;display:flex;flex-direction:column;gap:2px;padding:3px}
+#zoom button{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:16px;font-weight:600;color:var(--ink2)}
+#zoom button:hover{background:var(--hover)}
+
+/* svg room */
+.f-floor{fill:url(#gFloor)} .f-wallB{fill:url(#gWallB)} .f-wallL{fill:var(--wallL)} .f-wallTop{fill:var(--wallTop)}
+.f-wallEnd{fill:var(--wallEnd)} .f-wallEnd2{fill:var(--wallEnd2)} .f-slabL{fill:var(--slabL)} .f-slabR{fill:var(--slabR)}
+.f-base{fill:var(--base)} .gridl{stroke:var(--grid);stroke-width:1.2}
+.daypatch{opacity:var(--daylight);transition:opacity .8s}
+.nightonly{opacity:var(--night);transition:opacity .8s}
+.dayonly{opacity:calc(1 - var(--night));transition:opacity .8s}
+.sway{transform-box:fill-box;transform-origin:50% 100%;animation:sway 6.5s ease-in-out infinite alternate}
+@keyframes sway{from{transform:rotate(-1.8deg)}to{transform:rotate(1.8deg)}}
+.bot{cursor:pointer;transition:opacity .4s}
+.bot.dim,.bub.dim,.rug.dim,.sign.dim{opacity:.26}
+.bub,.rug,.sign{transition:opacity .4s}
+.cw.enter{animation:drop .72s cubic-bezier(.2,.9,.3,1.25) both}
+@keyframes drop{0%{opacity:0;transform:translateY(-26px)}55%{opacity:1}100%{opacity:1;transform:translateY(0)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.pose{transform-box:fill-box;transform-origin:50% 100%}
+.bot[data-s="activo"] .char{animation:bob 1.5s ease-in-out infinite}
+.bot[data-s="activo"] .pose{animation:typing .42s ease-in-out infinite alternate}
+.bot[data-s="pausado"] .char{transform:translateY(2px)}
+.bot[data-s="pausado"] .pose{animation:breathe 4.6s ease-in-out infinite}
+.bot[data-s="hecho"] .pose{animation:relax 5.5s ease-in-out infinite alternate}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes typing{from{transform:rotate(-1.4deg)}to{transform:rotate(1.4deg)}}
+@keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.015,.975)}}
+@keyframes relax{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.scr{fill:var(--scrOff);transition:fill .5s}
+.bot[data-s="activo"] .scr{fill:url(#scrOn)}
+.bot[data-s="bloqueado"] .scr{fill:url(#scrBad)}
+.bot[data-s="hecho"] .scr{fill:url(#scrDone)}
+.ln{opacity:0;transform-box:fill-box;transform-origin:0 50%}
+.bot[data-s="activo"] .ln{opacity:1;animation:lines 1.8s steps(6) infinite}
+@keyframes lines{0%{transform:scaleX(.2)}100%{transform:scaleX(1)}}
+.spill{opacity:0;transition:opacity .8s}
+body.night .bot[data-s="activo"] .spill{opacity:.9}
+body.night .bot[data-s="bloqueado"] .spill{opacity:.45}
+.ring{opacity:0;transition:opacity .3s}
+.bot.sel .ring{opacity:1}
+.ringp{transform-box:fill-box;transform-origin:50% 50%}
+.bot.sel .ringp{animation:ringp 1.9s ease-out infinite}
+@keyframes ringp{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+.bubIn{animation:float 2.6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.halo{transform-box:fill-box;transform-origin:50% 50%;animation:halo 1.8s ease-out infinite}
+@keyframes halo{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.7);opacity:0}}
+.dt{animation:dots 1.2s ease-in-out infinite}
+.dt.d2{animation-delay:.18s}.dt.d3{animation-delay:.36s}
+@keyframes dots{0%,100%{opacity:.35}40%{opacity:1}}
+.bub[data-s="pausado"]{opacity:.85}
+/* chrome */
+#top{position:fixed;top:12px;left:12px;display:flex;gap:8px;align-items:stretch;z-index:3}
+.brand{display:flex;align-items:center;gap:10px;padding:8px 12px 8px 9px}
+.logo{width:24px;height:24px;border-radius:7px;background:var(--ink);display:grid;place-items:center;flex:none}
+.logo svg{display:block}
+body.night .logo rect{stroke:#1b1f29}
+.brand b{font-size:13.5px;letter-spacing:-.01em;font-weight:700;white-space:nowrap}
+.live{display:inline-flex;align-items:center;gap:6px;color:var(--mut);font-size:12px;white-space:nowrap}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--mut2);display:inline-block;flex:none}
+.dot.on{background:var(--activo);animation:pulse 1.9s infinite}
+.dot.err{background:var(--bloqueado)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,178,91,.55)}70%{box-shadow:0 0 0 7px rgba(34,178,91,0)}100%{box-shadow:0 0 0 0 rgba(34,178,91,0)}}
+.clk{font-variant-numeric:tabular-nums;color:var(--mut);font-size:12px;padding-left:10px;border-left:1px solid var(--line);white-space:nowrap}
+.seg{display:flex;padding:3px;gap:2px}
+.seg button{display:flex;align-items:center;gap:5px;padding:5px 10px;border-radius:9px;font-size:12px;color:var(--mut);font-weight:550}
+.seg button[aria-pressed="true"]{background:var(--panelSolid);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+body.night .seg button[aria-pressed="true"]{background:rgba(255,255,255,.1)}
+#counts{position:fixed;top:12px;left:50%;transform:translateX(-50%);display:flex;gap:2px;padding:5px 6px;z-index:3;white-space:nowrap}
+#counts span{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;font-size:12px;color:var(--mut)}
+#counts b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:700}
+#counts i{width:7px;height:7px;border-radius:50%}
+
+#side{position:fixed;top:62px;left:12px;width:238px;display:flex;flex-direction:column;gap:8px;z-index:3;
+  max-height:calc(100vh - 62px - 266px);overflow:auto;scrollbar-width:none}
+#side::-webkit-scrollbar{display:none}
+#floors{padding:10px 8px 8px}
+.ttl{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--mut);padding:0 6px 6px;letter-spacing:.02em}
+.fl{display:grid;grid-template-columns:22px 1fr auto;grid-template-rows:auto auto;column-gap:9px;align-items:center;width:100%;
+  padding:7px 6px;border-radius:9px;transition:background .2s}
+.fl:hover{background:var(--hover)}
+.fl.sel{background:var(--hover);box-shadow:inset 0 0 0 1px var(--line)}
+.fl .num{grid-row:1 / span 2;width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:700;
+  background:var(--hover);color:var(--ink2)}
+.fl.sel .num{background:var(--ink);color:var(--panelSolid)}
+.fl .fn{font-weight:650;font-size:13px;white-space:nowrap}
+.fl .fc{grid-row:1 / span 2;grid-column:3;font-variant-numeric:tabular-nums;color:var(--mut);font-size:12px}
+.fl .dots{display:flex;gap:3px;margin-top:3px;grid-column:2}
+.fl .dots i{width:6px;height:6px;border-radius:50%}
+.fl.zero{opacity:.5}
+details.card{padding:0}
+details summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:10px 12px;cursor:pointer;font-weight:650}
+details summary::-webkit-details-marker{display:none}
+details summary .chev{transition:transform .2s;color:var(--mut);display:inline-block}
+details[open] summary .chev{transform:rotate(180deg)}
+.badge{display:inline-grid;place-items:center;min-width:18px;height:18px;padding:0 5px;border-radius:9px;font-size:11px;font-weight:700;
+  background:var(--hover);color:var(--mut);margin-left:6px}
+.badge.hot{background:rgba(229,83,61,.12);color:var(--bloqueado)}
+.sumL{display:flex;align-items:center}
+.minis{padding:0 6px 8px}
+.mini{display:flex;gap:8px;align-items:flex-start;width:100%;padding:6px;border-radius:9px}
+.mini:hover{background:var(--hover)}
+.mini svg{flex:none}
+.mini b{font-size:12.5px;display:block}
+.mini span span{color:var(--mut);font-size:11.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.none{color:var(--mut);font-size:12px;padding:0 8px 4px}
+
+#right{position:fixed;top:12px;right:12px;width:322px;max-height:calc(100vh - 24px);display:flex;flex-direction:column;z-index:3;overflow:hidden}
+#rhead{padding:13px 14px 12px;color:#fff;background:linear-gradient(160deg,#35c06c,#20a457);flex:none}
+#rhead.blk{background:linear-gradient(160deg,#ef6b52,#d9493a)}
+#rhead.calm{background:linear-gradient(160deg,#7a8696,#5d6874)}
+#rhead .r1{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;opacity:.92}
+#rhead .r1 b{font-size:13.5px}
+#rhead .big{font-size:26px;font-weight:750;letter-spacing:-.02em;margin-top:6px;line-height:1}
+#rhead .big small{font-size:13px;font-weight:600;opacity:.92;margin-left:6px;letter-spacing:0}
+#scrollR{overflow:auto;flex:1 1 auto;min-height:0}
+#list{padding:6px}
+.row{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;width:100%;padding:7px 8px;border-radius:10px;transition:background .2s}
+.row:hover{background:var(--hover)}
+.row.sel{background:var(--hover);box-shadow:inset 0 0 0 1px var(--line)}
+.row svg{display:block;margin:auto}
+.row .nmr{font-weight:650;font-size:13px;display:block}
+.row .sub{color:var(--mut);font-size:11.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.row .el{font-size:11px;color:var(--mut);font-variant-numeric:tabular-nums;align-self:start;padding-top:2px;white-space:nowrap}
+.st{display:inline-flex;align-items:center;gap:4px;font-weight:600}
+.st i{width:6px;height:6px;border-radius:50%;display:inline-block}
+.c-activo{color:var(--activo)} .c-pausado{color:var(--pausado)} .c-bloqueado{color:var(--bloqueado)} .c-hecho{color:var(--hecho)}
+.b-activo{background:var(--activo)} .b-pausado{background:var(--pausado)} .b-bloqueado{background:var(--bloqueado)} .b-hecho{background:var(--hecho)}
+#detail{border-top:1px solid var(--line);padding:12px 14px 14px}
+.dh{display:flex;gap:10px;align-items:center}
+.dh h3{margin:0 0 2px;font-size:16px;letter-spacing:-.01em}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--hover)}
+.pill i{width:6px;height:6px;border-radius:50%;display:inline-block}
+.dtask{font-size:14px;font-weight:600;margin:10px 0 3px;color:var(--ink)}
+.dmeta{color:var(--mut);font-size:12px;margin-bottom:6px;font-variant-numeric:tabular-nums}
+.dsec{margin-top:9px}
+.dsec h5{margin:0 0 3px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);font-weight:650}
+.dsec p{margin:0;font-size:12.5px;color:var(--ink2);overflow-wrap:anywhere}
+.dsec.blk{background:rgba(229,83,61,.08);border-radius:9px;padding:8px 10px}
+.dsec.blk h5{color:var(--bloqueado)}
+
+#log{position:fixed;left:12px;bottom:12px;width:300px;max-height:244px;padding:10px 6px 6px;z-index:3;display:flex;flex-direction:column}
+#log ul{list-style:none;margin:0;padding:0;overflow:auto;scrollbar-width:thin}
+#log li{display:grid;grid-template-columns:36px 1fr;gap:6px;padding:4px 6px;font-size:12px;color:var(--ink2)}
+#log time{color:var(--mut2);font-variant-numeric:tabular-nums}
+#log li b{font-weight:650;color:var(--ink)}
+#log li span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#hint{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:6px 10px;
+  font-size:11.5px;color:var(--mut);z-index:3;white-space:nowrap}
+.kb{display:inline-block;padding:1px 6px;border-radius:6px;background:var(--hover);color:var(--ink2);font-weight:600;font-size:11px;border:1px solid var(--line)}
+.sep{width:1px;height:14px;background:var(--line)}
+@media (max-width: 1180px) and (min-width: 821px){ #hint .desk{display:none} #counts span{padding:4px 5px} }
+
+/* mobile */
+@media (max-width: 820px){
+  html,body{height:auto}
+  body{overflow-x:hidden;overflow-y:auto}
+  #app{display:flex;flex-direction:column;gap:10px;padding:10px 10px calc(18px + env(safe-area-inset-bottom))}
+  #top,#counts,#side,#right,#log,#hint{position:static;transform:none;width:auto;max-height:none}
+  #side,#right,#scrollR{display:contents}
+  #top{order:1;flex-wrap:wrap}
+  .brand{flex:1 1 auto;min-width:0;flex-wrap:wrap;row-gap:2px}
+  .clk{margin-left:auto;border:0;padding-left:0}
+  #counts{order:2;justify-content:space-between;padding:4px;overflow-x:auto}
+  #counts span{padding:4px 5px;font-size:11.5px;gap:5px}
+  #floors{order:3;display:flex;gap:6px;overflow-x:auto;padding:2px 2px 4px;background:none;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;scrollbar-width:none}
+  #floors::-webkit-scrollbar{display:none}
+  #floors .ttl{display:none}
+  .fl{display:flex;flex:none;width:auto;gap:7px;padding:6px 11px 6px 6px;background:var(--panel);border:1px solid var(--line);border-radius:999px;box-shadow:0 2px 10px rgba(30,38,52,.06)}
+  .fl.sel{background:var(--ink);color:var(--panelSolid)}
+  .fl.sel .num{background:var(--panelSolid);color:var(--ink)}
+  .fl.sel .fc{color:inherit;opacity:.75}
+  .fl .num{width:20px;height:20px;border-radius:50%}
+  .fl .dots{display:none}
+  #stage{order:4;position:relative;inset:auto;height:60vh;min-height:360px;max-height:620px;border-radius:18px;
+    touch-action:pan-y;box-shadow:inset 0 0 0 1px var(--line);flex:none}
+  #zoom{right:10px;bottom:10px}
+  #detail{order:5;border:1px solid var(--line);border-radius:14px;background:var(--panel);box-shadow:var(--shadow)}
+  #rhead{order:6;border-radius:14px}
+  #list{order:7;background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+  #wait{order:8} #done{order:9}
+  #log{order:10}
+  #log ul{max-height:none}
+  #hint{order:11;justify-content:center;background:none;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;white-space:normal;text-align:center}
+  #hint .desk{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  .char,.pose,.bubIn,.sway,.ln,.ringp,.halo,.dt,.dot.on{animation:none !important}
+  .cw.enter{animation:fade .45s both !important}
+  #world.ease,#labels.ease .nm{transition:none !important}
+  .bot[data-s="pausado"] .char{transform:none}
+}
+</style>
 </head>
 <body>
-  <header>
-    <div>
-      <h1>Oficina Tabner</h1>
-      <div class="sub">Quién está en qué, en este momento</div>
+<div id="app">
+  <div id="stage" aria-label="Oficina isométrica de Tabner">
+    <svg id="world" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Planta de la oficina"></svg>
+    <div id="labels"></div>
+    <div id="tip" hidden></div>
+    <div id="empty" class="card" hidden></div>
+    <div id="zoom" class="card">
+      <button type="button" data-z="in" aria-label="Acercar">+</button>
+      <button type="button" data-z="out" aria-label="Alejar">−</button>
+      <button type="button" data-z="fit" aria-label="Encajar la oficina"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 5V1h4M9 1h4v4M13 9v4H9M5 13H1V9"/></svg></button>
     </div>
-    <div class="clock">
-      <div id="now"></div>
-      <div class="live"><span id="dot" class="dot"></span><span id="conn">Abriendo…</span></div>
+  </div>
+  <svg id="gdefs" width="0" height="0" aria-hidden="true" style="position:absolute;width:0;height:0"><defs id="gd"></defs></svg>
+
+  <header id="top">
+    <div class="brand card">
+      <span class="logo"><svg width="14" height="14" viewBox="0 0 14 14"><rect x="2.2" y="2.2" width="9.6" height="9.6" rx="2.6" fill="none" stroke="#fff" stroke-width="2"/></svg></span>
+      <b>Oficina Tabner</b>
+      <span class="live"><i id="dot" class="dot"></i><span id="conn">Abriendo…</span></span>
+      <span id="clock" class="clk"></span>
+    </div>
+    <div class="seg card" id="theme" role="group" aria-label="Luz de la oficina">
+      <button type="button" data-t="day" aria-pressed="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="6" cy="6" r="2.3"/><path d="M6 .8v1.2M6 10v1.2M.8 6H2M10 6h1.2M2.3 2.3l.9.9M8.8 8.8l.9.9M2.3 9.7l.9-.9M8.8 3.2l.9-.9"/></svg>Día</button>
+      <button type="button" data-t="night" aria-pressed="false"><svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M8.9 7.9A4.4 4.4 0 0 1 4.1 1.1a4.8 4.8 0 1 0 6.8 6.1 4.4 4.4 0 0 1-2 .7z"/></svg>Noche</button>
     </div>
   </header>
-  <main>
-    <div id="bots" class="grid"></div>
-    <h3>Cambios recientes</h3>
-    <ul id="log" class="log"></ul>
-  </main>
-  <footer id="foot"></footer>
-  <script>
-    const params = new URLSearchParams(location.search);
-    const DEFAULT_SRC = "https://jzalaya.github.io/tabner-oficina/status.json";
-    const src = params.get("src") || (location.hostname === "jzalaya.github.io" ? "./status.json" : DEFAULT_SRC);
-    const intervalSec = Math.max(5, Number(params.get("interval") || 15));
-    const labels = { activo: "activo", pausado: "en espera", bloqueado: "bloqueado", hecho: "hecho" };
-    let lastHash = "";
 
-    function madridClock(iso) {
-      const d = iso ? new Date(iso) : new Date();
-      if (Number.isNaN(d.getTime())) return iso || "";
-      return new Intl.DateTimeFormat("es-ES", {
-        timeZone: "Europe/Madrid",
-        hour: "2-digit",
-        minute: "2-digit",
-        day: "numeric",
-        month: "short"
-      }).format(d);
+  <div id="counts" class="card"></div>
+
+  <aside id="side">
+    <section id="floors" class="card"></section>
+    <details id="wait" class="card" open>
+      <summary><span class="sumL">Me espera <span id="waitN" class="badge">0</span></span><span class="chev">⌄</span></summary>
+      <div id="waitList" class="minis"></div>
+    </details>
+    <details id="done" class="card">
+      <summary><span class="sumL">Terminados <span id="doneN" class="badge">0</span></span><span class="chev">⌄</span></summary>
+      <div id="doneList" class="minis"></div>
+    </details>
+  </aside>
+
+  <aside id="right" class="card">
+    <div id="rhead"></div>
+    <div id="scrollR">
+      <div id="list"></div>
+      <div id="detail"></div>
+    </div>
+  </aside>
+
+  <section id="log" class="card">
+    <div class="ttl"><span>Actividad</span><span>hora de Madrid</span></div>
+    <ul id="logList"></ul>
+  </section>
+
+  <div id="hint" class="card">
+    <span class="desk"><span class="kb">Arrastra</span> mover</span>
+    <span class="desk"><span class="kb">Rueda</span> zoom</span>
+    <span class="desk"><span class="kb">Clic</span> ver bot</span>
+    <span class="sep desk"></span>
+    <span id="foot">Sin datos todavía</span>
+  </div>
+</div>
+<script>
+(function(){
+"use strict";
+/* ---------- data source (same contract as before) ---------- */
+const params = new URLSearchParams(location.search);
+const DEFAULT_SRC = "https://jzalaya.github.io/tabner-oficina/status.json";
+const src = params.get("src") || (location.hostname === "jzalaya.github.io" ? "./status.json" : DEFAULT_SRC);
+const intervalSec = Math.max(5, Number(params.get("interval") || 15));
+
+const LABELS = { activo: "activo", pausado: "en espera", bloqueado: "bloqueado", hecho: "hecho" };
+const KNOWN = ["activo", "pausado", "bloqueado", "hecho"];
+
+const FLOORS = [
+  { id:"producto",     name:"Producto",     n:1, ids:["dev","qa","ux"],                       o:[2.4, 2.6],  cols:3, tint:"#5b7cfa" },
+  { id:"captacion",    name:"Captación",    n:2, ids:["growth","redes"],                      o:[12.6, 2.6], cols:3, tint:"#f39a3b" },
+  { id:"coordinacion", name:"Coordinación", n:3, ids:["tabby","tabby-archivo"],               o:[2.4, 8.6],  cols:3, tint:"#22b3a0" },
+  { id:"operaciones",  name:"Operaciones",  n:4, ids:["soporte","feature-analyst","shorts"], o:[12.6, 8.6], cols:3, tint:"#ef5b4b" }
+];
+const OTROS = { id:"otros", name:"Otros", n:5, ids:[], o:[4.6, 12.8], cols:4, tint:"#8a94a3" };
+const ALLF = FLOORS.concat([OTROS]);
+const FLOOR_OF = {};
+FLOORS.forEach(f => f.ids.forEach(id => { FLOOR_OF[id] = f.id; }));
+const floorOf = id => FLOOR_OF[id] || "otros";
+const floorById = id => ALLF.find(f => f.id === id) || OTROS;
+
+const LOOK = {
+  "tabby":           { c:"#1fb3a1", sh:"sphere" },
+  "tabby-archivo":   { c:"#a9afb6", sh:"sphere", ghost:true },
+  "dev":             { c:"#3d6cf0", sh:"cube" },
+  "qa":              { c:"#3cc99b", sh:"cylinder" },
+  "ux":              { c:"#6c4fe0", sh:"hex" },
+  "growth":          { c:"#f5932a", sh:"capsule" },
+  "redes":           { c:"#f5c21b", sh:"star" },
+  "soporte":         { c:"#ef5a4b", sh:"pyramid" },
+  "feature-analyst": { c:"#5f6e86", sh:"diamond" },
+  "shorts":          { c:"#e94f9b", sh:"figure" }
+};
+const LEFTOVER = ["cone", "tri", "pent", "octa", "cube", "cylinder", "pyramid"];
+
+/* ---------- utils ---------- */
+function escapeHtml(s){
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+// plain text only: a markdown link shows just its label, backticks dropped, then escaped
+function plain(s){
+  return escapeHtml(String(s == null ? "" : s)
+    .replace(/\[([^\]]+)\]\(([^)]*)\)/g, "$1")
+    .replace(/`([^`]*)`/g, "$1"));
+}
+function hash(str){
+  let h = 2166136261 >>> 0; str = String(str);
+  for (let i = 0; i < str.length; i++){ h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  return h >>> 0;
+}
+function hx(c){ c = c.replace("#", ""); return [parseInt(c.slice(0,2),16), parseInt(c.slice(2,4),16), parseInt(c.slice(4,6),16)]; }
+function toHex(r){ return "#" + r.map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, "0")).join(""); }
+function mix(a, b, t){ const A = hx(a), B = hx(b); return toHex([A[0]+(B[0]-A[0])*t, A[1]+(B[1]-A[1])*t, A[2]+(B[2]-A[2])*t]); }
+function hsl(h, s, l){
+  s /= 100; l /= 100; const k = n => (n + h/30) % 12, a = s * Math.min(l, 1 - l);
+  const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+  return toHex([f(0)*255, f(8)*255, f(4)*255]);
+}
+function look(id){
+  if (LOOK[id]) return LOOK[id];
+  const h = hash(id);
+  return { c: hsl(h % 360, 58, 56), sh: LEFTOVER[(h >>> 9) % LEFTOVER.length] };
+}
+const gkey = id => "k" + hash(id).toString(36);
+const statusOf = b => (b && KNOWN.indexOf(b.status) >= 0) ? b.status : "pausado";
+const labelOf = b => LABELS[b && b.status] || String((b && b.status) || "sin estado");
+const TZ = "Europe/Madrid";
+const fmtHM = new Intl.DateTimeFormat("es-ES", { timeZone:TZ, hour:"2-digit", minute:"2-digit" });
+const fmtDay = new Intl.DateTimeFormat("es-ES", { timeZone:TZ, day:"numeric", month:"short", hour:"2-digit", minute:"2-digit" });
+const fmtYMD = new Intl.DateTimeFormat("es-ES", { timeZone:TZ, year:"numeric", month:"2-digit", day:"2-digit" });
+const fmtClock = new Intl.DateTimeFormat("es-ES", { timeZone:TZ, weekday:"short", hour:"2-digit", minute:"2-digit", second:"2-digit" });
+const fmtParts = new Intl.DateTimeFormat("en-GB", { timeZone:TZ, hour:"numeric", minute:"numeric", second:"numeric", hourCycle:"h23" });
+function validDate(iso){ if (!iso) return null; const d = new Date(iso); return Number.isNaN(d.getTime()) ? null : d; }
+function madridHM(iso){ const d = validDate(iso); return d ? fmtHM.format(d) : ""; }
+function madridDay(iso){ const d = validDate(iso); return d ? fmtDay.format(d) : (iso ? String(iso) : ""); }
+function madridSmart(iso){ const d = validDate(iso); if (!d) return iso ? String(iso) : ""; return fmtYMD.format(d) === fmtYMD.format(new Date()) ? fmtHM.format(d) : fmtDay.format(d); }
+function elapsed(since){
+  const d = validDate(since); if (!d) return "";
+  const mins = Math.max(0, Math.round((Date.now() - d.getTime()) / 60000));
+  if (mins < 60) return mins + " min";
+  const h = Math.floor(mins / 60), m = mins % 60;
+  if (h >= 48) return Math.floor(h / 24) + " d";
+  return h + " h " + m + " min";
+}
+function madridNow(){
+  const p = {}; fmtParts.formatToParts(new Date()).forEach(x => { p[x.type] = x.value; });
+  return { h: +p.hour % 24, m: +p.minute, s: +p.second };
+}
+
+/* ---------- isometric projection ---------- */
+const S = 44, C = Math.cos(Math.PI / 6), SN = 0.5, H = 4.2, T = 0.45, WT = 0.22;
+let W = 21.2, D = 13.8, MINX = 0, MINY = 0, SVGW = 0, SVGH = 0;
+function bounds(){
+  MINX = -(D + WT) * C * S - 40; const maxX = (W + 0.1) * C * S + 40;
+  MINY = -H * S - 2 * WT * SN * S - 40; const maxY = (W + D) * SN * S + T * S + 70;
+  SVGW = Math.ceil(maxX - MINX); SVGH = Math.ceil(maxY - MINY);
+}
+const P = (x, y, z) => [(x - y) * C * S - MINX, (x + y) * SN * S - z * S - MINY];
+const f1 = n => (Math.round(n * 10) / 10).toString();
+const pts = arr => arr.map(p => f1(p[0]) + "," + f1(p[1])).join(" ");
+const Q = list => pts(list.map(a => P(a[0], a[1], a[2])));
+// planar transforms: floor (u=+x, v=+y), back wall y=const (u=+x, v=down), left wall x=const (u=-y, v=down)
+function M(kind, x, y, z){
+  const p = P(x, y, z || 0), e = f1(p[0]), f = f1(p[1]);
+  if (kind === "floor") return `matrix(${C} ${SN} ${-C} ${SN} ${e} ${f})`;
+  if (kind === "back") return `matrix(${C} ${SN} 0 1 ${e} ${f})`;
+  return `matrix(${C} ${-SN} 0 1 ${e} ${f})`;
+}
+function fs(col, r){ return r ? `style="fill:${col};stroke:${col};stroke-width:${r};stroke-linejoin:round"` : `style="fill:${col}"`; }
+function box(x, y, z, w, d, h, c, r){
+  const right = Q([[x+w,y,z],[x+w,y+d,z],[x+w,y+d,z+h],[x+w,y,z+h]]);
+  const left  = Q([[x,y+d,z],[x+w,y+d,z],[x+w,y+d,z+h],[x,y+d,z+h]]);
+  const top   = Q([[x,y,z+h],[x+w,y,z+h],[x+w,y+d,z+h],[x,y+d,z+h]]);
+  return `<polygon points="${right}" ${fs(c[2], r)}/><polygon points="${left}" ${fs(c[1], r)}/><polygon points="${top}" ${fs(c[0], r)}/>`;
+}
+const DESK = ["var(--deskT)", "var(--deskL)", "var(--deskR)"];
+const CHAIR = ["var(--chT)", "var(--chL)", "var(--chR)"];
+const DARK = ["var(--dark1)", "var(--dark2)", "var(--dark3)"];
+const WOOD = ["var(--woodT)", "var(--woodL)", "var(--woodR)"];
+const SOFA = ["var(--sofaT)", "var(--sofaL)", "var(--sofaR)"];
+
+/* ---------- convex solids with soft lighting ---------- */
+const nrm = v => { const l = Math.hypot(v[0], v[1], v[2]) || 1; return [v[0]/l, v[1]/l, v[2]/l]; };
+const VIEW = nrm([1, 1, 1.15]), LIGHT = nrm([-0.3, 0.62, 1]);
+function solid(verts, faces, base, proj, sw){
+  const cen = [0, 0, 0]; verts.forEach(v => { cen[0] += v[0]; cen[1] += v[1]; cen[2] += v[2]; });
+  cen[0] /= verts.length; cen[1] /= verts.length; cen[2] /= verts.length;
+  const dark = mix(base, "#0b0d12", .46), light = mix(base, "#ffffff", .42);
+  const out = []; let minY = Infinity;
+  faces.forEach(f => {
+    const p = f.map(i => verts[i]), a = p[0], b = p[1], c = p[2];
+    const u = [b[0]-a[0], b[1]-a[1], b[2]-a[2]], v = [c[0]-a[0], c[1]-a[1], c[2]-a[2]];
+    let n = [u[1]*v[2]-u[2]*v[1], u[2]*v[0]-u[0]*v[2], u[0]*v[1]-u[1]*v[0]];
+    const fc = [0, 0, 0]; p.forEach(q => { fc[0] += q[0]; fc[1] += q[1]; fc[2] += q[2]; });
+    fc[0] /= p.length; fc[1] /= p.length; fc[2] /= p.length;
+    if (n[0]*(fc[0]-cen[0]) + n[1]*(fc[1]-cen[1]) + n[2]*(fc[2]-cen[2]) < 0) n = [-n[0], -n[1], -n[2]];
+    n = nrm(n);
+    if (n[0]*VIEW[0] + n[1]*VIEW[1] + n[2]*VIEW[2] <= 0.002) return;
+    const lit = Math.max(0, n[0]*LIGHT[0] + n[1]*LIGHT[1] + n[2]*LIGHT[2]);
+    const col = mix(dark, light, 0.22 + 0.78 * lit);
+    const sp = p.map(q => proj(q[0], q[1], q[2]));
+    sp.forEach(q => { if (q[1] < minY) minY = q[1]; });
+    out.push({ d: fc[0] + fc[1] + fc[2], s: `<polygon points="${pts(sp)}" style="fill:${col};stroke:${col};stroke-width:${sw};stroke-linejoin:round"/>` });
+  });
+  out.sort((a, b) => a.d - b.d);
+  return { svg: out.map(o => o.s).join(""), minY };
+}
+function ringV(n, r, z, rot){ const a = []; for (let i = 0; i < n; i++){ const t = rot + i * 2 * Math.PI / n; a.push([r * Math.cos(t), r * Math.sin(t), z]); } return a; }
+function prism(n, r, h, rot, z0){
+  const v = ringV(n, r, z0 || 0, rot).concat(ringV(n, r, (z0 || 0) + h, rot));
+  const f = [Array.from({ length: n }, (_, i) => n + i)];
+  for (let i = 0; i < n; i++) f.push([i, (i + 1) % n, n + (i + 1) % n, n + i]);
+  return [v, f];
+}
+function pyramid(n, r, h, rot){
+  const v = ringV(n, r, 0, rot).concat([[0, 0, h]]), f = [];
+  for (let i = 0; i < n; i++) f.push([i, (i + 1) % n, n]);
+  return [v, f];
+}
+function bipyr(n, r, zm, ht, hb, rot){
+  const v = ringV(n, r, zm, rot).concat([[0, 0, zm + ht], [0, 0, zm - hb]]), f = [];
+  for (let i = 0; i < n; i++){ f.push([i, (i + 1) % n, n]); f.push([i, (i + 1) % n, n + 1]); }
+  return [v, f];
+}
+const projAt = (x, y) => (dx, dy, dz) => [x + (dx - dy) * C * S, y + (dx + dy) * SN * S - dz * S];
+
+/* ---------- geometric mascots. (x,y) = seat point on screen. returns {svg, top} ---------- */
+function shapeSVG(id, x, y){
+  const L = look(id), k = gkey(id), c = L.c, pr = projAt(x, y), R2D = Math.PI / 180;
+  const R = (geo, sw) => { const s = solid(geo[0], geo[1], c, pr, sw); return { svg: s.svg, top: y - s.minY }; };
+  switch (L.sh){
+    case "sphere": {
+      const r = (L.ghost ? 0.38 : 0.42) * S, hx_ = x - r * .34, hy_ = y - r * 1.42;
+      return { top: 2 * r, svg:
+        `<circle cx="${f1(x)}" cy="${f1(y - r)}" r="${f1(r)}" fill="url(#s-${k})"/>` +
+        `<ellipse cx="${f1(hx_)}" cy="${f1(hy_)}" rx="${f1(r * .28)}" ry="${f1(r * .16)}" fill="#fff" opacity=".55" transform="rotate(-30 ${f1(hx_)} ${f1(hy_)})"/>` };
     }
-
-    function elapsed(since) {
-      if (!since) return "";
-      const start = new Date(since);
-      if (Number.isNaN(start.getTime())) return "";
-      const mins = Math.max(0, Math.round((Date.now() - start.getTime()) / 60000));
-      if (mins < 60) return mins + " min";
-      const h = Math.floor(mins / 60);
-      const m = mins % 60;
-      return h + " h " + m + " min";
+    case "cube": return R(prism(4, .44, .62, 30 * R2D), 4.5);
+    case "cylinder": return R(prism(30, .34, .72, 0), 1);
+    case "hex": return R(prism(6, .41, .74, 15 * R2D), 2.2);
+    case "pyramid": return R(pyramid(4, .5, 1.0, 22 * R2D), 2.2);
+    case "diamond": return R(bipyr(4, .36, .56, .5, .48, 12 * R2D), 1.6);
+    case "cone": return R(pyramid(30, .38, .95, 0), 1);
+    case "tri": return R(prism(3, .47, .66, 12 * R2D), 3);
+    case "pent": return R(prism(5, .42, .7, 8 * R2D), 2.5);
+    case "octa": return R(bipyr(6, .38, .5, .46, .46, 0), 1.2);
+    case "capsule": {
+      const w = .62 * S, h = 1.08 * S;
+      return { top: h, svg:
+        `<rect x="${f1(x - w/2)}" y="${f1(y - h)}" width="${f1(w)}" height="${f1(h)}" rx="${f1(w/2)}" fill="url(#l-${k})"/>` +
+        `<rect x="${f1(x - w * .3)}" y="${f1(y - h * .86)}" width="${f1(w * .17)}" height="${f1(h * .46)}" rx="${f1(w * .085)}" fill="#fff" opacity=".38"/>` };
     }
-
-    function escapeHtml(s) {
-      return String(s || "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
+    case "star": {
+      const Ro = .6 * S, Ri = Ro * .48, cy = y - Ro * .92, rot = -8 * R2D, p = [];
+      for (let i = 0; i < 10; i++){ const rr = i % 2 ? Ri : Ro, t = rot - Math.PI / 2 + i * Math.PI / 5; p.push([x + rr * Math.cos(t), cy + rr * Math.sin(t)]); }
+      const back = p.map(q => [q[0] + 2.6, q[1] + 3.4]), dk = mix(c, "#3a2a00", .38), hx_ = x - Ro * .18, hy_ = cy - Ro * .28;
+      return { top: Ro * 1.92, svg:
+        `<polygon points="${pts(back)}" style="fill:${dk};stroke:${dk};stroke-width:6;stroke-linejoin:round"/>` +
+        `<polygon points="${pts(p)}" fill="url(#s-${k})" style="stroke:${mix(c, "#ffffff", .15)};stroke-width:3.4;stroke-linejoin:round"/>` +
+        `<ellipse cx="${f1(hx_)}" cy="${f1(hy_)}" rx="${f1(Ro * .2)}" ry="${f1(Ro * .1)}" fill="#fff" opacity=".45" transform="rotate(-20 ${f1(hx_)} ${f1(hy_)})"/>` };
     }
-
-    function render(data) {
-      const bots = document.getElementById("bots");
-      if (!data.bots || !data.bots.length) {
-        bots.innerHTML = '<p class="empty">Aún no hay datos.</p>';
-      } else {
-        bots.innerHTML = data.bots.map((b) => {
-          const waited = elapsed(b.since);
-          return `<article>
-            <h2>${escapeHtml(b.name)} <span class="pill ${escapeHtml(b.status)}">${labels[b.status] || b.status}</span></h2>
-            <div class="task">${escapeHtml(b.task || "Sin tarea")}</div>
-            <div class="meta">
-              ${b.since ? `<p>Desde las ${escapeHtml(madridClock(b.since))}${waited ? " · " + waited : ""}</p>` : ""}
-              ${b.detail ? `<p>${escapeHtml(b.detail)}</p>` : ""}
-              ${b.block ? `<p class="bloqueado">${escapeHtml(b.block)}</p>` : ""}
-            </div>
-          </article>`;
-        }).join("");
-      }
-      const log = document.getElementById("log");
-      const items = (data.log || []).slice(0, 12);
-      log.innerHTML = items.length
-        ? items.map((e) => `<li><time>${escapeHtml(madridClock(e.at))}${e.actor ? " · " + escapeHtml(e.actor) : ""}</time>${escapeHtml(e.text)}</li>`).join("")
-        : '<li class="empty">Sin cambios recientes.</li>';
-      document.getElementById("foot").textContent =
-        "Fuente actualizada " + madridClock(data.sourceMtime) + " (hora de Madrid). Se refresca cada " + intervalSec + " s.";
+    case "figure": {
+      const w = .74 * S, h = .62 * S, r = .22 * S, hy = y - h * .9 - r;
+      return { top: h * .9 + 2 * r, svg:
+        `<path d="M${f1(x - w/2)},${f1(y)} C${f1(x - w/2)},${f1(y - h * 1.3)} ${f1(x + w/2)},${f1(y - h * 1.3)} ${f1(x + w/2)},${f1(y)} Q${f1(x)},${f1(y + 4)} ${f1(x - w/2)},${f1(y)}Z" fill="url(#s-${k})"/>` +
+        `<circle cx="${f1(x)}" cy="${f1(hy)}" r="${f1(r)}" fill="url(#s-${k})"/>` +
+        `<ellipse cx="${f1(x - r * .35)}" cy="${f1(hy - r * .4)}" rx="${f1(r * .32)}" ry="${f1(r * .18)}" fill="#fff" opacity=".55"/>` };
     }
+  }
+  return R(prism(4, .44, .62, 30 * R2D), 4.5);
+}
+function gradDefs(id){
+  const c = look(id).c, k = gkey(id), l = mix(c, "#ffffff", .55), d = mix(c, "#0b0d12", .45);
+  return `<radialGradient id="s-${k}" cx=".36" cy=".3" r=".8"><stop offset="0" stop-color="${l}"/><stop offset=".46" stop-color="${c}"/><stop offset="1" stop-color="${d}"/></radialGradient>` +
+         `<linearGradient id="l-${k}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${l}"/><stop offset=".45" stop-color="${c}"/><stop offset="1" stop-color="${d}"/></linearGradient>`;
+}
+const iconCache = {};
+function icon(id, size){
+  const key = id + "|" + size;
+  if (iconCache[key]) return iconCache[key];
+  const s = shapeSVG(id, 0, 0), top = Math.max(40, s.top + 6), w = top * 1.24;
+  const vb = `${f1(-w / 2)} ${f1(-top)} ${f1(w)} ${f1(top + 6)}`;
+  return (iconCache[key] = `<svg width="${size}" height="${Math.round(size * (top + 6) / w)}" viewBox="${vb}" aria-hidden="true"${look(id).ghost ? ' opacity=".7"' : ""}>${s.svg}</svg>`);
+}
 
-    async function tick() {
-      const now = document.getElementById("now");
-      now.textContent = new Intl.DateTimeFormat("es-ES", {
-        timeZone: "Europe/Madrid",
-        weekday: "short",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit"
-      }).format(new Date()) + " Madrid";
-      try {
-        const res = await fetch(src + (src.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" });
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const data = await res.json();
-        render(data);
-        lastHash = data.contentHash || lastHash;
-        document.getElementById("dot").className = "dot on";
-        document.getElementById("conn").textContent = "En vivo";
-      } catch (err) {
-        document.getElementById("dot").className = "dot err";
-        document.getElementById("conn").textContent = lastHash ? "Sin red, última foto" : "Sin datos todavía";
-      }
+/* ---------- state ---------- */
+const $ = s => document.querySelector(s);
+const world = $("#world"), stage = $("#stage"), labelsEl = $("#labels"), tip = $("#tip");
+let bots = [], lastData = null, hasData = false, signature = null, selectedId = null, selectedFloor = "all";
+let recs = new Map();       // bot id -> live element refs (never looked up through selectors built from data)
+let slotOrder = [], tvFloors = [], floorCenters = {};
+const seen = new Set();
+
+/* ---------- desk layout ---------- */
+function assign(list){
+  const byFloor = {}; ALLF.forEach(f => { byFloor[f.id] = []; });
+  list.forEach(b => { byFloor[floorOf(b.id)].push(b); });
+  FLOORS.forEach(f => byFloor[f.id].sort((a, b) => f.ids.indexOf(a.id) - f.ids.indexOf(b.id)));
+  const slots = [];
+  ALLF.forEach(f => byFloor[f.id].forEach((b, i) => {
+    slots.push({ b, floor: f.id, dx: f.o[0] + (i % f.cols) * 2.5, dy: f.o[1] + Math.floor(i / f.cols) * 2.4 });
+  }));
+  return { slots, byFloor, otrosRows: Math.ceil(byFloor.otros.length / OTROS.cols) };
+}
+
+/* ---------- room ---------- */
+function staticDefs(){
+  return `<defs>
+  <linearGradient id="gFloor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--floorA)"/><stop offset="1" style="stop-color:var(--floorB)"/></linearGradient>
+  <linearGradient id="gWallB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--wallB2)"/><stop offset=".55" style="stop-color:var(--wallB)"/><stop offset="1" style="stop-color:var(--wallB2)"/></linearGradient>
+  <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--skyA)"/><stop offset="1" style="stop-color:var(--skyB)"/></linearGradient>
+  <linearGradient id="gAO" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1d24" stop-opacity=".10"/><stop offset="1" stop-color="#1a1d24" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gAOx" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1a1d24" stop-opacity=".09"/><stop offset="1" stop-color="#1a1d24" stop-opacity="0"/></linearGradient>
+  <linearGradient id="scrOn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1fbff"/><stop offset="1" stop-color="#a8dcf6"/></linearGradient>
+  <linearGradient id="scrBad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a3d37"/><stop offset="1" stop-color="#4a2626"/></linearGradient>
+  <linearGradient id="scrDone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dff4ec"/><stop offset="1" stop-color="#b9e2d4"/></linearGradient>
+  <radialGradient id="gShadow"><stop offset="0" stop-color="#1c2030" stop-opacity=".2"/><stop offset=".6" stop-color="#1c2030" stop-opacity=".08"/><stop offset="1" stop-color="#1c2030" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gSpill"><stop offset="0" stop-color="#9fdcff" stop-opacity=".5"/><stop offset="1" stop-color="#9fdcff" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gLamp"><stop offset="0" stop-color="#ffd59a" stop-opacity=".32"/><stop offset="1" stop-color="#ffd59a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gLeaf" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#c4eaa6"/><stop offset=".55" stop-color="#88ca6c"/><stop offset="1" stop-color="#4f9a48"/></radialGradient>
+  <radialGradient id="gLeaf2" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#a6db8a"/><stop offset=".6" stop-color="#6bb457"/><stop offset="1" stop-color="#3f8340"/></radialGradient>
+  <linearGradient id="gPatch" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+  <filter id="blur" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>`;
+}
+function cyl(x, y, z, r, h, col, n){ const g = prism(n || 18, r, h, 0); return solid(g[0], g[1], col, (dx, dy, dz) => P(x + dx, y + dy, z + dz), 0.8).svg; }
+function plant(x, y, sc, potCol, z0){
+  z0 = z0 || 0;
+  const top = P(x, y, z0 + .55 * sc), sh = P(x, y, z0);
+  const blobs = [[0,-26,17],[-15,-16,13],[14,-15,13],[-8,-38,13],[10,-36,12],[0,-50,11],[-18,-30,10],[18,-28,10],[3,-14,12]];
+  const leaves = blobs.map((b, i) => `<circle cx="${f1(top[0] + b[0] * sc)}" cy="${f1(top[1] + b[1] * sc)}" r="${f1(b[2] * sc)}" fill="url(#${i % 3 === 1 ? "gLeaf2" : "gLeaf"})"/>`).join("");
+  return `<g>` +
+    `<ellipse cx="${f1(sh[0] + 6)}" cy="${f1(sh[1] + 2)}" rx="${f1(26 * sc)}" ry="${f1(12 * sc)}" fill="url(#gShadow)"/>` +
+    cyl(x, y, z0, .34 * sc, .55 * sc, potCol, 22) +
+    `<ellipse cx="${f1(top[0])}" cy="${f1(top[1])}" rx="${f1(.3 * S * sc * 1.15)}" ry="${f1(.3 * S * sc * .6)}" fill="#6b5a48"/>` +
+    `<g class="sway" style="animation-delay:-${(hash(x + ":" + y) % 6000) / 1000}s">${leaves}</g></g>`;
+}
+function bookshelf(x0, y0){
+  const w = 2.9, d = .5, h = 2.3; let s = "";
+  s += `<polygon points="${Q([[x0,y0,0],[x0+w,y0,0],[x0+w,y0,h],[x0,y0,h]])}" style="fill:var(--shelfBack)"/>`;
+  s += box(x0, y0, 0, .06, d, h, WOOD);
+  const palette = ["#3d6cf0","#f5932a","#22b3a0","#ef5a4b","#f5c21b","#6c4fe0","#e9e5dc","#2f3238","#3cc99b","#e94f9b"];
+  let seed = 7; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  [0, .58, 1.16, 1.74].forEach((z, si) => {
+    s += box(x0, y0, z, w, d, .05, WOOD);
+    if (si === 3){ s += box(x0 + 1.9, y0 + .08, z + .05, .5, .34, .3, ["#f4f2ee","#e4e1da","#cfcbc3"], 2); }
+    let bx = x0 + .14; const end = si === 3 ? x0 + 1.6 : x0 + w - .3;
+    while (bx < end){
+      const bw = .09 + rnd() * .1, bh = .3 + rnd() * .18, col = palette[Math.floor(rnd() * palette.length)];
+      s += box(bx, y0 + .07, z + .05, bw, .36, bh, [mix(col, "#ffffff", .25), col, mix(col, "#000000", .25)]);
+      bx += bw + .015 + (rnd() < .12 ? .22 : 0);
     }
+  });
+  return s + box(x0 + w - .06, y0, 0, .06, d, h, WOOD) + box(x0, y0, h, w, d, .05, WOOD);
+}
+function wallClock(){
+  let ticks = "";
+  for (let i = 0; i < 12; i++){
+    const a = i * Math.PI / 6, r1 = 15, r2 = i % 3 ? 13.5 : 12;
+    ticks += `<line x1="${f1(r1 * Math.sin(a))}" y1="${f1(-r1 * Math.cos(a))}" x2="${f1(r2 * Math.sin(a))}" y2="${f1(-r2 * Math.cos(a))}" stroke="#2b2e34" stroke-width="${i % 3 ? 1 : 1.8}" stroke-linecap="round"/>`;
+  }
+  return `<g transform="${M("left", 0, 3.4, 3.15)}"><g transform="translate(20 0)">` +
+    `<circle r="19.5" fill="#ffffff" stroke="#24262b" stroke-width="3"/>${ticks}` +
+    `<line id="hH" y2="-8.5" stroke="#1d1f24" stroke-width="2.4" stroke-linecap="round"/>` +
+    `<line id="hM" y2="-12.5" stroke="#1d1f24" stroke-width="1.7" stroke-linecap="round"/>` +
+    `<line id="hS" y1="3" y2="-13.5" stroke="#e5533d" stroke-width=".9" stroke-linecap="round"/>` +
+    `<circle r="1.6" fill="#1d1f24"/></g></g>`;
+}
+function buildRoom(){
+  let s = `<g>`;
+  s += `<polygon points="${Q([[0.4,0.6,-T],[W+.8,0.6,-T],[W+.8,D+.9,-T],[0.4,D+.9,-T]])}" fill="#1b2030" opacity=".16" filter="url(#blur)"/>`;
+  s += `<polygon class="f-slabL" points="${Q([[0,D,0],[W,D,0],[W,D,-T],[0,D,-T]])}"/>`;
+  s += `<polygon class="f-slabR" points="${Q([[W,0,0],[W,D,0],[W,D,-T],[W,0,-T]])}"/>`;
+  s += `<polygon class="f-floor" points="${Q([[0,0,0],[W,0,0],[W,D,0],[0,D,0]])}"/>`;
+  for (let x = 3; x < W; x += 3){ const a = P(x,0,0), b = P(x,D,0); s += `<line class="gridl" x1="${f1(a[0])}" y1="${f1(a[1])}" x2="${f1(b[0])}" y2="${f1(b[1])}"/>`; }
+  for (let y = 3; y < D; y += 3){ const a = P(0,y,0), b = P(W,y,0); s += `<line class="gridl" x1="${f1(a[0])}" y1="${f1(a[1])}" x2="${f1(b[0])}" y2="${f1(b[1])}"/>`; }
+  s += `<rect transform="${M("floor", 0, 0)}" width="${f1(W * S)}" height="${f1(.9 * S)}" fill="url(#gAO)"/>`;
+  s += `<rect transform="${M("floor", 0, 0)}" width="${f1(.9 * S)}" height="${f1(D * S)}" fill="url(#gAOx)"/>`;
+  s += `<polygon class="daypatch" points="${Q([[0,8.0,0],[0,12.9,0],[4.2,13.8,0],[4.2,8.9,0]])}" fill="url(#gPatch)"/>`;
+  s += `<polygon class="f-wallB" points="${Q([[0,0,0],[W,0,0],[W,0,H],[0,0,H]])}"/>`;
+  s += `<polygon class="f-wallL" points="${Q([[0,0,0],[0,D,0],[0,D,H],[0,0,H]])}"/>`;
+  s += `<polygon class="f-base" points="${Q([[0,0,0],[W,0,0],[W,0,.12],[0,0,.12]])}"/>`;
+  s += `<polygon class="f-base" points="${Q([[0,0,0],[0,D,0],[0,D,.12],[0,0,.12]])}" opacity=".85"/>`;
+  s += `<polygon class="f-wallTop" points="${Q([[-WT,-WT,H],[W,-WT,H],[W,0,H],[0,0,H]])}"/>`;
+  s += `<polygon class="f-wallTop" points="${Q([[-WT,-WT,H],[0,0,H],[0,D,H],[-WT,D,H]])}"/>`;
+  s += `<polygon class="f-wallEnd" points="${Q([[W,-WT,-T],[W,0,-T],[W,0,H],[W,-WT,H]])}"/>`;
+  s += `<polygon class="f-wallEnd2" points="${Q([[-WT,D,-T],[0,D,-T],[0,D,H],[-WT,D,H]])}"/>`;
+  FLOORS.forEach(f => { s += `<g transform="${M("floor", f.o[0] + 3.6, f.o[1] + 1.2)}"><ellipse class="nightonly" rx="${f1(4.6 * S)}" ry="${f1(2.4 * S)}" fill="url(#gLamp)"/></g>`; });
+  // back wall: sign + live screen (only headcounts, nothing about money)
+  s += `<g transform="${M("back", 1.5, 0, 3.25)}"><text x="0" y="0" font-size="38" font-weight="760" letter-spacing="-1" style="fill:var(--signInk)">Oficina Tabner</text>` +
+       `<text x="2" y="24" font-size="12" font-weight="600" letter-spacing="2.4" style="fill:var(--signInk)" opacity=".42">MADRID · PLANTA ABIERTA</text></g>`;
+  const tw = 3.7 * S, th = 1.75 * S;
+  s += `<g transform="${M("back", 9.5, 0, 3.25)}">` +
+       `<rect x="-3" y="-3" width="${f1(tw + 6)}" height="${f1(th + 8)}" rx="8" fill="#0f1114" opacity=".16"/>` +
+       `<rect width="${f1(tw)}" height="${f1(th)}" rx="6" style="fill:var(--tvBg)"/>` +
+       `<rect x="5" y="5" width="${f1(tw - 10)}" height="${f1(th - 10)}" rx="3" fill="#232832"/>` +
+       `<text x="14" y="23" font-size="10" font-weight="650" fill="#97a1ad" letter-spacing=".8">TRABAJANDO AHORA</text>` +
+       `<text id="tvN" x="14" y="62" font-size="34" font-weight="760" fill="#ffffff">0</text>` +
+       `<g id="tvBars" transform="translate(70 62)"></g></g>`;
+  s += bookshelf(17.7, 0.04);
+  s += wallClock();
+  // counter with coffee corner under the clock
+  s += box(0.04, 0.9, 0, .74, 3.8, .86, DESK);
+  s += `<g transform="${M("left", .78, 4.7, .78)}" opacity=".55">` +
+       [0, 1, 2, 3].map(i => `<rect x="${f1(i * S + 4)}" y="4" width="${f1(S - 8)}" height="${f1(.62 * S)}" rx="3" fill="none" style="stroke:var(--deskR)" stroke-width="1.2"/><rect x="${f1(i * S + S / 2 - 6)}" y="9" width="12" height="2.4" rx="1.2" style="fill:var(--deskR)"/>`).join("") + `</g>`;
+  s += box(0.02, 0.84, .86, .8, 3.92, .06, DESK, 1);
+  s += box(0.14, 1.28, .92, .44, .4, .52, DARK, 3) + box(0.22, 1.36, 1.44, .3, .24, .04, ["#555a63", "#444850", "#34373d"], 1);
+  s += cyl(0.42, 2.2, .92, .07, .14, "#e5533d") + cyl(0.42, 2.52, .92, .07, .14, "#3d6cf0") + cyl(0.36, 3.2, .92, .12, .06, "#f1efea");
+  // window
+  const ww = 4.9 * S, wh = 2.05 * S;
+  s += `<g transform="${M("left", 0, 12.95, 3.3)}">` +
+       `<rect width="${f1(ww)}" height="${f1(wh)}" rx="4" fill="url(#gSky)"/>` +
+       `<ellipse class="dayonly" cx="${f1(1.3 * S)}" cy="${f1(.7 * S)}" rx="34" ry="9" fill="#fff" opacity=".75"/>` +
+       `<ellipse class="dayonly" cx="${f1(3.4 * S)}" cy="${f1(.45 * S)}" rx="24" ry="6" fill="#fff" opacity=".6"/>` +
+       `<g class="nightonly"><circle cx="${f1(3.7 * S)}" cy="${f1(.55 * S)}" r="10" fill="#f4f1e6"/><circle cx="${f1(3.7 * S + 4)}" cy="${f1(.55 * S - 3)}" r="9" fill="#1a2645" opacity=".55"/>` +
+       `<circle cx="${f1(1.1 * S)}" cy="${f1(.4 * S)}" r="1.1" fill="#fff" opacity=".8"/><circle cx="${f1(2.2 * S)}" cy="${f1(.9 * S)}" r=".9" fill="#fff" opacity=".6"/></g>` +
+       `<rect width="${f1(ww)}" height="${f1(wh)}" rx="4" fill="none" style="stroke:var(--frame)" stroke-width="6"/>` +
+       `<line x1="${f1(ww / 2)}" y1="0" x2="${f1(ww / 2)}" y2="${f1(wh)}" style="stroke:var(--frame)" stroke-width="4"/>` +
+       `<line x1="0" y1="${f1(.82 * S)}" x2="${f1(ww)}" y2="${f1(.82 * S)}" style="stroke:var(--frame)" stroke-width="3"/></g>`;
+  s += box(0, 7.95, 1.22, .2, 5.1, .05, DESK, 1);
+  // low sofa under the window
+  s += box(0.12, 9.0, 0, .32, 3.2, .9, SOFA, 5);
+  s += box(0.12, 8.8, 0, .95, .26, .58, SOFA, 5);
+  s += box(0.44, 9.06, 0, .62, 3.08, .44, SOFA, 5);
+  s += box(0.12, 12.2, 0, .95, .26, .58, SOFA, 5);
+  s += plant(15.5, 0.72, 1.3, "#f1efea");
+  s += plant(0.42, 4.25, .5, "#e8e3da", .92);
+  return s + `</g>`;
+}
+function rugAndSign(f, n, rows){
+  const cols = Math.min(f.cols, Math.max(1, n)), x = f.o[0] - .55, y = f.o[1] - .45;
+  const w = cols * 2.5 - .25, d = rows * 2.4 + .1;
+  const rug = `<g class="rug" data-floor="${f.id}"><rect transform="${M("floor", x, y)}" width="${f1(w * S)}" height="${f1(d * S)}" rx="22" fill="${f.tint}" fill-opacity=".07" stroke="${f.tint}" stroke-opacity=".22" stroke-width="1.5"/></g>`;
+  const px = x - .1, py = y - .05, b = P(px, py, 0), t = P(px, py, 1.72), lab = escapeHtml(f.name), tw = f.name.length * 7.3 + 40;
+  const sign = `<g class="sign" data-floor="${f.id}">` +
+    `<ellipse cx="${f1(b[0])}" cy="${f1(b[1])}" rx="8" ry="4" fill="#1c2030" opacity=".18"/>` +
+    `<line x1="${f1(b[0])}" y1="${f1(b[1])}" x2="${f1(t[0])}" y2="${f1(t[1])}" stroke="#b9b5ad" stroke-width="2.4" stroke-linecap="round"/>` +
+    `<g transform="translate(${f1(t[0])} ${f1(t[1] - 14)})"><rect x="-10" y="-12" width="${f1(tw)}" height="25" rx="12.5" style="fill:var(--panelSolid)" stroke="#000" stroke-opacity=".07"/>` +
+    `<circle cx="3" cy=".5" r="7.5" fill="${f.tint}"/><text x="3" y="4.2" text-anchor="middle" font-size="10" font-weight="800" fill="#fff">${f.n}</text>` +
+    `<text x="16" y="5" font-size="12.5" font-weight="680" style="fill:var(--signInk)">${lab}</text></g></g>`;
+  return { rug, sign };
+}
 
-    tick();
-    setInterval(tick, intervalSec * 1000);
-  </script>
+/* ---------- status bubbles ---------- */
+function bubbleInner(s){
+  const base = (fill, extra) => `<circle cy="3" r="13" fill="#141820" opacity=".14"/>${extra || ""}<circle r="12.5" fill="${fill}" stroke="#fff" stroke-width="3"/>`;
+  if (s === "activo") return base("#22b25b") + `<circle class="dt" cx="-5" r="1.9" fill="#fff"/><circle class="dt d2" r="1.9" fill="#fff"/><circle class="dt d3" cx="5" r="1.9" fill="#fff"/>`;
+  if (s === "hecho") return base("#2aa774") + `<path d="M-5,.3 L-1.5,3.8 L5.2,-3.4" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>`;
+  if (s === "bloqueado") return base("#e5533d", `<circle class="halo" r="12.5" fill="#e5533d"/>`) + `<rect x="-1.4" y="-6.6" width="2.8" height="8" rx="1.4" fill="#fff"/><circle cy="5" r="1.7" fill="#fff"/>`;
+  return `<circle cy="2" r="9" fill="#141820" opacity=".1"/><circle r="8.5" fill="#b7bdc6" stroke="#fff" stroke-width="2.4"/><rect x="-3.2" y="-3.3" width="2.1" height="6.6" rx="1" fill="#fff"/><rect x="1.1" y="-3.3" width="2.1" height="6.6" rx="1" fill="#fff"/>`;
+}
+
+/* ---------- one desk with its mascot ---------- */
+function deskSVG(slot, i){
+  const b = slot.b, dx = slot.dx, dy = slot.dy, L = look(b.id), st = statusOf(b), h = hash(b.id);
+  const cx = dx + 1.02, cy = dy + 1.45, mx = dx + .72, yf = dy + .311;
+  let s = `<g class="bot" data-bot="${i}" data-s="${st}">`;
+  s += `<rect transform="${M("floor", dx - .35, dy - .25)}" width="${f1(2.5 * S)}" height="${f1(2.35 * S)}" rx="40" fill="url(#gShadow)"/>`;
+  s += `<rect class="spill" transform="${M("floor", dx + .05, dy + .65)}" width="${f1(1.6 * S)}" height="${f1(1.5 * S)}" rx="30" fill="url(#gSpill)"/>`;
+  s += box(dx + .12, dy + .1, .26, 1.56, .04, .38, DESK);
+  s += box(dx + .03, dy + .07, 0, .06, .82, .68, DESK);
+  s += box(dx + 1.71, dy + .07, 0, .06, .82, .68, DESK);
+  s += box(dx, dy, .68, 1.8, .95, .06, DESK, 1.6);
+  s += box(mx - .17, dy + .2, .74, .34, .22, .02, DARK, 1);
+  s += box(mx - .03, dy + .27, .76, .06, .05, .3, DARK);
+  s += box(mx - .5, dy + .24, .98, 1.0, .07, .6, DARK, 1.6);
+  s += `<polygon class="scr" points="${Q([[mx-.45,yf,1.03],[mx+.45,yf,1.03],[mx+.45,yf,1.53],[mx-.45,yf,1.53]])}"/>`;
+  let ln = "";
+  for (let k = 0; k < 4; k++){
+    const w = (.35 + ((h >>> (k * 3)) % 7) / 14) * .7 * S;
+    ln += `<rect class="ln" x="0" y="${k * 5.6}" width="${f1(w)}" height="3" rx="1.5" fill="#3a7fbf" fill-opacity=".55" style="animation-delay:-${(k * .31 + (h % 9) / 10).toFixed(2)}s"/>`;
+  }
+  s += `<g transform="${M("back", mx - .38, yf, 1.46)}">${ln}</g>`;
+  s += box(mx - .32, dy + .58, .74, .64, .2, .016, ["#eef0f2", "#d7dade", "#c4c8cd"], 1);
+  s += cyl(dx + 1.5, dy + .42, .74, .065, .13, L.c, 14);
+  s += `<g class="ring"><g transform="${M("floor", cx, cy)}"><circle r="${f1(.66 * S)}" fill="${L.c}" fill-opacity=".14" stroke="${L.c}" stroke-width="2.5"/>` +
+       `<circle class="ringp" r="${f1(.66 * S)}" fill="none" stroke="${L.c}" stroke-width="2"/></g></g>`;
+  s += `<g transform="${M("floor", cx, cy)}"><circle r="${f1(.34 * S)}" style="fill:var(--chR)" opacity=".9"/></g>`;
+  s += box(cx - .035, cy - .035, .06, .07, .07, .36, CHAIR);
+  s += box(cx - .33, cy - .3, .42, .66, .62, .09, CHAIR, 5);
+  const ghost = !!L.ghost, seat = P(cx, cy - .06 + (ghost ? .14 : 0), .52), sh = shapeSVG(b.id, seat[0], seat[1]), SC = 1.22;
+  sh.svg = `<g transform="matrix(${SC} 0 0 ${SC} ${f1(-seat[0] * (SC - 1))} ${f1(-seat[1] * (SC - 1))})">${sh.svg}</g>`; sh.top *= SC;
+  const delay = ((h % 1500) / 1000).toFixed(2);
+  s += `<g class="cw${slot.enter ? " enter" : ""}" style="animation-delay:${Math.min(.24, i * .03).toFixed(2)}s"><g class="char" style="animation-delay:-${delay}s">` +
+       `<g class="pose" style="animation-delay:-${delay}s"${ghost ? ' opacity=".62"' : ""}>${sh.svg}</g></g></g>`;
+  s += box(cx - .31, cy + .23, .5, .62, .08, .19, CHAIR, 4);
+  const rc = P(cx, cy, 0);
+  s += `<rect x="${f1(rc[0] - 34)}" y="${f1(seat[1] - sh.top - 22)}" width="68" height="${f1(sh.top + 56)}" fill="transparent"/>`;
+  s += `</g>`;
+  return { svg: s, bubAt: [seat[0], seat[1] - sh.top - 22], lab: P(cx, cy + .62, 0), center: P(cx, cy, .9) };
+}
+
+/* ---------- scene build: only when the set of bot ids changes ---------- */
+function buildScene(list){
+  const a = assign(list);
+  D = a.otrosRows ? 15.6 + (a.otrosRows - 1) * 2.4 : 13.8;
+  bounds();
+  world.setAttribute("width", SVGW); world.setAttribute("height", SVGH);
+  world.setAttribute("viewBox", `0 0 ${SVGW} ${SVGH}`);
+  $("#gd").innerHTML = list.map(b => gradDefs(b.id)).join("");
+  const used = FLOORS.concat(a.byFloor.otros.length ? [OTROS] : []);
+  let rugs = "", signs = "", desks = "", bubs = "";
+  floorCenters = {};
+  used.forEach(f => {
+    const n = a.byFloor[f.id].length || f.ids.length || 1, rows = Math.max(1, Math.ceil(n / f.cols)), cols = Math.min(f.cols, n);
+    const rs = rugAndSign(f, n, rows); rugs += rs.rug; signs += rs.sign;
+    floorCenters[f.id] = P(f.o[0] + cols * 1.25 - .3, f.o[1] + rows * 1.2, .6);
+  });
+  floorCenters.all = P(W / 2, D / 2, .4);
+  const slots = a.slots.slice().sort((p, q) => (p.dy - q.dy) || (p.dx - q.dx));
+  const meta = [];
+  slots.forEach((slot, i) => {
+    slot.enter = !seen.has(slot.b.id);
+    const r = deskSVG(slot, i), st = statusOf(slot.b);
+    desks += r.svg;
+    bubs += `<g class="bub" data-bot="${i}" data-s="${st}" transform="translate(${f1(r.bubAt[0])} ${f1(r.bubAt[1])})"><g class="bubIn" style="animation-delay:-${((hash(slot.b.id) % 2600) / 1000).toFixed(2)}s">${bubbleInner(st)}</g></g>`;
+    meta.push({ id: slot.b.id, floor: slot.floor, lab: r.lab, center: r.center, s: st });
+  });
+  const front = box(9.9, 11.9, 0, .9, .9, .42, DARK, 9) + box(11.2, 12.5, 0, .9, .9, .42, DARK, 9) + plant(1.0, D - .75, 1.15, "#e8e3da");
+  world.innerHTML = staticDefs() + buildRoom() + `<g id="rugs">${rugs}</g><g id="signs">${signs}</g><g id="desks">${desks}</g><g>${front}</g><g id="bubs">${bubs}</g>`;
+  labelsEl.innerHTML = meta.map((m, i) => `<div class="nm" data-bot="${i}"><i></i><span></span></div>`).join("");
+  const gs = world.querySelectorAll("#desks > .bot"), bs = world.querySelectorAll("#bubs > .bub"), ls = labelsEl.querySelectorAll(".nm");
+  recs = new Map();
+  meta.forEach((m, i) => {
+    recs.set(m.id, { g: gs[i], bub: bs[i], bubIn: bs[i].firstElementChild, label: ls[i], s: m.s, floor: m.floor, lab: m.lab, center: m.center });
+    seen.add(m.id);
+  });
+  slotOrder = slots.map(sl => sl.b.id);
+  tvFloors = used;
+  const bw = 11, gap = 9, maxH = 30;
+  $("#tvBars").innerHTML = used.map((f, i) =>
+    `<rect x="${i * (bw + gap)}" y="${-maxH}" width="${bw}" height="${maxH}" rx="3" fill="#ffffff" opacity=".06"/>` +
+    `<rect class="tvb" x="${i * (bw + gap)}" y="0" width="${bw}" height="0" rx="3" fill="${f.tint}"/>` +
+    `<text x="${i * (bw + gap) + bw / 2}" y="11" text-anchor="middle" font-size="8.5" font-weight="700" fill="#8b95a2">${f.n}</text>`).join("");
+  updateClockHands();
+}
+
+/* ---------- in-place updates (the scene is never rebuilt for the same ids) ---------- */
+function updateScene(){
+  const act = {}, tot = {};
+  bots.forEach(b => {
+    const r = recs.get(b.id); if (!r) return;
+    const s = statusOf(b);
+    if (r.s !== s){ r.g.setAttribute("data-s", s); r.bub.setAttribute("data-s", s); r.bubIn.innerHTML = bubbleInner(s); r.s = s; }
+    const nm = b.name || b.id, span = r.label.lastElementChild, dot = r.label.firstElementChild;
+    if (span.textContent !== nm) span.textContent = nm;
+    if (dot.className !== "b-" + s) dot.className = "b-" + s;
+    const sel = b.id === selectedId, dim = selectedFloor !== "all" && r.floor !== selectedFloor;
+    r.g.classList.toggle("sel", sel); r.label.classList.toggle("sel", sel);
+    r.g.classList.toggle("dim", dim); r.bub.classList.toggle("dim", dim); r.label.classList.toggle("dim", dim);
+    tot[r.floor] = (tot[r.floor] || 0) + 1;
+    if (b.status === "activo") act[r.floor] = (act[r.floor] || 0) + 1;
+  });
+  world.querySelectorAll(".rug, .sign").forEach(el => el.classList.toggle("dim", selectedFloor !== "all" && el.getAttribute("data-floor") !== selectedFloor));
+  const tvN = document.getElementById("tvN");
+  if (tvN) tvN.textContent = String(bots.filter(b => b.status === "activo").length);
+  const bars = world.querySelectorAll(".tvb");
+  tvFloors.forEach((f, i) => {
+    const t = tot[f.id] || 0, a = act[f.id] || 0, hg = t ? Math.max(3, 30 * a / t) : 0;
+    if (bars[i]){ bars[i].setAttribute("y", f1(-hg)); bars[i].setAttribute("height", f1(hg)); bars[i].setAttribute("opacity", a ? "1" : ".35"); }
+  });
+}
+
+/* ---------- panels ---------- */
+const mentionsCarlos = b => /carlos/i.test([b.block, b.detail, b.next].filter(Boolean).join(" "));
+const orderedBots = () => slotOrder.map(id => bots.find(b => b.id === id)).filter(Boolean);
+const botsOfFloor = fid => orderedBots().filter(b => floorOf(b.id) === fid);
+const dotsOf = list => list.map(b => `<i class="b-${statusOf(b)}" title="${escapeHtml((b.name || b.id) + " · " + labelOf(b))}"></i>`).join("");
+const plural = (n, one, many) => n === 1 ? one : many;
+function renderPanels(){
+  const n = s => bots.filter(b => b.status === s).length;
+  const nA = n("activo"), nP = n("pausado"), nB = n("bloqueado"), nH = n("hecho");
+  $("#counts").innerHTML =
+    `<span><i class="b-activo"></i><b>${nA}</b> trabajando</span>` +
+    `<span><i class="b-pausado"></i><b>${nP}</b> en espera</span>` +
+    `<span><i class="b-bloqueado"></i><b>${nB}</b> ${plural(nB, "bloqueado", "bloqueados")}</span>` +
+    `<span><i class="b-hecho"></i><b>${nH}</b> ${plural(nH, "hecho", "hechos")}</span>`;
+
+  const floors = FLOORS.concat(botsOfFloor("otros").length ? [OTROS] : []);
+  let fh = `<div class="ttl"><span>Plantas</span><span>activos</span></div>` +
+    `<button type="button" class="fl${selectedFloor === "all" ? " sel" : ""}" data-floor="all"><span class="num">◎</span><span class="fn">Toda la oficina</span><span class="fc">${nA}/${bots.length}</span><span class="dots">${dotsOf(orderedBots())}</span></button>`;
+  floors.forEach(f => {
+    const list = botsOfFloor(f.id), a = list.filter(b => b.status === "activo").length;
+    fh += `<button type="button" class="fl${selectedFloor === f.id ? " sel" : ""}${list.length ? "" : " zero"}" data-floor="${f.id}"><span class="num">${f.n}</span><span class="fn">${escapeHtml(f.name)}</span><span class="fc">${a}/${list.length}</span><span class="dots">${dotsOf(list)}</span></button>`;
+  });
+  $("#floors").innerHTML = fh;
+
+  const waiting = orderedBots().filter(b => b.status === "bloqueado" && mentionsCarlos(b));
+  $("#waitN").textContent = String(waiting.length);
+  $("#waitN").className = "badge" + (waiting.length ? " hot" : "");
+  $("#waitList").innerHTML = waiting.length ? waiting.map(b => mini(b, b.block || b.next || b.detail)).join("") : `<div class="none">Nada pendiente de ti.</div>`;
+  const done = orderedBots().filter(b => b.status === "hecho");
+  $("#doneN").textContent = String(done.length);
+  $("#doneList").innerHTML = done.length ? done.map(b => mini(b, b.task)).join("") : `<div class="none">Nadie ha terminado todavía.</div>`;
+
+  const fo = selectedFloor === "all" ? null : floorById(selectedFloor);
+  const list = fo ? botsOfFloor(fo.id) : orderedBots();
+  const la = list.filter(b => b.status === "activo").length, lb = list.filter(b => b.status === "bloqueado").length;
+  const rh = $("#rhead");
+  rh.className = la ? "" : (lb ? "blk" : "calm");
+  rh.innerHTML = `<div class="r1"><b>${escapeHtml(fo ? fo.name : "Toda la oficina")}</b><span>${fo ? "Planta " + fo.n + " · " : ""}${list.length} ${plural(list.length, "bot", "bots")}</span></div>` +
+    `<div class="big">${la}<small>trabajando${lb ? " · " + lb + " " + plural(lb, "bloqueado", "bloqueados") : ""}</small></div>`;
+  $("#list").innerHTML = list.length ? list.map(b => {
+    const st = statusOf(b), el = b.since ? elapsed(b.since) : "";
+    return `<button type="button" class="row${b.id === selectedId ? " sel" : ""}" data-id="${escapeHtml(b.id)}">${icon(b.id, 28)}` +
+      `<span><span class="nmr">${escapeHtml(b.name || b.id)}</span><span class="sub"><span class="st c-${st}"><i class="b-${st}"></i>${escapeHtml(labelOf(b))}</span> · ${plain(b.task || "Sin tarea")}</span></span>` +
+      `<span class="el">${escapeHtml(el)}</span></button>`;
+  }).join("") : `<div class="none" style="padding:10px 8px">${hasData ? "Ningún bot en esta planta." : "Sin datos todavía."}</div>`;
+  renderDetail(); renderLog();
+}
+function mini(b, text){
+  return `<button type="button" class="mini" data-id="${escapeHtml(b.id)}">${icon(b.id, 22)}<span><b>${escapeHtml(b.name || b.id)}</b><span>${plain(text || "")}</span></span></button>`;
+}
+function renderDetail(){
+  const b = bots.find(x => x.id === selectedId), el = $("#detail");
+  if (!b){ el.innerHTML = `<div class="none" style="padding:2px 0">${bots.length ? "Toca un bot para ver qué hace." : (hasData ? "La oficina está vacía por ahora." : "Esperando los primeros datos…")}</div>`; return; }
+  const st = statusOf(b), fl = floorById(floorOf(b.id)), el2 = elapsed(b.since);
+  const since = b.since && validDate(b.since) ? `Desde las ${escapeHtml(madridSmart(b.since))} (Madrid)${el2 ? " · " + escapeHtml(el2) : ""}` : "";
+  el.innerHTML = `<div class="dh">${icon(b.id, 40)}<div><h3>${escapeHtml(b.name || b.id)}</h3>` +
+    `<span class="pill c-${st}"><i class="b-${st}"></i>${escapeHtml(labelOf(b))}</span> <span style="color:var(--mut);font-size:11.5px">${escapeHtml(fl.name)}</span></div></div>` +
+    `<div class="dtask">${plain(b.task || "Sin tarea")}</div>` +
+    (since ? `<div class="dmeta">${since}</div>` : "") +
+    (b.block ? `<div class="dsec blk"><h5>Bloqueo</h5><p>${plain(b.block)}</p></div>` : "") +
+    (b.detail ? `<div class="dsec"><h5>Detalle</h5><p>${plain(b.detail)}</p></div>` : "") +
+    (b.next ? `<div class="dsec"><h5>Siguiente</h5><p>${plain(b.next)}</p></div>` : "");
+}
+function renderLog(){
+  const items = (lastData && Array.isArray(lastData.log) ? lastData.log : []).slice(0, 10);
+  $("#logList").innerHTML = items.length ? items.map(e =>
+    `<li><time>${escapeHtml(madridHM(e && e.at))}</time><span>${e && e.actor ? "<b>" + escapeHtml(e.actor) + "</b> " : ""}${plain(e && e.text)}</span></li>`).join("")
+    : `<li><time></time><span style="color:var(--mut)">Sin cambios recientes.</span></li>`;
+}
+function renderFoot(){
+  const t = lastData && lastData.sourceMtime ? madridDay(lastData.sourceMtime) : "";
+  $("#foot").textContent = (t ? "Fuente actualizada " + t + " (Madrid)" : "Sin datos todavía") + " · se refresca cada " + intervalSec + " s";
+}
+function renderEmpty(){
+  const e = $("#empty");
+  if (bots.length){ e.hidden = true; return; }
+  e.hidden = false;
+  e.innerHTML = hasData
+    ? `<b>La oficina está tranquila</b><span>No hay ningún bot en su mesa ahora mismo. En cuanto alguno coja turno, aparecerá aquí.</span>`
+    : `<b>Abriendo la oficina…</b><span>Todavía no hay datos. Lo vuelvo a intentar cada ${intervalSec} s.</span>`;
+}
+
+/* ---------- selection & floors ---------- */
+function defaultSelection(){
+  if (selectedId && bots.some(b => b.id === selectedId)) return;
+  const ord = orderedBots();
+  const pick = ord.find(b => b.status === "activo") || ord.find(b => b.status === "bloqueado") || ord[0];
+  selectedId = pick ? pick.id : null;
+}
+function select(id, pan){
+  if (!bots.some(b => b.id === id)) return;
+  selectedId = id;
+  const r = recs.get(id);
+  if (r && selectedFloor !== "all" && r.floor !== selectedFloor) selectedFloor = r.floor;
+  updateScene(); renderPanels();
+  if (pan && r) panToIfHidden(r.center);
+}
+function setFloor(fid){
+  selectedFloor = (fid === selectedFloor && fid !== "all") ? "all" : fid;
+  if (selectedFloor !== "all"){
+    const inFloor = botsOfFloor(selectedFloor), cur = bots.find(b => b.id === selectedId);
+    if (!cur || floorOf(cur.id) !== selectedFloor){
+      const p = inFloor.find(b => b.status === "activo") || inFloor.find(b => b.status === "bloqueado") || inFloor[0];
+      if (p) selectedId = p.id;
+    }
+  }
+  updateScene(); renderPanels();
+  if (selectedFloor === "all") fit(true);
+  else if (floorCenters[selectedFloor]) centerOn(floorCenters[selectedFloor], isMobile() ? Math.max(view.k, kFit * 1.15) : Math.max(view.k, kFit * 1.3));
+}
+
+/* ---------- pan / zoom ---------- */
+const view = { k: 1, tx: 0, ty: 0 }; let kFit = 1;
+const isMobile = () => window.matchMedia("(max-width: 820px)").matches;
+function area(){
+  const r = stage.getBoundingClientRect();
+  if (isMobile()) return { w: r.width, h: r.height, l: 0, t: 0, aw: r.width, ah: r.height };
+  const l = Math.min(262, r.width * .2), rr = Math.min(346, r.width * .27), t = 56, b = 44;
+  return { w: r.width, h: r.height, l, t, aw: Math.max(200, r.width - l - rr), ah: Math.max(200, r.height - t - b) };
+}
+let easeT = 0;
+function apply(ease){
+  world.classList.toggle("ease", !!ease); labelsEl.classList.toggle("ease", !!ease);
+  world.style.transform = `translate(${view.tx.toFixed(1)}px, ${view.ty.toFixed(1)}px) scale(${view.k.toFixed(4)})`;
+  placeLabels();
+  clearTimeout(easeT);
+  if (ease) easeT = setTimeout(() => { world.classList.remove("ease"); labelsEl.classList.remove("ease"); }, 700);
+}
+function placeLabels(){
+  recs.forEach(r => {
+    const x = view.tx + r.lab[0] * view.k, y = view.ty + r.lab[1] * view.k;
+    r.label.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translate(-50%, 0)`;
+  });
+}
+function clampView(){
+  const a = area();
+  view.tx = Math.min(a.w * .75, Math.max(a.w * .25 - SVGW * view.k, view.tx));
+  view.ty = Math.min(a.h * .75, Math.max(a.h * .25 - SVGH * view.k, view.ty));
+}
+function fit(ease){
+  const a = area();
+  if (isMobile()){
+    kFit = Math.min(a.h / (SVGH * .84), a.w / (SVGW * .52));
+    const c = floorCenters.all || [SVGW / 2, SVGH / 2];
+    view.k = kFit; view.tx = a.w / 2 - c[0] * kFit; view.ty = a.h / 2 - (c[1] - 30) * kFit;
+  } else {
+    kFit = Math.min(a.aw / SVGW, a.ah / SVGH) * 1.08;
+    view.k = kFit; view.tx = a.l + a.aw / 2 - SVGW * kFit / 2; view.ty = a.t + a.ah / 2 - SVGH * kFit / 2 + 6;
+  }
+  clampView(); apply(ease);
+}
+function centerOn(p, k){
+  const a = area();
+  view.k = Math.max(kFit * .6, Math.min(kFit * 3.2, k || view.k));
+  view.tx = a.l + a.aw / 2 - p[0] * view.k; view.ty = a.t + a.ah / 2 - p[1] * view.k;
+  clampView(); apply(true);
+}
+function panToIfHidden(p){
+  const a = area(), x = view.tx + p[0] * view.k, y = view.ty + p[1] * view.k;
+  if (x < a.l + 40 || x > a.l + a.aw - 40 || y < a.t + 50 || y > a.t + a.ah - 40) centerOn(p, view.k);
+}
+function zoomAt(px, py, factor){
+  const k2 = Math.max(kFit * .6, Math.min(kFit * 3.2, view.k * factor));
+  view.tx = px - (px - view.tx) * (k2 / view.k); view.ty = py - (py - view.ty) * (k2 / view.k); view.k = k2;
+  clampView(); apply(false);
+}
+const pointers = new Map(); let dragged = false, pinch = null, downAt = null;
+stage.addEventListener("pointerdown", e => {
+  if (e.button > 0 || e.target.closest("#zoom")) return;
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pointers.size === 1){ dragged = false; downAt = { x: e.clientX, y: e.clientY }; }
+  if (pointers.size === 2){ const p = [...pointers.values()]; pinch = { d: Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y) || 1, k: view.k }; }
+});
+window.addEventListener("pointermove", e => {
+  if (!pointers.has(e.pointerId)){ hover(e); return; }
+  const prev = pointers.get(e.pointerId); pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pointers.size === 1){
+    if (!dragged && downAt && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) > 5){ dragged = true; stage.classList.add("grabbing"); tip.hidden = true; }
+    if (dragged){ view.tx += e.clientX - prev.x; view.ty += e.clientY - prev.y; clampView(); apply(false); }
+  } else if (pointers.size === 2 && pinch){
+    dragged = true;
+    const p = [...pointers.values()], d = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y), r = stage.getBoundingClientRect();
+    zoomAt((p[0].x + p[1].x) / 2 - r.left, (p[0].y + p[1].y) / 2 - r.top, (pinch.k * d / pinch.d) / view.k);
+  }
+});
+function endPointer(e){ pointers.delete(e.pointerId); if (pointers.size < 2) pinch = null; if (!pointers.size) stage.classList.remove("grabbing"); }
+window.addEventListener("pointerup", endPointer);
+window.addEventListener("pointercancel", endPointer);
+stage.addEventListener("click", e => { if (dragged){ e.stopPropagation(); e.preventDefault(); dragged = false; } }, true);
+stage.addEventListener("wheel", e => {
+  e.preventDefault(); const r = stage.getBoundingClientRect();
+  zoomAt(e.clientX - r.left, e.clientY - r.top, Math.exp(-e.deltaY * (e.ctrlKey ? .01 : .0016)));
+}, { passive: false });
+$("#zoom").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const a = area(), z = b.getAttribute("data-z");
+  if (z === "fit"){ selectedFloor = "all"; updateScene(); renderPanels(); fit(true); }
+  else zoomAt(a.l + a.aw / 2, a.t + a.ah / 2, z === "in" ? 1.3 : 1 / 1.3);
+});
+function botFromEl(el){
+  const t = el && el.closest ? el.closest("[data-bot]") : null; if (!t) return null;
+  const id = slotOrder[Number(t.getAttribute("data-bot"))];
+  return bots.find(b => b.id === id) || null;
+}
+stage.addEventListener("click", e => { const b = botFromEl(e.target); if (b) select(b.id, false); });
+function hover(e){
+  if (e.pointerType !== "mouse" || pointers.size) return;
+  const b = stage.contains(e.target) ? botFromEl(e.target) : null;
+  if (!b){ if (!tip.hidden) tip.hidden = true; return; }
+  const r = stage.getBoundingClientRect();
+  tip.innerHTML = `<b>${escapeHtml(b.name || b.id)} · ${escapeHtml(labelOf(b))}</b><span>${plain(b.task || "Sin tarea")}</span>`;
+  tip.hidden = false;
+  const x = Math.min(r.width - 250, e.clientX - r.left + 14), y = Math.min(r.height - 60, e.clientY - r.top + 16);
+  tip.style.transform = `translate(${x}px, ${y}px)`;
+}
+document.addEventListener("click", e => {
+  const fl = e.target.closest(".fl"); if (fl){ setFloor(fl.getAttribute("data-floor")); return; }
+  const row = e.target.closest(".row, .mini");
+  if (row){ const id = row.getAttribute("data-id"); const b = bots.find(x => x.id === id); if (b) select(b.id, true); }
+});
+let rz = 0; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => fit(false), 120); });
+
+/* ---------- day / night ---------- */
+function setTheme(t, save){
+  document.body.classList.toggle("night", t === "night");
+  document.querySelectorAll("#theme button").forEach(b => b.setAttribute("aria-pressed", String(b.getAttribute("data-t") === t)));
+  const m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute("content", t === "night" ? "#151a24" : "#eceef0");
+  if (save){ try { localStorage.setItem("tabner-oficina-luz", t); } catch (_) {} }
+}
+$("#theme").addEventListener("click", e => { const b = e.target.closest("button"); if (b) setTheme(b.getAttribute("data-t"), true); });
+(function(){
+  let t = params.get("luz"); if (t !== "day" && t !== "night"){ try { t = localStorage.getItem("tabner-oficina-luz"); } catch (_) { t = null; } }
+  if (t !== "day" && t !== "night"){ const h = madridNow().h; t = (h >= 20 || h < 7) ? "night" : "day"; }
+  setTheme(t, false);
+})();
+
+/* ---------- clock ---------- */
+function updateClockHands(){
+  const n = madridNow(), set = (id, deg) => { const el = document.getElementById(id); if (el) el.setAttribute("transform", `rotate(${deg.toFixed(1)})`); };
+  set("hH", (n.h % 12) * 30 + n.m * .5); set("hM", n.m * 6 + n.s * .1); set("hS", n.s * 6);
+}
+function clockTick(){ $("#clock").textContent = fmtClock.format(new Date()) + " Madrid"; updateClockHands(); }
+
+/* ---------- data ---------- */
+let firstFit = true;
+function render(data){
+  lastData = data || {};
+  const raw = Array.isArray(lastData.bots) ? lastData.bots : [], ids = new Set();
+  bots = [];
+  raw.forEach(b => { if (b && b.id != null && !ids.has(String(b.id))){ ids.add(String(b.id)); bots.push(Object.assign({}, b, { id: String(b.id) })); } });
+  const sig = bots.map(b => b.id).sort().join("|");
+  if (sig !== signature){
+    signature = sig; buildScene(bots);
+    if (firstFit){ firstFit = false; fit(false); } else { clampView(); apply(false); }
+  }
+  defaultSelection();
+  updateScene(); renderPanels(); renderFoot(); renderEmpty();
+}
+let inFlight = false;
+async function tick(){
+  if (inFlight) return; inFlight = true;
+  try {
+    const res = await fetch(src + (src.includes("?") ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    hasData = true;
+    render(data);
+    $("#dot").className = "dot on"; $("#conn").textContent = "En vivo";
+  } catch (err) {
+    $("#dot").className = "dot err";
+    $("#conn").textContent = hasData ? "Sin red, última foto" : "Sin datos todavía";
+    if (!hasData) renderEmpty();
+  } finally { inFlight = false; }
+}
+
+// paint the empty room at once so the page is never blank, then go live
+buildScene([]); fit(false); signature = "\u0000";
+updateScene(); renderPanels(); renderFoot(); renderEmpty();
+clockTick(); setInterval(clockTick, 1000);
+setInterval(() => { if (hasData) renderPanels(); }, 30000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) tick(); });
+tick();
+setInterval(tick, intervalSec * 1000);
+})();
+</script>
 </body>
 </html>
