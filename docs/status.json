@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-10T08:02:54+01:00",
-  "sourceMtime": "2026-11-10T08:02:15+01:00",
+  "generatedAt": "2026-11-10T08:47:55+01:00",
+  "sourceMtime": "2026-11-10T08:47:32+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "activo",
-      "task": "M1 Guardar sesión unificado",
-      "since": "2026-11-09T17:42:49+01:00",
-      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid; retomada a mano el 2026-11-10T08:02 (sin Claude Code). Rama local `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, sin push. Turno DEV sigue cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades el cambio de defecto del popup.",
-      "next": "Dev escribe el código, corre vitest/tsc y entrega el SHA a QA.",
-      "block": null
+      "status": "bloqueado",
+      "task": "1.10.8 (versión)",
+      "since": null,
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
+      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
       "id": "qa",
@@ -18,19 +18,19 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
-      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
+      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
       "id": "ux",
       "name": "UX",
-      "status": "pausado",
+      "status": "bloqueado",
       "task": "M1 Guardar sesión unificado",
-      "since": "2026-11-09T17:42:49+01:00",
-      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid; retomada a mano el 2026-11-10T08:02 (sin Claude Code). Rama local `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, sin push. Turno DEV sigue cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades el cambio de defecto del popup.",
-      "next": "Dev escribe el código, corre vitest/tsc y entrega el SHA a QA.",
-      "block": null
+      "since": null,
+      "detail": "Código entregado a QA el 2026-11-10T08:46 Europe/Madrid. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Escrito a mano (sin Claude Code). Candidato 18/18 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; el cambio de defecto del popup va en Novedades.",
+      "next": "QA revisa el SHA y responde los fallos directo a Dev.",
+      "block": "Esperando dictamen de QA. No se publica ni se tocan D1, D2/H1 ni P1 en esta unidad."
     },
     {
       "id": "feature-analyst",
@@ -68,8 +68,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
-      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
+      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -193,8 +193,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). Rama de trabajo `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push.",
-      "next": "M1 en curso (Dev). Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
+      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -218,11 +218,11 @@
         "QA",
         "Dev"
       ],
-      "status": "activo",
-      "since": "2026-11-09T17:42:49+01:00",
-      "summary": "En curso desde 2026-11-09T17:42:49 Europe/Madrid; retomada a mano el 2026-11-10T08:02 (sin Claude Code). Rama local `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, sin push. Turno DEV sigue cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades el cambio de defecto del popup.",
-      "next": "Dev escribe el código, corre vitest/tsc y entrega el SHA a QA.",
-      "block": "Claude reservado para Shorts E01; se continúa a mano."
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Código entregado a QA el 2026-11-10T08:46 Europe/Madrid. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Escrito a mano (sin Claude Code). Candidato 18/18 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; el cambio de defecto del popup va en Novedades.",
+      "next": "QA revisa el SHA y responde los fallos directo a Dev.",
+      "block": "Esperando dictamen de QA. No se publica ni se tocan D1, D2/H1 ni P1 en esta unidad."
     },
     {
       "name": "O1 Menos llamadas a la nube",
@@ -302,10 +302,10 @@
       "bots": [
         "Dev"
       ],
-      "status": "activo",
-      "since": "2026-11-09T17:42:49+01:00",
-      "summary": "Cogido por DEV desde 2026-11-09T17:42:49 Europe/Madrid (motivo: 1.10.8 M1 Guardar sesión unificado).",
-      "next": "No borrar locks por edad ni liberar un proceso vivo. Dev suelta al cerrar la unidad.",
+      "status": "pausado",
+      "since": null,
+      "summary": "Libre. Dev lo soltó el 2026-11-10T08:46 Europe/Madrid al cerrar M1 (`turno.py ver` = libre).",
+      "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
     {
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T08:46:00+01:00",
+      "actor": "Dev",
+      "text": "M1 cerrada y entregada a QA. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Candidato 18/18 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-guardar-sesion/INFORME.md`. Turno DEV soltado (`turno.py ver` = libre)."
+    },
+    {
       "at": "2026-11-10T08:02:00+01:00",
       "actor": "Dev",
       "text": "retomo M1 a mano (sin Claude Code; Claude queda reservado para Shorts E01). Turno DEV sigue cogido desde 2026-11-09T17:42:49. Rama `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, árbol limpio."
@@ -556,12 +561,7 @@
       "at": "2026-11-07T16:11:20+01:00",
       "actor": "Shorts Orquestador",
       "text": "Short 003 r17 publicado y verificado con oEmbed en Luck is Math: . Una sola copia publicada reutilizando borrador; otros borradores sin tocar."
-    },
-    {
-      "at": "2026-11-07T16:05:00+01:00",
-      "actor": "Luck is Math",
-      "text": "Analista: la rutina del 6/11 falló por falta de uso (no es que no apuntara datos). La recuperación del 002 ahora está bloqueada por límite de solicitudes; se reintenta en la rutina de hoy hacia las 19:00, etiquetada con su edad real (sin simular el corte de…"
     }
   ],
-  "contentHash": "62e93613"
+  "contentHash": "ebf053db"
 }
