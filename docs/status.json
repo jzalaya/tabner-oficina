@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-10T23:21:40+01:00",
+  "generatedAt": "2026-11-10T23:23:55+01:00",
   "sourceMtime": "2026-11-10T23:21:33+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "bloqueado",
-      "task": "D1 (servidor)",
-      "since": null,
-      "detail": "Abierto. QA lo describe como cambio de lado servidor, sin tocar en D3. Fuera del manifiesto de D3 (`p1TobySync.test.ts`).",
+      "status": "activo",
+      "task": "UX-S1 instantanea al actualizar sobre 6fde85b0",
+      "since": "2026-11-10T23:23:30+01:00",
+      "detail": "Turno DEV desde 2026-11-10T23:23:30+01:00: UX-S1 instantanea al actualizar sobre 6fde85b0",
       "next": "Decisión e implementación de servidor (sin producción hasta autorización) y QA independiente.",
-      "block": "Bloquea publicar 1.10.8, según QA. No confundir con el corte C2 de `turno.py` (ese D1 ya está aplicado)."
+      "block": null
     },
     {
       "id": "qa",
@@ -551,5 +551,5 @@
       "text": "lanzador r12 contrastado (INFORME sha 09e30022fc254732ac2ddd095a7b2a10510bb02ddce00f785ae9f823604acead, 5971 B; sidecar coincide (hash desnudo); INFORME.md == INFORME-r12.md; test oficial 392/392 EXIT_REAL=0, INICIO 18:45:56 FIN 18:46:12, PID 3270812, CWD `/workspace`, log sha b331228d8a65ffbf4a244a81e885fc793146dc872b54d98568b32f6b6c595162 (20675 B); entry sha ed98f990d2a94b5a7d7a7bd02cadae2fc24f4c35ac52c34cb8678b82d56547d8 (14568 B, modo 0555); wrappers/git sha 2cca807a3c4badb61b8ee3f4d06d8b8b57e85752d07a19d8d400a38bcac46cbe (28978 B, modo 0555); tests sha 37609531f2d9ffe4d46585da4429f34591cc62d171dea7a36920d5194b7bcbe9 (76037 B); write-settings sin cambio sha 5fe1b5fa…; POLITICA sha 14250d9dd8323f71c34fb216d7cef8226cad13c4d6a08cc1020ddcbee6d1b197 (10718 B); INFORME-r11 sha f81e4ef6… e informe QA r11 sha 446dc8f3… intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `818764f`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos; turno libre desde las 18:37:59). Ya está en el chat de QA; no lo reenvío. N37, N39, N40, N7 y N8 siguen en baja. No es un OK de publicación (siguen D1, D2/H1 y P1). Decisión de Tabby (no de Carlos): A1 no se cierra aún como unidad de interfaz; el fleco UX-A1F-01 sigue en QA sobre `818764f`, pendiente de contraste en Chrome. H-14, H-15 y la observación INFORME §9 (`nativeGroups`/`nativeGroupKey`) siguen aparcados. No arranco UX-S1 ni la analítica."
     }
   ],
-  "contentHash": "61dfd7cb"
+  "contentHash": "7975dfa8"
 }
