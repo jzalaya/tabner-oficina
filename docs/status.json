@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T17:18:01+01:00",
-  "sourceMtime": "2026-11-10T17:17:23+01:00",
+  "generatedAt": "2026-11-10T17:18:46+01:00",
+  "sourceMtime": "2026-11-10T17:18:30+01:00",
   "bots": [
     {
       "id": "dev",
@@ -67,9 +67,9 @@
       "name": "Tabby",
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
-      "since": "2026-11-10T17:17:00+01:00",
+      "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de flecos A1 (`0553079e`) cerrada (informe sha 624d3dfc…, capturas 01–48; turno libre desde las 17:17). Lanzador r9 en QA (N25–N30), en paquete aparte. A Tabby: residual UX-A1F-01; H-11 confirmado en Chrome, con H-4 en el siguiente paquete, sin mezclarlos con el r9 ni con UX-S1. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de flecos A1 (`0553079e`) contrastada (informe sha 624d3dfc…, capturas 01–48; turno libre). Encargo a Dev el siguiente paquete de flecos (UX-A1F-01, H-11 y H-4), sin mezclarlo con el r9 ni con UX-S1. Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -192,9 +192,9 @@
         "Dev"
       ],
       "status": "bloqueado",
-      "since": "2026-11-10T17:17:00+01:00",
+      "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de flecos A1 (`0553079e`) cerrada (informe sha 624d3dfc…, capturas 01–48; turno libre desde las 17:17). Lanzador r9 en QA (N25–N30), en paquete aparte. A Tabby: residual UX-A1F-01; H-11 confirmado en Chrome, con H-4 en el siguiente paquete, sin mezclarlos con el r9 ni con UX-S1. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de flecos A1 (`0553079e`) contrastada (informe sha 624d3dfc…, capturas 01–48; turno libre). Encargo a Dev el siguiente paquete de flecos (UX-A1F-01, H-11 y H-4), sin mezclarlo con el r9 ni con UX-S1. Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -246,7 +246,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "r9 entregado a QA el 2026-11-10T17:10 Europe/Madrid (corrección N25, N26, N27 y refuerzo del test N28–N30), sin coger el turno. Test oficial 336/336 EXIT_REAL=0, INICIO 17:09:13 FIN 17:09:28 Europe/Madrid, PID 2761726, CWD `/workspace`, log sha 3344d154c3c67dde7371c5391a85353e3b067173c952a46115e01ed5845411f3 (17156 B). Entry sha 79d9b4b4… (13022 B, modo 0555, shebang `#!/bin/bash -p`, sin cambio de contenido). wrappers/git sha d7fb256c… (27347 B, modo 0555). tests sha 636e84b7… (59987 B). write-settings sha 5fe1b5fa… (3648 B, sin cambio). POLITICA sha 7024b7d8… (10121 B). INFORME sha 3cb91965fc18a19758fe8a039790da34166fc3c661e45d6d973f7b522e606cc6 (4954 B). INFORME-r8 sha 95f8d923… e informe QA r8 sha fea0ee06… intactos. `/workspace/tabner` en f8c50faa. Flecos de A1 (`0553079e`) no tocados.",
-      "next": "QA revisa r9 (ya entregado en su chat; no reenviar). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`). UX-S1 y H-11/H-4 no entran en este paquete.",
+      "next": "QA revisa r9 (ya entregado en su chat; no reenviar). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`). UX-S1 y los flecos de A1 (UX-A1F-01, H-11 y H-4) no entran en este paquete.",
       "block": "Pendiente de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
     },
     {
@@ -257,9 +257,9 @@
         "Dev"
       ],
       "status": "bloqueado",
-      "since": "2026-11-10T17:17:00+01:00",
+      "since": null,
       "summary": "Flecos UX-A1-01 a 04 y H-1/H-2 APTOS como unidad el 2026-11-10T16:41 Europe/Madrid sobre `0553079e` (padre `0138b443`, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-flecos-0553079e.md` (sha c6392af3d3ec0eb2c6ddccdaaa7e420bb09ce7de5aa77f2c2769104d0a40a0dd, 21418 B, `grep -ci aprobado` = 0). T1 114/114, T2 2103/50, sonda 49/49, tsc solo los 3 TS2307 previos. Cerrados UX-A1-01, UX-A1-02, UX-A1-03, UX-A1-04/H-5b (copia previa), H-1 y H-2. Fleco nuevo no bloqueante H-11 (media). INFORME Dev `/workspace/tabner-release/1.10.8/a1-flecos/INFORME.md` (sha 77cd2fec9595ae96fa8e2e934d627f520e2baa8bb70fea4cc3df326086ffe6af, 16955 B). Revisión UX a mano cerrada el 2026-11-10T15:19 Europe/Madrid sobre `0138b443`. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-0138b443.md` (sha 3072ecc5cc46633c2a537efc821aac34ec0be4dafb535f660e1b031b78e983ad); capturas 01–47 (con 36b, 37b y 38b). Sin altos. Cinco medios: UX-A1-01 (H-8, el diálogo no avisa de los borrados en la nube), UX-A1-02 (etiquetas del mismo minuto), UX-A1-03 (copia previa prometida que a menudo no se escribe), UX-A1-04 (9 copias con dos pestañas del dashboard, tope 8) y UX-A1-05 (pestaña nueva usable en ~10 s con 2500 pestañas). Dos bajos: UX-A1-06 (capacidad «-65900 más pestañas») y UX-A1-07 («Abrir» del popup). H-9 hecho. Solo Chrome. QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde). `/workspace/tabner` sigue en f8c50faa. Revisión UX a mano de estos flecos cerrada el 2026-11-10T17:17 Europe/Madrid: `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-0553079e.md` (sha 624d3dfced85e710a940489016b7cf8875a6be54b3f655380441c49a28f19da1).",
-      "next": "Revisión UX a mano de flecos `0553079e` cerrada el 2026-11-10T17:17 Europe/Madrid. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-0553079e.md` (sha 624d3dfced85e710a940489016b7cf8875a6be54b3f655380441c49a28f19da1, 10944 B); capturas 01–48 en `ux/capturas/2026-11-10-a1-flecos/`. Confirmados UX-A1-01, UX-A1-02 (segundos; ordinales no vistos), UX-A1-04, H-1 y H-6 (~1–2 s). H-11 reproducido en Chrome; no se encarga (va con H-4, ya aceptada, en el siguiente paquete, sin mezclarlo con el r9 ni con UX-S1). Residual medio UX-A1F-01 («ya está entre las copias» no salió; el restore de la más reciente sí escribió copia y rotó el tope). Bajos UX-A1F-02 (espacio zh_CN) y UX-A1-06 sigue. Sin altos. Solo Chrome. Turno libre desde las 17:17. Cuentas `tabner-qa+ux2` y `tabner-qa+ux3` pendientes de borrar. UX-S1 sigue para después, paquete aparte, sin reabrir A1. El r9 sigue en QA. No se lanza la analítica todavía.",
+      "next": "Encargo a Dev el siguiente paquete de flecos sobre `0553079e` (turno libre; worktree `/workspace/wt/a1`): UX-A1F-01 (el texto «ya está entre las copias» y que un restore del estado actual no gaste un hueco del tope), H-11 (proteger la copia elegida con el diálogo abierto) y H-4 (excluir `isCollapsed`/`areTagsCollapsed` de `relevantContent`). Sin mezclarlo con el r9 ni con UX-S1. No entran los bajos UX-A1F-02 ni UX-A1-06. Siguen fuera de alcance: H-3, H-5a, H-7 (H-12 documental). No se lanza la analítica ni UX-S1 (paquete aparte, sin reabrir A1, después de cerrar estos flecos como unidad). Límite: solo Chrome; no se comprobaron ordinales de UX-A1-02 ni un segundo dispositivo. Cuentas `tabner-qa+ux2` y `tabner-qa+ux3` pendientes de borrar (lo borra UX).",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -478,14 +478,19 @@
   ],
   "log": [
     {
-      "at": "2026-11-10T17:17:00+01:00",
-      "actor": "Tabner UX",
-      "text": "revisión a mano de flecos A1 (`0553079e`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-0553079e.md` (sha 624d3dfced85e710a940489016b7cf8875a6be54b3f655380441c49a28f19da1, 10944 B); capturas 01–48 en `ux/capturas/2026-11-10-a1-flecos/`. Confirmados en Chrome: UX-A1-01 (aviso de cuenta solo con sesión, en ES oscuro, EN claro y zh_CN oscuro; la descripción aclara que las copias no van a la nube), UX-A1-02 (segundos; no se vieron ordinales), UX-A1-04 (tope 8 con dos y tres dashboards), H-1 (copia ~2 s al renombrar un grupo, sin reabrir el dashboard) y H-6 (pestaña nueva usable en ~1–2 s con 2500 pestañas). H-11 reproducido (toast «No se ha podido restaurar la copia»); no se encarga, ya va con H-4. Un medio residual UX-A1F-01: el texto «ya está entre las copias» no salió; al restaurar la más reciente sí se escribió una copia y rotó el tope. Bajos: UX-A1F-02 (espacio de más en el diálogo zh_CN) y UX-A1-06 sigue a la vista con sesión («-34947 más pestañas»). Sin altos. Solo Chrome. Turno UX cogido a las 16:45:07 y soltado a las 17:17 (`turno.py ver` = libre). Cuentas `tabner-qa+ux2` y `tabner-qa+ux3` siguen en el proyecto de prueba, pendientes de borrar con el procedimiento del 1-11. No se encargó nada a Dev. No se arrancó UX-S1 ni la auditoría. No se tocó D1, D2/H1, P1 ni el lanzador. No es un OK de publicación."
+      "at": "2026-11-10T17:18:30+01:00",
+      "actor": "Tabby nueva",
+      "text": "revisión UX de flecos A1 contrastada (informe sha 624d3dfced85e710a940489016b7cf8875a6be54b3f655380441c49a28f19da1, 10944 B, sin sidecar; capturas 01–48; turno libre desde las 17:17; `/workspace/tabner` en f8c50faa; A1 sigue en `0553079e`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos). Confirmados UX-A1-01, UX-A1-02 (segundos; ordinales no vistos), UX-A1-04, H-1 y H-6 (~1–2 s); H-11 reproducido en Chrome; sin altos. No es un OK de publicación (siguen D1, D2/H1 y P1). Decisión de Tabby (no de Carlos): A1 no se cierra aún como unidad de interfaz. Encargo a Dev, en paquete aparte sobre `0553079e`, UX-A1F-01, H-11 y H-4 (excluir `isCollapsed`/`areTagsCollapsed` de `relevantContent`); no entran los bajos UX-A1F-02 ni UX-A1-06. No mezclo este paquete con el r9 (sigue en QA; no lo reenvío) ni con UX-S1. No arranco UX-S1 ni la analítica."
+    },
+    {
+      "at": "2026-11-10T17:18:30+01:00",
+      "actor": "Tabby nueva",
+      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T17:17:00+01:00",
       "actor": "Tabner UX",
-      "text": "Actualizado"
+      "text": "revisión a mano de flecos A1 (`0553079e`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-0553079e.md` (sha 624d3dfced85e710a940489016b7cf8875a6be54b3f655380441c49a28f19da1, 10944 B); capturas 01–48 en `ux/capturas/2026-11-10-a1-flecos/`. Confirmados en Chrome: UX-A1-01 (aviso de cuenta solo con sesión, en ES oscuro, EN claro y zh_CN oscuro; la descripción aclara que las copias no van a la nube), UX-A1-02 (segundos; no se vieron ordinales), UX-A1-04 (tope 8 con dos y tres dashboards), H-1 (copia ~2 s al renombrar un grupo, sin reabrir el dashboard) y H-6 (pestaña nueva usable en ~1–2 s con 2500 pestañas). H-11 reproducido (toast «No se ha podido restaurar la copia»); no se encarga, ya va con H-4. Un medio residual UX-A1F-01: el texto «ya está entre las copias» no salió; al restaurar la más reciente sí se escribió una copia y rotó el tope. Bajos: UX-A1F-02 (espacio de más en el diálogo zh_CN) y UX-A1-06 sigue a la vista con sesión («-34947 más pestañas»). Sin altos. Solo Chrome. Turno UX cogido a las 16:45:07 y soltado a las 17:17 (`turno.py ver` = libre). Cuentas `tabner-qa+ux2` y `tabner-qa+ux3` siguen en el proyecto de prueba, pendientes de borrar con el procedimiento del 1-11. No se encargó nada a Dev. No se arrancó UX-S1 ni la auditoría. No se tocó D1, D2/H1, P1 ni el lanzador. No es un OK de publicación."
     },
     {
       "at": "2026-11-10T17:11:59+01:00",
@@ -571,12 +576,7 @@
       "at": "2026-11-10T15:24:00+01:00",
       "actor": "Dev",
       "text": "corrección N16, N15b, N17, N18, N14b, sobrebloqueo y tests del lanzador (r7) entregada a QA, sin coger el turno y sin tocar A1 ni sus flecos. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 276/276 EXIT_REAL=0, INICIO 15:23:44 FIN 15:23:59 Europe/Madrid, PID 2329542, CWD `/workspace`, log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-r7.log` (sha dfb53f28103de8fe2abb41f46f09f955c6629ac633867b4b587a85570b667a91). Entry sha 009bdfa3f69b55046afefea25129e279665cbe044bf1c6cc78e1fe52a49fb4ce (modo 0555; retira EDITOR/VISUAL/PAGER/BROWSER/LESSOPEN/LESSCLOSE al arrancar Claude); wrappers/git sha 4eb164c89a61c55b60fbca5f9296aa01e5a91c4695ea45953fbcc814b9806a2d (modo 0555); tests sha a0e093eff482921315cc26f04a5e1b912354820c766c6a8645fa43ff0cd716fd; write-settings.py sha 9f6f4eb43f267d6dd5615cc1655b7db7599600f0a4934cd6f38ee28c496b518d; POLITICA sha c80342b3b9597d0e26aa2b9a739840e7ffd3d0b148b6a6bd2124905123dee492. INFORME sha 8cafb67bc2216b8997d57ae2a90fe039e3a2121cc654e949beff4a6b6136b55e (5505 B). r6 conservado en INFORME-r6.md (sha 18c92329…). N7/N8 siguen en baja. H9, D1, D2/H1, P1, turno.py y `/workspace/tabner` (f8c50faa) no se tocan."
-    },
-    {
-      "at": "2026-11-10T15:22:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "revisión UX de A1 contrastada (informe sha 3072ecc5…, 13517 B; capturas 01–47 más 36b, 37b y 38b; turno libre desde las 15:19; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`). Sin altos. H-9 hecho. Decisiones de Tabby: UX-A1-01, UX-A1-02, UX-A1-03 y UX-A1-04 entran en una unidad de flecos, junto con los H-1 y H-2 (media) que ya dejó QA (no los reenvío). UX-A1-05 no entra (la pestaña queda usable; los ~10 s son de pared y no bloquean). Los bajos UX-A1-06 y UX-A1-07 no van en esta unidad. El fleco se encarga a Dev en paquete aparte cuando entregue el r7 del lanzador; no se mezcla ni se interrumpe esa corrección. No se lanza la analítica todavía. La ronda UX de ~15:50 sigue siendo solo propuesta mientras el lanzador esté en corrección o en QA. No es un OK de publicación."
     }
   ],
-  "contentHash": "c9c7c0d4"
+  "contentHash": "bb522e64"
 }
