@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T10:23:45+01:00",
-  "sourceMtime": "2026-11-10T10:23:28+01:00",
+  "generatedAt": "2026-11-10T10:24:30+01:00",
+  "sourceMtime": "2026-11-10T10:24:04+01:00",
   "bots": [
     {
       "id": "dev",
@@ -58,7 +58,7 @@
       "status": "pausado",
       "task": "Contenido diario / Facebook",
       "since": null,
-      "detail": "10-11 (rutina ~10:00 Madrid): Short/Reel «POV 87 pestañas» ES (9:16 verificado con ffprobe y cropdetect) publicado en [YouTube](https://youtube.com/shorts/5moqDqsUmsY), [Instagram](https://www.instagram.com/reel/DfjjeoCopcM/) y [Página FB Tabner](https://www.facebook.com/reel/3048302028874043), sin promoción. X: 1 respuesta publicada hoy, sin enlace, a [@reelCheburashka](https://x.com/tabnerapp/status/2120084856369537395) (1 de 8, 0 con enlace). Pendiente la de @jevlorde, también sin enlace, desde este chat. Reddit u/tabnerapp: nada hoy. Sin menciones nuevas en X. Página FB sin vincular a IG.",
+      "detail": "10-11 (rutina ~10:00 Madrid): Short/Reel «POV 87 pestañas» ES (9:16 verificado con ffprobe y cropdetect) publicado en [YouTube](https://youtube.com/shorts/5moqDqsUmsY), [Instagram](https://www.instagram.com/reel/DfjjeoCopcM/) y [Página FB Tabner](https://www.facebook.com/reel/3048302028874043), sin promoción. X: 2 respuestas publicadas hoy, ambas sin enlace: a [@reelCheburashka](https://x.com/tabnerapp/status/2120084856369537395) y a [@jevlorde](https://x.com/tabnerapp/status/2120085049299059148) (2 de 8, 0 con enlace). La conexión de X ya tiene permiso de publicación; cada post sigue saliendo desde este chat, no desde la rutina. Reddit u/tabnerapp: nada hoy. Sin menciones nuevas en X. Página FB sin vincular a IG.",
       "next": "Redes sigue publicando en IG, FB, YT y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); no tocar el perfil personal ni otras páginas.",
       "block": null
     },
@@ -338,7 +338,7 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "10-11 (rutina ~10:00 Madrid): Short/Reel «POV 87 pestañas» ES (9:16 verificado con ffprobe y cropdetect) publicado en [YouTube](https://youtube.com/shorts/5moqDqsUmsY), [Instagram](https://www.instagram.com/reel/DfjjeoCopcM/) y [Página FB Tabner](https://www.facebook.com/reel/3048302028874043), sin promoción. X: 1 respuesta publicada hoy, sin enlace, a [@reelCheburashka](https://x.com/tabnerapp/status/2120084856369537395) (1 de 8, 0 con enlace). Pendiente la de @jevlorde, también sin enlace, desde este chat. Reddit u/tabnerapp: nada hoy. Sin menciones nuevas en X. Página FB sin vincular a IG.",
+      "summary": "10-11 (rutina ~10:00 Madrid): Short/Reel «POV 87 pestañas» ES (9:16 verificado con ffprobe y cropdetect) publicado en [YouTube](https://youtube.com/shorts/5moqDqsUmsY), [Instagram](https://www.instagram.com/reel/DfjjeoCopcM/) y [Página FB Tabner](https://www.facebook.com/reel/3048302028874043), sin promoción. X: 2 respuestas publicadas hoy, ambas sin enlace: a [@reelCheburashka](https://x.com/tabnerapp/status/2120084856369537395) y a [@jevlorde](https://x.com/tabnerapp/status/2120085049299059148) (2 de 8, 0 con enlace). La conexión de X ya tiene permiso de publicación; cada post sigue saliendo desde este chat, no desde la rutina. Reddit u/tabnerapp: nada hoy. Sin menciones nuevas en X. Página FB sin vincular a IG.",
       "next": "Redes sigue publicando en IG, FB, YT y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); no tocar el perfil personal ni otras páginas.",
       "block": "X por API exige tarjeta de aprobación en chat. Prohibido interactuar con otras páginas o con lo que ya hubiera en Facebook."
     },
@@ -563,5 +563,5 @@
       "text": "003 r17 publicado por el padre por orden de Carlos (S 7/11, hacia las 16:11): URL confirmada al Analista; cortes desde la publicación real (24 h, D 8/11 ~16:11; 48 h, L 9/11 ~16:11)."
     }
   ],
-  "contentHash": "167761be"
+  "contentHash": "60c7bcb3"
 }
