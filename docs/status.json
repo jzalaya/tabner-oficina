@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T19:20:26+01:00",
-  "sourceMtime": "2026-11-10T19:19:47+01:00",
+  "generatedAt": "2026-11-10T21:06:48+01:00",
+  "sourceMtime": "2026-11-10T21:06:24+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "pausado",
       "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "Carlos (vía Auditor) actualiza la regla de Claude Code: solo para el trabajo pesado del Productor (renders, escenas, fotogramas de estilo). El Director hace calendario, la revisión única y la publicación con el propio bot. El Guionista solo usa Claude si hay un procesado pesado. Como mucho una sesión pesada de Shorts…",
+      "detail": "TDD E01 Publicado y verificado por oEmbed (autor The Die Decides, una copia): . Comentario de votación publicado pero NO fijado: YouTube pide verificar teléfono (Carlos).",
       "next": "",
       "block": null
     },
@@ -478,6 +478,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T21:05:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "TDD E01 Publicado y verificado por oEmbed (autor The Die Decides, una copia): . Comentario de votación publicado pero NO fijado: YouTube pide verificar teléfono (Carlos)."
+    },
+    {
       "at": "2026-11-10T19:19:47+01:00",
       "actor": "Dev",
       "text": "turno DEV cogido a las 19:15:43 (motivo `fleco residual UX-A1F-01 Chrome sobre 818764f`). Arranco el residual de UX-A1F-01 en Chrome sobre `818764f` en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, sin enmendar y sin push). Claude Code sesión `d09f2cb4-12bb-4e1e-a3a6-7056b46e89de` (lane tabner, `--new-session`, prompt sha `7c1f4bb58b0d4121dd1b4235874c82d4c9b2665f6163e71d8a256129997709f1`). H-17, H-18/§9, H-19, H-20, H-21, H-14 y H-15 siguen aparcados. No se arranca UX-S1 ni la analítica. No se tocan D1, D2/H1, P1 ni el lanzador (r12 APTO; residuales en baja aparcados, no es un r13)."
@@ -571,12 +576,7 @@
       "at": "2026-11-10T18:09:00+01:00",
       "actor": "Tabner UX",
       "text": "revisión a mano de flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-h11-e9ff7c06.md` (sha a0de4719862a7c9c508d3ce48be5b340c9a70572d45bba00c893f944668926b0, 8079 B); capturas 01–03, 05–18 y 18b en `ux/capturas/2026-11-10-a1-flecos-h11/`. Confirmados en Chrome: H-11 (pin y lock entre dos dashboards, toast «Copia restaurada», la elegida sigue) y H-4 (plegar y desplegar no rota las 8 copias; par 14/15). UX-A1F-01 sigue abierto en Chrome: tras solo plegar, el diálogo dijo «Antes se guarda una copia del estado actual.» (no «ya está entre las copias»); al restaurar la más reciente se escribió 17:05:00 y salió 17:00:30. Sin altos. Solo Chrome. Turno UX cogido a las 17:49:55 y soltado a las 18:09 (`turno.py ver` = libre). No se encargó nada a Dev. No se arrancó UX-S1 ni la auditoría. No se tocó D1, D2/H1, P1 ni el lanzador. No es un OK de publicación."
-    },
-    {
-      "at": "2026-11-10T18:03:49+01:00",
-      "actor": "Tabby nueva",
-      "text": "lanzador r10 NO APTO contrastado (informe sha a75f7cc074c84ee2fa83eb8c70fe87a17fabb17d3aea28dbaaea6e4a26d15f21, 5978 B, grep -ci aprobado = 0; sidecar coincide (con nombre de fichero); Q01/Q02 352/352, diffs vacíos frente al log r10; Q01 PID 3046447, 17:54:27–17:54:43; Q02 PID 3050105, 17:54:43–17:54:58; N31 y N32 cerrados; N25–N27 y N19–N23 siguen cerrados; bloquean N33 y N34; N35 en baja; r1–r9 e INFORME-r9 sha 3cb91965… e INFORME r10 sha 761df526… intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `e9ff7c06`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos; turno en UX desde las 17:49:55). Hallazgos y §5 ya están en el chat de Dev; no los reenvío. Encargo a Dev, ahora y sin coger el turno, la corrección de N33 y N34 y el refuerzo del test (N35), en paquete aparte, sin mezclarla con la revisión UX de los flecos de A1 ni con UX-S1. No toco D1, D2/H1 ni P1. No arranco UX-S1 ni la analítica. No encargo H-14/H-15. No es un OK de publicación."
     }
   ],
-  "contentHash": "79201db7"
+  "contentHash": "a7071fcc"
 }
