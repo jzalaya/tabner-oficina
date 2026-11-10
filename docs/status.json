@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:38:56+01:00",
-  "sourceMtime": "2026-11-10T13:38:53+01:00",
+  "generatedAt": "2026-11-10T13:39:41+01:00",
+  "sourceMtime": "2026-11-10T13:39:30+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "pausado",
       "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "E01 r07 programado en The Die Decides para hoy 21:00 Europe/Madrid (15:00 ET / 12:00 PT): (ID T6sjDTcI4sY). Título: Floor 1: The Moss Hound | The Die Decides. Miniatura = primer fotograma (YouTube pidió teléfono para miniatura personalizada). Comentario fijado pendiente de que sea público. Calendario TDD…",
+      "detail": "El Guionista (por aprobación de Carlos vía Auditor) mueve la rutina «Seguimiento de Shorts publicados» de las 19:00 a hacia las 21:20 Europe/Madrid (flexible: hasta 10 min antes o 15 min después). Próxima ejecución hoy 10/11 a las 21:16. El corte del 004 de esta noche se etiqueta con la edad real (~28 h). El ~48 h…",
       "next": "",
       "block": null
     },
@@ -108,17 +108,17 @@
       "status": "pausado",
       "task": "Luck is Math: 004 publicado; 005, 006 y 007 en revisión",
       "since": null,
-      "detail": "El Director informó de que Carlos dio el OK a 005 r04, 006 r04 y 007 r05. Cambio de hora, no de fechas: salen a las 21:00 Europe/Madrid (15:00 ET / 12:00 PT) el X 11/11, V 13/11 y L 16/11. Los publica el Director (no se suben desde aquí); las métricas a 24 y 48 h se desplazan a ~21:00 de esos días. Relevo (Carlos vía…",
+      "detail": "La rutina de métricas del Guionista pasa de las 19:00 a hacia las 21:20 Europe/Madrid. El 004 se lee hoy con edad real (~28 h); el ~48 h sigue anclado al 11/11 ~17:15 (~52 h a las 21:20). Los cortes de 005–007 se leen hacia las 21:20 del día siguiente y del segundo día.",
       "next": "Revisar las entregas del Productor: 005 r03 para el M 10/11 a las 12:00; 006 r04 para el J 12/11 a las 12:00; 007 r05 para el D 15/11 a las 12:00.",
       "block": null
     },
     {
       "id": "shorts-guionista",
       "name": "Shorts Guionista",
-      "status": "hecho",
-      "task": "Guiones entregados",
+      "status": "pausado",
+      "task": "Guiones de Shorts",
       "since": null,
-      "detail": "Guionista: 006 (~43 s, reto «how many duplicates are in your drawer?») y 007 (~42,5 s, reto «How many times do you riffle?») recortados; los -verify.py salen con código 0. Corrección exacta del 007: 2^52 − 52 = 4.503.599.627.370.444 ≈ 4,5×10^15 (comprobado); locución y pantalla sin cambios. Del 004 al 007, todos…",
+      "detail": "La rutina de métricas del Guionista pasa de las 19:00 a hacia las 21:20 Europe/Madrid. El 004 se lee hoy con edad real (~28 h); el ~48 h sigue anclado al 11/11 ~17:15 (~52 h a las 21:20). Los cortes de 005–007 se leen hacia las 21:20 del día siguiente y del segundo día.",
       "next": "Sin encargo nuevo registrado.",
       "block": null
     },
@@ -475,6 +475,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T13:39:00+01:00",
+      "actor": "Luck is Math",
+      "text": "La rutina de métricas del Guionista pasa de las 19:00 a hacia las 21:20 Europe/Madrid. El 004 se lee hoy con edad real (~28 h); el ~48 h sigue anclado al 11/11 ~17:15 (~52 h a las 21:20). Los cortes de 005–007 se leen hacia las 21:20 del día siguiente y del…"
+    },
+    {
+      "at": "2026-11-10T13:39:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "El Guionista (por aprobación de Carlos vía Auditor) mueve la rutina «Seguimiento de Shorts publicados» de las 19:00 a hacia las 21:20 Europe/Madrid (flexible: hasta 10 min antes o 15 min después). Próxima ejecución hoy 10/11 a las 21:16. El corte del 004 de…"
+    },
+    {
       "at": "2026-11-10T13:38:00+01:00",
       "actor": "Tabby nueva",
       "text": "decisión de Carlos de las 13:36 (chat de Auditor; DECISIONES). A1 arranca ya en un worktree (`/workspace/wt/a1`, base f8c50faa); no espera a la QA del lanzador. Encargo a Dev: el turno está libre tras la entrega r3 (INFORME y wrappers contrastados; 90/90; no reenvío el paquete a QA). En la ronda UX de ~15:50, UX propone a Tabby y no coge turno ni Chrome real ni encarga a Dev mientras A1 o la QA del lanzador estén abiertos. Tabby no escribe a Carlos al cerrar o encargar una unidad. Las respuestas de X se aprueban una sola vez, en el chat de Redes. Cabecera de ESTADO reescrita. Commit de `turno.py` y su README, sin interrumpir trabajo en curso. No se tocan D1, D2/H1 ni P1."
@@ -540,11 +550,6 @@
       "text": "lanzador único de Claude listo, sin coger el turno. Punto de entrada `/workspace/run-claude-wt.sh`. Worktrees en `/workspace/wt/<unidad>`; nadie programa en `/workspace/tabner`. Sesiones con `--session-id` propio (nada de `--continue`). `flock` solo para buzón de pruebas, tiendas, y como mucho una sesión pesada de Tabner y una de Shorts a la vez. `turno.py` se conserva archivado, sin modificar. Pruebas sintéticas: `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 31/31, EXIT_REAL=0 (log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador.log`, INICIO=2026-11-10T12:54:14+01:00, FIN=2026-11-10T12:54:27+01:00). INFORME `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha 31f3e57365c9d75d8acdcb1557c830b5b4143bc29f66437b50c36ca25a4dbf25). No se ha empezado A1 (encargo de Carlos/Creador 12:47 y DECISIONES 12:44: primero el lanzador). No se tocó D1, D2/H1 ni P1. Una sola revisión de QA, ya avisada en su chat."
     },
     {
-      "at": "2026-11-10T12:51:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "Carlos aprueba el piloto TDD E01 r07 (voz Kokoro am_michael toma A). No se publica el piloto. Pendiente su OK para abrir el canal The Die Decides."
-    },
-    {
       "at": "2026-11-10T12:50:00+01:00",
       "actor": "Tabby nueva",
       "text": "revisión UX de O1 contrastada (informe y sha coinciden; 19 capturas; turno libre). O1 queda cerrada como unidad de interfaz (sin medios ni altos). H-7 se mantiene. El límite de cobertura (tarjeta completa de la barra no reseguida en ES/zh_CN; solo Chrome) no bloquea. Encargo A1 a Dev: instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca storage.sync; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms queda fuera de esta unidad). Playwright no es puerta de A1; el contrato lo cubre vitest y la UI se revisa a mano. Textos nuevos en 9 idiomas. No se quita el banner de copia (eso es O3, después de A1). No se tocan D1, D2/H1 ni P1."
@@ -568,12 +573,7 @@
       "at": "2026-11-10T12:21:00+01:00",
       "actor": "Tabby nueva",
       "text": "O1 APTO contrastado (informe y sha coinciden; turno libre). Encargo a UX la revisión a mano en Chrome real de f8c50faa (hueco del popup, onboarding, Novedades, barra sin sesión, textos). H-7 se mantiene: «Entrar con tu email» al compartir sin sesión es requisito de la función, no una promo de O1. Playwright no es puerta de O1; el contrato lo cubre vitest y la UI se revisa a mano. H-1 (cobertura) ya está en Dev, no lo reenvío. No se lanza A1. No se tocan D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T12:20:00+01:00",
-      "actor": "QA",
-      "text": "O1 (`f8c50faa`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445). Turno QA cogido a las 12:08:29 y soltado a las 12:17:51 Europe/Madrid; el cerrojo queda libre. La llamada a crear cuenta desaparece del popup, del onboarding y de Novedades; la barra lateral no cambia; H-1 (media, cobertura): 4 mutantes de QA sobreviven; conviene que Dev refuerce los tests. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios. Pendiente revisión manual/UI (Tabby o UX), incluida la decisión de H-7. Flecos no bloqueantes a Dev: H-1 a H-6 y H-8."
     }
   ],
-  "contentHash": "db8db2d0"
+  "contentHash": "30f7d416"
 }
