@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:56:56+01:00",
-  "sourceMtime": "2026-11-10T14:56:44+01:00",
+  "generatedAt": "2026-11-10T14:58:26+01:00",
+  "sourceMtime": "2026-11-10T14:57:57+01:00",
   "bots": [
     {
       "id": "dev",
@@ -246,7 +246,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "r6 entregado a QA el 2026-11-10T14:56 Europe/Madrid (corrección de N12, N13, N10b/c/d, N11b, N14 y N15 del r5 NO APTO). Test oficial 207/207 EXIT_REAL=0, INICIO 14:55:04 FIN 14:55:18 Europe/Madrid, PID 2207648, CWD `/workspace`, log sha df141301…. Entry sha 5c979568…; wrappers/git sha cf2ccba5…; tests sha 805e7ba1…; write-settings sha 09342fb6…; POLITICA sha ee1e0642…. INFORME sha 18c92329… (5159 B). r5 conservado en INFORME-r5.md (sha 913b39b4…). Informe QA r5 sha 80c59c31… e INFORME-r4b sha 2653e5c0… intactos. `/workspace/tabner` en f8c50faa. A1 (`0138b443`) no tocada. Sin coger el turno.",
-      "next": "Pendiente revisión de QA. N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
+      "next": "QA revisa r6 (ya entregado en su chat; no reenviar). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
       "block": "Entregado, pendiente de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
     },
     {
@@ -478,6 +478,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T14:57:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "lanzador r6 contrastado (INFORME sha 18c92329…, 5159 B; log sha df141301…, 207/207 y 0 fallos, INICIO 14:55:04 FIN 14:55:18 Europe/Madrid, PID 2207648, CWD `/workspace`; entry sha 5c979568…; wrappers/git sha cf2ccba5…; tests sha 805e7ba1…; write-settings sha 09342fb6…; POLITICA sha ee1e0642… coinciden; INFORME-r5 sha 913b39b4…, INFORME-r4b sha 2653e5c0… e informe QA r5 sha 80c59c31… intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos; turno UX desde las 14:32:59). No reenvío el paquete a QA (Dev ya lo ha entregado en su chat). No interrumpo la revisión UX a mano de A1. N7/N8 siguen en baja. H9 sigue cerrado. La ronda UX de ~15:50 sigue siendo solo propuesta mientras A1 o la QA del lanzador estén abiertos. No es un OK de publicación."
+    },
+    {
+      "at": "2026-11-10T14:57:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-10T14:56:00+01:00",
       "actor": "Dev",
       "text": "corrección N12, N13, N10b/c/d, N11b, N14 y N15 del lanzador (r6) entregada a QA, sin coger el turno y sin tocar A1 ni interrumpir su revisión UX. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 207/207 EXIT_REAL=0, INICIO 14:55:04 FIN 14:55:18 Europe/Madrid, PID 2207648, CWD `/workspace`, log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-r6.log` (sha df1413012eb1ffece60a7feed5eaf3871574856fd3d8010e7e91c82ec4a3e38f). Entry sha 5c97956854c439c33df17eb3af55a5f1cd715bd282e297b1e459bec9984545a6; wrappers/git sha cf2ccba5385a415839e7d93eedc93c915b048806d9bb56f62993fcc3f6ebf2a6; tests sha 805e7ba1b6b00e60fe64fef6482f0a3742adc734381e07ef644717bd4fe8ce6d; write-settings.py sha 09342fb67ce9558ec5fc25ef1efc0a188b9eea4fcf23d1734b33a64a3f9e7482; POLITICA sha ee1e06423b9d43f56d2ee6dc96a6b320f66b65b8b2806f81ee87e0ee5c791729. INFORME sha 18c9232960e3b379b86ee9672284fc95b8d8622632164f382a0a3dd71b823a52 (5159 B). r5 conservado en INFORME-r5.md (sha 913b39b4…). N7/N8 siguen en baja. H9, D1, D2/H1, P1, turno.py y `/workspace/tabner` (f8c50faa) no se tocan."
@@ -486,11 +496,6 @@
       "at": "2026-11-10T14:49:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador r5 NO APTO contrastado (informe sha 80c59c31…, 14236 B, grep -ci aprobado = 0; Q01/Q02 116/116; N10 y N11 exactos del r4b cerrados; bloquean N12, N13 y N10b, más N10c, N11b, N10d, N14, N15 y tests m30/m31; r1–r4b e INFORME-r4b intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos). Encargo a Dev la corrección de N12, N13, N10b/c/d, N11b, N14, N15 y el refuerzo del test (§5); no reenvío los hallazgos (QA ya los ha dejado en su chat). No interrumpo la revisión UX a mano de A1 (turno UX cogido a las 14:32:59). N7/N8 siguen en baja. H9 sigue cerrado. La ronda UX de ~15:50 sigue siendo solo propuesta mientras A1 o la QA del lanzador estén abiertos. No es un OK de publicación."
-    },
-    {
-      "at": "2026-11-10T14:49:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T14:48:00+01:00",
@@ -571,12 +576,7 @@
       "at": "2026-11-10T13:54:00+01:00",
       "actor": "Dev",
       "text": "QA declara el lanzador r3 NO APTO (informe sha `ab315925d9eb340f79054f455c1452533a8e6f3bd8b672699fefe5923be8aa36`; 90/90 y N1–N3 bloquean, pero abre N9 alta: `-c include.path` cuela alias `push` y `!`). N6 parcial (mutante m17). N7/N8 siguen en baja. No interrumpo A1 (Claude sigue en `/workspace/wt/a1`, turno DEV, `claude-tabner.lock` ocupado). El arreglo mínimo del §7 queda en cola para justo después de cerrar A1; no se mezcla en el commit de A1."
-    },
-    {
-      "at": "2026-11-10T13:53:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "lanzador r3 NO APTO contrastado (informe y sha coinciden; 8258 B; grep -ci aprobado = 0; r1 y r2 intactos; /workspace/tabner en f8c50faa; turno sigue en DEV por A1 desde las 13:40:15; /workspace/wt/a1 intacto como cerrojo, trabajo de A1 en curso). No interrumpo A1. Encargo a Dev la corrección de N9 y el refuerzo del test (include.path y el caso que mata m17) al cerrar A1, no ahora. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). Después, nueva revisión de QA. H9 (`/workspace/run-claude.sh`) sigue en Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "aaa177b5"
+  "contentHash": "7bad86f6"
 }
