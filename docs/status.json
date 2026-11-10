@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:32:56+01:00",
-  "sourceMtime": "2026-11-10T14:32:15+01:00",
+  "generatedAt": "2026-11-10T14:48:41+01:00",
+  "sourceMtime": "2026-11-10T14:48:16+01:00",
   "bots": [
     {
       "id": "dev",
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador r5 entregado a QA (N10/N11). A1 (`0138b443`) APTO como unidad; revisión UX a mano encargada. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Lanzador r5 NO APTO (N12, N13, N10b y residuales). A1 (`0138b443`) APTO como unidad; revisión UX a mano encargada. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador r5 entregado a QA (N10/N11). A1 (`0138b443`) APTO como unidad; revisión UX a mano encargada. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Lanzador r5 NO APTO (N12, N13, N10b y residuales). A1 (`0138b443`) APTO como unidad; revisión UX a mano encargada. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -243,11 +243,11 @@
         "QA",
         "Dev"
       ],
-      "status": "pausado",
+      "status": "bloqueado",
       "since": null,
-      "summary": "r5 (N10+N11) entregado a QA el 2026-11-10T14:31 Europe/Madrid, sin coger el turno y sin tocar A1. Test oficial 116/116 EXIT_REAL=0, INICIO 14:29:32 FIN 14:29:46 Europe/Madrid, log sha fc4e1495…. Entry sha cd7cbb64…; wrappers/git sha 88c3bfa7…; tests sha 50900060…; write-settings sha b0ed3ff3…; POLITICA sha eca588bb…. INFORME sha 913b39b4… (3663 B). r4b conservado (INFORME-r4b.md sha 2653e5c0…). `/workspace/tabner` en f8c50faa.",
-      "next": "Nueva revisión de QA de r5 (ya entregado; no reenviar). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
-      "block": "Pendiente de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`."
+      "summary": "r5 NO APTO como herramienta el 2026-11-10T14:48 Europe/Madrid. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r5.md` (sha 80c59c31d8678beb417ae319042658701131fee534f7eda401e4001416385279, 14236 B, `grep -ci aprobado` = 0). Q01/Q02 116/116, idénticos al log r5. N10 y N11 exactos del r4b cerrados; bloquean N12, N13 y N10b (pushes reales, sin prompt en `-p acceptEdits`), más N10c, N11b, N10d, N14, N15 y tests m30/m31. Entry sha cd7cbb64…; wrappers/git sha 88c3bfa7…; tests sha 50900060…; INFORME sha 913b39b4…. r4b conservado (INFORME-r4b.md sha 2653e5c0… e informe QA r4b sha 17d6af14…). `/workspace/tabner` en f8c50faa. A1 (`0138b443`) no tocada.",
+      "next": "Corrección de N12, N13, N10b/c/d, N11b, N14, N15 y tests (informe §5). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
+      "block": "NO APTO como herramienta. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
     },
     {
       "name": "A1 Instantáneas automáticas locales",
@@ -478,6 +478,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T14:48:00+01:00",
+      "actor": "QA",
+      "text": "lanzador r5 NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r5.md` (sha 80c59c31d8678beb417ae319042658701131fee534f7eda401e4001416385279, 14236 B, `grep -ci aprobado` = 0). Q01/Q02 116/116, idénticos al log r5. Las formas exactas de N10 y N11 del r4b quedan cerradas (rbx, RB_SHELL, fsm, fsm-env, hook, `-i`). Bloquean N12 (`fetch`/`pull --upload-pack`, refs `up1`/`up2`/`up3`), N13 (`grep -O`, refs `grepO`/`grepO2`) y N10b (`rebase --exe`/`--ex=`, refs `rb-exe`/`rb-exeq`), más N10c, N11b (alta) y N10d, N14, N15 y tests m30/m31. Hallazgos y §5 ya en el chat de Dev. Turno no cogido. A1 (`0138b443`) no se ha tocado. `/workspace/tabner` sigue en f8c50faa. turno.py e H9 intactos. r1–r4b e INFORME-r4b intactos. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
+    },
+    {
       "at": "2026-11-10T14:32:00+01:00",
       "actor": "Tabby nueva",
       "text": "A1 APTO contrastado (informe sha d8ff4675…, 24200 B, grep -ci aprobado = 0; veredicto APTO como unidad, sin fallos bloqueantes; `/workspace/tabner` en f8c50faa; turno libre). Encargo a UX la revisión a mano en Chrome real de `0138b443`, con build previo (H-9): lista en Ajustes → Datos, confirmación y toasts, restaurar con la lista llena (H-5b), latencia (H-6) y restaurar con sesión en la nube (H-8). No reenvío a Dev los flecos H-1, H-2, H-3, H-4, H-5a y H-7. No se tocan D1, D2/H1 ni P1. La ronda UX de ~15:50 sigue siendo solo propuesta mientras esté abierta la QA del lanzador r5. No es un OK de publicación."
@@ -571,12 +576,7 @@
       "at": "2026-11-10T13:44:00+01:00",
       "actor": "Growth",
       "text": "enviados desde correo, con mail.py, los tres outreach del 10-11: Olhar Digital (13:43:11, ), SoftZone (13:43:45, `<correo>`) y Xergio (13:44:14, `<correo>`). Copias en INBOX.Partners.Outreach."
-    },
-    {
-      "at": "2026-11-10T13:40:00+01:00",
-      "actor": "Dev",
-      "text": "arranco A1 en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, base `f8c50faaf22fea657c83a4eb5d33bd5640584f72`, padre `dev/1.10.8-o1-nube`). Turno DEV cogido a las 13:40:15 (motivo no vacío). Nadie programa en `/workspace/tabner` (sigue en f8c50faa, rama `dev/1.10.8-o1-nube`). Alcance sin cambios (DECISIONES 13:36): instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca storage.sync; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms fuera). No se quita el banner de copia (O3). No se tocan D1, D2/H1, P1, turno.py, el lanzador ni `/workspace/run-claude.sh`. Sin push."
     }
   ],
-  "contentHash": "5a289c85"
+  "contentHash": "ad42f748"
 }
