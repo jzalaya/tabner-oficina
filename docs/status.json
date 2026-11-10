@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T10:24:30+01:00",
-  "sourceMtime": "2026-11-10T10:24:04+01:00",
+  "generatedAt": "2026-11-10T10:31:15+01:00",
+  "sourceMtime": "2026-11-10T10:30:37+01:00",
   "bots": [
     {
       "id": "dev",
@@ -8,8 +8,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
-      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
+      "next": "Siguiente: revisión UX/manual de M1 (M1-1 a M1-4, M1-7) y luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -18,8 +18,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
-      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
+      "next": "Siguiente: revisión UX/manual de M1 (M1-1 a M1-4, M1-7) y luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -28,9 +28,9 @@
       "status": "bloqueado",
       "task": "M1 Guardar sesión unificado",
       "since": null,
-      "detail": "Código entregado a QA el 2026-11-10T08:46 Europe/Madrid. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Escrito a mano (sin Claude Code). Candidato 18/18 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; el cambio de defecto del popup va en Novedades.",
-      "next": "QA revisa el SHA y responde los fallos directo a Dev.",
-      "block": "Esperando dictamen de QA. No se publica ni se tocan D1, D2/H1 ni P1 en esta unidad."
+      "detail": "QA: APTO como unidad el 2026-11-10T10:30 Europe/Madrid, sin fallos bloqueantes. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Candidato 18/18 + 132/132 y regresión ampliada 694/694, iguales en la base 3ce1af81. 4 mutantes de Dev: 1 rojo cada uno. tsc EXIT 2 solo 3 TS2307 previos. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md` (sha eee4eab290b32d19d5ba5b9a8ff2647fabfa97473a20d1ce35444b65a283061e).",
+      "next": "UX/Tabby: M1-1 (novedad en la entrada 1.10.7), M1-2 (Deshacer no es el mismo si no se cierran pestañas), M1-3 (popup con closeTabsOnDrop), M1-4 (defecto «esta ventana») y M1-7 (si aplica Playwright), más revisión manual de UI. Dev: flecos no bloqueantes M1-5 (i18n `saveSession`) y M1-6 (consulta sin windowId).",
+      "block": "No bloquea M1. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
       "id": "feature-analyst",
@@ -68,8 +68,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
-      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
+      "next": "Siguiente: revisión UX/manual de M1 (M1-1 a M1-4, M1-7) y luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -193,8 +193,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 entregada a QA: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push.",
-      "next": "QA revisa M1. Luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
+      "next": "Siguiente: revisión UX/manual de M1 (M1-1 a M1-4, M1-7) y luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -220,9 +220,9 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Código entregado a QA el 2026-11-10T08:46 Europe/Madrid. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Escrito a mano (sin Claude Code). Candidato 18/18 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; el cambio de defecto del popup va en Novedades.",
-      "next": "QA revisa el SHA y responde los fallos directo a Dev.",
-      "block": "Esperando dictamen de QA. No se publica ni se tocan D1, D2/H1 ni P1 en esta unidad."
+      "summary": "QA: APTO como unidad el 2026-11-10T10:30 Europe/Madrid, sin fallos bloqueantes. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Candidato 18/18 + 132/132 y regresión ampliada 694/694, iguales en la base 3ce1af81. 4 mutantes de Dev: 1 rojo cada uno. tsc EXIT 2 solo 3 TS2307 previos. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md` (sha eee4eab290b32d19d5ba5b9a8ff2647fabfa97473a20d1ce35444b65a283061e).",
+      "next": "UX/Tabby: M1-1 (novedad en la entrada 1.10.7), M1-2 (Deshacer no es el mismo si no se cierran pestañas), M1-3 (popup con closeTabsOnDrop), M1-4 (defecto «esta ventana») y M1-7 (si aplica Playwright), más revisión manual de UI. Dev: flecos no bloqueantes M1-5 (i18n `saveSession`) y M1-6 (consulta sin windowId).",
+      "block": "No bloquea M1. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
       "name": "O1 Menos llamadas a la nube",
@@ -304,7 +304,7 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Libre. Dev lo soltó el 2026-11-10T08:46 Europe/Madrid al cerrar M1 (`turno.py ver` = libre).",
+      "summary": "Libre. QA lo cogió a las 10:17:08 y lo soltó a las 10:25:47 Europe/Madrid al cerrar la revisión de M1.",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T10:30:00+01:00",
+      "actor": "QA",
+      "text": "M1 (`3446ff9`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md` (sha eee4eab290b32d19d5ba5b9a8ff2647fabfa97473a20d1ce35444b65a283061e). Turno QA cogido a las 10:17:08 y soltado a las 10:25:47 Europe/Madrid; el cerrojo queda libre. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios. Flecos para UX/Tabby antes de publicar: M1-1 a M1-4 y M1-7. A Dev: M1-5 (i18n) y M1-6 (cobertura)."
+    },
+    {
       "at": "2026-11-10T10:15:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "005 r04 (9/11 15:30), 006 r04 (9/11 15:48) y 007 r05 (9/11 16:03) entregados, sin revisión del Orq. LiM registrada. 005 sale mañana X 11/11 17:00 (rutina). Analítica: 001 y 003 actualizados 9/11. Ritmo 3/semana OK."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T10:20:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "parada del 8/11 levantada por Carlos. 004 r06 sigue sin revisión del Orq. LiM registrada y le toca salir hoy L 9/11. 005 tiene r01 y r02 (7/11) para X 11/11, pendiente de revisión. 006 y 007 con carpeta de producción creada hoy. Analítica: último registro…"
-    },
-    {
-      "at": "2026-11-07T16:15:00+01:00",
-      "actor": "Luck is Math",
-      "text": "003 r17 publicado por el padre por orden de Carlos (S 7/11, hacia las 16:11): URL confirmada al Analista; cortes desde la publicación real (24 h, D 8/11 ~16:11; 48 h, L 9/11 ~16:11)."
     }
   ],
-  "contentHash": "60c7bcb3"
+  "contentHash": "7c4d3b1e"
 }
