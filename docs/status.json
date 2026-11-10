@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:14:11+01:00",
-  "sourceMtime": "2026-11-10T14:13:34+01:00",
+  "generatedAt": "2026-11-10T14:17:11+01:00",
+  "sourceMtime": "2026-11-10T14:16:48+01:00",
   "bots": [
     {
       "id": "dev",
@@ -38,7 +38,7 @@
       "status": "hecho",
       "task": "Investigación de funciones",
       "since": null,
-      "detail": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst no arranca otro ciclo.",
+      "detail": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
       "next": "Próximas rondas: Tabner UX (ronda de los martes).",
       "block": null
     },
@@ -246,7 +246,7 @@
       "status": "pausado",
       "since": null,
       "summary": "Corrección N9 + texto de `turno.py` (r4b) entregada a QA el 2026-11-10T14:12 Europe/Madrid. Informe `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha 2653e5c0f61a747ebe1395f5e18acaf2a774e45d484b6f0ad8cb7d91e7ede8e7). r4 queda en `INFORME-r4.md` (sha 18f8ff9be4df8e94b823027d8315cf4c3c8afd852088eb870c396ceb84e3616e). Punto de entrada `/workspace/run-claude-wt.sh` (sha 0052072e59b351391a3e44ef618b68080836a6371eb53205f0fd846affaf1edd, solo texto de help/status). `POLITICA.md` sha 17da1664d1d170f5f95b8c786c65e812605423eaa839250d073a7d7f558f43c9. `wrappers/git` sha 840957a48e5b77ba3b35b02d5fe741fe610e1708afcc8c2e55e3b9f3e9cf4b52. Test 96/96, 0 fallos (log sha 597a2aaf05571f3d0c1c6f7af42f440483cf686acbf17a7ca334740f6553ca65, 14:11:57–14:12:10 Europe/Madrid). r3 NO APTO previo intacto (sha ab315925d9eb340f79054f455c1452533a8e6f3bd8b672699fefe5923be8aa36). No se cogió el turno. No se tocó A1 (`0138b443`).",
-      "next": "Nueva revisión de QA del paquete r4b (ya entregado; no reenviar). No interrumpir la QA de A1. N7/N8 siguen en baja. H9 lo lleva Creador.",
+      "next": "Nueva revisión de QA del paquete r4b (ya entregado; no reenviar). No interrumpir la QA de A1. N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
       "block": "Pendiente de veredicto de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`."
     },
     {
@@ -341,7 +341,7 @@
       ],
       "status": "hecho",
       "since": null,
-      "summary": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst no arranca otro ciclo.",
+      "summary": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
       "next": "Próximas rondas: Tabner UX (ronda de los martes).",
       "block": ""
     },
@@ -477,14 +477,19 @@
   ],
   "log": [
     {
-      "at": "2026-11-10T14:13:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "lanzador r4b contrastado (INFORME sha 2653e5c0…; run-claude-wt.sh sha 0052072e… y POLITICA.md sha 17da1664… coinciden; el texto ya dice que `turno.py` sigue en vigor, no archivado; log sha 597a2aaf…, 96/96 y 0 fallos, mtime del log 14:12:10 Europe/Madrid; r3 y r4 intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… intacto; turno libre). No reenvío el paquete a QA (Dev ya lo ha entregado en su chat, pidiendo revisión de r4b y no solo de r4). No interrumpo la QA de A1. N7/N8 siguen en baja. H9 lo sigue llevando Creador; Dev no lo ha tocado."
+      "at": "2026-11-10T14:16:00+01:00",
+      "actor": "Auditor",
+      "text": "decisión de Carlos de las 14:16 (chat de Auditor). Actualizadas dos celdas desfasadas, sin tocar el resto ni interrumpir las QA: H9 del lanzador ya está cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`); Feature Analyst (archivo) queda oculto de la barra y el rol de investigación lo lleva Tabner UX. La rutina pausada de las 19:00 del Shorts Analista queda pedida de baja (las métricas las lleva el Guionista hacia las 21:20). No se toca A1 ni el r4b."
+    },
+    {
+      "at": "2026-11-10T14:16:00+01:00",
+      "actor": "Auditor (solo celdas H9 y Feature Analyst; el resto lo sigue llevando Tabby nueva)",
+      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T14:13:00+01:00",
-      "actor": "Tabby (nueva)",
-      "text": "Actualizado"
+      "actor": "Tabby nueva",
+      "text": "lanzador r4b contrastado (INFORME sha 2653e5c0…; run-claude-wt.sh sha 0052072e… y POLITICA.md sha 17da1664… coinciden; el texto ya dice que `turno.py` sigue en vigor, no archivado; log sha 597a2aaf…, 96/96 y 0 fallos, mtime del log 14:12:10 Europe/Madrid; r3 y r4 intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… intacto; turno libre). No reenvío el paquete a QA (Dev ya lo ha entregado en su chat, pidiendo revisión de r4b y no solo de r4). No interrumpo la QA de A1. N7/N8 siguen en baja. H9 lo sigue llevando Creador; Dev no lo ha tocado."
     },
     {
       "at": "2026-11-10T14:12:00+01:00",
@@ -570,12 +575,7 @@
       "at": "2026-11-10T13:37:00+01:00",
       "actor": "Dev",
       "text": "corrección N1–N3 del lanzador (r3) entregada a QA, sin coger el turno y sin arrancar A1. El punto de entrada `/workspace/run-claude-wt.sh` no cambia de contenido (sha 43a04ea3e63b819aeac6b6baa14ff76007611a20f7493c9c2fb96d89d930e834); el cambio está en `wrappers/git` (sha 45ab21781ee95bb20327a4597de4c4cd69fd5db9bef158445277474cbd2cd0b6) y `write-settings.py` (sha 7915db6757249a3670c3322b4a75edbbcd53e587311f3f671b882f413325fc7d). Pruebas: `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 90/90, EXIT_REAL=0 (log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador.log`, sha baeb1217b34e2582689a48edb6b67306af4b07db832a84376cf9ee15ac1e4718, INICIO=2026-11-10T13:36:01+01:00, FIN=2026-11-10T13:36:15+01:00). INFORME `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha ce1f36d34fced451712b5580e5c144b8713c622b10d2a9e562f844da10606da1). `/workspace/tabner` sigue en f8c50faa; no hay worktree de producto bajo `/workspace/wt`; `turno.py` y `/workspace/run-claude.sh` intactos (H9 sigue en Creador). No se tocó D1, D2/H1 ni P1. A1 espera la nueva revisión de QA."
-    },
-    {
-      "at": "2026-11-10T13:33:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "lanzador r2 NO APTO contrastado (informe y sha coinciden; 13331 B; grep -ci aprobado = 0; r1 intacto; /workspace/tabner en f8c50faa; turno.py intacto; turno libre). Encargo a Dev la corrección de N1–N3 y el refuerzo del test; después, nueva revisión de QA. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). A1 sigue en espera; el alcance no cambia. H9 (`/workspace/run-claude.sh`) sigue en Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "714d4ffc"
+  "contentHash": "6c68c3b1"
 }
