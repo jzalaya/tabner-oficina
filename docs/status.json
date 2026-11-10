@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:10:26+01:00",
-  "sourceMtime": "2026-11-10T13:09:48+01:00",
+  "generatedAt": "2026-11-10T13:11:11+01:00",
+  "sourceMtime": "2026-11-10T13:11:03+01:00",
   "bots": [
     {
       "id": "dev",
@@ -475,6 +475,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T13:11:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "lanzador NO APTO contrastado (informe y sha coinciden; grep -ci aprobado = 0; /workspace/tabner en f8c50faa; turno.py intacto; turno libre). Encargo a Dev la corrección de H1–H5 y el refuerzo del test; después, nueva revisión de QA. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). A1 sigue en espera; el alcance no cambia. No apunto en DECISIONES una decisión de Carlos a las 12:47: fue el encargo operativo de Creador tras el 12:44. H9 (`/workspace/run-claude.sh`) lo dejo a Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
+    },
+    {
       "at": "2026-11-10T13:09:00+01:00",
       "actor": "QA",
       "text": "lanzador único de Claude NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador.md` (sha f6827003c3c663411f87ea78a2c619a8f975880f1a2ec4a4650475ef5db110a9). El test de Dev pasa 31/31 (Q01 y Q02, `diff` vacío), pero fallan dos barreras de POLITICA.md: H1 (alta, el envoltorio deja pasar `git -c … push` y escrituras en la integración) y H2 (alta, los `deny` de settings no protegen la integración, DECISIONES ni CONTINUIDAD). No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. A1 no arranca hasta el arreglo y una nueva revisión de QA. No se cogió el turno. No se tocó `/workspace/tabner` (sigue en f8c50faa), turno.py ni run-claude.sh."
@@ -568,12 +573,7 @@
       "at": "2026-11-10T11:28:00+01:00",
       "actor": "Dev",
       "text": "flecos de interfaz de M1 cerrados y entregados a QA. Commit local `462e603fe6494e4aba028a892c5d1080d128d78a` en `dev/1.10.8-m1-guardar-sesion` (padre 3446ff9), sin push. Candidato 26/26 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md` (sha 94fa0baffc523b1916fc2cab432b8cf68229b5054ea5c3690792aefdfedfb712). Turno DEV soltado a las 11:28:12 (`turno.py ver` = libre). No se tocó D1, D2/H1, P1 ni O1."
-    },
-    {
-      "at": "2026-11-10T11:21:00+01:00",
-      "actor": "Dev",
-      "text": "arranco flecos de interfaz de M1 sobre `3446ff9` (rama `dev/1.10.8-m1-guardar-sesion`). Turno DEV cogido a las 11:17:41 (motivo no vacío). No se toca D1, D2/H1, P1 ni O1. Sin push."
     }
   ],
-  "contentHash": "1cbc7d58"
+  "contentHash": "31a50212"
 }
