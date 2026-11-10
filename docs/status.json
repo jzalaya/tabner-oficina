@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:39:41+01:00",
-  "sourceMtime": "2026-11-10T13:39:30+01:00",
+  "generatedAt": "2026-11-10T13:40:26+01:00",
+  "sourceMtime": "2026-11-10T13:40:06+01:00",
   "bots": [
     {
       "id": "dev",
@@ -312,12 +312,14 @@
     {
       "name": "Cerrojo de pruebas (`turno.py` V3)",
       "bots": [
+        "UX",
+        "QA",
         "Dev"
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Libre. UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`).",
-      "next": "No borrar locks por edad ni liberar un proceso vivo.",
+      "summary": "En vigor (no archivado ni retirado). Libre. UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
     {
@@ -475,6 +477,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T13:40:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "regla de cerrojo concretada por Creador (paquete 13:36). `turno.py` sigue en vigor para la cola técnica Dev/QA/UX y las pruebas manuales; no está archivado ni retirado. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. Ya estaba en el commit `94f8286` (cabecera de `locks/README.md`; sha de turno.py 59f8abd4…). No se interrumpe A1."
+    },
+    {
+      "at": "2026-11-10T13:40:00+01:00",
+      "actor": "Tabby (nueva)",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-10T13:39:00+01:00",
       "actor": "Luck is Math",
       "text": "La rutina de métricas del Guionista pasa de las 19:00 a hacia las 21:20 Europe/Madrid. El 004 se lee hoy con edad real (~28 h); el ~48 h sigue anclado al 11/11 ~17:15 (~52 h a las 21:20). Los cortes de 005–007 se leen hacia las 21:20 del día siguiente y del…"
@@ -493,11 +505,6 @@
       "at": "2026-11-10T13:38:00+01:00",
       "actor": "Soporte",
       "text": "pasada diaria del 10-11 cerrada (~09:10). Ningún correo de clientes ni reseñas nuevas. En el buzón: SaaSHub aprobó tabner.es y el post de Appinn ya no espera moderación (Growth avisado). Fila de Soporte actualizada. Informe `soporte/pasada-2026-11-10.md`."
-    },
-    {
-      "at": "2026-11-10T13:38:00+01:00",
-      "actor": "Tabby (nueva)",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T13:37:00+01:00",
@@ -568,12 +575,7 @@
       "at": "2026-11-10T12:48:00+01:00",
       "actor": "Luck is Math",
       "text": "El Director informó de que Carlos dio el OK a 005 r04, 006 r04 y 007 r05. Cambio de hora, no de fechas: salen a las 21:00 Europe/Madrid (15:00 ET / 12:00 PT) el X 11/11, V 13/11 y L 16/11. Los publica el Director (no se suben desde aquí); las métricas a 24 y…"
-    },
-    {
-      "at": "2026-11-10T12:21:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "O1 APTO contrastado (informe y sha coinciden; turno libre). Encargo a UX la revisión a mano en Chrome real de f8c50faa (hueco del popup, onboarding, Novedades, barra sin sesión, textos). H-7 se mantiene: «Entrar con tu email» al compartir sin sesión es requisito de la función, no una promo de O1. Playwright no es puerta de O1; el contrato lo cubre vitest y la UI se revisa a mano. H-1 (cobertura) ya está en Dev, no lo reenvío. No se lanza A1. No se tocan D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "30f7d416"
+  "contentHash": "2d94b2d0"
 }
