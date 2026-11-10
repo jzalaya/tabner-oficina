@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T11:23:01+01:00",
-  "sourceMtime": "2026-11-10T11:22:38+01:00",
+  "generatedAt": "2026-11-10T11:29:01+01:00",
+  "sourceMtime": "2026-11-10T11:28:23+01:00",
   "bots": [
     {
       "id": "dev",
@@ -8,8 +8,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad (`3446ff9`); flecos de interfaz entregados a QA: `462e603fe6494e4aba028a892c5d1080d128d78a` en `dev/1.10.8-m1-guardar-sesion` (padre 3446ff9), sin push. Informe `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md`.",
+      "next": "QA revisa los flecos de M1 (`462e603`). O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -18,8 +18,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad (`3446ff9`); flecos de interfaz entregados a QA: `462e603fe6494e4aba028a892c5d1080d128d78a` en `dev/1.10.8-m1-guardar-sesion` (padre 3446ff9), sin push. Informe `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md`.",
+      "next": "QA revisa los flecos de M1 (`462e603`). O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -28,9 +28,9 @@
       "status": "bloqueado",
       "task": "M1 Guardar sesión unificado",
       "since": null,
-      "detail": "QA APTO como unidad. Revisión UX a mano cerrada el 2026-11-10T11:20 Europe/Madrid sobre `3446ff9` (Chrome 156, perfil propio, sin Playwright). Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53. 5 medios (UX-M1-01 a 05) y 1 bajo (UX-M1-06). M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, se mueve al cortar la 1.10.8.",
-      "next": "Dev implementa UX-M1-01 a 06 (y M1-5/M1-6 si siguen pendientes) y entrega el SHA en el chat de QA. No se lanza O1. Decisiones Tabby 11:16: M1-2 unificar Deshacer; M1-3 el popup no cierra pestañas; M1-4 confirmado («esta ventana»).",
-      "block": "No bloquea M1 como unidad de código. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
+      "detail": "Flecos de interfaz entregados a QA el 2026-11-10T11:28 Europe/Madrid: commit local `462e603fe6494e4aba028a892c5d1080d128d78a` (padre 3446ff9), sin push. Candidato 26/26 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md` (sha 94fa0baffc523b1916fc2cab432b8cf68229b5054ea5c3690792aefdfedfb712). La unidad 3446ff9 sigue APTO; la revisión UX de 3446ff9 queda como partida.",
+      "next": "QA revisa `462e603`. No se lanza O1. M1-1 se mueve al cortar la 1.10.8.",
+      "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
       "id": "feature-analyst",
@@ -68,8 +68,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad (`3446ff9`); flecos de interfaz entregados a QA: `462e603fe6494e4aba028a892c5d1080d128d78a` en `dev/1.10.8-m1-guardar-sesion` (padre 3446ff9), sin push. Informe `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md`.",
+      "next": "QA revisa los flecos de M1 (`462e603`). O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -193,8 +193,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad (`3446ff9`); flecos de interfaz entregados a QA: `462e603fe6494e4aba028a892c5d1080d128d78a` en `dev/1.10.8-m1-guardar-sesion` (padre 3446ff9), sin push. Informe `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md`.",
+      "next": "QA revisa los flecos de M1 (`462e603`). O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -220,9 +220,9 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "QA APTO como unidad. Revisión UX a mano cerrada el 2026-11-10T11:20 Europe/Madrid sobre `3446ff9` (Chrome 156, perfil propio, sin Playwright). Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53. 5 medios (UX-M1-01 a 05) y 1 bajo (UX-M1-06). M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, se mueve al cortar la 1.10.8.",
-      "next": "Dev implementa UX-M1-01 a 06 (y M1-5/M1-6 si siguen pendientes) y entrega el SHA en el chat de QA. No se lanza O1. Decisiones Tabby 11:16: M1-2 unificar Deshacer; M1-3 el popup no cierra pestañas; M1-4 confirmado («esta ventana»).",
-      "block": "No bloquea M1 como unidad de código. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
+      "summary": "Flecos de interfaz entregados a QA el 2026-11-10T11:28 Europe/Madrid: commit local `462e603fe6494e4aba028a892c5d1080d128d78a` (padre 3446ff9), sin push. Candidato 26/26 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md` (sha 94fa0baffc523b1916fc2cab432b8cf68229b5054ea5c3690792aefdfedfb712). La unidad 3446ff9 sigue APTO; la revisión UX de 3446ff9 queda como partida.",
+      "next": "QA revisa `462e603`. No se lanza O1. M1-1 se mueve al cortar la 1.10.8.",
+      "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
       "name": "O1 Menos llamadas a la nube",
@@ -303,8 +303,8 @@
         "Dev"
       ],
       "status": "pausado",
-      "since": "2026-11-10T11:17:41+01:00",
-      "summary": "Ocupado por Dev desde 2026-11-10T11:17:41 Europe/Madrid (flecos de interfaz de M1 sobre 3446ff9; motivo no vacío).",
+      "since": null,
+      "summary": "Libre. Dev lo cogió a las 11:17:41 y lo soltó a las 11:28:12 Europe/Madrid al cerrar los flecos de M1 (`turno.py ver` = libre).",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T11:28:00+01:00",
+      "actor": "Dev",
+      "text": "flecos de interfaz de M1 cerrados y entregados a QA. Commit local `462e603fe6494e4aba028a892c5d1080d128d78a` en `dev/1.10.8-m1-guardar-sesion` (padre 3446ff9), sin push. Candidato 26/26 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md` (sha 94fa0baffc523b1916fc2cab432b8cf68229b5054ea5c3690792aefdfedfb712). Turno DEV soltado a las 11:28:12 (`turno.py ver` = libre). No se tocó D1, D2/H1, P1 ni O1."
+    },
+    {
       "at": "2026-11-10T11:21:00+01:00",
       "actor": "Dev",
       "text": "arranco flecos de interfaz de M1 sobre `3446ff9` (rama `dev/1.10.8-m1-guardar-sesion`). Turno DEV cogido a las 11:17:41 (motivo no vacío). No se toca D1, D2/H1, P1 ni O1. Sin push."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T17:28:00+01:00",
       "actor": "Tabby (archivo)",
       "text": "Actualizado"
-    },
-    {
-      "at": "2026-11-09T17:16:00+01:00",
-      "actor": "Luck is Math",
-      "text": "004 r08 publicado por el padre: (Why Your Friends Have More Friends Than You (On Average)). URL confirmada al Analista; cortes desde la publicación real (~17:15): 24 h el 10/11 ~17:15 y 48 h el 11/11 ~17:15."
     }
   ],
-  "contentHash": "430dfb21"
+  "contentHash": "bb4d758f"
 }
