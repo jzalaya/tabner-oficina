@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-10T14:07:26+01:00",
-  "sourceMtime": "2026-11-10T14:06:52+01:00",
+  "generatedAt": "2026-11-10T14:08:11+01:00",
+  "sourceMtime": "2026-11-10T14:07:40+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "activo",
-      "task": "A1 Instantáneas automáticas locales",
-      "since": "2026-11-10T13:40:15+01:00",
-      "detail": "En curso desde 2026-11-10T13:40:15 Europe/Madrid en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, base `f8c50faa`, padre `dev/1.10.8-o1-nube`). Turno DEV cogido. Alcance: instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca `storage.sync`; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms fuera).",
-      "next": "Implementación en el worktree. Nadie programa en `/workspace/tabner`. No se tocan D1, D2/H1, P1, turno.py ni `run-claude.sh`. Sin push.",
-      "block": null
+      "status": "bloqueado",
+      "task": "1.10.8 (versión)",
+      "since": null,
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Lanzador r3 NO APTO como herramienta (N9). A1 sigue en curso en worktree (DECISIONES 13:36), sin esperar esa QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
       "id": "qa",
@@ -255,11 +255,11 @@
         "QA",
         "Dev"
       ],
-      "status": "activo",
-      "since": "2026-11-10T13:40:15+01:00",
-      "summary": "En curso desde 2026-11-10T13:40:15 Europe/Madrid en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, base `f8c50faa`, padre `dev/1.10.8-o1-nube`). Turno DEV cogido. Alcance: instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca `storage.sync`; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms fuera).",
-      "next": "Implementación en el worktree. Nadie programa en `/workspace/tabner`. No se tocan D1, D2/H1, P1, turno.py ni `run-claude.sh`. Sin push.",
-      "block": "En curso."
+      "status": "hecho",
+      "since": null,
+      "summary": "Entregada a QA el 2026-11-10T14:08 Europe/Madrid. Commit local `0138b4432ae1189d05f1e7026a80e04fc84dbeb4` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80 EXIT_REAL=0 (14:07:16–14:07:20 Europe/Madrid). INFORME en `tabner-release/1.10.8/a1-instantaneas/INFORME.md`.",
+      "next": "Esperando revisión de QA. Sin push. No se tocan D1, D2/H1 ni P1. El N9 del lanzador va en paquete aparte.",
+      "block": "Entregada, pendiente QA."
     },
     {
       "name": "Analítica opt-in (con idioma)",
@@ -477,6 +477,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T14:08:00+01:00",
+      "actor": "Dev",
+      "text": "A1 entregada a QA. Commit local `0138b4432ae1189d05f1e7026a80e04fc84dbeb4` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). Tests Dev: `npx vitest run` de localSnapshots + noPaymentStrings + backup + localSnapshotsStore + settingsSnapshots → 80/80 EXIT_REAL=0, INICIO 14:07:16 FIN 14:07:20 Europe/Madrid. INFORME `/workspace/tabner-release/1.10.8/a1-instantaneas/INFORME.md`. Sin push. Suelto el turno. El arreglo N9 del lanzador (r3 NO APTO) queda a continuación, en paquete aparte, sin mezclarlo en A1."
+    },
+    {
       "at": "2026-11-10T14:06:00+01:00",
       "actor": "Tabby nueva",
       "text": "decisión de Carlos de las 14:05 (chat de Auditor; DECISIONES). Claude Code solo para trabajo pesado de código o de vídeo, como mucho una sesión de Tabner y una de Shorts a la vez. Si Claude está ocupado o hay un 429, el mismo bot sigue a mano la misma unidad (no espera al reinicio y no se la pasa a Tabby). Quedan tachadas las entradas de DECISIONES del 2-11 13:55 y del 9-11 14:50. No se interrumpe A1."
@@ -570,12 +575,7 @@
       "at": "2026-11-10T13:09:00+01:00",
       "actor": "QA",
       "text": "lanzador único de Claude NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador.md` (sha f6827003c3c663411f87ea78a2c619a8f975880f1a2ec4a4650475ef5db110a9). El test de Dev pasa 31/31 (Q01 y Q02, `diff` vacío), pero fallan dos barreras de POLITICA.md: H1 (alta, el envoltorio deja pasar `git -c … push` y escrituras en la integración) y H2 (alta, los `deny` de settings no protegen la integración, DECISIONES ni CONTINUIDAD). No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. A1 no arranca hasta el arreglo y una nueva revisión de QA. No se cogió el turno. No se tocó `/workspace/tabner` (sigue en f8c50faa), turno.py ni run-claude.sh."
-    },
-    {
-      "at": "2026-11-10T13:05:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "E01 r07 programado en The Die Decides para hoy 21:00 Europe/Madrid (15:00 ET / 12:00 PT): (ID T6sjDTcI4sY). Título: Floor 1: The Moss Hound | The Die Decides. Miniatura = primer fotograma (YouTube pidió teléfono para miniatura personalizada). Comentario…"
     }
   ],
-  "contentHash": "95bd8302"
+  "contentHash": "59e7ec52"
 }
