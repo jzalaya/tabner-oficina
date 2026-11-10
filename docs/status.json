@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-11-10T14:48:41+01:00",
-  "sourceMtime": "2026-11-10T14:48:16+01:00",
+  "generatedAt": "2026-11-10T14:50:11+01:00",
+  "sourceMtime": "2026-11-10T14:49:40+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
       "status": "activo",
-      "task": "A1 Instantáneas automáticas locales",
-      "since": null,
-      "detail": "APTO como unidad el 2026-11-10T14:32 Europe/Madrid, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde, 24200 B, `grep -ci aprobado` = 0). Commit local `0138b443` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80, sonda 28/28, regresión ampliada 902/902 frente a 838/838 del padre, suite `app` 2069/50 frente a 2033/50, tsc solo 3 TS2307 previos. Copias solo en `chrome.storage.local` (`tabner_snapshots_v1`); nunca `storage.sync` ni `tabner_z`. 9 idiomas. Sin `alarms` ni permisos nuevos. Turno no cogido. `/workspace/tabner` sigue en f8c50faa.",
-      "next": "Encargada a UX la revisión a mano en Chrome real (con build previo, H-9): lista en Ajustes → Datos, confirmación y toasts, restaurar con la lista llena (H-5b), latencia (H-6) y restaurar con sesión en la nube (H-8). Flecos no bloqueantes a Dev (no reenviar): H-1 y H-2 (media), H-3, H-4, H-5a y H-7. Sin push. No se tocan D1, D2/H1 ni P1. El r5 del lanzador va en paquete aparte.",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": "2026-11-10T14:32:59+01:00",
+      "detail": "En vigor (no archivado ni retirado). Ocupado por UX desde las 14:32:59 Europe/Madrid (Revisión UX A1 0138b443). Dev lo cogió a las 13:40:15 y lo soltó a las 14:08 Europe/Madrid al entregar A1 (`0138b443`). UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
       "id": "qa",
       "name": "QA",
       "status": "activo",
-      "task": "A1 Instantáneas automáticas locales",
-      "since": null,
-      "detail": "APTO como unidad el 2026-11-10T14:32 Europe/Madrid, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde, 24200 B, `grep -ci aprobado` = 0). Commit local `0138b443` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80, sonda 28/28, regresión ampliada 902/902 frente a 838/838 del padre, suite `app` 2069/50 frente a 2033/50, tsc solo 3 TS2307 previos. Copias solo en `chrome.storage.local` (`tabner_snapshots_v1`); nunca `storage.sync` ni `tabner_z`. 9 idiomas. Sin `alarms` ni permisos nuevos. Turno no cogido. `/workspace/tabner` sigue en f8c50faa.",
-      "next": "Encargada a UX la revisión a mano en Chrome real (con build previo, H-9): lista en Ajustes → Datos, confirmación y toasts, restaurar con la lista llena (H-5b), latencia (H-6) y restaurar con sesión en la nube (H-8). Flecos no bloqueantes a Dev (no reenviar): H-1 y H-2 (media), H-3, H-4, H-5a y H-7. Sin push. No se tocan D1, D2/H1 ni P1. El r5 del lanzador va en paquete aparte.",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": "2026-11-10T14:32:59+01:00",
+      "detail": "En vigor (no archivado ni retirado). Ocupado por UX desde las 14:32:59 Europe/Madrid (Revisión UX A1 0138b443). Dev lo cogió a las 13:40:15 y lo soltó a las 14:08 Europe/Madrid al entregar A1 (`0138b443`). UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
       "id": "ux",
       "name": "UX",
       "status": "activo",
-      "task": "A1 Instantáneas automáticas locales",
-      "since": null,
-      "detail": "APTO como unidad el 2026-11-10T14:32 Europe/Madrid, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde, 24200 B, `grep -ci aprobado` = 0). Commit local `0138b443` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80, sonda 28/28, regresión ampliada 902/902 frente a 838/838 del padre, suite `app` 2069/50 frente a 2033/50, tsc solo 3 TS2307 previos. Copias solo en `chrome.storage.local` (`tabner_snapshots_v1`); nunca `storage.sync` ni `tabner_z`. 9 idiomas. Sin `alarms` ni permisos nuevos. Turno no cogido. `/workspace/tabner` sigue en f8c50faa.",
-      "next": "Encargada a UX la revisión a mano en Chrome real (con build previo, H-9): lista en Ajustes → Datos, confirmación y toasts, restaurar con la lista llena (H-5b), latencia (H-6) y restaurar con sesión en la nube (H-8). Flecos no bloqueantes a Dev (no reenviar): H-1 y H-2 (media), H-3, H-4, H-5a y H-7. Sin push. No se tocan D1, D2/H1 ni P1. El r5 del lanzador va en paquete aparte.",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": "2026-11-10T14:32:59+01:00",
+      "detail": "En vigor (no archivado ni retirado). Ocupado por UX desde las 14:32:59 Europe/Madrid (Revisión UX A1 0138b443). Dev lo cogió a las 13:40:15 y lo soltó a las 14:08 Europe/Madrid al entregar A1 (`0138b443`). UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
@@ -256,10 +256,10 @@
         "QA",
         "Dev"
       ],
-      "status": "activo",
+      "status": "bloqueado",
       "since": null,
-      "summary": "APTO como unidad el 2026-11-10T14:32 Europe/Madrid, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde, 24200 B, `grep -ci aprobado` = 0). Commit local `0138b443` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80, sonda 28/28, regresión ampliada 902/902 frente a 838/838 del padre, suite `app` 2069/50 frente a 2033/50, tsc solo 3 TS2307 previos. Copias solo en `chrome.storage.local` (`tabner_snapshots_v1`); nunca `storage.sync` ni `tabner_z`. 9 idiomas. Sin `alarms` ni permisos nuevos. Turno no cogido. `/workspace/tabner` sigue en f8c50faa.",
-      "next": "Encargada a UX la revisión a mano en Chrome real (con build previo, H-9): lista en Ajustes → Datos, confirmación y toasts, restaurar con la lista llena (H-5b), latencia (H-6) y restaurar con sesión en la nube (H-8). Flecos no bloqueantes a Dev (no reenviar): H-1 y H-2 (media), H-3, H-4, H-5a y H-7. Sin push. No se tocan D1, D2/H1 ni P1. El r5 del lanzador va en paquete aparte.",
+      "summary": "APTO como unidad el 2026-11-10T14:32 Europe/Madrid, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde, 24200 B, `grep -ci aprobado` = 0). Commit local `0138b443` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80, sonda 28/28, regresión ampliada 902/902 frente a 838/838 del padre, suite `app` 2069/50 frente a 2033/50, tsc solo 3 TS2307 previos. Copias solo en `chrome.storage.local` (`tabner_snapshots_v1`); nunca `storage.sync` ni `tabner_z`. 9 idiomas. Sin `alarms` ni permisos nuevos. UX cogió el turno a las 14:32:59 Europe/Madrid. `/workspace/tabner` sigue en f8c50faa.",
+      "next": "UX ya arrancó la revisión a mano en Chrome real (turno cogido a las 14:32:59; no reencargar). Alcance (con build previo, H-9): lista en Ajustes → Datos, confirmación y toasts, restaurar con la lista llena (H-5b), latencia (H-6) y restaurar con sesión en la nube (H-8). Flecos no bloqueantes a Dev (no reenviar): H-1 y H-2 (media), H-3, H-4, H-5a y H-7. Sin push. No se tocan D1, D2/H1 ni P1. El r5 del lanzador queda NO APTO; Dev corrige en paquete aparte, sin interrumpir esta revisión.",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -317,9 +317,9 @@
         "QA",
         "Dev"
       ],
-      "status": "pausado",
-      "since": null,
-      "summary": "En vigor (no archivado ni retirado). Libre. Dev lo cogió a las 13:40:15 y lo soltó a las 14:08 Europe/Madrid al entregar A1 (`0138b443`). UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
+      "status": "activo",
+      "since": "2026-11-10T14:32:59+01:00",
+      "summary": "En vigor (no archivado ni retirado). Ocupado por UX desde las 14:32:59 Europe/Madrid (Revisión UX A1 0138b443). Dev lo cogió a las 13:40:15 y lo soltó a las 14:08 Europe/Madrid al entregar A1 (`0138b443`). UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -478,6 +478,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T14:49:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "lanzador r5 NO APTO contrastado (informe sha 80c59c31…, 14236 B, grep -ci aprobado = 0; Q01/Q02 116/116; N10 y N11 exactos del r4b cerrados; bloquean N12, N13 y N10b, más N10c, N11b, N10d, N14, N15 y tests m30/m31; r1–r4b e INFORME-r4b intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos). Encargo a Dev la corrección de N12, N13, N10b/c/d, N11b, N14, N15 y el refuerzo del test (§5); no reenvío los hallazgos (QA ya los ha dejado en su chat). No interrumpo la revisión UX a mano de A1 (turno UX cogido a las 14:32:59). N7/N8 siguen en baja. H9 sigue cerrado. La ronda UX de ~15:50 sigue siendo solo propuesta mientras A1 o la QA del lanzador estén abiertos. No es un OK de publicación."
+    },
+    {
+      "at": "2026-11-10T14:49:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-10T14:48:00+01:00",
       "actor": "QA",
       "text": "lanzador r5 NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r5.md` (sha 80c59c31d8678beb417ae319042658701131fee534f7eda401e4001416385279, 14236 B, `grep -ci aprobado` = 0). Q01/Q02 116/116, idénticos al log r5. Las formas exactas de N10 y N11 del r4b quedan cerradas (rbx, RB_SHELL, fsm, fsm-env, hook, `-i`). Bloquean N12 (`fetch`/`pull --upload-pack`, refs `up1`/`up2`/`up3`), N13 (`grep -O`, refs `grepO`/`grepO2`) y N10b (`rebase --exe`/`--ex=`, refs `rb-exe`/`rb-exeq`), más N10c, N11b (alta) y N10d, N14, N15 y tests m30/m31. Hallazgos y §5 ya en el chat de Dev. Turno no cogido. A1 (`0138b443`) no se ha tocado. `/workspace/tabner` sigue en f8c50faa. turno.py e H9 intactos. r1–r4b e INFORME-r4b intactos. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
@@ -496,11 +506,6 @@
       "at": "2026-11-10T14:32:00+01:00",
       "actor": "QA",
       "text": "A1 (`0138b443`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde, 24200 B, `grep -ci aprobado` = 0). 80/80, sonda 28/28, regresión ampliada 902/902 frente a 838/838 del padre, suite `app` 2069 pasan / 50 saltados frente a 2033/50, tsc solo los 3 TS2307 previos. Copias solo en `chrome.storage.local` (`tabner_snapshots_v1`); nunca `storage.sync` ni `tabner_z`. 9 idiomas. Sin `alarms` ni permisos nuevos. Flecos no bloqueantes a Dev: H-1 y H-2 (media), H-3, H-4, H-5a y H-7. Para Tabby/UX: revisión a mano en Chrome real con build previo (H-9), incluida la lista llena (H-5b), la latencia (H-6) y restaurar con sesión en la nube (H-8). Turno no cogido. No se tocó `/workspace/tabner` (sigue en f8c50faa) ni el lanzador. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
-    },
-    {
-      "at": "2026-11-10T14:32:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T14:31:00+01:00",
@@ -571,12 +576,7 @@
       "at": "2026-11-10T13:53:00+01:00",
       "actor": "QA",
       "text": "lanzador único de Claude (r3, corrección N1–N3) NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r3.md` (sha ab315925d9eb340f79054f455c1452533a8e6f3bd8b672699fefe5923be8aa36, 8258 B, `grep -ci aprobado` = 0). El test pasa 90/90 (Q01 PID 2007189 y Q02 PID 2008239, `diff` vacío) y las sondas exactas de N1–N3 de r2 ahora bloquean (N3, N4 y N5 cerrados). Bloquea N9 (alta): `git -c include.path=FILE` con `alias.zz=push` hace push real (`inc-push` en el remoto de prueba) y con `alias.sh=!…` ejecuta shell (`FROM_INCLUDE`). N6 parcial (el test no cubre `include.path`; el mutante m17 sobrevive). N7/N8 siguen abiertos en baja. H3–H8 y H10 en regresión OK. H9 sin tocar. No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No se cogió el turno. No se tocó `/workspace/wt/a1` ni el cerrojo `claude-tabner.lock` (A1 en curso, ajeno a esta revisión). Informes r1 y r2 e INFORME-v1/r2 intactos. `/workspace/tabner` sigue en f8c50faa."
-    },
-    {
-      "at": "2026-11-10T13:44:00+01:00",
-      "actor": "Growth",
-      "text": "enviados desde correo, con mail.py, los tres outreach del 10-11: Olhar Digital (13:43:11, ), SoftZone (13:43:45, `<correo>`) y Xergio (13:44:14, `<correo>`). Copias en INBOX.Partners.Outreach."
     }
   ],
-  "contentHash": "ad42f748"
+  "contentHash": "2c0f1d61"
 }
