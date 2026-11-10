@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-10T13:40:26+01:00",
-  "sourceMtime": "2026-11-10T13:40:06+01:00",
+  "generatedAt": "2026-11-10T13:41:11+01:00",
+  "sourceMtime": "2026-11-10T13:40:49+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "bloqueado",
-      "task": "1.10.8 (versión)",
-      "since": null,
-      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador r3 entregado a QA, pendiente de veredicto. A1 arranca ya en worktree (DECISIONES 13:36), sin esperar esa QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
-      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
+      "status": "activo",
+      "task": "A1 Instantáneas automáticas locales",
+      "since": "2026-11-10T13:40:15+01:00",
+      "detail": "En curso desde 2026-11-10T13:40:15 Europe/Madrid en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, base `f8c50faa`, padre `dev/1.10.8-o1-nube`). Turno DEV cogido. Alcance: instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca `storage.sync`; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms fuera).",
+      "next": "Implementación en el worktree. Nadie programa en `/workspace/tabner`. No se tocan D1, D2/H1, P1, turno.py ni `run-claude.sh`. Sin push.",
+      "block": null
     },
     {
       "id": "qa",
@@ -255,11 +255,11 @@
         "QA",
         "Dev"
       ],
-      "status": "pausado",
-      "since": null,
-      "summary": "Encargada a Dev el 2026-11-10T12:50 Europe/Madrid sobre `f8c50faa`. Instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca `storage.sync`; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo).",
-      "next": "Arranca ya en `/workspace/wt/a1` sobre `f8c50faa`, sin esperar la QA del lanzador (DECISIONES 13:36). El alcance de A1 no cambia. Nadie programa en `/workspace/tabner`. No se tocan D1, D2/H1 ni P1.",
-      "block": "No ha empezado la implementación."
+      "status": "activo",
+      "since": "2026-11-10T13:40:15+01:00",
+      "summary": "En curso desde 2026-11-10T13:40:15 Europe/Madrid en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, base `f8c50faa`, padre `dev/1.10.8-o1-nube`). Turno DEV cogido. Alcance: instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca `storage.sync`; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms fuera).",
+      "next": "Implementación en el worktree. Nadie programa en `/workspace/tabner`. No se tocan D1, D2/H1, P1, turno.py ni `run-claude.sh`. Sin push.",
+      "block": "En curso."
     },
     {
       "name": "Analítica opt-in (con idioma)",
@@ -478,6 +478,11 @@
   "log": [
     {
       "at": "2026-11-10T13:40:00+01:00",
+      "actor": "Dev",
+      "text": "arranco A1 en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, base `f8c50faaf22fea657c83a4eb5d33bd5640584f72`, padre `dev/1.10.8-o1-nube`). Turno DEV cogido a las 13:40:15 (motivo no vacío). Nadie programa en `/workspace/tabner` (sigue en f8c50faa, rama `dev/1.10.8-o1-nube`). Alcance sin cambios (DECISIONES 13:36): instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca storage.sync; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms fuera). No se quita el banner de copia (O3). No se tocan D1, D2/H1, P1, turno.py, el lanzador ni `/workspace/run-claude.sh`. Sin push."
+    },
+    {
+      "at": "2026-11-10T13:40:00+01:00",
       "actor": "Tabby nueva",
       "text": "regla de cerrojo concretada por Creador (paquete 13:36). `turno.py` sigue en vigor para la cola técnica Dev/QA/UX y las pruebas manuales; no está archivado ni retirado. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. Ya estaba en el commit `94f8286` (cabecera de `locks/README.md`; sha de turno.py 59f8abd4…). No se interrumpe A1."
     },
@@ -570,12 +575,7 @@
       "at": "2026-11-10T12:48:00+01:00",
       "actor": "Tabby nueva",
       "text": "decisión de Carlos de las 12:44 (chat de Creador; DECISIONES). Shorts se consolida ya (no espera al 16-11). Continuidad de archivo pasa a pausa porque la Tabby nueva ya desatasca a las 9/12/15/18; esa rutina de desatasco no se toca. Dev preparará el lanzador de Claude y los worktrees sin coger el turno de UX. No se interrumpe la revisión UX a mano de O1 (`f8c50faa`)."
-    },
-    {
-      "at": "2026-11-10T12:48:00+01:00",
-      "actor": "Luck is Math",
-      "text": "El Director informó de que Carlos dio el OK a 005 r04, 006 r04 y 007 r05. Cambio de hora, no de fechas: salen a las 21:00 Europe/Madrid (15:00 ET / 12:00 PT) el X 11/11, V 13/11 y L 16/11. Los publica el Director (no se suben desde aquí); las métricas a 24 y…"
     }
   ],
-  "contentHash": "2d94b2d0"
+  "contentHash": "8facd689"
 }
