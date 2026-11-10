@@ -1,95 +1,95 @@
 {
-  "generatedAt": "2026-11-10T17:10:30+01:00",
-  "sourceMtime": "2026-11-10T17:10:20+01:00",
+  "generatedAt": "2026-11-10T17:11:16+01:00",
+  "sourceMtime": "2026-11-10T17:10:48+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "pausado",
-      "task": "Desarrollo de Tabner",
-      "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
+      "status": "activo",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": "2026-11-10T16:45:07+01:00",
+      "detail": "En vigor (no archivado ni retirado). UX lo tiene desde las 16:45:07 Europe/Madrid para la revisión a mano de los flecos A1 (`0553079e`). Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
       "id": "qa",
       "name": "QA",
-      "status": "pausado",
-      "task": "Pruebas de Tabner",
-      "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
+      "status": "activo",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": "2026-11-10T16:45:07+01:00",
+      "detail": "En vigor (no archivado ni retirado). UX lo tiene desde las 16:45:07 Europe/Madrid para la revisión a mano de los flecos A1 (`0553079e`). Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
       "id": "ux",
       "name": "UX",
-      "status": "pausado",
-      "task": "Revisión UX de Tabner",
-      "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
+      "status": "activo",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": "2026-11-10T16:45:07+01:00",
+      "detail": "En vigor (no archivado ni retirado). UX lo tiene desde las 16:45:07 Europe/Madrid para la revisión a mano de los flecos A1 (`0553079e`). Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
       "id": "feature-analyst",
       "name": "Feature Analyst",
-      "status": "pausado",
+      "status": "hecho",
       "task": "Investigación de funciones",
       "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
+      "detail": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md` (sha c3a9dbb4…). Decisiones de Tabby: UX-S1 aceptada (paquete aparte al cerrar los flecos de A1, sin reabrir A1, antes de la analítica; no es el P1 de preservación local). UX-S2 aceptada en la auditoría UX completa. Cerrada la pasada del 9-11 (~12:09). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
+      "next": "Próximas rondas: Tabner UX (ronda de los martes).",
       "block": null
     },
     {
       "id": "growth",
       "name": "Growth",
-      "status": "pausado",
-      "task": "Captación de Tabner",
+      "status": "bloqueado",
+      "task": "Product Hunt",
       "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
-      "block": null
+      "detail": "Carlos se registró el 9-11. Perfil maker [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es, X @tabnerapp y LinkedIn https://es.linkedin.com/in/carlosjzalaya. Avatar aún no subido (sigue la C; el selector de Product Hunt no abre desde el box). Lanzamiento aplazado sin fecha pública. Self-hunt gratuito.",
+      "next": "Coordinar con Carlos antes de programar el lanzamiento. Foto opcional (Carlos dijo que le da igual).",
+      "block": "Hace falta una fecha nueva."
     },
     {
       "id": "redes",
       "name": "Redes",
       "status": "pausado",
-      "task": "Redes sociales de Tabner",
+      "task": "Contenido diario / Facebook",
       "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
+      "detail": "10-11 (rutina ~10:00 Madrid): Short/Reel «POV 87 pestañas» ES (9:16 verificado con ffprobe y cropdetect) publicado en [YouTube](https://youtube.com/shorts/5moqDqsUmsY), [Instagram](https://www.instagram.com/reel/DfjjeoCopcM/) y [Página FB Tabner](https://www.facebook.com/reel/3048302028874043), sin promoción. X: 2 respuestas publicadas hoy, ambas sin enlace: a [@reelCheburashka](https://x.com/tabnerapp/status/2120084856369537395) y a [@jevlorde](https://x.com/tabnerapp/status/2120085049299059148) (2 de 8, 0 con enlace). La conexión de X ya tiene permiso de publicación; cada post sigue saliendo desde este chat, no desde la rutina. Reddit u/tabnerapp: nada hoy. Sin menciones nuevas en X. Página FB sin vincular a IG.",
+      "next": "Redes sigue publicando en IG, FB, YT y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); no tocar el perfil personal ni otras páginas.",
       "block": null
     },
     {
       "id": "tabby",
       "name": "Tabby",
-      "status": "pausado",
-      "task": "Coordinación de Tabner",
-      "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
-      "block": null
+      "status": "bloqueado",
+      "task": "1.10.8 (versión)",
+      "since": "2026-11-10T16:45:07+01:00",
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Flecos A1 (`0553079e`) APTO como unidad; revisión UX a mano en curso (turno UX desde las 16:45:07). Lanzador r8 NO APTO (N25); encargo a Dev la corrección r9 en paquete aparte, sin coger el turno. Tras UX, H-11 y H-4 (plegar no cuenta como cambio) en paquete aparte si sigue haciendo falta, sin mezclarlos con el r9 ni con UX-S1. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
       "id": "tabby-archivo",
       "name": "Tabby (archivo)",
-      "status": "pausado",
-      "task": "Archivo de Tabby",
+      "status": "hecho",
+      "task": "A2 Importador OneTab",
       "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
+      "detail": "Cerrada. Código 3ce1af81, QA APTO, pasada UI 7/7 y exportación real de OneTab importada hacia las 17:36: resumen 1 tablero / 3 grupos / 6 pestañas / 0 líneas omitidas; tablero nuevo «Imported from OneTab (2)» sin mezclar los dos anteriores (7+7). El texto de `export-real-onetab.txt` coincide con la captura del export de OneTab; la importación se pegó desde el portapapeles. Observaciones no bloqueantes: orden visual 1-3-2 en dos columnas (también con el export real); texto de ayuda tenue en oscuro; título «Extensions» frente a «Extensiones» del fixture.",
+      "next": "Cerrada. M1 ya está encargada a Dev.",
       "block": null
     },
     {
       "id": "soporte",
       "name": "Soporte",
       "status": "pausado",
-      "task": "Soporte de Tabner",
+      "task": "Soporte",
       "since": null,
-      "detail": "Sin parte reciente en el tablero.",
-      "next": "",
+      "detail": "Pasada del 10-11 cerrada (~09:10): 8 correos nuevos, ninguno de clientes. SaaSHub aprobó tabner.es; el post de Appinn ya no espera moderación (códigos de acceso + aviso de aprobado, de la captación de Growth); código de verificación de Reddit (u/tabnerapp); newsletter de Uneed; CV espontáneo de Marcos, archivado sin respuesta. Entrada vaciada (servicios/plataformas a Servicios; CV a Archivo). Outreach: 3 envíos de Growth, sin respuestas. CWS 4,1★ / 19 valoraciones, todas respondidas, la más reciente sigue siendo del 11-8-2026; AMO 0 reseñas. Informe en `soporte/pasada-2026-11-10.md`.",
+      "next": "Próxima pasada diaria habitual. Reenviar a Growth las respuestas de Madonomori, IlSoftware y LogicielPro si llegan.",
       "block": null
     },
     {
@@ -183,7 +183,299 @@
       "block": null
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "name": "1.10.8 (versión)",
+      "bots": [
+        "Tabby",
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": "2026-11-10T16:45:07+01:00",
+      "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Flecos A1 (`0553079e`) APTO como unidad; revisión UX a mano en curso (turno UX desde las 16:45:07). Lanzador r8 NO APTO (N25); encargo a Dev la corrección r9 en paquete aparte, sin coger el turno. Tras UX, H-11 y H-4 (plegar no cuenta como cambio) en paquete aparte si sigue haciendo falta, sin mezclarlos con el r9 ni con UX-S1. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
+    },
+    {
+      "name": "A2 Importador OneTab",
+      "bots": [
+        "Tabby (archivo)",
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Cerrada. Código 3ce1af81, QA APTO, pasada UI 7/7 y exportación real de OneTab importada hacia las 17:36: resumen 1 tablero / 3 grupos / 6 pestañas / 0 líneas omitidas; tablero nuevo «Imported from OneTab (2)» sin mezclar los dos anteriores (7+7). El texto de `export-real-onetab.txt` coincide con la captura del export de OneTab; la importación se pegó desde el portapapeles. Observaciones no bloqueantes: orden visual 1-3-2 en dos columnas (también con el export real); texto de ayuda tenue en oscuro; título «Extensions» frente a «Extensiones» del fixture.",
+      "next": "Cerrada. M1 ya está encargada a Dev.",
+      "block": "Fleco documental A2-1: `CAMBIO.md` aún decía «NADA EJECUTADO». No bloquea esta revisión UX."
+    },
+    {
+      "name": "M1 Guardar sesión unificado",
+      "bots": [
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Flecos confirmados en Chrome real el 2026-11-10T12:05 Europe/Madrid sobre `462e603`. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-flecos-462e603.md` (sha 090a0d8db39ac76566e761fb8ed8080127b9ebb30e087838c203015ce4d62a35); capturas 01–32. H-3/UX-M1-01, UX-M1-05, M1-2, M1-3, títulos neutros (EN/ES/zh_CN) y M1-4 confirmados. Sin medios ni altos. Bajos: UX-M1F-01 (H-2) y UX-M1F-02 (H-6). H-8: retocar Novedades al cortar (M1-1). QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md`.",
+      "next": "Cerrada como unidad de interfaz en 462e603. Pendiente al corte: M1-1 y H-8 (Novedades). Los bajos UX-M1F-01/02 no bloquean y no van en O1.",
+      "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
+    },
+    {
+      "name": "O1 Menos llamadas a la nube",
+      "bots": [
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Revisión UX a mano cerrada el 2026-11-10T12:48 Europe/Madrid sobre `f8c50faa`. Informe `/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md` (sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc); capturas 01–19. Sin medios ni altos. H-7: no es promo residual en el tablero; en grupo no hay el aviso del tablero, no se eleva. QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Cerrada como unidad de interfaz en f8c50faa. H-7 se mantiene. Límite no bloqueante: tarjeta completa de la barra no reseguida en ES/zh_CN (sí compacta e icono); solo Chrome.",
+      "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
+    },
+    {
+      "name": "Lanzador único de Claude (worktrees)",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "r8 NO APTO como herramienta el 2026-11-10T17:03 Europe/Madrid. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r8.md` (sha fea0ee06ec664da5cfd17d23ab4041346bacf528316e57d654981f1189603cf8, 11841 B, `grep -ci aprobado` = 0). Q01/Q02 308/308, idénticos al log r8. N19–N22 y N23 cerrados; r5/r6 siguen cerradas. Bloquea N25 (PATH de `tr`/`grep`/remote helper, refs `path-tr`/`path-grep`/`remhelp`, con prompt). N26 media latente; N27 media (m65); N28–N30 en baja. Entry sha 79d9b4b4… (13022 B, modo 0555, shebang `#!/bin/bash -p`). wrappers/git sha f7e466a8… (25924 B, modo 0555). INFORME sha 95f8d923… (5299 B). INFORME-r7 sha 8cafb67b… e informe QA r7 sha 0351d4de… intactos. `/workspace/tabner` en f8c50faa. Flecos de A1 (`0553079e`) no tocados.",
+      "next": "Encargo a Dev la corrección de N25, N26 y N27 y el refuerzo del test (§5, incl. N28–N30), sin coger el turno y sin interrumpir la revisión UX de los flecos. Hallazgos y §5 ya en el chat de Dev; no reenviar. N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`). UX-S1 y H-11/H-4 no entran en este paquete.",
+      "block": "NO APTO por N25. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
+    },
+    {
+      "name": "A1 Instantáneas automáticas locales",
+      "bots": [
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": "2026-11-10T16:45:07+01:00",
+      "summary": "Flecos UX-A1-01 a 04 y H-1/H-2 APTOS como unidad el 2026-11-10T16:41 Europe/Madrid sobre `0553079e` (padre `0138b443`, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-flecos-0553079e.md` (sha c6392af3d3ec0eb2c6ddccdaaa7e420bb09ce7de5aa77f2c2769104d0a40a0dd, 21418 B, `grep -ci aprobado` = 0). T1 114/114, T2 2103/50, sonda 49/49, tsc solo los 3 TS2307 previos. Cerrados UX-A1-01, UX-A1-02, UX-A1-03, UX-A1-04/H-5b (copia previa), H-1 y H-2. Fleco nuevo no bloqueante H-11 (media). INFORME Dev `/workspace/tabner-release/1.10.8/a1-flecos/INFORME.md` (sha 77cd2fec9595ae96fa8e2e934d627f520e2baa8bb70fea4cc3df326086ffe6af, 16955 B). Revisión UX a mano cerrada el 2026-11-10T15:19 Europe/Madrid sobre `0138b443`. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-0138b443.md` (sha 3072ecc5cc46633c2a537efc821aac34ec0be4dafb535f660e1b031b78e983ad); capturas 01–47 (con 36b, 37b y 38b). Sin altos. Cinco medios: UX-A1-01 (H-8, el diálogo no avisa de los borrados en la nube), UX-A1-02 (etiquetas del mismo minuto), UX-A1-03 (copia previa prometida que a menudo no se escribe), UX-A1-04 (9 copias con dos pestañas del dashboard, tope 8) y UX-A1-05 (pestaña nueva usable en ~10 s con 2500 pestañas). Dos bajos: UX-A1-06 (capacidad «-65900 más pestañas») y UX-A1-07 («Abrir» del popup). H-9 hecho. Solo Chrome. QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde). `/workspace/tabner` sigue en f8c50faa.",
+      "next": "Revisión UX a mano en Chrome real de los flecos en `0553079e` en curso (turno UX desde las 16:45:07; con build previo). H-4 aceptada: excluir `isCollapsed`/`areTagsCollapsed` de `relevantContent`; va con H-11 (media) en el siguiente paquete de flecos, después de esa revisión, sin mezclarlo con el r9 ni con UX-S1. El lanzador r8 es NO APTO; la corrección r9 va a Dev en paquete aparte, sin coger el turno. UX-S1 sigue para después, también en paquete aparte, sin reabrir A1. Siguen fuera de alcance: H-3, H-5a, H-7 (H-12 documental; H-6/H-9 informativos). No entran UX-A1-05 (latencia de ~10 s, usable, no bloquea) ni los bajos UX-A1-06 y UX-A1-07. No se lanza la analítica todavía. Límite: no se comprobó un segundo dispositivo en H-8. La cuenta `tabner-qa+ux2` sigue en el proyecto de prueba (lo borra UX).",
+      "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
+    },
+    {
+      "name": "Analítica opt-in (con idioma)",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Encolada, última de la cola de la 1.10.8. Opt-in, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente.",
+      "next": "Tras los flecos de A1 y UX-S1, según la Tabby nueva.",
+      "block": "No ha empezado. Diseño conservador ya decidido."
+    },
+    {
+      "name": "D1 (servidor)",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Abierto. QA lo describe como cambio de lado servidor, sin tocar en D3. Fuera del manifiesto de D3 (`p1TobySync.test.ts`).",
+      "next": "Decisión e implementación de servidor (sin producción hasta autorización) y QA independiente.",
+      "block": "Bloquea publicar 1.10.8, según QA. No confundir con el corte C2 de `turno.py` (ese D1 ya está aplicado)."
+    },
+    {
+      "name": "D2 / H1",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Abierto. `p1BLIntegrity.test.ts:200` en rojo (R11/R12): altas locales que se pierden sin locks / conflicto con realtime dentro del debounce. El riesgo residual H-1 de D3 está aceptado (DECISIONES 11:59), pero QA sigue dando D2 por bloqueante.",
+      "next": "Delta propio (test de rojo a verde + mutante) y QA independiente.",
+      "block": "Bloquea publicar 1.10.8, según QA."
+    },
+    {
+      "name": "P1 (preservación local)",
+      "bots": [
+        "QA",
+        "Dev"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Abierto según QA. R07 1/1 con `P1_NOLOCKS=1` no lo cierra. Depende de que D1 deje en verde los 3 rojos originales de preservación y de que D2 cierre el hallazgo 20:1x/H1.",
+      "next": "Cerrar D1 y D2 y contrastar P1 con QA; no relanzar la matriz masiva por inercia.",
+      "block": "Bloquea publicar 1.10.8, según QA."
+    },
+    {
+      "name": "Cerrojo de pruebas (`turno.py` V3)",
+      "bots": [
+        "UX",
+        "QA",
+        "Dev"
+      ],
+      "status": "activo",
+      "since": "2026-11-10T16:45:07+01:00",
+      "summary": "En vigor (no archivado ni retirado). UX lo tiene desde las 16:45:07 Europe/Madrid para la revisión a mano de los flecos A1 (`0553079e`). Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
+      "block": ""
+    },
+    {
+      "name": "Auditoría UX completa",
+      "bots": [
+        "UX"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "54 ID abiertos. El runner de Playwright ya no es la vía (Carlos, 9-11). Encolada. El texto del aviso «No cierres ni recargues» (5b) se revisa en esta auditoría. La UX a mano de A2 ya está cerrada.",
+      "next": "Ronda reducida del 10-11 cerrada (`ux/2026-11-10.md`, sha c3a9dbb4…). UX-S2 entra en esta auditoría (instalar/importar no toca grupos nativos; el dashboard no se queda en carga infinita tras actualizar). No arranca ahora: sigue encolada a la espera de turno; no coger turno ni Chrome real ni encargar a Dev mientras los flecos de A1 o la corrección/QA del lanzador estén abiertos (DECISIONES 13:36).",
+      "block": ""
+    },
+    {
+      "name": "Investigación de funciones",
+      "bots": [
+        "Feature Analyst",
+        "UX"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md` (sha c3a9dbb4…). Decisiones de Tabby: UX-S1 aceptada (paquete aparte al cerrar los flecos de A1, sin reabrir A1, antes de la analítica; no es el P1 de preservación local). UX-S2 aceptada en la auditoría UX completa. Cerrada la pasada del 9-11 (~12:09). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
+      "next": "Próximas rondas: Tabner UX (ronda de los martes).",
+      "block": ""
+    },
+    {
+      "name": "Contenido diario / Facebook",
+      "bots": [
+        "Redes"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "10-11 (rutina ~10:00 Madrid): Short/Reel «POV 87 pestañas» ES (9:16 verificado con ffprobe y cropdetect) publicado en [YouTube](https://youtube.com/shorts/5moqDqsUmsY), [Instagram](https://www.instagram.com/reel/DfjjeoCopcM/) y [Página FB Tabner](https://www.facebook.com/reel/3048302028874043), sin promoción. X: 2 respuestas publicadas hoy, ambas sin enlace: a [@reelCheburashka](https://x.com/tabnerapp/status/2120084856369537395) y a [@jevlorde](https://x.com/tabnerapp/status/2120085049299059148) (2 de 8, 0 con enlace). La conexión de X ya tiene permiso de publicación; cada post sigue saliendo desde este chat, no desde la rutina. Reddit u/tabnerapp: nada hoy. Sin menciones nuevas en X. Página FB sin vincular a IG.",
+      "next": "Redes sigue publicando en IG, FB, YT y X dentro de los límites (X ≤8 respuestas/día, ≤50 % con enlace); no tocar el perfil personal ni otras páginas.",
+      "block": "X por API exige tarjeta de aprobación en chat. Prohibido interactuar con otras páginas o con lo que ya hubiera en Facebook."
+    },
+    {
+      "name": "Reddit `u/tabnerapp`",
+      "bots": [
+        "Redes"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Cuenta creada el 9-11 con `correo`; login en el vault). 0 posts al crear. Fecha de nacimiento del onboarding sin rellenar (no inventar). No se crea `r/tabner` de momento (Carlos, ❤️ el 9-11).",
+      "next": "Plan lento: comentarios útiles sin enlace durante unos días/semanas; `r/tabner` cuando la cuenta tenga historial. No tocar `u/PiperoJones`.",
+      "block": "Cuenta nueva: ir con calma para no parecer sospechosa."
+    },
+    {
+      "name": "LogicielPro",
+      "bots": [
+        "Growth"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Enviado el 9-11-2026 a las 17:45 Europe/Madrid desde correo a correo, con el texto aprobado (t53u de Carlos: «Logicielpro aprobado»). . Copia en INBOX.Partners.Outreach.",
+      "next": "Si llega respuesta, Soporte la pasa a Growth; no contestar desde Growth.",
+      "block": ""
+    },
+    {
+      "name": "Product Hunt",
+      "bots": [
+        "Growth"
+      ],
+      "status": "bloqueado",
+      "since": null,
+      "summary": "Carlos se registró el 9-11. Perfil maker [@carlosjurado](https://www.producthunt.com/@carlosjurado): nombre Carlos Jurado Zalaya, titular «Maker of Tabner, a free tab manager», about, web tabner.es, X @tabnerapp y LinkedIn https://es.linkedin.com/in/carlosjzalaya. Avatar aún no subido (sigue la C; el selector de Product Hunt no abre desde el box). Lanzamiento aplazado sin fecha pública. Self-hunt gratuito.",
+      "next": "Coordinar con Carlos antes de programar el lanzamiento. Foto opcional (Carlos dijo que le da igual).",
+      "block": "Hace falta una fecha nueva."
+    },
+    {
+      "name": "Plan 2 semanas (9–22 nov)",
+      "bots": [
+        "Growth"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Entregado el 9-11. Hecho hoy: outreach a Madonomori (12:09), IlSoftware (12:20) y LogicielPro (17:45); cuenta y post de Appinn creados. 10-11 13:41 Europe/Madrid (verificado por Growth en páginas públicas): post de Appinn publicado y visible en https://meta.appinn.net/t/topic/95558 (发现频道); ficha de SaaSHub pública en https://www.saashub.com/tabner-es (Pricing Free, 0 reseñas). Outreach 10-11 enviado desde correo con mail.py: Olhar Digital 13:43:11 (`<correo>`), SoftZone 13:43:45 (`<correo>`) y Xergio 13:44:14 (`<correo>`); copias en INBOX.Partners.Outreach.",
+      "next": "Siguiente previsto: formulario de Korben. Soporte debe reenviar a Growth las respuestas de Madonomori, IlSoftware, LogicielPro, Olhar Digital, SoftZone y Xergio si llegan.",
+      "block": "Shareware4U aparcado; Product Hunt, coordinar con Carlos."
+    },
+    {
+      "name": "Uneed",
+      "bots": [
+        "Growth"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Programado por Carlos el 8-11 para el 9 de mayo de 2027 (Launch Scheduled). No atribuir la programación a Tabby.",
+      "next": "Recordatorio interno ~30 días antes (votos ≥10).",
+      "block": ""
+    },
+    {
+      "name": "Shareware4U",
+      "bots": [
+        "Tabby",
+        "Growth"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Aparcado el 8-11: el alta exige calle/CP/localidad y anuncia publicar datos personales.",
+      "next": "No reabrir con domicilio de Carlos ni inventar dirección.",
+      "block": "Domicilio público obligatorio."
+    },
+    {
+      "name": "Shorts 004–007",
+      "bots": [],
+      "status": "pausado",
+      "since": null,
+      "summary": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 los lleva el Shorts Director (el Orquestador Luck is Math está archivado; decisión 10-11 12:44). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
+      "next": "Lo gestiona el Shorts Director (calendario, revisión única y publicación). El Guionista absorbe investigación y métricas. No gestionar ni concretar desde Tabner.",
+      "block": "Tubería distinta; no mezclar con Redes."
+    },
+    {
+      "name": "Audición de voz",
+      "bots": [],
+      "status": "pausado",
+      "since": null,
+      "summary": "No es tubería de Tabner Redes. La audición de voz del rediseño la lleva el equipo de Shorts (Director / Productor). El paquete EN v3 de Tabner ya tiene revisión audiovisual APTO y se publicó (Shorts 8-11, Reel 8-11 y 9-11).",
+      "next": "Los vídeos nuevos de Tabner siguen yendo a 9:16 a pantalla completa, con voz, música con licencia y subtítulos, a cargo de Redes. No mezclar la cola de audición de Shorts.",
+      "block": "Tubería distinta."
+    },
+    {
+      "name": "Métricas de tiendas",
+      "bots": [
+        "Tabby"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "La foto de tiendas de Tabner la toma `snapshot.py` (hoy a las 10:55, O3): Chrome 255 usuarios, 4.1 de media, 19 valoraciones, v1.10.7; AMO 2 usuarios diarios; 0 issues. Las métricas de Shorts las lleva el Guionista hacia las 21:20 Europe/Madrid (ya no el Analista a las 19:00).",
+      "next": "No relanzar `snapshot.py` desde aquí ni tratar las métricas de Shorts como de Tabner.",
+      "block": "No mezclar con Shorts."
+    },
+    {
+      "name": "Soporte",
+      "bots": [
+        "Soporte"
+      ],
+      "status": "pausado",
+      "since": null,
+      "summary": "Pasada del 10-11 cerrada (~09:10): 8 correos nuevos, ninguno de clientes. SaaSHub aprobó tabner.es; el post de Appinn ya no espera moderación (códigos de acceso + aviso de aprobado, de la captación de Growth); código de verificación de Reddit (u/tabnerapp); newsletter de Uneed; CV espontáneo de Marcos, archivado sin respuesta. Entrada vaciada (servicios/plataformas a Servicios; CV a Archivo). Outreach: 3 envíos de Growth, sin respuestas. CWS 4,1★ / 19 valoraciones, todas respondidas, la más reciente sigue siendo del 11-8-2026; AMO 0 reseñas. Informe en `soporte/pasada-2026-11-10.md`.",
+      "next": "Próxima pasada diaria habitual. Reenviar a Growth las respuestas de Madonomori, IlSoftware y LogicielPro si llegan.",
+      "block": ""
+    },
+    {
+      "name": "Revisión semanal de Growth",
+      "bots": [
+        "Growth"
+      ],
+      "status": "hecho",
+      "since": null,
+      "summary": "Entregada el 9-11 (~12:02) junto con el plan a 2 semanas.",
+      "next": "Próxima revisión en el ciclo semanal. No relanzar esta.",
+      "block": ""
+    }
+  ],
   "log": [
     {
       "at": "2026-11-10T17:10:00+01:00",
@@ -286,5 +578,5 @@
       "text": "lanzador r6 NO APTO contrastado (informe sha b0b464ee…, 14279 B, grep -ci aprobado = 0; Q01/Q02 207/207; vías exactas de r5 cerradas; bloquean N16, N15b, N17, N18 y N14b; r1–r5 e INFORME-r5 intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos). Encargo a Dev la corrección de N16, N15b, N17, N18, N14b y el refuerzo del test (§5); no reenvío los hallazgos (QA ya los ha dejado en su chat). No interrumpo la revisión UX a mano de A1 (turno UX cogido a las 14:32:59). N7/N8 siguen en baja. H9 sigue cerrado. La ronda UX de ~15:50 sigue siendo solo propuesta mientras A1 o la QA del lanzador estén abiertos. No es un OK de publicación."
     }
   ],
-  "contentHash": "e143323c"
+  "contentHash": "734b0333"
 }
