@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T23:01:41+01:00",
+  "generatedAt": "2026-11-10T23:18:40+01:00",
   "sourceMtime": "2026-11-10T22:56:41+01:00",
   "bots": [
     {
@@ -25,10 +25,10 @@
     {
       "id": "ux",
       "name": "UX",
-      "status": "activo",
-      "task": "revisión UX residual A1 UX-A1F-01 Chrome 6fde85b0",
-      "since": "2026-11-10T22:57:29+01:00",
-      "detail": "Turno UX desde 2026-11-10T22:57:29+01:00: revisión UX residual A1 UX-A1F-01 Chrome 6fde85b0",
+      "status": "pausado",
+      "task": "Auditoría UX completa",
+      "since": null,
+      "detail": "54 ID abiertos. El runner de Playwright ya no es la vía (Carlos, 9-11). Encolada. El texto del aviso «No cierres ni recargues» (5b) se revisa en esta auditoría. La UX a mano de A2 ya está cerrada.",
       "next": "Ronda reducida del 10-11 cerrada (`ux/2026-11-10.md`, sha c3a9dbb4…). UX-S2 entra en esta auditoría (instalar/importar no toca grupos nativos; el dashboard no se queda en carga infinita tras actualizar). No arranca ahora: sigue encolada a la espera de turno; no coger turno ni Chrome real ni encargar a Dev mientras los flecos de A1 o la corrección/QA del lanzador estén abiertos (DECISIONES 13:36).",
       "block": null
     },
@@ -538,5 +538,5 @@
       "text": "fleco UX-A1F-01 contrastado (INFORME sha 025ef78dc11793896808acd4acb55c1b284f744007b6fdd73ae67faa8f28dd3d, 13658 B; sidecar coincide (forma con nombre); INFORME.md == INFORME-A1-flecos-a1f-01.md; commit `818764f26dea49de0dd59e7dbdb9f715cd3cfe13`, padre `e9ff7c06`, sin push y sin enmendar; T1 137/137 EXIT_REAL=0, INICIO 18:36:13 FIN 18:36:18, PID 3252439, log sha 0b09032aac383f1b6f7986ff7dfa7dbf0f7dfdd01a486f1b8ebc352eb516eb1e (1007 B); T2 2126/50 EXIT_REAL=0, INICIO 18:36:22 FIN 18:37:02, PID 3252837, log sha 96f32a6d6996f0548d62dac73306d90b4dbb08506133f99b39ad5f0903013724 (27495 B); tsc solo los 3 TS2307 previos, EXIT_REAL=2; turno soltado a las 18:37:59, `turno.py ver` = libre; `/workspace/tabner` en f8c50faa; lanzador r11 intacto). Ya está en el chat de QA; no lo reenvío. Sin contraste en Chrome (pasos en INFORME §6). No es un OK de publicación (siguen D1, D2/H1 y P1). Decisión de Tabby (no de Carlos): A1 no se cierra aún como unidad de interfaz. Encargo a Dev la corrección r12 (N36; N38 en baja en el mismo paquete), sin coger el turno y sin mezclarla con este fleco ni con UX-S1. Hallazgos de r11 ya están en el chat de Dev; no los reenvío. La observación del INFORME §9 (`nativeGroups`/`nativeGroupKey` al restaurar) queda aparcada; no se abre ahora. H-14 y H-15 siguen aparcados. No arranco UX-S1 ni la analítica."
     }
   ],
-  "contentHash": "4b8b588"
+  "contentHash": "5d8155d3"
 }
