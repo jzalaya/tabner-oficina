@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T16:10:28+01:00",
-  "sourceMtime": "2026-11-10T16:10:11+01:00",
+  "generatedAt": "2026-11-10T16:13:28+01:00",
+  "sourceMtime": "2026-11-10T16:12:46+01:00",
   "bots": [
     {
       "id": "dev",
@@ -19,7 +19,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Flecos A1 (UX-A1-01 a 04 y H-1/H-2) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). Lanzador r7 en QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 (UX-A1-01 a 04 y H-1/H-2) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). Lanzador r7 en QA. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -38,7 +38,7 @@
       "status": "hecho",
       "task": "Investigación de funciones",
       "since": null,
-      "detail": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md`. Propuestas a Tabby: UX-S1 (instantánea local al actualizarse la extensión, sobre A1) y UX-S2 (verificar en la auditoría que instalar/importar no toca grupos nativos). Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
+      "detail": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md` (sha c3a9dbb4…). Decisiones de Tabby: UX-S1 aceptada (paquete aparte al cerrar los flecos de A1, sin reabrir A1, antes de la analítica; no es el P1 de preservación local). UX-S2 aceptada en la auditoría UX completa. Cerrada la pasada del 9-11 (~12:09). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
       "next": "Próximas rondas: Tabner UX (ronda de los martes).",
       "block": null
     },
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Flecos A1 (UX-A1-01 a 04 y H-1/H-2) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). Lanzador r7 en QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 (UX-A1-01 a 04 y H-1/H-2) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). Lanzador r7 en QA. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Flecos A1 (UX-A1-01 a 04 y H-1/H-2) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). Lanzador r7 en QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 (UX-A1-01 a 04 y H-1/H-2) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). Lanzador r7 en QA. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -259,7 +259,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Revisión UX a mano cerrada el 2026-11-10T15:19 Europe/Madrid sobre `0138b443`. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-0138b443.md` (sha 3072ecc5cc46633c2a537efc821aac34ec0be4dafb535f660e1b031b78e983ad); capturas 01–47 (con 36b, 37b y 38b). Sin altos. Cinco medios: UX-A1-01 (H-8, el diálogo no avisa de los borrados en la nube), UX-A1-02 (etiquetas del mismo minuto), UX-A1-03 (copia previa prometida que a menudo no se escribe), UX-A1-04 (9 copias con dos pestañas del dashboard, tope 8) y UX-A1-05 (pestaña nueva usable en ~10 s con 2500 pestañas). Dos bajos: UX-A1-06 (capacidad «-65900 más pestañas») y UX-A1-07 («Abrir» del popup). H-9 hecho. Solo Chrome. QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde). `/workspace/tabner` sigue en f8c50faa.",
-      "next": "Flecos UX-A1-01 a 04 y H-1/H-2 (media) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). No entran UX-A1-05 (latencia de ~10 s, usable, no bloquea) ni los bajos UX-A1-06 y UX-A1-07. No se lanza la analítica todavía. Límite: no se comprobó un segundo dispositivo en H-8. La cuenta `tabner-qa+ux2` sigue en el proyecto de prueba (lo borra UX).",
+      "next": "Flecos UX-A1-01 a 04 y H-1/H-2 (media) en curso en `/workspace/wt/a1` sobre `0138b443` (turno Dev desde 15:27:18). UX-S1 queda para un paquete aparte al cerrar esos flecos (no se mezcla ni se encarga ahora). No entran UX-A1-05 (latencia de ~10 s, usable, no bloquea) ni los bajos UX-A1-06 y UX-A1-07. No se lanza la analítica todavía. Límite: no se comprobó un segundo dispositivo en H-8. La cuenta `tabner-qa+ux2` sigue en el proyecto de prueba (lo borra UX).",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -271,7 +271,7 @@
       "status": "pausado",
       "since": null,
       "summary": "Encolada, última de la cola de la 1.10.8. Opt-in, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente.",
-      "next": "Tras los flecos de A1, según la Tabby nueva.",
+      "next": "Tras los flecos de A1 y UX-S1, según la Tabby nueva.",
       "block": "No ha empezado. Diseño conservador ya decidido."
     },
     {
@@ -331,7 +331,7 @@
       "status": "pausado",
       "since": null,
       "summary": "54 ID abiertos. El runner de Playwright ya no es la vía (Carlos, 9-11). Encolada. El texto del aviso «No cierres ni recargues» (5b) se revisa en esta auditoría. La UX a mano de A2 ya está cerrada.",
-      "next": "Ronda de hoy ~15:50: proponer el resultado a Tabby; no coger turno ni Chrome real ni encargar a Dev mientras el lanzador siga en corrección o en QA (r6 NO APTO; DECISIONES 13:36). A1 ya está cerrada.",
+      "next": "Ronda reducida del 10-11 cerrada (`ux/2026-11-10.md`, sha c3a9dbb4…). UX-S2 entra en esta auditoría (instalar/importar no toca grupos nativos; el dashboard no se queda en carga infinita tras actualizar). No arranca ahora: sigue encolada a la espera de turno; no coger turno ni Chrome real ni encargar a Dev mientras los flecos de A1 o la QA del lanzador r7 estén abiertos (DECISIONES 13:36).",
       "block": ""
     },
     {
@@ -342,7 +342,7 @@
       ],
       "status": "hecho",
       "since": null,
-      "summary": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md`. Propuestas a Tabby: UX-S1 (instantánea local al actualizarse la extensión, sobre A1) y UX-S2 (verificar en la auditoría que instalar/importar no toca grupos nativos). Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
+      "summary": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md` (sha c3a9dbb4…). Decisiones de Tabby: UX-S1 aceptada (paquete aparte al cerrar los flecos de A1, sin reabrir A1, antes de la analítica; no es el P1 de preservación local). UX-S2 aceptada en la auditoría UX completa. Cerrada la pasada del 9-11 (~12:09). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
       "next": "Próximas rondas: Tabner UX (ronda de los martes).",
       "block": ""
     },
@@ -478,6 +478,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T16:12:46+01:00",
+      "actor": "Tabby nueva",
+      "text": "ronda UX semanal contrastada (informe `/workspace/tabner-ops/ux/2026-11-10.md`, sha c3a9dbb40c73324f4eb45652ec374cd10422cca3e5b2a87db29ab36857796d01, 3578 B; sin sidecar). Sin hallazgos UX nuevos. Sin turno ni Chrome real, como estaba encargado. Decisiones de Tabby: UX-S1 aceptada (instantánea local al actualizarse la extensión, antes de migrar datos, sin permiso nuevo ni alarms, con la misma deduplicación de A1). No la encargo ahora: los flecos de A1 siguen en curso (turno Dev desde 15:27:18) y el lanzador r7 está en QA. La encargo en paquete aparte al cerrar esos flecos, sin reabrir A1 y sin mezclarla con ellos. No la llamo P1: P1 ya es la preservación local que bloquea la 1.10.8. Va en la 1.10.8, antes de la analítica opt-in. UX-S2 aceptada: entra en la auditoría UX completa (instalar/importar no toca grupos nativos; el dashboard no se queda en carga infinita tras actualizar). Esa auditoría no arranca ahora. No se encarga nada a Dev. No es un OK de publicación."
+    },
+    {
+      "at": "2026-11-10T16:12:46+01:00",
+      "actor": "Tabby nueva",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-10T16:12:00+01:00",
       "actor": "Tabner UX",
       "text": "ronda semanal reducida (instrucción de hoy: sin turno, sin Chrome real y sin encargos a Dev; turno en DEV por flecos A1 desde 15:27:18). Informe `/workspace/tabner-ops/ux/2026-11-10.md`. Sin hallazgos UX nuevos sobre los informes de unidad de hoy. Propuestas a Tabby: UX-S1 (instantánea local al actualizarse la extensión, sin permiso nuevo) y UX-S2 (verificación en la auditoría). No se encarga nada a Dev. No se tocó D1, D2/H1 ni P1."
@@ -491,11 +501,6 @@
       "at": "2026-11-10T15:26:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador r7 contrastado (INFORME sha 8cafb67b…, 5505 B; log sha dfb53f28…, 276/276 y 0 fallos, INICIO 15:23:44 FIN 15:23:59 Europe/Madrid, PID 2329542, CWD `/workspace`; entry sha 009bdfa3… modo 0555; wrappers/git sha 4eb164c8… modo 0555; tests sha a0e093ef…; write-settings sha 9f6f4eb4…; POLITICA sha c80342b3… coinciden; INFORME-r6 sha 18c92329…, INFORME-r5 sha 913b39b4… e informe QA r6 sha b0b464ee… intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos; turno libre desde las 15:19). No reenvío el paquete a QA (Dev ya lo ha entregado en su chat). Encargo a Dev los flecos de A1 (UX-A1-01 a 04 y H-1/H-2) en paquete aparte; no reenvío los H-1/H-2. No entran UX-A1-05 ni los bajos UX-A1-06 y UX-A1-07. No se lanza la analítica todavía. La ronda UX de ~15:50 sigue siendo solo propuesta mientras el lanzador esté en QA. No es un OK de publicación."
-    },
-    {
-      "at": "2026-11-10T15:26:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T15:24:00+01:00",
@@ -571,12 +576,7 @@
       "at": "2026-11-10T14:25:00+01:00",
       "actor": "QA",
       "text": "lanzador único de Claude (r4b, corrección N9 + texto de turno.py) NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r4b.md` (sha 17d6af14049e57c0f239a55a80d31a5f559ab506a21fcc0f0d31e2ebe29f1534, 12817 B, `grep -ci aprobado` = 0). N9 y m17 quedan cerrados y el texto de turno.py está bien (en vigor, no archivado). Bloquean N10 (alta: `git rebase -x` hace push real, ref `rbx`) y N11 (alta: `core.fsmonitor`, `core.hooksPath` o `diff.external` por `-c` o `GIT_CONFIG_*` hacen push, refs `fsm`, `fsm-env`, `hook`). El test pasa 96/96 (Q01 PID 2072010 y Q02 PID 2072967, `diff` vacío). N7/N8 siguen en baja. H9 (stub 5c1e03cf) no bloquea. No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No se cogió el turno. No se tocó `/workspace/wt/a1` (`0138b443`) ni el cerrojo de Claude (QA de A1 en curso). Informes r1–r3 e INFORME-r4 intactos. `/workspace/tabner` sigue en f8c50faa."
-    },
-    {
-      "at": "2026-11-10T14:16:00+01:00",
-      "actor": "Auditor",
-      "text": "decisión de Carlos de las 14:16 (chat de Auditor). Actualizadas dos celdas desfasadas, sin tocar el resto ni interrumpir las QA: H9 del lanzador ya está cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`); Feature Analyst (archivo) queda oculto de la barra y el rol de investigación lo lleva Tabner UX. La rutina pausada de las 19:00 del Shorts Analista queda pedida de baja (las métricas las lleva el Guionista hacia las 21:20). No se toca A1 ni el r4b."
     }
   ],
-  "contentHash": "e8e72c0c"
+  "contentHash": "3854f3e9"
 }
