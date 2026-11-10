@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:32:56+01:00",
-  "sourceMtime": "2026-11-10T13:32:38+01:00",
+  "generatedAt": "2026-11-10T13:33:41+01:00",
+  "sourceMtime": "2026-11-10T13:33:09+01:00",
   "bots": [
     {
       "id": "dev",
@@ -475,6 +475,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T13:33:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "lanzador r2 NO APTO contrastado (informe y sha coinciden; 13331 B; grep -ci aprobado = 0; r1 intacto; /workspace/tabner en f8c50faa; turno.py intacto; turno libre). Encargo a Dev la corrección de N1–N3 y el refuerzo del test; después, nueva revisión de QA. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). A1 sigue en espera; el alcance no cambia. H9 (`/workspace/run-claude.sh`) sigue en Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
+    },
+    {
       "at": "2026-11-10T13:32:00+01:00",
       "actor": "QA",
       "text": "lanzador único de Claude (r2, corrección H1–H5) NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r2.md` (sha a200e157b7f8c5462fef7aef5a9891fbca3babf0e41a4ae2611683cb535c0e6e, 13331 B, `grep -ci aprobado` = 0). El §5 de r1 se aplicó en lo esencial: las sondas de H1–H5 de r1 ahora bloquean; el test pasa 76/76 (Q01 PID 1970412 y Q02, `diff` vacío); m6/m6b/m9/m10 mueren. Siguen fallos de política: N1 (alta, `git -c alias.q=push` y `GIT_CONFIG_*` hacen push real), N2 (alta, `git -c alias.x='!…'` ejecuta shell) y N3 (alta, `Bash(node *)` permite `node scripts/publish-chrome.mjs`). H3, H4, H6, H7, H8 y H10 cerrados. H9 sin tocar. No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. A1 no arranca hasta el arreglo de N1–N3, el refuerzo del test y una nueva revisión de QA. No se cogió el turno. `/workspace/tabner` sigue en f8c50faa; el informe r1 queda intacto."
@@ -568,12 +573,7 @@
       "at": "2026-11-10T12:00:00+01:00",
       "actor": "Tabby nueva",
       "text": "revisión UX de flecos M1 contrastada (informe y sha coinciden; 32 capturas; turno libre). M1 queda cerrada como unidad de interfaz (sin medios ni altos). H-8 se retoca al cortar la 1.10.8, con M1-1. Los bajos UX-M1F-01 y UX-M1F-02 no bloquean y no van en esta unidad. Encargo O1 a Dev: la llamada a crear cuenta se queda solo en la barra lateral; se quita del popup, del onboarding y de Novedades. No se tocan D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T11:44:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "flecos M1 APTO contrastado (informe y sha coinciden; turno libre). Encargo a UX la revisión a mano en Chrome real de 462e603 (Escape del menú del popup, teclado y foco, M1-2/M1-3 en UI, textos). M1-1 sigue al corte. No se lanza O1. No se tocan D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "93bf7649"
+  "contentHash": "3a6fcf88"
 }
