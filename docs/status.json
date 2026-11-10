@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-09T22:44:15+01:00",
-  "sourceMtime": "2026-11-09T22:43:52+01:00",
+  "generatedAt": "2026-11-10T08:02:54+01:00",
+  "sourceMtime": "2026-11-10T08:02:15+01:00",
   "bots": [
     {
       "id": "dev",
@@ -8,8 +8,8 @@
       "status": "activo",
       "task": "M1 Guardar sesión unificado",
       "since": "2026-11-09T17:42:49+01:00",
-      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid. Rama local `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push. Turno DEV cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades si cambia el defecto.",
-      "next": "Claude Code escribe; Dev ejecuta vitest/tsc y entrega el SHA a QA.",
+      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid; retomada a mano el 2026-11-10T08:02 (sin Claude Code). Rama local `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, sin push. Turno DEV sigue cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades el cambio de defecto del popup.",
+      "next": "Dev escribe el código, corre vitest/tsc y entrega el SHA a QA.",
       "block": null
     },
     {
@@ -28,8 +28,8 @@
       "status": "pausado",
       "task": "M1 Guardar sesión unificado",
       "since": "2026-11-09T17:42:49+01:00",
-      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid. Rama local `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push. Turno DEV cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades si cambia el defecto.",
-      "next": "Claude Code escribe; Dev ejecuta vitest/tsc y entrega el SHA a QA.",
+      "detail": "En curso desde 2026-11-09T17:42:49 Europe/Madrid; retomada a mano el 2026-11-10T08:02 (sin Claude Code). Rama local `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, sin push. Turno DEV sigue cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades el cambio de defecto del popup.",
+      "next": "Dev escribe el código, corre vitest/tsc y entrega el SHA a QA.",
       "block": null
     },
     {
@@ -220,9 +220,9 @@
       ],
       "status": "activo",
       "since": "2026-11-09T17:42:49+01:00",
-      "summary": "En curso desde 2026-11-09T17:42:49 Europe/Madrid. Rama local `dev/1.10.8-m1-guardar-sesion` desde 3ce1af81, sin push. Turno DEV cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades si cambia el defecto.",
-      "next": "Claude Code escribe; Dev ejecuta vitest/tsc y entrega el SHA a QA.",
-      "block": "Código en marcha."
+      "summary": "En curso desde 2026-11-09T17:42:49 Europe/Madrid; retomada a mano el 2026-11-10T08:02 (sin Claude Code). Rama local `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, sin push. Turno DEV sigue cogido. Alcance: misma acción en popup y dashboard, con alcance explícito (esta ventana / todas) y el mismo Deshacer; explicar en Novedades el cambio de defecto del popup.",
+      "next": "Dev escribe el código, corre vitest/tsc y entrega el SHA a QA.",
+      "block": "Claude reservado para Shorts E01; se continúa a mano."
     },
     {
       "name": "O1 Menos llamadas a la nube",
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T08:02:00+01:00",
+      "actor": "Dev",
+      "text": "retomo M1 a mano (sin Claude Code; Claude queda reservado para Shorts E01). Turno DEV sigue cogido desde 2026-11-09T17:42:49. Rama `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, árbol limpio."
+    },
+    {
       "at": "2026-11-09T22:45:00+01:00",
       "actor": "Luck is Math",
       "text": "Revisados 005 r04 (8/10, el r03 falló por parpadeo), 006 r04 (8/10; cifra ~6.637 corregida) y 007 r05 (8/10; Rosa/Rose corregido). Los tres se envían al padre para el OK de Carlos; no se publica nada. Propuesta: 005 el X 11/11, 006 el V 13/11 y 007 el L 16/11."
@@ -558,5 +563,5 @@
       "text": "Analista: la rutina del 6/11 falló por falta de uso (no es que no apuntara datos). La recuperación del 002 ahora está bloqueada por límite de solicitudes; se reintenta en la rutina de hoy hacia las 19:00, etiquetada con su edad real (sin simular el corte de…"
     }
   ],
-  "contentHash": "c9fe42cf"
+  "contentHash": "62e93613"
 }
