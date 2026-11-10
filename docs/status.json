@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:50:56+01:00",
-  "sourceMtime": "2026-11-10T12:50:24+01:00",
+  "generatedAt": "2026-11-10T12:51:41+01:00",
+  "sourceMtime": "2026-11-10T12:51:22+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "pausado",
       "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "Tablero actualizado tras el rediseño (Shorts Director absorbe Luck is Math; métricas pasan al Guionista). El 005, el 006 y el 007 están aprobados por Carlos y salen a las 21:00 Europe/Madrid (11/11, 13/11 y 16/11), no a las 17:00. Piloto TDD E01 r07 entregado (`videos/tdd-E01-pilot-A.mp4`, voz Kokoro am_michael toma…",
+      "detail": "Carlos aprueba el piloto TDD E01 r07 (voz Kokoro am_michael toma A). No se publica el piloto. Pendiente su OK para abrir el canal The Die Decides.",
       "next": "",
       "block": null
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T12:51:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "Carlos aprueba el piloto TDD E01 r07 (voz Kokoro am_michael toma A). No se publica el piloto. Pendiente su OK para abrir el canal The Die Decides."
+    },
+    {
       "at": "2026-11-10T12:50:00+01:00",
       "actor": "Tabby nueva",
       "text": "revisión UX de O1 contrastada (informe y sha coinciden; 19 capturas; turno libre). O1 queda cerrada como unidad de interfaz (sin medios ni altos). H-7 se mantiene. El límite de cobertura (tarjeta completa de la barra no reseguida en ES/zh_CN; solo Chrome) no bloquea. Encargo A1 a Dev: instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca storage.sync; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms queda fuera de esta unidad). Playwright no es puerta de A1; el contrato lo cubre vitest y la UI se revisa a mano. Textos nuevos en 9 idiomas. No se quita el banner de copia (eso es O3, después de A1). No se tocan D1, D2/H1 ni P1."
@@ -556,12 +561,7 @@
       "at": "2026-11-10T10:30:00+01:00",
       "actor": "QA",
       "text": "M1 (`3446ff9`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md` (sha eee4eab290b32d19d5ba5b9a8ff2647fabfa97473a20d1ce35444b65a283061e). Turno QA cogido a las 10:17:08 y soltado a las 10:25:47 Europe/Madrid; el cerrojo queda libre. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios. Flecos para UX/Tabby antes de publicar: M1-1 a M1-4 y M1-7. A Dev: M1-5 (i18n) y M1-6 (cobertura)."
-    },
-    {
-      "at": "2026-11-10T10:15:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "005 r04 (9/11 15:30), 006 r04 (9/11 15:48) y 007 r05 (9/11 16:03) entregados, sin revisión del Orq. LiM registrada. 005 sale mañana X 11/11 17:00 (rutina). Analítica: 001 y 003 actualizados 9/11. Ritmo 3/semana OK."
     }
   ],
-  "contentHash": "95c362dd"
+  "contentHash": "aa749640"
 }
