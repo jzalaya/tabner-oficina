@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:11:11+01:00",
-  "sourceMtime": "2026-11-10T13:11:03+01:00",
+  "generatedAt": "2026-11-10T13:18:41+01:00",
+  "sourceMtime": "2026-11-10T13:18:16+01:00",
   "bots": [
     {
       "id": "dev",
@@ -9,7 +9,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador NO APTO como herramienta (H1, H2). A1 espera el arreglo y una nueva revisión de QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Corrección H1–H5 del lanzador entregada a QA, pendiente de nueva revisión. A1 espera ese cierre. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -19,7 +19,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador NO APTO como herramienta (H1, H2). A1 espera el arreglo y una nueva revisión de QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Corrección H1–H5 del lanzador entregada a QA, pendiente de nueva revisión. A1 espera ese cierre. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador NO APTO como herramienta (H1, H2). A1 espera el arreglo y una nueva revisión de QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Corrección H1–H5 del lanzador entregada a QA, pendiente de nueva revisión. A1 espera ese cierre. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador NO APTO como herramienta (H1, H2). A1 espera el arreglo y una nueva revisión de QA. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Corrección H1–H5 del lanzador entregada a QA, pendiente de nueva revisión. A1 espera ese cierre. Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -245,9 +245,9 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "NO APTO como herramienta (2026-11-10T13:09 Europe/Madrid). Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador.md` (sha f6827003c3c663411f87ea78a2c619a8f975880f1a2ec4a4650475ef5db110a9). El test de Dev pasa 31/31 (Q01/Q02, `diff` vacío) sobre `/workspace/run-claude-wt.sh` (sha 3788f8c31b9238970eba1c31959d3d992384eeddd8e1933b7702799039dd4c17). Fallan H1 (envoltorio git: `git -c … push` y escrituras en la integración) y H2 (los `deny` de settings no protegen integración, DECISIONES ni CONTINUIDAD). `turno.py` intacto (sha 59f8abd4390be0562c246b801e5172c4e7f9ce72ef844336e374c9fa6248b498). No se cogió el turno.",
-      "next": "Dev corrige H1–H5 y refuerza el test; luego nueva revisión de QA. A1 no arranca hasta ese cierre. H9 (`run-claude.sh`) lo decide Creador, vía Tabby.",
-      "block": "H1 y H2 (fallos de política). No es veto de publicación (herramienta interna). Vuelta atrás: `run-claude-wt.sh.anterior`."
+      "summary": "Corrección H1–H5 entregada a QA el 2026-11-10T13:18 Europe/Madrid, pendiente de nueva revisión. NO APTO previo: `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador.md` (sha f6827003c3c663411f87ea78a2c619a8f975880f1a2ec4a4650475ef5db110a9). Punto de entrada `/workspace/run-claude-wt.sh` (sha 43a04ea3e63b819aeac6b6baa14ff76007611a20f7493c9c2fb96d89d930e834). Test 76/76 EXIT_REAL=0 (log sha 7486674ff4fda6dfda3f4e91dff2b6489f574555c02e3c8002954c99cef47d33, 13:16:37–13:16:51 Europe/Madrid). INFORME `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha 2472d5b208a9800f8456aa81a5301485a4f55b64fd1868ac3192687ef1af291c). `turno.py` intacto. No se cogió el turno.",
+      "next": "Nueva revisión de QA. A1 no arranca hasta que cierre. H9 (`run-claude.sh`) lo decide Creador, vía Tabby.",
+      "block": "Pendiente de veredicto de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`."
     },
     {
       "name": "A1 Instantáneas automáticas locales",
@@ -258,7 +258,7 @@
       "status": "pausado",
       "since": null,
       "summary": "Encargada a Dev el 2026-11-10T12:50 Europe/Madrid sobre `f8c50faa`. Instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca `storage.sync`; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo).",
-      "next": "La implementación no ha empezado. El lanzador ha salido NO APTO (H1, H2); A1 espera el arreglo y una nueva revisión de QA. El alcance de A1 no cambia. No se tocan D1, D2/H1 ni P1.",
+      "next": "La implementación no ha empezado. Dev ha entregado la corrección H1–H5 del lanzador; A1 espera la nueva revisión de QA. El alcance de A1 no cambia. No se tocan D1, D2/H1 ni P1.",
       "block": "No ha empezado la implementación."
     },
     {
@@ -475,6 +475,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T13:18:00+01:00",
+      "actor": "Dev",
+      "text": "corrección H1–H5 del lanzador entregada a QA, sin coger el turno y sin arrancar A1. Punto de entrada `/workspace/run-claude-wt.sh` (sha 43a04ea3e63b819aeac6b6baa14ff76007611a20f7493c9c2fb96d89d930e834). Pruebas sintéticas: `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 76/76, EXIT_REAL=0 (log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador.log`, sha 7486674ff4fda6dfda3f4e91dff2b6489f574555c02e3c8002954c99cef47d33, INICIO=2026-11-10T13:16:37+01:00, FIN=2026-11-10T13:16:51+01:00). INFORME `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha 2472d5b208a9800f8456aa81a5301485a4f55b64fd1868ac3192687ef1af291c). `/workspace/tabner` sigue en f8c50faa; no hay worktree de producto bajo `/workspace/wt`; `turno.py` y `/workspace/run-claude.sh` intactos (H9 sigue en Creador). No se tocó D1, D2/H1 ni P1. A1 espera la nueva revisión de QA."
+    },
+    {
       "at": "2026-11-10T13:11:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador NO APTO contrastado (informe y sha coinciden; grep -ci aprobado = 0; /workspace/tabner en f8c50faa; turno.py intacto; turno libre). Encargo a Dev la corrección de H1–H5 y el refuerzo del test; después, nueva revisión de QA. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). A1 sigue en espera; el alcance no cambia. No apunto en DECISIONES una decisión de Carlos a las 12:47: fue el encargo operativo de Creador tras el 12:44. H9 (`/workspace/run-claude.sh`) lo dejo a Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
@@ -568,12 +573,7 @@
       "at": "2026-11-10T11:43:00+01:00",
       "actor": "QA",
       "text": "flecos de interfaz de M1 (`462e603`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7). Turno QA cogido a las 11:29:59 y soltado a las 11:39:20 Europe/Madrid; el cerrojo queda libre. Cerrados M1-2/UX-M1-02, UX-M1-06, M1-3/UX-M1-03, M1-5/UX-M1-04 y M1-6; UX-M1-01 y UX-M1-05 cerrados en jsdom, falta Chrome real (H-3). M1-4 sin cambio (no es defecto). M1-1 sigue aplazado al corte (whatsnew no se ha movido). La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios. Pendiente revisión manual/UI (Tabby o UX). Flecos no bloqueantes a Dev: H-1 a H-8."
-    },
-    {
-      "at": "2026-11-10T11:28:00+01:00",
-      "actor": "Dev",
-      "text": "flecos de interfaz de M1 cerrados y entregados a QA. Commit local `462e603fe6494e4aba028a892c5d1080d128d78a` en `dev/1.10.8-m1-guardar-sesion` (padre 3446ff9), sin push. Candidato 26/26 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-flecos/INFORME.md` (sha 94fa0baffc523b1916fc2cab432b8cf68229b5054ea5c3690792aefdfedfb712). Turno DEV soltado a las 11:28:12 (`turno.py ver` = libre). No se tocó D1, D2/H1, P1 ni O1."
     }
   ],
-  "contentHash": "31a50212"
+  "contentHash": "ba94fa5"
 }
