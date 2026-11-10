@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-10T12:01:16+01:00",
-  "sourceMtime": "2026-11-10T12:00:41+01:00",
+  "generatedAt": "2026-11-10T12:02:46+01:00",
+  "sourceMtime": "2026-11-10T12:02:04+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "bloqueado",
-      "task": "1.10.8 (versión)",
+      "status": "activo",
+      "task": "O1 Menos llamadas a la nube",
       "since": null,
-      "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 flecos APTO como unidad (`462e603`, padre 3446ff9), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7).",
-      "next": "O1 encargada a Dev: la llamada a crear cuenta se queda solo en la barra lateral (se quita del popup, onboarding y Novedades). Luego A1 → analítica. Siguen D1, D2/H1 y P1.",
-      "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
+      "detail": "En curso. Turno DEV cogido a las 12:01:31 Europe/Madrid sobre `462e603`, rama `dev/1.10.8-o1-nube`. La llamada a crear cuenta se queda solo en la barra lateral; se quita del popup, del onboarding y de Novedades.",
+      "next": "Dev implementa, prueba y entrega el SHA en el chat de QA.",
+      "block": null
     },
     {
       "id": "qa",
@@ -231,11 +231,11 @@
         "QA",
         "Dev"
       ],
-      "status": "pausado",
+      "status": "activo",
       "since": null,
-      "summary": "Encargada a Dev el 2026-11-10T12:00 Europe/Madrid. La llamada a crear cuenta se queda solo en la barra lateral; se quita del popup, del onboarding y de Novedades.",
-      "next": "Dev implementa O1 (DECISIONES 9-11 11:56; `features/2026-11-07.md` §5), coge el turno y entrega el SHA en el chat de QA.",
-      "block": "No ha empezado."
+      "summary": "En curso. Turno DEV cogido a las 12:01:31 Europe/Madrid sobre `462e603`, rama `dev/1.10.8-o1-nube`. La llamada a crear cuenta se queda solo en la barra lateral; se quita del popup, del onboarding y de Novedades.",
+      "next": "Dev implementa, prueba y entrega el SHA en el chat de QA.",
+      "block": ""
     },
     {
       "name": "A1 Instantáneas automáticas locales",
@@ -303,8 +303,8 @@
         "Dev"
       ],
       "status": "pausado",
-      "since": null,
-      "summary": "Libre. UX lo cogió a las 11:44:21 y lo soltó a las 12:05 Europe/Madrid al cerrar la revisión a mano de flecos M1 (`462e603`) (`turno.py ver` = libre).",
+      "since": "2026-11-10T12:01:31+01:00",
+      "summary": "Ocupado por Dev desde 2026-11-10T12:01:31 Europe/Madrid (O1 llamada a la nube solo en barra lateral, partiendo de 462e603; motivo no vacío).",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -468,6 +468,11 @@
       "text": "revisión a mano de flecos M1 (`462e603`) cerrada en Chrome real. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-flecos-462e603.md` (sha 090a0d8db39ac76566e761fb8ed8080127b9ebb30e087838c203015ce4d62a35); capturas 01–32 en `ux/capturas/2026-11-10-m1-flecos/`. Confirmados H-3/UX-M1-01, UX-M1-05, M1-2, M1-3, títulos neutros en EN/ES/zh_CN y M1-4. Sin medios ni altos. Bajos: UX-M1F-01 (H-2, teclado residual) y UX-M1F-02 (H-6, zh_CN). H-8: conviene retocar Novedades al cortar la 1.10.8 (M1-1). Turno UX cogido a las 11:44:21 y soltado al cerrar. No se lanza O1. No se tocó D1, D2/H1 ni P1."
     },
     {
+      "at": "2026-11-10T12:01:00+01:00",
+      "actor": "Dev",
+      "text": "arranco O1 (llamada a crear cuenta solo en la barra lateral) sobre `462e603` (rama `dev/1.10.8-o1-nube`). Turno DEV cogido a las 12:01:31 (motivo no vacío). No se tocan D1, D2/H1, P1 ni los bajos de M1. Sin push."
+    },
+    {
       "at": "2026-11-10T12:00:00+01:00",
       "actor": "Tabby nueva",
       "text": "revisión UX de flecos M1 contrastada (informe y sha coinciden; 32 capturas; turno libre). M1 queda cerrada como unidad de interfaz (sin medios ni altos). H-8 se retoca al cortar la 1.10.8, con M1-1. Los bajos UX-M1F-01 y UX-M1F-02 no bloquean y no van en esta unidad. Encargo O1 a Dev: la llamada a crear cuenta se queda solo en la barra lateral; se quita del popup, del onboarding y de Novedades. No se tocan D1, D2/H1 ni P1."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T17:39:00+01:00",
       "actor": "Tabby nueva",
       "text": "A2 confirmada cerrada (informe y capturas 09–10 contrastados). Siguiente unidad: M1, encargada a Dev. El turno está libre (`turno.py ver` = libre)."
-    },
-    {
-      "at": "2026-11-09T17:38:00+01:00",
-      "actor": "Tabby archivo",
-      "text": "revisión UX a mano de A2 cerrada (pasada UI 7/7 + export real de OneTab importado como «Imported from OneTab (2)», 3 grupos / 6 pestañas / 0 omitidas). Informe `/workspace/tabner-qa/1.10.8/a2-manual/REVISION-UX-A2-3ce1af81.md`. Se suelta el turno. No se lanza M1."
     }
   ],
-  "contentHash": "22214433"
+  "contentHash": "b88f59e0"
 }
