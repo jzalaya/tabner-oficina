@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:22:16+01:00",
-  "sourceMtime": "2026-11-10T12:21:49+01:00",
+  "generatedAt": "2026-11-10T12:48:41+01:00",
+  "sourceMtime": "2026-11-10T12:48:40+01:00",
   "bots": [
     {
       "id": "dev",
@@ -95,12 +95,12 @@
     {
       "id": "shorts-orquestador",
       "name": "Shorts Orquestador",
-      "status": "bloqueado",
-      "task": "Piloto The Die Decides (E01)",
+      "status": "pausado",
+      "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "audition-v3 entregada (D/E/F), pendiente elección de Carlos. 005 r04 (9/11 15:30), 006 r04 (9/11 15:48) y 007 r05 (9/11 16:03) entregados, sin revisión del Orq. LiM registrada. 005 sale mañana X 11/11 17:00 (rutina). Analítica: 001 y 003 actualizados 9/11. Ritmo 3/semana OK.",
-      "next": "Cuando Carlos elija, encargar el montaje final al Productor.",
-      "block": "Pendiente de Carlos: audition-v3 entregada (D/E/F), pendiente elección de Carlos."
+      "detail": "Tablero actualizado tras el rediseño (Shorts Director absorbe Luck is Math; métricas pasan al Guionista). El 005, el 006 y el 007 están aprobados por Carlos y salen a las 21:00 Europe/Madrid (11/11, 13/11 y 16/11), no a las 17:00. Piloto TDD E01 r07 entregado (`videos/tdd-E01-pilot-A.mp4`, voz Kokoro am_michael toma…",
+      "next": "",
+      "block": null
     },
     {
       "id": "luck-is-math",
@@ -108,7 +108,7 @@
       "status": "pausado",
       "task": "Luck is Math: 004 publicado; 005, 006 y 007 en revisión",
       "since": null,
-      "detail": "Revisados 005 r04 (8/10, el r03 falló por parpadeo), 006 r04 (8/10; cifra ~6.637 corregida) y 007 r05 (8/10; Rosa/Rose corregido). Los tres se envían al padre para el OK de Carlos; no se publica nada. Propuesta: 005 el X 11/11, 006 el V 13/11 y 007 el L 16/11.",
+      "detail": "El Director informó de que Carlos dio el OK a 005 r04, 006 r04 y 007 r05. Cambio de hora, no de fechas: salen a las 21:00 Europe/Madrid (15:00 ET / 12:00 PT) el X 11/11, V 13/11 y L 16/11. Los publica el Director (no se suben desde aquí); las métricas a 24 y 48 h se desplazan a ~21:00 de esos días. Relevo (Carlos vía…",
       "next": "Revisar las entregas del Productor: 005 r03 para el M 10/11 a las 12:00; 006 r04 para el J 12/11 a las 12:00; 007 r05 para el D 15/11 a las 12:00.",
       "block": null
     },
@@ -463,6 +463,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T12:48:00+01:00",
+      "actor": "Luck is Math",
+      "text": "El Director informó de que Carlos dio el OK a 005 r04, 006 r04 y 007 r05. Cambio de hora, no de fechas: salen a las 21:00 Europe/Madrid (15:00 ET / 12:00 PT) el X 11/11, V 13/11 y L 16/11. Los publica el Director (no se suben desde aquí); las métricas a 24 y…"
+    },
+    {
+      "at": "2026-11-10T12:48:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "Tablero actualizado tras el rediseño (Shorts Director absorbe Luck is Math; métricas pasan al Guionista). El 005, el 006 y el 007 están aprobados por Carlos y salen a las 21:00 Europe/Madrid (11/11, 13/11 y 16/11), no a las 17:00. Piloto TDD E01 r07…"
+    },
+    {
       "at": "2026-11-10T12:21:00+01:00",
       "actor": "Tabby nueva",
       "text": "O1 APTO contrastado (informe y sha coinciden; turno libre). Encargo a UX la revisión a mano en Chrome real de f8c50faa (hueco del popup, onboarding, Novedades, barra sin sesión, textos). H-7 se mantiene: «Entrar con tu email» al compartir sin sesión es requisito de la función, no una promo de O1. Playwright no es puerta de O1; el contrato lo cubre vitest y la UI se revisa a mano. H-1 (cobertura) ya está en Dev, no lo reenvío. No se lanza A1. No se tocan D1, D2/H1 ni P1."
@@ -551,17 +561,7 @@
       "at": "2026-11-09T22:45:00+01:00",
       "actor": "Luck is Math",
       "text": "Revisados 005 r04 (8/10, el r03 falló por parpadeo), 006 r04 (8/10; cifra ~6.637 corregida) y 007 r05 (8/10; Rosa/Rose corregido). Los tres se envían al padre para el OK de Carlos; no se publica nada. Propuesta: 005 el X 11/11, 006 el V 13/11 y 007 el L 16/11."
-    },
-    {
-      "at": "2026-11-09T21:45:00+01:00",
-      "actor": "Growth",
-      "text": "LinkedIn de Product Hunt guardado (https://es.linkedin.com/in/carlosjzalaya); avatar sigue pendiente."
-    },
-    {
-      "at": "2026-11-09T21:38:00+01:00",
-      "actor": "Growth",
-      "text": "perfil maker de Product Hunt guardado como @carlosjurado; avatar pendiente."
     }
   ],
-  "contentHash": "eeaa241a"
+  "contentHash": "3c391536"
 }
