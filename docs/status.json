@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:07:16+01:00",
-  "sourceMtime": "2026-11-10T12:07:15+01:00",
+  "generatedAt": "2026-11-10T12:21:31+01:00",
+  "sourceMtime": "2026-11-10T12:20:53+01:00",
   "bots": [
     {
       "id": "dev",
@@ -8,8 +8,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3, A2 y M1 cerradas. O1 entregada a QA: `f8c50faaf22fea657c83a4eb5d33bd5640584f72` en `dev/1.10.8-o1-nube` (padre 462e603), sin push. Informe `/workspace/tabner-release/1.10.8/o1-nube/INFORME.md`.",
-      "next": "QA revisa O1 (`f8c50fa`). Luego A1 → analítica. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -18,8 +18,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3, A2 y M1 cerradas. O1 entregada a QA: `f8c50faaf22fea657c83a4eb5d33bd5640584f72` en `dev/1.10.8-o1-nube` (padre 462e603), sin push. Informe `/workspace/tabner-release/1.10.8/o1-nube/INFORME.md`.",
-      "next": "QA revisa O1 (`f8c50fa`). Luego A1 → analítica. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -68,8 +68,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3, A2 y M1 cerradas. O1 entregada a QA: `f8c50faaf22fea657c83a4eb5d33bd5640584f72` en `dev/1.10.8-o1-nube` (padre 462e603), sin push. Informe `/workspace/tabner-release/1.10.8/o1-nube/INFORME.md`.",
-      "next": "QA revisa O1 (`f8c50fa`). Luego A1 → analítica. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -193,8 +193,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Abierta. D3, A2 y M1 cerradas. O1 entregada a QA: `f8c50faaf22fea657c83a4eb5d33bd5640584f72` en `dev/1.10.8-o1-nube` (padre 462e603), sin push. Informe `/workspace/tabner-release/1.10.8/o1-nube/INFORME.md`.",
-      "next": "QA revisa O1 (`f8c50fa`). Luego A1 → analítica. Siguen D1, D2/H1 y P1.",
+      "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -231,10 +231,10 @@
         "QA",
         "Dev"
       ],
-      "status": "hecho",
+      "status": "bloqueado",
       "since": null,
-      "summary": "Entregada a QA el 2026-11-10T12:06 Europe/Madrid: commit local `f8c50faaf22fea657c83a4eb5d33bd5640584f72` (padre 462e603), sin push. Candidato 12/12 + 128/128 EXIT 0; 4 mutantes EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/o1-nube/INFORME.md` (sha d98c71b8036583a9a31f0793fe0b24f79b89b7fcb5d6f267c942aab005f87e58).",
-      "next": "QA revisa `f8c50fa`. UX a mano después, si Tabby lo encarga. No se lanza A1.",
+      "summary": "APTO como unidad el 2026-11-10T12:20 Europe/Madrid (`f8c50faa`, padre 462e603), sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445). CTA quitada del popup, onboarding y Novedades; la barra no cambia; 12/12 + 128/128 y ampliada 838/838 en el candidato. H-1 (media): 4 mutantes de QA sobreviven.",
+      "next": "Revisión manual/UI (hueco del popup, onboarding, Novedades, barra sin sesión, textos, decidir H-7). No se lanza A1.",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -304,7 +304,7 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Libre. Dev lo cogió a las 12:01:31 y lo soltó a las 12:06:58 Europe/Madrid al cerrar O1 (`turno.py ver` = libre).",
+      "summary": "Libre. QA lo cogió a las 12:08:29 y lo soltó a las 12:17:51 Europe/Madrid al cerrar la QA de O1 (`f8c50faa`).",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T12:20:00+01:00",
+      "actor": "QA",
+      "text": "O1 (`f8c50faa`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445). Turno QA cogido a las 12:08:29 y soltado a las 12:17:51 Europe/Madrid; el cerrojo queda libre. La llamada a crear cuenta desaparece del popup, del onboarding y de Novedades; la barra lateral no cambia; H-1 (media, cobertura): 4 mutantes de QA sobreviven; conviene que Dev refuerce los tests. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios. Pendiente revisión manual/UI (Tabby o UX), incluida la decisión de H-7. Flecos no bloqueantes a Dev: H-1 a H-6 y H-8."
+    },
+    {
       "at": "2026-11-10T12:06:00+01:00",
       "actor": "Dev",
       "text": "O1 cerrada y entregada a QA. Commit local `f8c50faaf22fea657c83a4eb5d33bd5640584f72` en `dev/1.10.8-o1-nube` (padre 462e603), sin push. Candidato 12/12 + 128/128 EXIT 0; 4 mutantes EXIT 1 (mut-1/2/3: 2 rojos; mut-4: 1 rojo); tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/o1-nube/INFORME.md` (sha d98c71b8036583a9a31f0793fe0b24f79b89b7fcb5d6f267c942aab005f87e58). Turno DEV soltado a las 12:06:58 (`turno.py ver` = libre). No se tocó D1, D2/H1, P1 ni los bajos de M1."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T17:46:00+01:00",
       "actor": "Growth",
       "text": "correo a LogicielPro enviado a las 17:45 desde correo a correo. Copia en INBOX.Partners.Outreach. ."
-    },
-    {
-      "at": "2026-11-09T17:43:00+01:00",
-      "actor": "Dev",
-      "text": "turno DEV cogido a las 17:42:49; M1 en curso en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81)."
     }
   ],
-  "contentHash": "600ce0cc"
+  "contentHash": "2307619e"
 }
