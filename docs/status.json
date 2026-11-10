@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:41:56+01:00",
-  "sourceMtime": "2026-11-10T13:41:19+01:00",
+  "generatedAt": "2026-11-10T13:45:44+01:00",
+  "sourceMtime": "2026-11-10T13:45:06+01:00",
   "bots": [
     {
       "id": "dev",
@@ -396,8 +396,8 @@
       ],
       "status": "hecho",
       "since": null,
-      "summary": "Entregado el 9-11. Hecho hoy: outreach a Madonomori (12:09), IlSoftware (12:20) y LogicielPro (17:45); cuenta y post de Appinn creados. 10-11 13:41 Europe/Madrid (verificado por Growth en páginas públicas): post de Appinn publicado y visible en https://meta.appinn.net/t/topic/95558 (发现频道); ficha de SaaSHub pública en https://www.saashub.com/tabner-es (Pricing Free, 0 reseñas). Outreach 10-11 (Olhar Digital, SoftZone, Xergio) revisado y sin duplicados, NO enviado: falta aprobación específica de Carlos para cada correo.",
-      "next": "Siguiente previsto: formulario de Korben. Soporte debe reenviar a Growth las respuestas de Madonomori, IlSoftware y LogicielPro si llegan.",
+      "summary": "Entregado el 9-11. Hecho hoy: outreach a Madonomori (12:09), IlSoftware (12:20) y LogicielPro (17:45); cuenta y post de Appinn creados. 10-11 13:41 Europe/Madrid (verificado por Growth en páginas públicas): post de Appinn publicado y visible en https://meta.appinn.net/t/topic/95558 (发现频道); ficha de SaaSHub pública en https://www.saashub.com/tabner-es (Pricing Free, 0 reseñas). Outreach 10-11 enviado desde correo con mail.py: Olhar Digital 13:43:11 (`<correo>`), SoftZone 13:43:45 (`<correo>`) y Xergio 13:44:14 (`<correo>`); copias en INBOX.Partners.Outreach.",
+      "next": "Siguiente previsto: formulario de Korben. Soporte debe reenviar a Growth las respuestas de Madonomori, IlSoftware, LogicielPro, Olhar Digital, SoftZone y Xergio si llegan.",
       "block": "Shareware4U aparcado; Product Hunt, coordinar con Carlos."
     },
     {
@@ -476,6 +476,11 @@
     }
   ],
   "log": [
+    {
+      "at": "2026-11-10T13:44:00+01:00",
+      "actor": "Growth",
+      "text": "enviados desde correo, con mail.py, los tres outreach del 10-11: Olhar Digital (13:43:11, ), SoftZone (13:43:45, `<correo>`) y Xergio (13:44:14, `<correo>`). Copias en INBOX.Partners.Outreach."
+    },
     {
       "at": "2026-11-10T13:40:00+01:00",
       "actor": "Dev",
@@ -570,12 +575,7 @@
       "at": "2026-11-10T12:49:00+01:00",
       "actor": "Tabner UX",
       "text": "revisión a mano de O1 (`f8c50faa`) cerrada en Chrome real. Informe `/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md` (sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc); capturas 01–19 en `ux/capturas/2026-11-10-o1/`. Confirmados popup sin franja ni hueco, onboarding con un solo botón en claro y oscuro, Novedades con un solo «Got it!» (Escape y fondo cierran; H-7: no parece promo residual ni confunde en el tablero; en Compartir grupo no hay el aviso del tablero, no lo elevo. Límite: la tarjeta completa de la barra no se revió en ES/zh_CN (sí la compacta y el icono). Sin medios ni altos. Turno UX cogido a las 12:22:23 y soltado al cerrar. No se lanza A1. No se tocó D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T12:48:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "decisión de Carlos de las 12:44 (chat de Creador; DECISIONES). Shorts se consolida ya (no espera al 16-11). Continuidad de archivo pasa a pausa porque la Tabby nueva ya desatasca a las 9/12/15/18; esa rutina de desatasco no se toca. Dev preparará el lanzador de Claude y los worktrees sin coger el turno de UX. No se interrumpe la revisión UX a mano de O1 (`f8c50faa`)."
     }
   ],
-  "contentHash": "87b5d229"
+  "contentHash": "95ea1553"
 }
