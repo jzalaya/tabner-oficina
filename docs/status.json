@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:00:41+01:00",
-  "sourceMtime": "2026-11-10T13:00:04+01:00",
+  "generatedAt": "2026-11-10T13:06:41+01:00",
+  "sourceMtime": "2026-11-10T13:06:21+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "pausado",
       "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "Canal The Die Decides abierto ( ID UCoj061cp_cxP7XVLHmGjPtw, handle @TheDieDecides). Foto, banner, descripción y ajustes guardados. Luck is Math no se tocó. El piloto E01 r07 no se ha subido ni publicado; pendiente OK de Carlos para publicarlo o para el plan de episodios.",
+      "detail": "E01 r07 programado en The Die Decides para hoy 21:00 Europe/Madrid (15:00 ET / 12:00 PT): (ID T6sjDTcI4sY). Título: Floor 1: The Moss Hound | The Die Decides. Miniatura = primer fotograma (YouTube pidió teléfono para miniatura personalizada). Comentario fijado pendiente de que sea público. Calendario TDD…",
       "next": "",
       "block": null
     },
@@ -475,6 +475,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T13:05:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "E01 r07 programado en The Die Decides para hoy 21:00 Europe/Madrid (15:00 ET / 12:00 PT): (ID T6sjDTcI4sY). Título: Floor 1: The Moss Hound | The Die Decides. Miniatura = primer fotograma (YouTube pidió teléfono para miniatura personalizada). Comentario…"
+    },
+    {
       "at": "2026-11-10T12:59:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "Canal The Die Decides abierto ( ID UCoj061cp_cxP7XVLHmGjPtw, handle @TheDieDecides). Foto, banner, descripción y ajustes guardados. Luck is Math no se tocó. El piloto E01 r07 no se ha subido ni publicado; pendiente OK de Carlos para publicarlo o para el plan…"
@@ -513,11 +518,6 @@
       "at": "2026-11-10T12:48:00+01:00",
       "actor": "Luck is Math",
       "text": "El Director informó de que Carlos dio el OK a 005 r04, 006 r04 y 007 r05. Cambio de hora, no de fechas: salen a las 21:00 Europe/Madrid (15:00 ET / 12:00 PT) el X 11/11, V 13/11 y L 16/11. Los publica el Director (no se suben desde aquí); las métricas a 24 y…"
-    },
-    {
-      "at": "2026-11-10T12:48:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "Tablero actualizado tras el rediseño (Shorts Director absorbe Luck is Math; métricas pasan al Guionista). El 005, el 006 y el 007 están aprobados por Carlos y salen a las 21:00 Europe/Madrid (11/11, 13/11 y 16/11), no a las 17:00. Piloto TDD E01 r07…"
     },
     {
       "at": "2026-11-10T12:21:00+01:00",
@@ -575,5 +575,5 @@
       "text": "revisión a mano de M1 (`3446ff9`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53 en `ux/capturas/2026-11-10-m1/`. M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, no bloquea. A Tabby: decidir M1-2 (unificar Deshacer vs ajustar Novedades) y M1-3 (que el popup no cierre pestañas). Turno UX cogido a las 10:32:04 y soltado al cerrar. No se lanza O1 desde aquí. No se tocó D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "b77a9248"
+  "contentHash": "f216241c"
 }
