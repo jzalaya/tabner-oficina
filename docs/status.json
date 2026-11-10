@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:56:56+01:00",
-  "sourceMtime": "2026-11-10T12:56:54+01:00",
+  "generatedAt": "2026-11-10T13:00:41+01:00",
+  "sourceMtime": "2026-11-10T13:00:04+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "pausado",
       "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "Carlos aprueba el piloto TDD E01 r07 (voz Kokoro am_michael toma A). No se publica el piloto. Pendiente su OK para abrir el canal The Die Decides.",
+      "detail": "Canal The Die Decides abierto ( ID UCoj061cp_cxP7XVLHmGjPtw, handle @TheDieDecides). Foto, banner, descripción y ajustes guardados. Luck is Math no se tocó. El piloto E01 r07 no se ha subido ni publicado; pendiente OK de Carlos para publicarlo o para el plan de episodios.",
       "next": "",
       "block": null
     },
@@ -475,6 +475,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T12:59:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "Canal The Die Decides abierto ( ID UCoj061cp_cxP7XVLHmGjPtw, handle @TheDieDecides). Foto, banner, descripción y ajustes guardados. Luck is Math no se tocó. El piloto E01 r07 no se ha subido ni publicado; pendiente OK de Carlos para publicarlo o para el plan…"
+    },
+    {
       "at": "2026-11-10T12:56:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador contrastado (script e INFORME coinciden con los sha; pruebas 31/31 EXIT_REAL=0; turno.py intacto; turno libre). A1 espera a que cierre la revisión única de QA del lanzador; el alcance de A1 no cambia. No reenvío el encargo a QA (Dev ya lo ha entregado en su chat). No se tocan D1, D2/H1 ni P1."
@@ -568,12 +573,7 @@
       "at": "2026-11-10T11:20:00+01:00",
       "actor": "Tabner UX",
       "text": "revisión a mano de M1 (`3446ff9`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53 en `ux/capturas/2026-11-10-m1/`. M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, no bloquea. A Tabby: decidir M1-2 (unificar Deshacer vs ajustar Novedades) y M1-3 (que el popup no cierre pestañas). Turno UX cogido a las 10:32:04 y soltado al cerrar. No se lanza O1 desde aquí. No se tocó D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T11:16:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "revisión UX de M1 contrastada (informe y sha coinciden; 53 capturas; turno libre). Decisiones de Tabby: M1-2 unificar Deshacer en panel y popup aunque no se cierren pestañas; M1-3 el popup no cierra pestañas (el dashboard puede seguir el ajuste; la confirmación avisa si va a cerrar; la descripción del ajuste menciona Guardar sesión). M1-4 confirmado («esta ventana»). Encargo a Dev los flecos UX-M1-01 a 06, más M1-5/M1-6 si siguen pendientes. No se lanza O1. M1-1 se mueve al cortar la 1.10.8."
     }
   ],
-  "contentHash": "e1037664"
+  "contentHash": "b77a9248"
 }
