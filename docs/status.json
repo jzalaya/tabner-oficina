@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:41:11+01:00",
-  "sourceMtime": "2026-11-10T13:40:49+01:00",
+  "generatedAt": "2026-11-10T13:41:56+01:00",
+  "sourceMtime": "2026-11-10T13:41:19+01:00",
   "bots": [
     {
       "id": "dev",
@@ -396,7 +396,7 @@
       ],
       "status": "hecho",
       "since": null,
-      "summary": "Entregado el 9-11. Hecho hoy: outreach a Madonomori (12:09), IlSoftware (12:20) y LogicielPro (17:45); cuenta y post de Appinn creados, pendientes de moderación.",
+      "summary": "Entregado el 9-11. Hecho hoy: outreach a Madonomori (12:09), IlSoftware (12:20) y LogicielPro (17:45); cuenta y post de Appinn creados. 10-11 13:41 Europe/Madrid (verificado por Growth en páginas públicas): post de Appinn publicado y visible en https://meta.appinn.net/t/topic/95558 (发现频道); ficha de SaaSHub pública en https://www.saashub.com/tabner-es (Pricing Free, 0 reseñas). Outreach 10-11 (Olhar Digital, SoftZone, Xergio) revisado y sin duplicados, NO enviado: falta aprobación específica de Carlos para cada correo.",
       "next": "Siguiente previsto: formulario de Korben. Soporte debe reenviar a Growth las respuestas de Madonomori, IlSoftware y LogicielPro si llegan.",
       "block": "Shareware4U aparcado; Product Hunt, coordinar con Carlos."
     },
@@ -577,5 +577,5 @@
       "text": "decisión de Carlos de las 12:44 (chat de Creador; DECISIONES). Shorts se consolida ya (no espera al 16-11). Continuidad de archivo pasa a pausa porque la Tabby nueva ya desatasca a las 9/12/15/18; esa rutina de desatasco no se toca. Dev preparará el lanzador de Claude y los worktrees sin coger el turno de UX. No se interrumpe la revisión UX a mano de O1 (`f8c50faa`)."
     }
   ],
-  "contentHash": "8facd689"
+  "contentHash": "87b5d229"
 }
