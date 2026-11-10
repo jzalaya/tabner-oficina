@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:53:59+01:00",
-  "sourceMtime": "2026-11-10T13:53:56+01:00",
+  "generatedAt": "2026-11-10T13:54:44+01:00",
+  "sourceMtime": "2026-11-10T13:54:06+01:00",
   "bots": [
     {
       "id": "dev",
@@ -477,6 +477,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T13:54:00+01:00",
+      "actor": "Dev",
+      "text": "QA declara el lanzador r3 NO APTO (informe sha `ab315925d9eb340f79054f455c1452533a8e6f3bd8b672699fefe5923be8aa36`; 90/90 y N1–N3 bloquean, pero abre N9 alta: `-c include.path` cuela alias `push` y `!`). N6 parcial (mutante m17). N7/N8 siguen en baja. No interrumpo A1 (Claude sigue en `/workspace/wt/a1`, turno DEV, `claude-tabner.lock` ocupado). El arreglo mínimo del §7 queda en cola para justo después de cerrar A1; no se mezcla en el commit de A1."
+    },
+    {
       "at": "2026-11-10T13:53:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador r3 NO APTO contrastado (informe y sha coinciden; 8258 B; grep -ci aprobado = 0; r1 y r2 intactos; /workspace/tabner en f8c50faa; turno sigue en DEV por A1 desde las 13:40:15; /workspace/wt/a1 intacto como cerrojo, trabajo de A1 en curso). No interrumpo A1. Encargo a Dev la corrección de N9 y el refuerzo del test (include.path y el caso que mata m17) al cerrar A1, no ahora. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). Después, nueva revisión de QA. H9 (`/workspace/run-claude.sh`) sigue en Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
@@ -570,12 +575,7 @@
       "at": "2026-11-10T12:56:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador contrastado (script e INFORME coinciden con los sha; pruebas 31/31 EXIT_REAL=0; turno.py intacto; turno libre). A1 espera a que cierre la revisión única de QA del lanzador; el alcance de A1 no cambia. No reenvío el encargo a QA (Dev ya lo ha entregado en su chat). No se tocan D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T12:55:00+01:00",
-      "actor": "Dev",
-      "text": "lanzador único de Claude listo, sin coger el turno. Punto de entrada `/workspace/run-claude-wt.sh`. Worktrees en `/workspace/wt/<unidad>`; nadie programa en `/workspace/tabner`. Sesiones con `--session-id` propio (nada de `--continue`). `flock` solo para buzón de pruebas, tiendas, y como mucho una sesión pesada de Tabner y una de Shorts a la vez. `turno.py` se conserva archivado, sin modificar. Pruebas sintéticas: `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 31/31, EXIT_REAL=0 (log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador.log`, INICIO=2026-11-10T12:54:14+01:00, FIN=2026-11-10T12:54:27+01:00). INFORME `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha 31f3e57365c9d75d8acdcb1557c830b5b4143bc29f66437b50c36ca25a4dbf25). No se ha empezado A1 (encargo de Carlos/Creador 12:47 y DECISIONES 12:44: primero el lanzador). No se tocó D1, D2/H1 ni P1. Una sola revisión de QA, ya avisada en su chat."
     }
   ],
-  "contentHash": "6a46328f"
+  "contentHash": "7126acd9"
 }
