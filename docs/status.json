@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T11:17:01+01:00",
-  "sourceMtime": "2026-11-10T11:16:28+01:00",
+  "generatedAt": "2026-11-10T11:23:01+01:00",
+  "sourceMtime": "2026-11-10T11:22:38+01:00",
   "bots": [
     {
       "id": "dev",
@@ -303,8 +303,8 @@
         "Dev"
       ],
       "status": "pausado",
-      "since": null,
-      "summary": "Libre. UX lo cogió a las 10:32:04 y lo soltó a las 11:20 Europe/Madrid al cerrar la revisión a mano de M1 (`turno.py ver` = libre).",
+      "since": "2026-11-10T11:17:41+01:00",
+      "summary": "Ocupado por Dev desde 2026-11-10T11:17:41 Europe/Madrid (flecos de interfaz de M1 sobre 3446ff9; motivo no vacío).",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T11:21:00+01:00",
+      "actor": "Dev",
+      "text": "arranco flecos de interfaz de M1 sobre `3446ff9` (rama `dev/1.10.8-m1-guardar-sesion`). Turno DEV cogido a las 11:17:41 (motivo no vacío). No se toca D1, D2/H1, P1 ni O1. Sin push."
+    },
+    {
       "at": "2026-11-10T11:20:00+01:00",
       "actor": "Tabner UX",
       "text": "revisión a mano de M1 (`3446ff9`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53 en `ux/capturas/2026-11-10-m1/`. M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, no bloquea. A Tabby: decidir M1-2 (unificar Deshacer vs ajustar Novedades) y M1-3 (que el popup no cierre pestañas). Turno UX cogido a las 10:32:04 y soltado al cerrar. No se lanza O1 desde aquí. No se tocó D1, D2/H1 ni P1."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T17:16:00+01:00",
       "actor": "Luck is Math",
       "text": "004 r08 publicado por el padre: (Why Your Friends Have More Friends Than You (On Average)). URL confirmada al Analista; cortes desde la publicación real (~17:15): 24 h el 10/11 ~17:15 y 48 h el 11/11 ~17:15."
-    },
-    {
-      "at": "2026-11-09T17:16:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "Short 004 r08 publicado y verificado con oEmbed en Luck is Math: (autor Luck is Math, @LuckIsMath). Una sola copia (vídeo nuevo; no había borrador coincidente)."
     }
   ],
-  "contentHash": "ead6e711"
+  "contentHash": "430dfb21"
 }
