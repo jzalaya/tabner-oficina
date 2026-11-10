@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-10T17:23:16+01:00",
-  "sourceMtime": "2026-11-10T17:22:32+01:00",
+  "generatedAt": "2026-11-10T17:29:16+01:00",
+  "sourceMtime": "2026-11-10T17:28:31+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
       "status": "activo",
       "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": "2026-11-10T17:19:20+01:00",
-      "detail": "En vigor (no archivado ni retirado). DEV desde las 17:19:20 Europe/Madrid (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "since": null,
+      "detail": "En vigor (no archivado ni retirado). Libre. Dev lo soltó a las 17:28:13 Europe/Madrid al entregar los flecos H-11/H-4/UX-A1F-01 (`e9ff7c06`). Dev lo había cogido a las 17:19:20 (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -17,8 +17,8 @@
       "name": "QA",
       "status": "activo",
       "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": "2026-11-10T17:19:20+01:00",
-      "detail": "En vigor (no archivado ni retirado). DEV desde las 17:19:20 Europe/Madrid (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "since": null,
+      "detail": "En vigor (no archivado ni retirado). Libre. Dev lo soltó a las 17:28:13 Europe/Madrid al entregar los flecos H-11/H-4/UX-A1F-01 (`e9ff7c06`). Dev lo había cogido a las 17:19:20 (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -27,8 +27,8 @@
       "name": "UX",
       "status": "activo",
       "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": "2026-11-10T17:19:20+01:00",
-      "detail": "En vigor (no archivado ni retirado). DEV desde las 17:19:20 Europe/Madrid (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "since": null,
+      "detail": "En vigor (no archivado ni retirado). Libre. Dev lo soltó a las 17:28:13 Europe/Madrid al entregar los flecos H-11/H-4/UX-A1F-01 (`e9ff7c06`). Dev lo había cogido a las 17:19:20 (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de flecos A1 (`0553079e`) contrastada (informe sha 624d3dfc…, capturas 01–48; turno libre). Encargo a Dev el siguiente paquete de flecos (UX-A1F-01, H-11 y H-4), sin mezclarlo con el r9 ni con UX-S1. Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`, padre `0553079e`, sin push) entregados a QA. Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego, si este paquete queda APTO, revisión UX a mano y después UX-S1 (paquete aparte, sin reabrir A1) y analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de flecos A1 (`0553079e`) contrastada (informe sha 624d3dfc…, capturas 01–48; turno libre). Encargo a Dev el siguiente paquete de flecos (UX-A1F-01, H-11 y H-4), sin mezclarlo con el r9 ni con UX-S1. Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego UX-S1 (instantánea al actualizar, paquete aparte, sin reabrir A1) y después analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`, padre `0553079e`, sin push) entregados a QA. Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego, si este paquete queda APTO, revisión UX a mano y después UX-S1 (paquete aparte, sin reabrir A1) y analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -245,7 +245,7 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "r9 entregado a QA el 2026-11-10T17:10 Europe/Madrid (corrección N25, N26, N27 y refuerzo del test N28–N30), sin coger el turno. Test oficial 336/336 EXIT_REAL=0, INICIO 17:09:13 FIN 17:09:28 Europe/Madrid, PID 2761726, CWD `/workspace`, log sha 3344d154c3c67dde7371c5391a85353e3b067173c952a46115e01ed5845411f3 (17156 B). Entry sha 79d9b4b4… (13022 B, modo 0555, shebang `#!/bin/bash -p`, sin cambio de contenido). wrappers/git sha d7fb256c… (27347 B, modo 0555). tests sha 636e84b7… (59987 B). write-settings sha 5fe1b5fa… (3648 B, sin cambio). POLITICA sha 7024b7d8… (10121 B). INFORME sha 3cb91965fc18a19758fe8a039790da34166fc3c661e45d6d973f7b522e606cc6 (4954 B). INFORME-r8 sha 95f8d923… e informe QA r8 sha fea0ee06… intactos. `/workspace/tabner` en f8c50faa. Flecos de A1 (`0553079e`) no tocados.",
+      "summary": "r9 entregado a QA el 2026-11-10T17:10 Europe/Madrid (corrección N25, N26, N27 y refuerzo del test N28–N30), sin coger el turno. Test oficial 336/336 EXIT_REAL=0, INICIO 17:09:13 FIN 17:09:28 Europe/Madrid, PID 2761726, CWD `/workspace`, log sha 3344d154c3c67dde7371c5391a85353e3b067173c952a46115e01ed5845411f3 (17156 B). Entry sha 79d9b4b4… (13022 B, modo 0555, shebang `#!/bin/bash -p`, sin cambio de contenido). wrappers/git sha d7fb256c… (27347 B, modo 0555). tests sha 636e84b7… (59987 B). write-settings sha 5fe1b5fa… (3648 B, sin cambio). POLITICA sha 7024b7d8… (10121 B). INFORME sha 3cb91965fc18a19758fe8a039790da34166fc3c661e45d6d973f7b522e606cc6 (4954 B). INFORME-r8 sha 95f8d923… e informe QA r8 sha fea0ee06… intactos. `/workspace/tabner` en f8c50faa. Flecos de A1 no tocados en r9 (van en paquete aparte, ahora `e9ff7c06` en QA).",
       "next": "QA revisa r9 (ya entregado en su chat; no reenviar). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`). UX-S1 y los flecos de A1 (UX-A1F-01, H-11 y H-4) no entran en este paquete.",
       "block": "Pendiente de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
     },
@@ -258,8 +258,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Flecos UX-A1-01 a 04 y H-1/H-2 APTOS como unidad el 2026-11-10T16:41 Europe/Madrid sobre `0553079e` (padre `0138b443`, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-flecos-0553079e.md` (sha c6392af3d3ec0eb2c6ddccdaaa7e420bb09ce7de5aa77f2c2769104d0a40a0dd, 21418 B, `grep -ci aprobado` = 0). T1 114/114, T2 2103/50, sonda 49/49, tsc solo los 3 TS2307 previos. Cerrados UX-A1-01, UX-A1-02, UX-A1-03, UX-A1-04/H-5b (copia previa), H-1 y H-2. Fleco nuevo no bloqueante H-11 (media). INFORME Dev `/workspace/tabner-release/1.10.8/a1-flecos/INFORME.md` (sha 77cd2fec9595ae96fa8e2e934d627f520e2baa8bb70fea4cc3df326086ffe6af, 16955 B). Revisión UX a mano cerrada el 2026-11-10T15:19 Europe/Madrid sobre `0138b443`. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-0138b443.md` (sha 3072ecc5cc46633c2a537efc821aac34ec0be4dafb535f660e1b031b78e983ad); capturas 01–47 (con 36b, 37b y 38b). Sin altos. Cinco medios: UX-A1-01 (H-8, el diálogo no avisa de los borrados en la nube), UX-A1-02 (etiquetas del mismo minuto), UX-A1-03 (copia previa prometida que a menudo no se escribe), UX-A1-04 (9 copias con dos pestañas del dashboard, tope 8) y UX-A1-05 (pestaña nueva usable en ~10 s con 2500 pestañas). Dos bajos: UX-A1-06 (capacidad «-65900 más pestañas») y UX-A1-07 («Abrir» del popup). H-9 hecho. Solo Chrome. QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde). `/workspace/tabner` sigue en f8c50faa. Revisión UX a mano de estos flecos cerrada el 2026-11-10T17:17 Europe/Madrid: `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-0553079e.md` (sha 624d3dfced85e710a940489016b7cf8875a6be54b3f655380441c49a28f19da1).",
-      "next": "Encargo a Dev el siguiente paquete de flecos sobre `0553079e` (turno libre; worktree `/workspace/wt/a1`): UX-A1F-01 (el texto «ya está entre las copias» y que un restore del estado actual no gaste un hueco del tope), H-11 (proteger la copia elegida con el diálogo abierto) y H-4 (excluir `isCollapsed`/`areTagsCollapsed` de `relevantContent`). Sin mezclarlo con el r9 ni con UX-S1. No entran los bajos UX-A1F-02 ni UX-A1-06. Siguen fuera de alcance: H-3, H-5a, H-7 (H-12 documental). No se lanza la analítica ni UX-S1 (paquete aparte, sin reabrir A1, después de cerrar estos flecos como unidad). Límite: solo Chrome; no se comprobaron ordinales de UX-A1-02 ni un segundo dispositivo. Cuentas `tabner-qa+ux2` y `tabner-qa+ux3` pendientes de borrar (lo borra UX).",
+      "summary": "Flecos UX-A1-01 a 04 y H-1/H-2 APTOS como unidad el 2026-11-10T16:41 Europe/Madrid sobre `0553079e` (padre `0138b443`, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-flecos-0553079e.md` (sha c6392af3d3ec0eb2c6ddccdaaa7e420bb09ce7de5aa77f2c2769104d0a40a0dd, 21418 B, `grep -ci aprobado` = 0). T1 114/114, T2 2103/50, sonda 49/49, tsc solo los 3 TS2307 previos. Cerrados UX-A1-01, UX-A1-02, UX-A1-03, UX-A1-04/H-5b (copia previa), H-1 y H-2. Fleco nuevo no bloqueante H-11 (media). INFORME Dev `/workspace/tabner-release/1.10.8/a1-flecos/INFORME.md` (sha 77cd2fec9595ae96fa8e2e934d627f520e2baa8bb70fea4cc3df326086ffe6af, 16955 B). Revisión UX a mano cerrada el 2026-11-10T15:19 Europe/Madrid sobre `0138b443`. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-0138b443.md` (sha 3072ecc5cc46633c2a537efc821aac34ec0be4dafb535f660e1b031b78e983ad); capturas 01–47 (con 36b, 37b y 38b). Sin altos. Cinco medios: UX-A1-01 (H-8, el diálogo no avisa de los borrados en la nube), UX-A1-02 (etiquetas del mismo minuto), UX-A1-03 (copia previa prometida que a menudo no se escribe), UX-A1-04 (9 copias con dos pestañas del dashboard, tope 8) y UX-A1-05 (pestaña nueva usable en ~10 s con 2500 pestañas). Dos bajos: UX-A1-06 (capacidad «-65900 más pestañas») y UX-A1-07 («Abrir» del popup). H-9 hecho. Solo Chrome. QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-0138b443.md` (sha d8ff4675e58d9449036461a5b72a05e1dde20cfc852ea69491fa0b1e1bc28cde). `/workspace/tabner` sigue en f8c50faa. Revisión UX a mano de estos flecos cerrada el 2026-11-10T17:17 Europe/Madrid: `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-0553079e.md` (sha 624d3dfced85e710a940489016b7cf8875a6be54b3f655380441c49a28f19da1). Paquete H-11/H-4/UX-A1F-01 entregado a QA el 2026-11-10T17:28 Europe/Madrid: commit local `e9ff7c06ee1b963a41e114338f0ac6c1dea85ebc` (padre `0553079e`, sin push). INFORME `/workspace/tabner-release/1.10.8/a1-flecos-h11/INFORME.md` (sha 7e2f521e7d1c25bda8c8bce4888bb09905b36f9977321719e4ccbcba5c94bfa3, 9528 B). T1 124/124, T2 2113/50, tsc solo los 3 TS2307 previos.",
+      "next": "QA revisa el paquete H-11/H-4/UX-A1F-01 (`e9ff7c06`, padre `0553079e`, sin push) en su chat (no reenviar). INFORME `/workspace/tabner-release/1.10.8/a1-flecos-h11/INFORME.md` (sha 7e2f521e7d1c25bda8c8bce4888bb09905b36f9977321719e4ccbcba5c94bfa3, 9528 B). No entran los bajos UX-A1F-02 ni UX-A1-06. Siguen fuera de alcance: H-3, H-5a, H-7 (H-12 documental). No se lanza la analítica ni UX-S1 hasta cerrar estos flecos como unidad (el r9 sigue en QA, paquete aparte). Límite: solo Chrome; no se comprobaron ordinales de UX-A1-02 ni un segundo dispositivo. Cuentas `tabner-qa+ux2` y `tabner-qa+ux3` pendientes de borrar (lo borra UX).",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -318,8 +318,8 @@
         "Dev"
       ],
       "status": "activo",
-      "since": "2026-11-10T17:19:20+01:00",
-      "summary": "En vigor (no archivado ni retirado). DEV desde las 17:19:20 Europe/Madrid (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "since": null,
+      "summary": "En vigor (no archivado ni retirado). Libre. Dev lo soltó a las 17:28:13 Europe/Madrid al entregar los flecos H-11/H-4/UX-A1F-01 (`e9ff7c06`). Dev lo había cogido a las 17:19:20 (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -478,6 +478,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T17:28:00+01:00",
+      "actor": "Dev",
+      "text": "flecos A1 (H-11, H-4 y UX-A1F-01) entregados a QA. Commit local `e9ff7c06ee1b963a41e114338f0ac6c1dea85ebc` (padre `0553079e`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`), sin push. Hecho a mano (DECISIONES 14:05): no se ocupó Claude para no interferir con la QA del r9 (mismo `claude-tabner.lock`). Verificación oficial de Dev: T1 `npx vitest run --project app` (6 ficheros de copias) 124/124 EXIT_REAL=0, INICIO 17:25:54 FIN 17:25:56 Europe/Madrid, PID 2862943, log sha c2beb0bf995e0287f411cef799a5d94e2390c6e18523224b299deae734ff941f; T2 suite `app` 207/6 ficheros, 2113/50 tests, EXIT_REAL=0, INICIO 17:25:56 FIN 17:26:36, PID 2863338, log sha 45f28c8f7eaeb2c74ff78ba76ec398a68a0ca20d0eb5562cfadd2886a6115e1b; tsc solo los 3 TS2307 previos, EXIT 2. INFORME sha 7e2f521e7d1c25bda8c8bce4888bb09905b36f9977321719e4ccbcba5c94bfa3 (9528 B). Versión sigue en 1.10.7. `/workspace/tabner` en f8c50faa. No entran los bajos UX-A1F-02 ni UX-A1-06. Turno soltado a las 17:28:13. El r9 del lanzador sigue en QA; no se ha tocado. UX-S1 va en paquete aparte. No es un OK de publicación."
+    },
+    {
       "at": "2026-11-10T17:19:00+01:00",
       "actor": "Dev",
       "text": "turno cogido a las 17:19:20 Europe/Madrid (`flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). Arrancados en `/workspace/wt/a1` sobre `0553079e`, sin tocar el lanzador (r9 sigue en QA), D1, D2/H1, P1, UX-S1 ni la analítica. No entran los bajos UX-A1F-02 ni UX-A1-06. La entrega irá al chat de QA."
@@ -571,12 +576,7 @@
       "at": "2026-11-10T15:27:00+01:00",
       "actor": "Dev",
       "text": "turno cogido a las 15:27:18 Europe/Madrid (`flecos A1: UX-A1-01 a 04 y H-1/H-2 sobre 0138b443`). Arrancados en `/workspace/wt/a1` sobre `0138b443`, sin tocar el lanzador, D1, D2/H1 ni P1. No entran UX-A1-05 ni los bajos UX-A1-06 y UX-A1-07. La entrega irá al chat de QA."
-    },
-    {
-      "at": "2026-11-10T15:26:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "lanzador r7 contrastado (INFORME sha 8cafb67b…, 5505 B; log sha dfb53f28…, 276/276 y 0 fallos, INICIO 15:23:44 FIN 15:23:59 Europe/Madrid, PID 2329542, CWD `/workspace`; entry sha 009bdfa3… modo 0555; wrappers/git sha 4eb164c8… modo 0555; tests sha a0e093ef…; write-settings sha 9f6f4eb4…; POLITICA sha c80342b3… coinciden; INFORME-r6 sha 18c92329…, INFORME-r5 sha 913b39b4… e informe QA r6 sha b0b464ee… intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos; turno libre desde las 15:19). No reenvío el paquete a QA (Dev ya lo ha entregado en su chat). Encargo a Dev los flecos de A1 (UX-A1-01 a 04 y H-1/H-2) en paquete aparte; no reenvío los H-1/H-2. No entran UX-A1-05 ni los bajos UX-A1-06 y UX-A1-07. No se lanza la analítica todavía. La ronda UX de ~15:50 sigue siendo solo propuesta mientras el lanzador esté en QA. No es un OK de publicación."
     }
   ],
-  "contentHash": "1e879395"
+  "contentHash": "e64f4cf5"
 }
