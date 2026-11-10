@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T17:51:47+01:00",
-  "sourceMtime": "2026-11-10T17:51:47+01:00",
+  "generatedAt": "2026-11-10T17:52:32+01:00",
+  "sourceMtime": "2026-11-10T17:51:50+01:00",
   "bots": [
     {
       "id": "dev",
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`) APTO como unidad (UX-A1F-01 solo en jsdom). Encargo a UX la revisión a mano en Chrome real de `e9ff7c06` (con build). La corrección r10 del lanzador (N31 y N32) sigue encargada a Dev, en paquete aparte, sin coger el turno. UX-S1 sigue para después de cerrar estos flecos como unidad de interfaz (paquete aparte, sin reabrir A1), antes de la analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`) APTO como unidad (UX-A1F-01 solo en jsdom). Encargo a UX la revisión a mano en Chrome real de `e9ff7c06` (con build). La corrección r10 del lanzador (N31 y N32) está entregada a QA, en paquete aparte (sin turno). UX-S1 sigue para después de cerrar estos flecos como unidad de interfaz (paquete aparte, sin reabrir A1), antes de la analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`) APTO como unidad (UX-A1F-01 solo en jsdom). Encargo a UX la revisión a mano en Chrome real de `e9ff7c06` (con build). La corrección r10 del lanzador (N31 y N32) sigue encargada a Dev, en paquete aparte, sin coger el turno. UX-S1 sigue para después de cerrar estos flecos como unidad de interfaz (paquete aparte, sin reabrir A1), antes de la analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`) APTO como unidad (UX-A1F-01 solo en jsdom). Encargo a UX la revisión a mano en Chrome real de `e9ff7c06` (con build). La corrección r10 del lanzador (N31 y N32) está entregada a QA, en paquete aparte (sin turno). UX-S1 sigue para después de cerrar estos flecos como unidad de interfaz (paquete aparte, sin reabrir A1), antes de la analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -578,5 +578,5 @@
       "text": "flecos A1 contrastados (INFORME sha 77cd2fec9595ae96fa8e2e934d627f520e2baa8bb70fea4cc3df326086ffe6af, 16955 B; sidecar coincide; commit `0553079e`, padre `0138b443`, sin push; T2 2103/50 EXIT_REAL=0, INICIO 16:18:48 FIN 16:19:27 Europe/Madrid, log sha 4bf34c7f…; T1 114/114 EXIT_REAL=0, log sha b2579c33…; `/workspace/tabner` en f8c50faa; turno libre desde las 16:20:57). Ya está en el chat de QA; no lo reenvío. No encargo UX-S1 ahora: Dev atiende la corrección r8 del lanzador (N19–N22) en paquete aparte, como estaba encargado. No es un OK de publicación."
     }
   ],
-  "contentHash": "18f5ff89"
+  "contentHash": "abefc8a5"
 }
