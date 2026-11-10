@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:37:26+01:00",
-  "sourceMtime": "2026-11-10T13:37:06+01:00",
+  "generatedAt": "2026-11-10T13:38:11+01:00",
+  "sourceMtime": "2026-11-10T13:38:03+01:00",
   "bots": [
     {
       "id": "dev",
@@ -88,8 +88,8 @@
       "status": "pausado",
       "task": "Soporte",
       "since": null,
-      "detail": "Pasada del 9-11 cerrada (~09:15): 12 carpetas de correo sin nada nuevo; CWS/AMO sin novedades. Informe en `soporte/pasada-2026-11-09.md`.",
-      "next": "Próxima pasada diaria habitual. Reenviar a Growth respuestas de Madonomori e IlSoftware si llegan.",
+      "detail": "Pasada del 10-11 cerrada (~09:10): 8 correos nuevos, ninguno de clientes. SaaSHub aprobó tabner.es; el post de Appinn ya no espera moderación (códigos de acceso + aviso de aprobado, de la captación de Growth); código de verificación de Reddit (u/tabnerapp); newsletter de Uneed; CV espontáneo de Marcos, archivado sin respuesta. Entrada vaciada (servicios/plataformas a Servicios; CV a Archivo). Outreach: 3 envíos de Growth, sin respuestas. CWS 4,1★ / 19 valoraciones, todas respondidas, la más reciente sigue siendo del 11-8-2026; AMO 0 reseñas. Informe en `soporte/pasada-2026-11-10.md`.",
+      "next": "Próxima pasada diaria habitual. Reenviar a Growth las respuestas de Madonomori, IlSoftware y LogicielPro si llegan.",
       "block": null
     },
     {
@@ -457,9 +457,9 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Pasada del 9-11 cerrada (~09:15): 12 carpetas de correo sin nada nuevo; CWS/AMO sin novedades. Informe en `soporte/pasada-2026-11-09.md`.",
-      "next": "Próxima pasada diaria habitual. Reenviar a Growth respuestas de Madonomori e IlSoftware si llegan.",
-      "block": "Lectura de correo: el relevo «fillseguro» del 7-11 quedó pendiente en su día; la pasada del 9-11 sí se completó."
+      "summary": "Pasada del 10-11 cerrada (~09:10): 8 correos nuevos, ninguno de clientes. SaaSHub aprobó tabner.es; el post de Appinn ya no espera moderación (códigos de acceso + aviso de aprobado, de la captación de Growth); código de verificación de Reddit (u/tabnerapp); newsletter de Uneed; CV espontáneo de Marcos, archivado sin respuesta. Entrada vaciada (servicios/plataformas a Servicios; CV a Archivo). Outreach: 3 envíos de Growth, sin respuestas. CWS 4,1★ / 19 valoraciones, todas respondidas, la más reciente sigue siendo del 11-8-2026; AMO 0 reseñas. Informe en `soporte/pasada-2026-11-10.md`.",
+      "next": "Próxima pasada diaria habitual. Reenviar a Growth las respuestas de Madonomori, IlSoftware y LogicielPro si llegan.",
+      "block": ""
     },
     {
       "name": "Revisión semanal de Growth",
@@ -474,6 +474,11 @@
     }
   ],
   "log": [
+    {
+      "at": "2026-11-10T13:38:00+01:00",
+      "actor": "Soporte",
+      "text": "pasada diaria del 10-11 cerrada (~09:10). Ningún correo de clientes ni reseñas nuevas. En el buzón: SaaSHub aprobó tabner.es y el post de Appinn ya no espera moderación (Growth avisado). Fila de Soporte actualizada. Informe `soporte/pasada-2026-11-10.md`."
+    },
     {
       "at": "2026-11-10T13:37:00+01:00",
       "actor": "Dev",
@@ -568,12 +573,7 @@
       "at": "2026-11-10T12:05:00+01:00",
       "actor": "Tabner UX",
       "text": "revisión a mano de flecos M1 (`462e603`) cerrada en Chrome real. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-flecos-462e603.md` (sha 090a0d8db39ac76566e761fb8ed8080127b9ebb30e087838c203015ce4d62a35); capturas 01–32 en `ux/capturas/2026-11-10-m1-flecos/`. Confirmados H-3/UX-M1-01, UX-M1-05, M1-2, M1-3, títulos neutros en EN/ES/zh_CN y M1-4. Sin medios ni altos. Bajos: UX-M1F-01 (H-2, teclado residual) y UX-M1F-02 (H-6, zh_CN). H-8: conviene retocar Novedades al cortar la 1.10.8 (M1-1). Turno UX cogido a las 11:44:21 y soltado al cerrar. No se lanza O1. No se tocó D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T12:01:00+01:00",
-      "actor": "Dev",
-      "text": "arranco O1 (llamada a crear cuenta solo en la barra lateral) sobre `462e603` (rama `dev/1.10.8-o1-nube`). Turno DEV cogido a las 12:01:31 (motivo no vacío). No se tocan D1, D2/H1, P1 ni los bajos de M1. Sin push."
     }
   ],
-  "contentHash": "a98f6ef"
+  "contentHash": "2f6ae4cb"
 }
