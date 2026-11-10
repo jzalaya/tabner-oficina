@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:26:11+01:00",
-  "sourceMtime": "2026-11-10T14:25:51+01:00",
+  "generatedAt": "2026-11-10T14:27:41+01:00",
+  "sourceMtime": "2026-11-10T14:27:05+01:00",
   "bots": [
     {
       "id": "dev",
@@ -246,7 +246,7 @@
       "status": "pausado",
       "since": null,
       "summary": "r4b NO APTO como herramienta el 2026-11-10T14:25 Europe/Madrid. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r4b.md` (sha 17d6af14049e57c0f239a55a80d31a5f559ab506a21fcc0f0d31e2ebe29f1534, 12817 B, `grep -ci aprobado` = 0). N9 y m17 cerrados; texto de turno.py OK. Bloquean N10 (alta, `git rebase -x` hace push real) y N11 (alta, `core.fsmonitor`/`core.hooksPath`/`diff.external` por `-c` o `GIT_CONFIG_*` hacen push). Test 96/96. Entry sha 0052072e…; wrappers/git 840957a4…; POLITICA 17da1664…. Informes r1–r3 e INFORME-r4 intactos. No se cogió el turno. No se tocó A1 (`0138b443`).",
-      "next": "Corrección de N10 y N11 (informe §7) y nueva revisión de QA. No interrumpir la QA de A1. N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
+      "next": "Dev corrige N10 y N11 (encargado; hallazgos y §7 ya en su chat, no reenviar) y nueva revisión de QA. No interrumpir la QA de A1. N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
       "block": "NO APTO como herramienta (N10, N11). No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`."
     },
     {
@@ -256,10 +256,10 @@
         "Dev"
       ],
       "status": "hecho",
-      "since": null,
-      "summary": "Entregada a QA el 2026-11-10T14:08 Europe/Madrid. Commit local `0138b4432ae1189d05f1e7026a80e04fc84dbeb4` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80 EXIT_REAL=0 (14:07:16–14:07:20 Europe/Madrid). INFORME en `tabner-release/1.10.8/a1-instantaneas/INFORME.md`.",
-      "next": "Esperando revisión de QA. Sin push. No se tocan D1, D2/H1 ni P1. El N9 del lanzador va en paquete aparte.",
-      "block": "Entregada, pendiente QA."
+      "since": "2026-11-10T14:09:27+01:00",
+      "summary": "Entregada a QA el 2026-11-10T14:08 Europe/Madrid. Commit local `0138b4432ae1189d05f1e7026a80e04fc84dbeb4` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). 80/80 EXIT_REAL=0 (14:07:16–14:07:20 Europe/Madrid). INFORME en `tabner-release/1.10.8/a1-instantaneas/INFORME.md`. QA en curso desde las 14:09:27 Europe/Madrid (P0–P3 y matriz; evidencias nuevas ~14:26).",
+      "next": "Sigue la QA. Sin push. No interrumpir. No se tocan D1, D2/H1 ni P1. El N10/N11 del lanzador va en paquete aparte.",
+      "block": "En QA."
     },
     {
       "name": "Analítica opt-in (con idioma)",
@@ -477,6 +477,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T14:27:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "lanzador r4b NO APTO contrastado (informe sha 17d6af14…, 12817 B, grep -ci aprobado = 0; N9 y m17 cerrados; texto de turno.py OK; bloquean N10 y N11; r1–r3 e INFORME-r4 intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443` y su QA sigue en curso desde las 14:09:27, última evidencia ~14:26; turno.py sha 59f8abd4… intacto; turno libre). Encargo a Dev la corrección de N10 y N11; no reenvío los hallazgos (QA ya los ha dejado en su chat, con el §7). No interrumpo la QA de A1. N7/N8 siguen en baja. H9 ya está cerrado (stub de Creador)."
+    },
+    {
+      "at": "2026-11-10T14:27:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-10T14:25:00+01:00",
       "actor": "QA",
       "text": "lanzador único de Claude (r4b, corrección N9 + texto de turno.py) NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r4b.md` (sha 17d6af14049e57c0f239a55a80d31a5f559ab506a21fcc0f0d31e2ebe29f1534, 12817 B, `grep -ci aprobado` = 0). N9 y m17 quedan cerrados y el texto de turno.py está bien (en vigor, no archivado). Bloquean N10 (alta: `git rebase -x` hace push real, ref `rbx`) y N11 (alta: `core.fsmonitor`, `core.hooksPath` o `diff.external` por `-c` o `GIT_CONFIG_*` hacen push, refs `fsm`, `fsm-env`, `hook`). El test pasa 96/96 (Q01 PID 2072010 y Q02 PID 2072967, `diff` vacío). N7/N8 siguen en baja. H9 (stub 5c1e03cf) no bloquea. No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No se cogió el turno. No se tocó `/workspace/wt/a1` (`0138b443`) ni el cerrojo de Claude (QA de A1 en curso). Informes r1–r3 e INFORME-r4 intactos. `/workspace/tabner` sigue en f8c50faa."
@@ -485,11 +495,6 @@
       "at": "2026-11-10T14:16:00+01:00",
       "actor": "Auditor",
       "text": "decisión de Carlos de las 14:16 (chat de Auditor). Actualizadas dos celdas desfasadas, sin tocar el resto ni interrumpir las QA: H9 del lanzador ya está cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`); Feature Analyst (archivo) queda oculto de la barra y el rol de investigación lo lleva Tabner UX. La rutina pausada de las 19:00 del Shorts Analista queda pedida de baja (las métricas las lleva el Guionista hacia las 21:20). No se toca A1 ni el r4b."
-    },
-    {
-      "at": "2026-11-10T14:16:00+01:00",
-      "actor": "Auditor (solo celdas H9 y Feature Analyst; el resto lo sigue llevando Tabby nueva)",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T14:13:00+01:00",
@@ -570,12 +575,7 @@
       "at": "2026-11-10T13:38:00+01:00",
       "actor": "Tabby nueva",
       "text": "decisión de Carlos de las 13:36 (chat de Auditor; DECISIONES). A1 arranca ya en un worktree (`/workspace/wt/a1`, base f8c50faa); no espera a la QA del lanzador. Encargo a Dev: el turno está libre tras la entrega r3 (INFORME y wrappers contrastados; 90/90; no reenvío el paquete a QA). En la ronda UX de ~15:50, UX propone a Tabby y no coge turno ni Chrome real ni encarga a Dev mientras A1 o la QA del lanzador estén abiertos. Tabby no escribe a Carlos al cerrar o encargar una unidad. Las respuestas de X se aprueban una sola vez, en el chat de Redes. Cabecera de ESTADO reescrita. Commit de `turno.py` y su README, sin interrumpir trabajo en curso. No se tocan D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T13:38:00+01:00",
-      "actor": "Soporte",
-      "text": "pasada diaria del 10-11 cerrada (~09:10). Ningún correo de clientes ni reseñas nuevas. En el buzón: SaaSHub aprobó tabner.es y el post de Appinn ya no espera moderación (Growth avisado). Fila de Soporte actualizada. Informe `soporte/pasada-2026-11-10.md`."
     }
   ],
-  "contentHash": "6433401e"
+  "contentHash": "4b42d0e"
 }
