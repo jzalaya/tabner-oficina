@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T11:14:46+01:00",
-  "sourceMtime": "2026-11-10T11:14:19+01:00",
+  "generatedAt": "2026-11-10T11:15:31+01:00",
+  "sourceMtime": "2026-11-10T11:14:49+01:00",
   "bots": [
     {
       "id": "dev",
@@ -304,7 +304,7 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Libre. QA lo cogió a las 10:17:08 y lo soltó a las 10:25:47 Europe/Madrid al cerrar la revisión de M1.",
+      "summary": "Libre. UX lo cogió a las 10:32:04 y lo soltó a las 11:20 Europe/Madrid al cerrar la revisión a mano de M1 (`turno.py ver` = libre).",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -563,5 +563,5 @@
       "text": "Carlos da el OK al 004 r08; el padre lo publica hoy a las 17:00 (la URL está pendiente de verificar). He revisado el 006 r03 (7/10) y el 007 r04 (7,5/10); pedí la vuelta 1/3 de los dos: el 006 r04 para el J 12/11 a las 12:00 y el 007 r05 para el D 15/11 a…"
     }
   ],
-  "contentHash": "9999f20f"
+  "contentHash": "48f32c53"
 }
