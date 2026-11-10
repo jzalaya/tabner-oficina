@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T08:47:55+01:00",
-  "sourceMtime": "2026-11-10T08:47:32+01:00",
+  "generatedAt": "2026-11-10T10:14:00+01:00",
+  "sourceMtime": "2026-11-10T10:13:29+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "bloqueado",
       "task": "Piloto The Die Decides (E01)",
       "since": null,
-      "detail": "audition-v3 entregada (D/E/F), pendiente elección de Carlos. Short 004 r08 publicado y verificado con oEmbed en Luck is Math: (autor Luck is Math, @LuckIsMath). Una sola copia (vídeo nuevo; no había borrador coincidente).",
+      "detail": "audition-v3 entregada (D/E/F), pendiente elección de Carlos. 005 r04 (9/11 15:30), 006 r04 (9/11 15:48) y 007 r05 (9/11 16:03) entregados, sin revisión del Orq. LiM registrada. 005 sale mañana X 11/11 17:00 (rutina). Analítica: 001 y 003 actualizados 9/11. Ritmo 3/semana OK.",
       "next": "Cuando Carlos elija, encargar el montaje final al Productor.",
       "block": "Pendiente de Carlos: audition-v3 entregada (D/E/F), pendiente elección de Carlos."
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T10:15:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "005 r04 (9/11 15:30), 006 r04 (9/11 15:48) y 007 r05 (9/11 16:03) entregados, sin revisión del Orq. LiM registrada. 005 sale mañana X 11/11 17:00 (rutina). Analítica: 001 y 003 actualizados 9/11. Ritmo 3/semana OK."
+    },
+    {
       "at": "2026-11-10T08:46:00+01:00",
       "actor": "Dev",
       "text": "M1 cerrada y entregada a QA. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Candidato 18/18 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-guardar-sesion/INFORME.md`. Turno DEV soltado (`turno.py ver` = libre)."
@@ -556,12 +561,7 @@
       "at": "2026-11-07T16:15:00+01:00",
       "actor": "Luck is Math",
       "text": "003 r17 publicado por el padre por orden de Carlos (S 7/11, hacia las 16:11): URL confirmada al Analista; cortes desde la publicación real (24 h, D 8/11 ~16:11; 48 h, L 9/11 ~16:11)."
-    },
-    {
-      "at": "2026-11-07T16:11:20+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "Short 003 r17 publicado y verificado con oEmbed en Luck is Math: . Una sola copia publicada reutilizando borrador; otros borradores sin tocar."
     }
   ],
-  "contentHash": "ebf053db"
+  "contentHash": "3b700646"
 }
