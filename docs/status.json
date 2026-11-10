@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T11:44:01+01:00",
-  "sourceMtime": "2026-11-10T11:43:58+01:00",
+  "generatedAt": "2026-11-10T11:59:46+01:00",
+  "sourceMtime": "2026-11-10T11:59:27+01:00",
   "bots": [
     {
       "id": "dev",
@@ -9,7 +9,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 flecos APTO como unidad (`462e603`, padre 3446ff9), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7).",
-      "next": "UX revisa a mano en Chrome real los flecos de M1 en 462e603. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de flecos M1 cerrada (informe `ux/2026-11-10-m1-flecos-462e603.md`). Tabby decide O1 y los bajos UX-M1F-01/02 y el retoque de Novedades (H-8, con M1-1). Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -19,7 +19,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 flecos APTO como unidad (`462e603`, padre 3446ff9), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7).",
-      "next": "UX revisa a mano en Chrome real los flecos de M1 en 462e603. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de flecos M1 cerrada (informe `ux/2026-11-10-m1-flecos-462e603.md`). Tabby decide O1 y los bajos UX-M1F-01/02 y el retoque de Novedades (H-8, con M1-1). Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -28,8 +28,8 @@
       "status": "bloqueado",
       "task": "M1 Guardar sesión unificado",
       "since": null,
-      "detail": "Flecos de interfaz (`462e603`) APTO como unidad el 2026-11-10T11:43 Europe/Madrid, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7). Cerrados M1-2/UX-M1-02, UX-M1-06, M1-3/UX-M1-03, M1-5/UX-M1-04 y M1-6; UX-M1-01 y UX-M1-05 cerrados en jsdom (falta Chrome real, H-3). M1-4 sin cambio (no es defecto). M1-1 sigue aplazado al corte (whatsnew no se ha movido). 26/26 + 132/132 y regresión ampliada 704/704 iguales a la base 3446ff9.",
-      "next": "UX revisa a mano en Chrome real: Escape del menú del popup (H-3/UX-M1-01), teclado y foco (UX-M1-05, H-2), popup y panel con «Cerrar pestañas al mover», Deshacer en el panel, y textos. M1-1 al cortar. No se lanza O1.",
+      "detail": "Flecos confirmados en Chrome real el 2026-11-10T12:05 Europe/Madrid sobre `462e603`. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-flecos-462e603.md` (sha 090a0d8db39ac76566e761fb8ed8080127b9ebb30e087838c203015ce4d62a35); capturas 01–32. H-3/UX-M1-01, UX-M1-05, M1-2, M1-3, títulos neutros (EN/ES/zh_CN) y M1-4 confirmados. Sin medios ni altos. Bajos: UX-M1F-01 (H-2) y UX-M1F-02 (H-6). H-8: retocar Novedades al cortar (M1-1). QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md`.",
+      "next": "Tabby decide O1, los bajos UX-M1F-01/02 y el texto de Novedades (H-8 con M1-1). No se lanza O1 desde UX.",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 flecos APTO como unidad (`462e603`, padre 3446ff9), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7).",
-      "next": "UX revisa a mano en Chrome real los flecos de M1 en 462e603. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de flecos M1 cerrada (informe `ux/2026-11-10-m1-flecos-462e603.md`). Tabby decide O1 y los bajos UX-M1F-01/02 y el retoque de Novedades (H-8, con M1-1). Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 flecos APTO como unidad (`462e603`, padre 3446ff9), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7).",
-      "next": "UX revisa a mano en Chrome real los flecos de M1 en 462e603. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de flecos M1 cerrada (informe `ux/2026-11-10-m1-flecos-462e603.md`). Tabby decide O1 y los bajos UX-M1F-01/02 y el retoque de Novedades (H-8, con M1-1). Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -220,8 +220,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Flecos de interfaz (`462e603`) APTO como unidad el 2026-11-10T11:43 Europe/Madrid, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md` (sha 4a1173ef63216f237a7bf64e6c3b1c40a780a265cdd5ac72f2c46e8eb4f77eb7). Cerrados M1-2/UX-M1-02, UX-M1-06, M1-3/UX-M1-03, M1-5/UX-M1-04 y M1-6; UX-M1-01 y UX-M1-05 cerrados en jsdom (falta Chrome real, H-3). M1-4 sin cambio (no es defecto). M1-1 sigue aplazado al corte (whatsnew no se ha movido). 26/26 + 132/132 y regresión ampliada 704/704 iguales a la base 3446ff9.",
-      "next": "UX revisa a mano en Chrome real: Escape del menú del popup (H-3/UX-M1-01), teclado y foco (UX-M1-05, H-2), popup y panel con «Cerrar pestañas al mover», Deshacer en el panel, y textos. M1-1 al cortar. No se lanza O1.",
+      "summary": "Flecos confirmados en Chrome real el 2026-11-10T12:05 Europe/Madrid sobre `462e603`. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-flecos-462e603.md` (sha 090a0d8db39ac76566e761fb8ed8080127b9ebb30e087838c203015ce4d62a35); capturas 01–32. H-3/UX-M1-01, UX-M1-05, M1-2, M1-3, títulos neutros (EN/ES/zh_CN) y M1-4 confirmados. Sin medios ni altos. Bajos: UX-M1F-01 (H-2) y UX-M1F-02 (H-6). H-8: retocar Novedades al cortar (M1-1). QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-flecos-462e603.md`.",
+      "next": "Tabby decide O1, los bajos UX-M1F-01/02 y el texto de Novedades (H-8 con M1-1). No se lanza O1 desde UX.",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -304,7 +304,7 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Libre. QA lo cogió a las 11:29:59 y lo soltó a las 11:39:20 Europe/Madrid al cerrar la QA de flecos M1 (`462e603`).",
+      "summary": "Libre. UX lo cogió a las 11:44:21 y lo soltó a las 12:05 Europe/Madrid al cerrar la revisión a mano de flecos M1 (`462e603`) (`turno.py ver` = libre).",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T12:05:00+01:00",
+      "actor": "Tabner UX",
+      "text": "revisión a mano de flecos M1 (`462e603`) cerrada en Chrome real. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-flecos-462e603.md` (sha 090a0d8db39ac76566e761fb8ed8080127b9ebb30e087838c203015ce4d62a35); capturas 01–32 en `ux/capturas/2026-11-10-m1-flecos/`. Confirmados H-3/UX-M1-01, UX-M1-05, M1-2, M1-3, títulos neutros en EN/ES/zh_CN y M1-4. Sin medios ni altos. Bajos: UX-M1F-01 (H-2, teclado residual) y UX-M1F-02 (H-6, zh_CN). H-8: conviene retocar Novedades al cortar la 1.10.8 (M1-1). Turno UX cogido a las 11:44:21 y soltado al cerrar. No se lanza O1. No se tocó D1, D2/H1 ni P1."
+    },
+    {
       "at": "2026-11-10T11:44:00+01:00",
       "actor": "Tabby nueva",
       "text": "flecos M1 APTO contrastado (informe y sha coinciden; turno libre). Encargo a UX la revisión a mano en Chrome real de 462e603 (Escape del menú del popup, teclado y foco, M1-2/M1-3 en UI, textos). M1-1 sigue al corte. No se lanza O1. No se tocan D1, D2/H1 ni P1."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T17:33:00+01:00",
       "actor": "Tabby archivo",
       "text": "pasada UI de A2 terminada (7/7). Informe `/workspace/tabner-qa/1.10.8/a2-manual/REVISION-UX-A2-UI-3ce1af81.md`. Siguiente de la misma unidad: exportación real de OneTab. No se lanza M1."
-    },
-    {
-      "at": "2026-11-09T17:32:24+01:00",
-      "actor": "Tabby nueva",
-      "text": "lectura diaria de ESTADO creada (lunes a viernes hacia las 9:00 Europe/Madrid). No se interrumpe la UX a mano de A2. Shorts 004–007, audición de voz y la métrica de las 19:00 no son tubería de Tabner (Luck is Math / Shorts Analista)."
     }
   ],
-  "contentHash": "87b727b3"
+  "contentHash": "6c50e744"
 }
