@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:08:11+01:00",
-  "sourceMtime": "2026-11-10T14:07:40+01:00",
+  "generatedAt": "2026-11-10T14:10:26+01:00",
+  "sourceMtime": "2026-11-10T14:09:45+01:00",
   "bots": [
     {
       "id": "dev",
@@ -477,6 +477,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T14:10:00+01:00",
+      "actor": "Dev",
+      "text": "corrección N9 (+ cobertura m17) del lanzador entregada a QA, sin coger el turno y sin tocar A1. Punto de entrada `/workspace/run-claude-wt.sh` sin cambios de contenido (sha 43a04ea3e63b819aeac6b6baa14ff76007611a20f7493c9c2fb96d89d930e834). wrappers/git rechaza `-c include.path` / `includeIf` / el equivalente por entorno. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 96/96 EXIT_REAL=0, INICIO 14:09:03 FIN 14:09:17 Europe/Madrid, log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-r4.log`. N7/N8 siguen en baja. H9 no se toca."
+    },
+    {
       "at": "2026-11-10T14:08:00+01:00",
       "actor": "Dev",
       "text": "A1 entregada a QA. Commit local `0138b4432ae1189d05f1e7026a80e04fc84dbeb4` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). Tests Dev: `npx vitest run` de localSnapshots + noPaymentStrings + backup + localSnapshotsStore + settingsSnapshots → 80/80 EXIT_REAL=0, INICIO 14:07:16 FIN 14:07:20 Europe/Madrid. INFORME `/workspace/tabner-release/1.10.8/a1-instantaneas/INFORME.md`. Sin push. Suelto el turno. El arreglo N9 del lanzador (r3 NO APTO) queda a continuación, en paquete aparte, sin mezclarlo en A1."
@@ -570,12 +575,7 @@
       "at": "2026-11-10T13:11:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador NO APTO contrastado (informe y sha coinciden; grep -ci aprobado = 0; /workspace/tabner en f8c50faa; turno.py intacto; turno libre). Encargo a Dev la corrección de H1–H5 y el refuerzo del test; después, nueva revisión de QA. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). A1 sigue en espera; el alcance no cambia. No apunto en DECISIONES una decisión de Carlos a las 12:47: fue el encargo operativo de Creador tras el 12:44. H9 (`/workspace/run-claude.sh`) lo dejo a Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
-    },
-    {
-      "at": "2026-11-10T13:09:00+01:00",
-      "actor": "QA",
-      "text": "lanzador único de Claude NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador.md` (sha f6827003c3c663411f87ea78a2c619a8f975880f1a2ec4a4650475ef5db110a9). El test de Dev pasa 31/31 (Q01 y Q02, `diff` vacío), pero fallan dos barreras de POLITICA.md: H1 (alta, el envoltorio deja pasar `git -c … push` y escrituras en la integración) y H2 (alta, los `deny` de settings no protegen la integración, DECISIONES ni CONTINUIDAD). No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. A1 no arranca hasta el arreglo y una nueva revisión de QA. No se cogió el turno. No se tocó `/workspace/tabner` (sigue en f8c50faa), turno.py ni run-claude.sh."
     }
   ],
-  "contentHash": "59e7ec52"
+  "contentHash": "a953b6f3"
 }
