@@ -375,17 +375,17 @@ const KNOWN = ["activo", "pausado", "bloqueado", "hecho"];
 const FLOORS = [
   { id:"tabner", name:"Tabner", n:"3", label:"Planta 3", theme:"office", sub:"PLANTA 3 · MADRID",
     zones:[
-      { id:"producto",     name:"Producto",     ids:["dev","qa","ux","feature-analyst"], o:[2.4, 2.6], cols:4, tint:"#5b7cfa" },
-      { id:"captacion",    name:"Captación",    ids:["growth","redes"],                  o:[12.6, 2.6], cols:2, tint:"#f39a3b" },
-      { id:"coordinacion", name:"Coordinación", ids:["tabby","tabby-archivo"],           o:[2.4, 8.4], cols:2, tint:"#22b3a0" },
-      { id:"operaciones",  name:"Operaciones",  ids:["soporte"],                         o:[9.4, 8.4], cols:1, tint:"#ef5b4b" }
+      { id:"producto",     name:"Producto",     ids:["dev","qa","ux"],          o:[2.4, 2.6], cols:3, tint:"#5b7cfa" },
+      { id:"captacion",    name:"Captación",    ids:["growth","redes"],         o:[12.6, 2.6], cols:2, tint:"#f39a3b" },
+      { id:"coordinacion", name:"Coordinación", ids:["tabby"],                  o:[2.4, 8.4], cols:1, tint:"#22b3a0" },
+      { id:"operaciones",  name:"Operaciones",  ids:["soporte"],                o:[9.4, 8.4], cols:1, tint:"#ef5b4b" }
     ] },
   { id:"shorts", name:"Shorts", n:"2", label:"Planta 2", theme:"studio", sub:"PLANTA 2 · ESTUDIO",
-    zones:[ { id:"estudio", name:"Estudio", ids:["shorts-orquestador","luck-is-math","shorts-guionista","shorts-productor","shorts-investigador","shorts-analista"], o:[2.6, 2.8], cols:3, sx:3.0, sy:4.4, tint:"#e94f9b", nosign:true } ] },
+    zones:[ { id:"estudio", name:"Estudio", ids:["shorts-director","shorts-guionista","shorts-productor"], o:[2.6, 2.8], cols:3, sx:3.0, sy:4.4, tint:"#e94f9b", nosign:true } ] },
   { id:"julietas", name:"Julietas", n:"1", label:"Planta 1", theme:"boutique", sub:"PLANTA 1 · TALLER",
     zones:[ { id:"taller", name:"Taller", ids:["julieta"], o:[3.4, 3.0], cols:1, tint:"#d9707f", nosign:true } ] },
   { id:"mas", name:"Más", n:"+", label:"Anexo", theme:"annex", sub:"ANEXO · MADRID",
-    zones:[ { id:"anexo", name:"Anexo", ids:["sabueso","creador"], o:[2.6, 3.0], cols:3, sx:2.8, sy:3.8, tint:"#9b6a3f", nosign:true, catchall:true } ] }
+    zones:[ { id:"anexo", name:"Anexo", ids:["sabueso","creador","auditor"], o:[2.6, 3.0], cols:3, sx:2.8, sy:3.8, tint:"#9b6a3f", nosign:true, catchall:true } ] }
 ];
 const FLOOR_BY = {}, FLOOR_OF = {}, ZONE_OF = {};
 FLOORS.forEach(f => { FLOOR_BY[f.id] = f; f.zones.forEach(z => z.ids.forEach(id => { FLOOR_OF[id] = f.id; ZONE_OF[id] = z; })); });
@@ -397,23 +397,19 @@ const ext = (z, cols, rows) => ({ w: (cols - 1) * SX(z) + 2.25, d: (rows - 1) * 
 
 const LOOK = {
   "tabby":           { c:"#1fb3a1", sh:"sphere" },
-  "tabby-archivo":   { c:"#a9afb6", sh:"sphere", ghost:true },
   "dev":             { c:"#3d6cf0", sh:"cube" },
   "qa":              { c:"#3cc99b", sh:"cylinder" },
   "ux":              { c:"#6c4fe0", sh:"hex" },
   "growth":          { c:"#f5932a", sh:"capsule" },
   "redes":           { c:"#f5c21b", sh:"star" },
   "soporte":         { c:"#ef5a4b", sh:"pyramid" },
-  "feature-analyst": { c:"#5f6e86", sh:"diamond" },
-  "shorts-orquestador":  { c:"#c2305a", sh:"octa" },
-  "luck-is-math":        { c:"#f1ede4", sh:"die" },
+  "shorts-director":     { c:"#c2305a", sh:"octa" },
   "shorts-guionista":    { c:"#3aa7e6", sh:"tri" },
   "shorts-productor":    { c:"#e94f9b", sh:"figure" },
-  "shorts-investigador": { c:"#8cc63f", sh:"cone" },
-  "shorts-analista":     { c:"#0f8f84", sh:"bars" },
   "sabueso":             { c:"#9b6a3f", sh:"egg" },
   "julieta":             { c:"#e23d5f", sh:"heart" },
-  "creador":             { c:"#b07cf0", sh:"pent" }
+  "creador":             { c:"#b07cf0", sh:"pent" },
+  "auditor":             { c:"#4a6d8c", sh:"diamond" }
 };
 const LEFTOVER = ["cone", "tri", "pent", "octa", "cube", "cylinder", "pyramid"];
 

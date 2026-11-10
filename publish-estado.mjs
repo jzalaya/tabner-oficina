@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Lee ESTADO.md y los tableros de Shorts (solo lectura), publica un JSON público
- * con la plantilla completa de bots y lo sube al repo.
+ * Lee ESTADO.md, turno.py y los tableros de Shorts (solo lectura), publica un JSON
+ * público con la flota actual y lo sube al repo.
  * Uso: node /workspace/tabner-oficina/publish-estado.mjs
  *      node /workspace/tabner-oficina/publish-estado.mjs --once
  */
@@ -72,17 +72,30 @@ function extractSince(text, fallbackDate) {
   return null;
 }
 
-function classify(estadoReal, bloqueo) {
+function isPublicationDisclaimer(block) {
+  const b = (block || "").toLowerCase();
+  return /la 1\.10\.8 sigue bloqueada/.test(b) && /no es un ok de publicaci/.test(b);
+}
+
+function classify(estadoReal, bloqueo, siguiente) {
   const estado = (estadoReal || "").toLowerCase();
+  const next = (siguiente || "").toLowerCase();
   const block = (bloqueo || "").toLowerCase();
-  if (/(^|\. )(cerrada|cerrado|entregada|entregado)\b/.test(estado) || /^(cerrada|cerrado|entregada|entregado)\b/.test(estado)) {
+  const closed = `${estado} ${next}`;
+  if (/(^|\. )(cerrada|cerrado|entregada|entregado)\b/.test(estado) || /^(cerrada|cerrado|entregada|entregado)\b/.test(estado) || /cerrad[oa] como unidad/.test(closed)) {
     return "hecho";
   }
-  if (/\ben curso\b|\bcogido\b/.test(estado + " " + block)) return "activo";
-  if (/\bpausad|\bapar[ck]ad|\bencolada\b|\bno ha empezado\b/.test(estado)) return "pausado";
-  const hasBlock = block && !/^\s*ninguno/.test(block) && /bloquea|vetad|falta|hace falta|espera/.test(block);
+  // El lanzador APTO, con residuales aparcados, no es trabajo en curso.
+  if (/\bapto como herramienta\b/.test(estado) && !/\bno apto\b/.test(estado)) return "hecho";
+  // "no cogido" y "lo había cogido" no son un turno vivo.
+  const live = (estado + " " + block)
+    .replace(/\bno\s+cogid[oa]s?\b/gi, " ")
+    .replace(/\b(?:lo\s+)?hab[ií]a\s+cogid[oa]\b/gi, " ");
+  if (/\ben curso\b|\bcogido\b/.test(live)) return "activo";
+  if (/\bpausad|\bapar[ck]ad|\bencolada\b|\bno ha empezado\b/.test(estado + " " + next)) return "pausado";
+  const hasBlock = block && !/^\s*ninguno/.test(block) && /bloquea|vetad|falta|hace falta|espera/.test(block) && !isPublicationDisclaimer(block);
   if (hasBlock) return "bloqueado";
-  if (/\babierto\b/.test(estado) && /bloquea|vetad/.test(block)) return "bloqueado";
+  if (/\babierto\b/.test(estado) && /bloquea|vetad/.test(block) && !isPublicationDisclaimer(block)) return "bloqueado";
   if (/\babierto\b/.test(estado)) return "activo";
   return "pausado";
 }
@@ -116,6 +129,10 @@ function extractBots(responsable) {
 
 function statusForBot(task, bot) {
   let status = task.status;
+  // El veto de publicación de la versión no bloquea al coordinador ni al equipo técnico.
+  if (status === "bloqueado" && /1\.10\.|versi[oó]n/i.test(task.name) && /vetad|publicaci[oó]n/.test(task.block || "")) {
+    status = "pausado";
+  }
   const blob = `${task.summary} ${task.next}`;
   const holder = blob.match(/turno\s+(DEV|QA|TABBY|UX|REDES|GROWTH)/i) || blob.match(/cogido por\s+(DEV|QA|TABBY|UX|REDES|GROWTH)/i);
   if (status === "activo" && holder) {
@@ -173,7 +190,7 @@ function parseEstado(markdown) {
     if (!inTable || !line.startsWith("|")) continue;
     const [name, responsable, estadoReal, siguiente, bloqueo] = splitRow(line);
     if (!name || name === "Tarea") continue;
-    const status = classify(estadoReal, bloqueo);
+    const status = classify(estadoReal, bloqueo, siguiente);
     const since = extractSince(`${estadoReal} ${siguiente}`, fallbackDate);
     tasks.push({
       name: sanitize(name),
@@ -218,21 +235,17 @@ const ROSTER = [
   { id: "dev", name: "Dev", from: "Dev", task: "Desarrollo de Tabner" },
   { id: "qa", name: "QA", from: "QA", task: "Pruebas de Tabner" },
   { id: "ux", name: "UX", from: "UX", task: "Revisión UX de Tabner" },
-  { id: "feature-analyst", name: "Feature Analyst", from: "Feature Analyst", task: "Investigación de funciones" },
   { id: "growth", name: "Growth", from: "Growth", task: "Captación de Tabner" },
   { id: "redes", name: "Redes", from: "Redes", task: "Redes sociales de Tabner" },
   { id: "tabby", name: "Tabby", from: "Tabby", task: "Coordinación de Tabner" },
-  { id: "tabby-archivo", name: "Tabby (archivo)", from: "Tabby (archivo)", task: "Archivo de Tabby" },
   { id: "soporte", name: "Soporte", from: "Soporte", task: "Soporte de Tabner" },
-  { id: "shorts-orquestador", name: "Shorts Orquestador", task: "Orquestación de Shorts" },
-  { id: "luck-is-math", name: "Luck is Math", task: "Canal Luck is Math" },
+  { id: "shorts-director", name: "Shorts Director", task: "Dirección de Shorts" },
   { id: "shorts-guionista", name: "Shorts Guionista", task: "Guiones de Shorts" },
   { id: "shorts-productor", name: "Shorts Productor", task: "Producción de vídeo" },
-  { id: "shorts-investigador", name: "Shorts Investigador", task: "Investigación de ideas" },
-  { id: "shorts-analista", name: "Shorts Analista", task: "Analítica de Shorts" },
   { id: "sabueso", name: "Sabueso", task: "Investigación de startups", detail: "Equipo nocturno. Sin parte reciente en el tablero." },
   { id: "julieta", name: "Julieta", task: "Julietas (thejulietas.com)" },
   { id: "creador", name: "Creador", task: "Diseño de Grok Bots" },
+  { id: "auditor", name: "Auditor", task: "Auditoría de la flota" },
 ];
 const NO_PARTE = "Sin parte reciente en el tablero.";
 
@@ -388,8 +401,66 @@ function parseShorts(limMd, tabMd, year) {
     }
     reg.slice(-3).forEach((e) => log.push({ at: e.at, actor: "Shorts Orquestador", text: shortText(clean(e.text), 260) }));
   }
+  remapArchivedOverlays(overlays);
   return { overlays, log };
 }
+
+function remapArchivedOverlays(overlays) {
+  const remap = {
+    "luck-is-math": "shorts-director",
+    "shorts-orquestador": "shorts-director",
+    "shorts-analista": "shorts-guionista",
+    "shorts-investigador": "shorts-guionista",
+  };
+  const rank = { activo: 3, bloqueado: 2, pausado: 1, hecho: 0 };
+  for (const [from, to] of Object.entries(remap)) {
+    if (!overlays.has(from)) continue;
+    const rec = overlays.get(from);
+    overlays.delete(from);
+    const cur = overlays.get(to);
+    if (!cur || (rank[rec.status] || 0) > (rank[cur.status] || 0)) overlays.set(to, rec);
+  }
+}
+
+function readTurno() {
+  try {
+    const out = execFileSync("python3", ["/workspace/tabner-ops/locks/turno.py", "ver"], { encoding: "utf8" }).trim();
+    if (!out || /^libre\b/i.test(out)) return { libre: true };
+    const data = JSON.parse(out);
+    const quien = String(data.quien || "").trim();
+    if (!quien || /^libre$/i.test(quien) || data.estado_turno === "libre") return { libre: true, data };
+    return { libre: false, quien, desde: data.desde_iso || null, motivo: data.motivo || "", data };
+  } catch {
+    return null;
+  }
+}
+
+const TURNO_NAME = { DEV: "Dev", QA: "QA", UX: "UX", TABBY: "Tabby", REDES: "Redes", GROWTH: "Growth", SOPORTE: "Soporte" };
+
+function applyTurno(bots, turno) {
+  if (!turno) return bots;
+  const holder = turno.libre ? null : (TURNO_NAME[(turno.quien || "").toUpperCase()] || turno.quien);
+  return bots.map((b) => {
+    const fromLock = /cerrojo|turno\.py/i.test(b.task || "");
+    if (fromLock && (!holder || b.name !== holder)) {
+      return { ...b, status: "pausado", since: null, detail: "Turno libre.", block: null };
+    }
+    if (holder && b.name === holder) {
+      return {
+        id: b.id,
+        name: b.name,
+        status: "activo",
+        task: turno.motivo || b.task,
+        since: turno.desde || b.since,
+        detail: `Turno ${turno.quien} desde ${turno.desde || "—"}${turno.motivo ? `: ${turno.motivo}` : ""}`.trim(),
+        next: b.next || "",
+        block: null,
+      };
+    }
+    return b;
+  });
+}
+
 
 function readOptional(path) {
   try { return { text: readFileSync(path, "utf8"), mtime: statSync(path).mtime }; } catch { return null; }
@@ -404,11 +475,11 @@ function buildPayload() {
   const year = latest.getFullYear();
   const tabner = parseEstado(estado.text, madridIso(estado.mtime));
   const shorts = parseShorts(lim && lim.text, tab && tab.text, year);
-  const bots = ROSTER.map((r) => {
+  const bots = applyTurno(ROSTER.map((r) => {
     const o = (r.from && tabner.byBot.get(r.from)) || shorts.overlays.get(r.id);
     if (o) return { id: r.id, name: r.name, status: o.status, task: o.task, since: o.since || null, detail: o.detail || "", next: o.next || "", block: o.block || null };
     return { id: r.id, name: r.name, status: "pausado", task: r.task, since: null, detail: r.detail || NO_PARTE, next: "", block: null };
-  });
+  }), readTurno());
   const log = tabner.log.concat(shorts.log)
     .filter((e) => e.at)
     .sort((a, b) => new Date(b.at) - new Date(a.at))
