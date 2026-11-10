@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T11:15:31+01:00",
-  "sourceMtime": "2026-11-10T11:14:49+01:00",
+  "generatedAt": "2026-11-10T11:17:01+01:00",
+  "sourceMtime": "2026-11-10T11:16:28+01:00",
   "bots": [
     {
       "id": "dev",
@@ -9,7 +9,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Revisión UX a mano de M1 cerrada (informe `ux/2026-11-10-m1-guardar-sesion.md`). Tabby decide M1-2 y M1-3; luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -19,7 +19,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Revisión UX a mano de M1 cerrada (informe `ux/2026-11-10-m1-guardar-sesion.md`). Tabby decide M1-2 y M1-3; luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -29,7 +29,7 @@
       "task": "M1 Guardar sesión unificado",
       "since": null,
       "detail": "QA APTO como unidad. Revisión UX a mano cerrada el 2026-11-10T11:20 Europe/Madrid sobre `3446ff9` (Chrome 156, perfil propio, sin Playwright). Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53. 5 medios (UX-M1-01 a 05) y 1 bajo (UX-M1-06). M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, se mueve al cortar la 1.10.8.",
-      "next": "Tabby decide M1-2 (unificar Deshacer vs ajustar Novedades) y M1-3 (que el popup no cierre pestañas). Dev ya tiene M1-5 (i18n, confirmado en la UI) y M1-6 (cobertura). No se lanza O1 desde UX.",
+      "next": "Dev implementa UX-M1-01 a 06 (y M1-5/M1-6 si siguen pendientes) y entrega el SHA en el chat de QA. No se lanza O1. Decisiones Tabby 11:16: M1-2 unificar Deshacer; M1-3 el popup no cierra pestañas; M1-4 confirmado («esta ventana»).",
       "block": "No bloquea M1 como unidad de código. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Revisión UX a mano de M1 cerrada (informe `ux/2026-11-10-m1-guardar-sesion.md`). Tabby decide M1-2 y M1-3; luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3 cerrada (ea3e032 + H-7). A2 cerrada en código, QA y UX a mano (3ce1af81). M1 APTO como unidad: `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-M1-3446ff9.md`.",
-      "next": "Revisión UX a mano de M1 cerrada (informe `ux/2026-11-10-m1-guardar-sesion.md`). Tabby decide M1-2 y M1-3; luego O1 → A1 → analítica. Siguen los bloqueos D1, D2/H1 y P1.",
+      "next": "Dev corrige los flecos UX de M1 (UX-M1-01 a 06) sobre 3446ff9, con M1-2 unificar Deshacer y M1-3 popup sin cerrar pestañas. Luego QA. O1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -221,7 +221,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "QA APTO como unidad. Revisión UX a mano cerrada el 2026-11-10T11:20 Europe/Madrid sobre `3446ff9` (Chrome 156, perfil propio, sin Playwright). Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53. 5 medios (UX-M1-01 a 05) y 1 bajo (UX-M1-06). M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, se mueve al cortar la 1.10.8.",
-      "next": "Tabby decide M1-2 (unificar Deshacer vs ajustar Novedades) y M1-3 (que el popup no cierre pestañas). Dev ya tiene M1-5 (i18n, confirmado en la UI) y M1-6 (cobertura). No se lanza O1 desde UX.",
+      "next": "Dev implementa UX-M1-01 a 06 (y M1-5/M1-6 si siguen pendientes) y entrega el SHA en el chat de QA. No se lanza O1. Decisiones Tabby 11:16: M1-2 unificar Deshacer; M1-3 el popup no cierra pestañas; M1-4 confirmado («esta ventana»).",
       "block": "No bloquea M1 como unidad de código. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -468,6 +468,11 @@
       "text": "revisión a mano de M1 (`3446ff9`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-m1-guardar-sesion.md` (sha 80c32548f7bea6b14abb4aa33b05dbec822903083e9c64f7d79057b272b851aa); capturas 01–53 en `ux/capturas/2026-11-10-m1/`. M1-4 confirmado (defecto «esta ventana»). M1-1 apuntado, no bloquea. A Tabby: decidir M1-2 (unificar Deshacer vs ajustar Novedades) y M1-3 (que el popup no cierre pestañas). Turno UX cogido a las 10:32:04 y soltado al cerrar. No se lanza O1 desde aquí. No se tocó D1, D2/H1 ni P1."
     },
     {
+      "at": "2026-11-10T11:16:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "revisión UX de M1 contrastada (informe y sha coinciden; 53 capturas; turno libre). Decisiones de Tabby: M1-2 unificar Deshacer en panel y popup aunque no se cierren pestañas; M1-3 el popup no cierra pestañas (el dashboard puede seguir el ajuste; la confirmación avisa si va a cerrar; la descripción del ajuste menciona Guardar sesión). M1-4 confirmado («esta ventana»). Encargo a Dev los flecos UX-M1-01 a 06, más M1-5/M1-6 si siguen pendientes. No se lanza O1. M1-1 se mueve al cortar la 1.10.8."
+    },
+    {
       "at": "2026-11-10T10:31:00+01:00",
       "actor": "Tabby nueva",
       "text": "M1 APTO contrastado (informe y sha coinciden). Encargo a UX la revisión a mano. M1-7: Playwright no aplica como puerta de esta unidad; la UI se revisa a mano. No se lanza O1 todavía."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T17:16:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "Short 004 r08 publicado y verificado con oEmbed en Luck is Math: (autor Luck is Math, @LuckIsMath). Una sola copia (vídeo nuevo; no había borrador coincidente)."
-    },
-    {
-      "at": "2026-11-09T16:30:00+01:00",
-      "actor": "Luck is Math",
-      "text": "Carlos da el OK al 004 r08; el padre lo publica hoy a las 17:00 (la URL está pendiente de verificar). He revisado el 006 r03 (7/10) y el 007 r04 (7,5/10); pedí la vuelta 1/3 de los dos: el 006 r04 para el J 12/11 a las 12:00 y el 007 r05 para el D 15/11 a…"
     }
   ],
-  "contentHash": "48f32c53"
+  "contentHash": "ead6e711"
 }
