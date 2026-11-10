@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T15:30:43+01:00",
-  "sourceMtime": "2026-11-10T15:30:12+01:00",
+  "generatedAt": "2026-11-10T16:10:28+01:00",
+  "sourceMtime": "2026-11-10T16:10:11+01:00",
   "bots": [
     {
       "id": "dev",
@@ -38,7 +38,7 @@
       "status": "hecho",
       "task": "Investigación de funciones",
       "since": null,
-      "detail": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
+      "detail": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md`. Propuestas a Tabby: UX-S1 (instantánea local al actualizarse la extensión, sobre A1) y UX-S2 (verificar en la auditoría que instalar/importar no toca grupos nativos). Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
       "next": "Próximas rondas: Tabner UX (ronda de los martes).",
       "block": null
     },
@@ -342,7 +342,7 @@
       ],
       "status": "hecho",
       "since": null,
-      "summary": "Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
+      "summary": "Ronda semanal del 10-11 (~16:10, reducida, sin navegador ni turno): `ux/2026-11-10.md`. Propuestas a Tabby: UX-S1 (instantánea local al actualizarse la extensión, sobre A1) y UX-S2 (verificar en la auditoría que instalar/importar no toca grupos nativos). Cerrada la pasada del 9-11 (~12:09). Sin cambios en la cola 1.10.8 (A1 reforzada). N1 (panel lateral opcional) encolado como P2 tras la 1.10.8. Feature Analyst (archivo) no arranca otro ciclo (oculto; sin rutinas).",
       "next": "Próximas rondas: Tabner UX (ronda de los martes).",
       "block": ""
     },
@@ -478,6 +478,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T16:12:00+01:00",
+      "actor": "Tabner UX",
+      "text": "ronda semanal reducida (instrucción de hoy: sin turno, sin Chrome real y sin encargos a Dev; turno en DEV por flecos A1 desde 15:27:18). Informe `/workspace/tabner-ops/ux/2026-11-10.md`. Sin hallazgos UX nuevos sobre los informes de unidad de hoy. Propuestas a Tabby: UX-S1 (instantánea local al actualizarse la extensión, sin permiso nuevo) y UX-S2 (verificación en la auditoría). No se encarga nada a Dev. No se tocó D1, D2/H1 ni P1."
+    },
+    {
       "at": "2026-11-10T15:27:00+01:00",
       "actor": "Dev",
       "text": "turno cogido a las 15:27:18 Europe/Madrid (`flecos A1: UX-A1-01 a 04 y H-1/H-2 sobre 0138b443`). Arrancados en `/workspace/wt/a1` sobre `0138b443`, sin tocar el lanzador, D1, D2/H1 ni P1. No entran UX-A1-05 ni los bajos UX-A1-06 y UX-A1-07. La entrega irá al chat de QA."
@@ -571,12 +576,7 @@
       "at": "2026-11-10T14:16:00+01:00",
       "actor": "Auditor",
       "text": "decisión de Carlos de las 14:16 (chat de Auditor). Actualizadas dos celdas desfasadas, sin tocar el resto ni interrumpir las QA: H9 del lanzador ya está cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`); Feature Analyst (archivo) queda oculto de la barra y el rol de investigación lo lleva Tabner UX. La rutina pausada de las 19:00 del Shorts Analista queda pedida de baja (las métricas las lleva el Guionista hacia las 21:20). No se toca A1 ni el r4b."
-    },
-    {
-      "at": "2026-11-10T14:13:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "lanzador r4b contrastado (INFORME sha 2653e5c0…; run-claude-wt.sh sha 0052072e… y POLITICA.md sha 17da1664… coinciden; el texto ya dice que `turno.py` sigue en vigor, no archivado; log sha 597a2aaf…, 96/96 y 0 fallos, mtime del log 14:12:10 Europe/Madrid; r3 y r4 intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443`; turno.py sha 59f8abd4… intacto; turno libre). No reenvío el paquete a QA (Dev ya lo ha entregado en su chat, pidiendo revisión de r4b y no solo de r4). No interrumpo la QA de A1. N7/N8 siguen en baja. H9 lo sigue llevando Creador; Dev no lo ha tocado."
     }
   ],
-  "contentHash": "ba98fa89"
+  "contentHash": "e8e72c0c"
 }
