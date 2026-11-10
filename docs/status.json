@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:21:31+01:00",
-  "sourceMtime": "2026-11-10T12:20:53+01:00",
+  "generatedAt": "2026-11-10T12:22:16+01:00",
+  "sourceMtime": "2026-11-10T12:21:49+01:00",
   "bots": [
     {
       "id": "dev",
@@ -9,7 +9,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -19,7 +19,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión manual/UI de O1 (Tabby o UX). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -234,7 +234,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "APTO como unidad el 2026-11-10T12:20 Europe/Madrid (`f8c50faa`, padre 462e603), sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445). CTA quitada del popup, onboarding y Novedades; la barra no cambia; 12/12 + 128/128 y ampliada 838/838 en el candidato. H-1 (media): 4 mutantes de QA sobreviven.",
-      "next": "Revisión manual/UI (hueco del popup, onboarding, Novedades, barra sin sesión, textos, decidir H-7). No se lanza A1.",
+      "next": "Revisión UX a mano en Chrome real de f8c50faa encargada (hueco del popup, onboarding, Novedades, barra sin sesión, textos). H-7 se mantiene (requisito para compartir, no promo). Playwright no es puerta de O1. No se lanza A1.",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -463,6 +463,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T12:21:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "O1 APTO contrastado (informe y sha coinciden; turno libre). Encargo a UX la revisión a mano en Chrome real de f8c50faa (hueco del popup, onboarding, Novedades, barra sin sesión, textos). H-7 se mantiene: «Entrar con tu email» al compartir sin sesión es requisito de la función, no una promo de O1. Playwright no es puerta de O1; el contrato lo cubre vitest y la UI se revisa a mano. H-1 (cobertura) ya está en Dev, no lo reenvío. No se lanza A1. No se tocan D1, D2/H1 ni P1."
+    },
+    {
       "at": "2026-11-10T12:20:00+01:00",
       "actor": "QA",
       "text": "O1 (`f8c50faa`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445). Turno QA cogido a las 12:08:29 y soltado a las 12:17:51 Europe/Madrid; el cerrojo queda libre. La llamada a crear cuenta desaparece del popup, del onboarding y de Novedades; la barra lateral no cambia; H-1 (media, cobertura): 4 mutantes de QA sobreviven; conviene que Dev refuerce los tests. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios. Pendiente revisión manual/UI (Tabby o UX), incluida la decisión de H-7. Flecos no bloqueantes a Dev: H-1 a H-6 y H-8."
@@ -556,12 +561,7 @@
       "at": "2026-11-09T21:38:00+01:00",
       "actor": "Growth",
       "text": "perfil maker de Product Hunt guardado como @carlosjurado; avatar pendiente."
-    },
-    {
-      "at": "2026-11-09T17:46:00+01:00",
-      "actor": "Growth",
-      "text": "correo a LogicielPro enviado a las 17:45 desde correo a correo. Copia en INBOX.Partners.Outreach. ."
     }
   ],
-  "contentHash": "2307619e"
+  "contentHash": "eeaa241a"
 }
