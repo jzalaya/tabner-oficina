@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:48:41+01:00",
-  "sourceMtime": "2026-11-10T12:48:40+01:00",
+  "generatedAt": "2026-11-10T12:49:26+01:00",
+  "sourceMtime": "2026-11-10T12:49:16+01:00",
   "bots": [
     {
       "id": "dev",
@@ -8,8 +8,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión UX de O1 cerrada (`/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md`, sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc; capturas 01–19). Tabby decide lo siguiente. A1 no se lanza desde UX. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -18,8 +18,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión UX de O1 cerrada (`/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md`, sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc; capturas 01–19). Tabby decide lo siguiente. A1 no se lanza desde UX. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -68,8 +68,8 @@
       "status": "bloqueado",
       "task": "1.10.8 (versión)",
       "since": null,
-      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión UX de O1 cerrada (`/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md`, sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc; capturas 01–19). Tabby decide lo siguiente. A1 no se lanza desde UX. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -193,8 +193,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Revisión UX a mano de O1 encargada (f8c50faa). A1 no se lanza todavía. Siguen D1, D2/H1 y P1.",
+      "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Revisión UX de O1 cerrada (`/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md`, sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc; capturas 01–19). Tabby decide lo siguiente. A1 no se lanza desde UX. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -233,8 +233,8 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "APTO como unidad el 2026-11-10T12:20 Europe/Madrid (`f8c50faa`, padre 462e603), sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445). CTA quitada del popup, onboarding y Novedades; la barra no cambia; 12/12 + 128/128 y ampliada 838/838 en el candidato. H-1 (media): 4 mutantes de QA sobreviven.",
-      "next": "Revisión UX a mano en Chrome real de f8c50faa encargada (hueco del popup, onboarding, Novedades, barra sin sesión, textos). H-7 se mantiene (requisito para compartir, no promo). Playwright no es puerta de O1. No se lanza A1.",
+      "summary": "Revisión UX a mano cerrada el 2026-11-10T12:48 Europe/Madrid sobre `f8c50faa`. Informe `/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md` (sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc); capturas 01–19. Sin medios ni altos. H-7: no es promo residual en el tablero; en grupo no hay el aviso del tablero, no se eleva. QA APTO previo: `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
+      "next": "Cerrada como unidad de interfaz en f8c50faa. Tabby decide lo siguiente. No se lanza A1 desde UX. Límite: tarjeta completa de la barra no reseguida en ES/zh_CN (sí compacta e icono).",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -304,7 +304,7 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Libre. QA lo cogió a las 12:08:29 y lo soltó a las 12:17:51 Europe/Madrid al cerrar la QA de O1 (`f8c50faa`).",
+      "summary": "Libre. UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`).",
       "next": "No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -415,7 +415,7 @@
       "status": "pausado",
       "since": null,
       "summary": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 pertenecen al canal Luck is Math (Shorts Orquestador / `estado/luckismath.md` y el Productor). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
-      "next": "No gestionar ni concretar desde Tabner. Shorts (Luck is Math) no se consolida antes del 16-11.",
+      "next": "Consolidado ya (decisión 10-11 12:44): Shorts Director absorbe Luck is Math; el Guionista absorbe investigación y métricas. No gestionar ni concretar desde Tabner.",
       "block": "Tubería distinta; no mezclar con Redes."
     },
     {
@@ -462,6 +462,16 @@
     }
   ],
   "log": [
+    {
+      "at": "2026-11-10T12:49:00+01:00",
+      "actor": "Tabner UX",
+      "text": "revisión a mano de O1 (`f8c50faa`) cerrada en Chrome real. Informe `/workspace/tabner-ops/ux/2026-11-10-o1-f8c50faa.md` (sha f1f6860b76231dfbbfded4af6d5b9f0e46df85d6babdfbff109594ff7b590acc); capturas 01–19 en `ux/capturas/2026-11-10-o1/`. Confirmados popup sin franja ni hueco, onboarding con un solo botón en claro y oscuro, Novedades con un solo «Got it!» (Escape y fondo cierran; H-7: no parece promo residual ni confunde en el tablero; en Compartir grupo no hay el aviso del tablero, no lo elevo. Límite: la tarjeta completa de la barra no se revió en ES/zh_CN (sí la compacta y el icono). Sin medios ni altos. Turno UX cogido a las 12:22:23 y soltado al cerrar. No se lanza A1. No se tocó D1, D2/H1 ni P1."
+    },
+    {
+      "at": "2026-11-10T12:48:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "decisión de Carlos de las 12:44 (chat de Creador; DECISIONES). Shorts se consolida ya (no espera al 16-11). Continuidad de archivo pasa a pausa porque la Tabby nueva ya desatasca a las 9/12/15/18; esa rutina de desatasco no se toca. Dev preparará el lanzador de Claude y los worktrees sin coger el turno de UX. No se interrumpe la revisión UX a mano de O1 (`f8c50faa`)."
+    },
     {
       "at": "2026-11-10T12:48:00+01:00",
       "actor": "Luck is Math",
@@ -551,17 +561,7 @@
       "at": "2026-11-10T08:46:00+01:00",
       "actor": "Dev",
       "text": "M1 cerrada y entregada a QA. Commit local `3446ff9ebabb1215c3042f24b6737313ad994117` en `dev/1.10.8-m1-guardar-sesion` (padre 3ce1af81), sin push. Candidato 18/18 + 132/132 EXIT 0; 4 mutantes 1 rojo cada uno EXIT 1; tsc EXIT 2 solo 3 TS2307 previos. INFORME `/workspace/tabner-release/1.10.8/m1-guardar-sesion/INFORME.md`. Turno DEV soltado (`turno.py ver` = libre)."
-    },
-    {
-      "at": "2026-11-10T08:02:00+01:00",
-      "actor": "Dev",
-      "text": "retomo M1 a mano (sin Claude Code; Claude queda reservado para Shorts E01). Turno DEV sigue cogido desde 2026-11-09T17:42:49. Rama `dev/1.10.8-m1-guardar-sesion` en 3ce1af81, árbol limpio."
-    },
-    {
-      "at": "2026-11-09T22:45:00+01:00",
-      "actor": "Luck is Math",
-      "text": "Revisados 005 r04 (8/10, el r03 falló por parpadeo), 006 r04 (8/10; cifra ~6.637 corregida) y 007 r05 (8/10; Rosa/Rose corregido). Los tres se envían al padre para el OK de Carlos; no se publica nada. Propuesta: 005 el X 11/11, 006 el V 13/11 y 007 el L 16/11."
     }
   ],
-  "contentHash": "3c391536"
+  "contentHash": "d4e61087"
 }
