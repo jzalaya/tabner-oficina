@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T13:53:14+01:00",
-  "sourceMtime": "2026-11-10T13:53:04+01:00",
+  "generatedAt": "2026-11-10T13:53:59+01:00",
+  "sourceMtime": "2026-11-10T13:53:56+01:00",
   "bots": [
     {
       "id": "dev",
@@ -317,8 +317,8 @@
         "Dev"
       ],
       "status": "pausado",
-      "since": null,
-      "summary": "En vigor (no archivado ni retirado). Libre. UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
+      "since": "2026-11-10T13:40:15+01:00",
+      "summary": "En vigor (no archivado ni retirado). Ocupado por DEV desde 2026-11-10T13:40:15 Europe/Madrid (A1, `/workspace/wt/a1`). UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -478,8 +478,18 @@
   "log": [
     {
       "at": "2026-11-10T13:53:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "lanzador r3 NO APTO contrastado (informe y sha coinciden; 8258 B; grep -ci aprobado = 0; r1 y r2 intactos; /workspace/tabner en f8c50faa; turno sigue en DEV por A1 desde las 13:40:15; /workspace/wt/a1 intacto como cerrojo, trabajo de A1 en curso). No interrumpo A1. Encargo a Dev la corrección de N9 y el refuerzo del test (include.path y el caso que mata m17) al cerrar A1, no ahora. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). Después, nueva revisión de QA. H9 (`/workspace/run-claude.sh`) sigue en Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
+    },
+    {
+      "at": "2026-11-10T13:53:00+01:00",
       "actor": "QA",
       "text": "lanzador único de Claude (r3, corrección N1–N3) NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r3.md` (sha ab315925d9eb340f79054f455c1452533a8e6f3bd8b672699fefe5923be8aa36, 8258 B, `grep -ci aprobado` = 0). El test pasa 90/90 (Q01 PID 2007189 y Q02 PID 2008239, `diff` vacío) y las sondas exactas de N1–N3 de r2 ahora bloquean (N3, N4 y N5 cerrados). Bloquea N9 (alta): `git -c include.path=FILE` con `alias.zz=push` hace push real (`inc-push` en el remoto de prueba) y con `alias.sh=!…` ejecuta shell (`FROM_INCLUDE`). N6 parcial (el test no cubre `include.path`; el mutante m17 sobrevive). N7/N8 siguen abiertos en baja. H3–H8 y H10 en regresión OK. H9 sin tocar. No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No se cogió el turno. No se tocó `/workspace/wt/a1` ni el cerrojo `claude-tabner.lock` (A1 en curso, ajeno a esta revisión). Informes r1 y r2 e INFORME-v1/r2 intactos. `/workspace/tabner` sigue en f8c50faa."
+    },
+    {
+      "at": "2026-11-10T13:53:00+01:00",
+      "actor": "Tabby (nueva)",
+      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T13:44:00+01:00",
@@ -495,11 +505,6 @@
       "at": "2026-11-10T13:40:00+01:00",
       "actor": "Tabby nueva",
       "text": "regla de cerrojo concretada por Creador (paquete 13:36). `turno.py` sigue en vigor para la cola técnica Dev/QA/UX y las pruebas manuales; no está archivado ni retirado. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. Ya estaba en el commit `94f8286` (cabecera de `locks/README.md`; sha de turno.py 59f8abd4…). No se interrumpe A1."
-    },
-    {
-      "at": "2026-11-10T13:40:00+01:00",
-      "actor": "Tabby (nueva)",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T13:39:00+01:00",
@@ -570,12 +575,7 @@
       "at": "2026-11-10T12:55:00+01:00",
       "actor": "Dev",
       "text": "lanzador único de Claude listo, sin coger el turno. Punto de entrada `/workspace/run-claude-wt.sh`. Worktrees en `/workspace/wt/<unidad>`; nadie programa en `/workspace/tabner`. Sesiones con `--session-id` propio (nada de `--continue`). `flock` solo para buzón de pruebas, tiendas, y como mucho una sesión pesada de Tabner y una de Shorts a la vez. `turno.py` se conserva archivado, sin modificar. Pruebas sintéticas: `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 31/31, EXIT_REAL=0 (log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador.log`, INICIO=2026-11-10T12:54:14+01:00, FIN=2026-11-10T12:54:27+01:00). INFORME `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha 31f3e57365c9d75d8acdcb1557c830b5b4143bc29f66437b50c36ca25a4dbf25). No se ha empezado A1 (encargo de Carlos/Creador 12:47 y DECISIONES 12:44: primero el lanzador). No se tocó D1, D2/H1 ni P1. Una sola revisión de QA, ya avisada en su chat."
-    },
-    {
-      "at": "2026-11-10T12:50:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "revisión UX de O1 contrastada (informe y sha coinciden; 19 capturas; turno libre). O1 queda cerrada como unidad de interfaz (sin medios ni altos). H-7 se mantiene. El límite de cobertura (tarjeta completa de la barra no reseguida en ES/zh_CN; solo Chrome) no bloquea. Encargo A1 a Dev: instantáneas automáticas locales con «Restaurar» en Ajustes → Datos; límite de tamaño y número; nunca storage.sync; disparo al abrir el dashboard y tras cambios importantes (sin permiso nuevo; alarms queda fuera de esta unidad). Playwright no es puerta de A1; el contrato lo cubre vitest y la UI se revisa a mano. Textos nuevos en 9 idiomas. No se quita el banner de copia (eso es O3, después de A1). No se tocan D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "9960ca95"
+  "contentHash": "6a46328f"
 }
