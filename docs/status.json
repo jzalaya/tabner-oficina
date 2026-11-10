@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T17:30:01+01:00",
-  "sourceMtime": "2026-11-10T17:29:52+01:00",
+  "generatedAt": "2026-11-10T17:46:32+01:00",
+  "sourceMtime": "2026-11-10T17:46:01+01:00",
   "bots": [
     {
       "id": "dev",
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`, padre `0553079e`, sin push) entregados a QA (ya en su chat; no reenviar). Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego, si este paquete queda APTO, revisión UX a mano y después UX-S1 (paquete aparte, sin reabrir A1) y analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`, padre `0553079e`, sin push) entregados a QA (ya en su chat; no reenviar). Lanzador r9 NO APTO (N31; N25–N27 cerrados), en paquete aparte. Luego, si este paquete queda APTO, revisión UX a mano y después UX-S1 (paquete aparte, sin reabrir A1) y analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`, padre `0553079e`, sin push) entregados a QA (ya en su chat; no reenviar). Lanzador r9 sigue en QA (N25–N30), en paquete aparte. Luego, si este paquete queda APTO, revisión UX a mano y después UX-S1 (paquete aparte, sin reabrir A1) y analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Flecos A1 H-11/H-4/UX-A1F-01 (`e9ff7c06`, padre `0553079e`, sin push) entregados a QA (ya en su chat; no reenviar). Lanzador r9 NO APTO (N31; N25–N27 cerrados), en paquete aparte. Luego, si este paquete queda APTO, revisión UX a mano y después UX-S1 (paquete aparte, sin reabrir A1) y analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -245,9 +245,9 @@
       ],
       "status": "bloqueado",
       "since": null,
-      "summary": "r9 entregado a QA el 2026-11-10T17:10 Europe/Madrid (corrección N25, N26, N27 y refuerzo del test N28–N30), sin coger el turno. Test oficial 336/336 EXIT_REAL=0, INICIO 17:09:13 FIN 17:09:28 Europe/Madrid, PID 2761726, CWD `/workspace`, log sha 3344d154c3c67dde7371c5391a85353e3b067173c952a46115e01ed5845411f3 (17156 B). Entry sha 79d9b4b4… (13022 B, modo 0555, shebang `#!/bin/bash -p`, sin cambio de contenido). wrappers/git sha d7fb256c… (27347 B, modo 0555). tests sha 636e84b7… (59987 B). write-settings sha 5fe1b5fa… (3648 B, sin cambio). POLITICA sha 7024b7d8… (10121 B). INFORME sha 3cb91965fc18a19758fe8a039790da34166fc3c661e45d6d973f7b522e606cc6 (4954 B). INFORME-r8 sha 95f8d923… e informe QA r8 sha fea0ee06… intactos. `/workspace/tabner` en f8c50faa. Flecos de A1 no tocados en r9 (van en paquete aparte, ahora `e9ff7c06` en QA).",
-      "next": "QA revisa r9 (ya entregado en su chat; no reenviar). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`). UX-S1 y los flecos de A1 (UX-A1F-01, H-11 y H-4) no entran en este paquete.",
-      "block": "Pendiente de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
+      "summary": "r9 NO APTO como herramienta el 2026-11-10T17:45 Europe/Madrid. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r9.md` (sha 0cf6e89228e6a9ac0c1c18495b0d023b533fff86e9e9ce9670ef949e8399ea09, 8022 B, `grep -ci aprobado` = 0). Q01/Q02 336/336, idénticos al log r9. N25–N27 y N19–N23 cerrados; r5/r6 siguen cerradas. Bloquea N31 (`CLAUDE_WT_GIT_BIN` como `$GIT_BIN`, refs `claude-gitbin`/`eg2`, con prompt). N32 baja (test). Entry sha 79d9b4b4… (13022 B, modo 0555, shebang `#!/bin/bash -p`, sin cambio de contenido). wrappers/git sha d7fb256c… (27347 B, modo 0555). INFORME sha 3cb91965… (4954 B). INFORME-r8 sha 95f8d923… e informe QA r8 sha fea0ee06… intactos. `/workspace/tabner` en f8c50faa. Flecos de A1 (`e9ff7c06`) no tocados (siguen en QA, paquete aparte).",
+      "next": "Corrección de N31 (fijar `GIT_BIN=/usr/bin/git` y no confiar en `CLAUDE_WT_GIT_BIN`) y refuerzo del test (N32). Hallazgos y §5 ya en el chat de Dev. N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`). UX-S1 y los flecos de A1 (UX-A1F-01, H-11 y H-4) no entran en este paquete.",
+      "block": "NO APTO por N31. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
     },
     {
       "name": "A1 Instantáneas automáticas locales",
@@ -478,6 +478,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T17:45:00+01:00",
+      "actor": "QA",
+      "text": "lanzador r9 NO APTO como herramienta. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r9.md` (sha 0cf6e89228e6a9ac0c1c18495b0d023b533fff86e9e9ce9670ef949e8399ea09, 8022 B, `grep -ci aprobado` = 0). Q01/Q02 336/336, idénticos al log r9 (Q01 PID 2775988, 17:13:22–17:13:38; Q02 PID 2779626, 17:13:38–17:13:54). Las vías exactas de r8 (N25–N27) y N19–N23 quedan cerradas, y las de r5/r6 siguen cerradas. Bloquea N31 (alta: `CLAUDE_WT_GIT_BIN=/ruta/a/falso` se usa como `$GIT_BIN` y se ejecuta; `git status` hace push, refs `claude-gitbin` y `eg2`; pide prompt). N32 en baja (test: m66/m68 sobreviven porque la otra capa los frena). Hallazgos y §5 ya en el chat de Dev. Turno no cogido. No se tocó `/workspace/wt/a1` (`e9ff7c06`, flecos H-11/H-4 en QA) ni `/workspace/tabner` (f8c50faa). turno.py e H9 intactos. r1–r8 e INFORME-r8 intactos. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
+    },
+    {
       "at": "2026-11-10T17:29:52+01:00",
       "actor": "Tabby nueva",
       "text": "flecos A1 H-11/H-4/UX-A1F-01 contrastados (commit `e9ff7c06ee1b963a41e114338f0ac6c1dea85ebc`, padre `0553079e`; INFORME sha 7e2f521e7d1c25bda8c8bce4888bb09905b36f9977321719e4ccbcba5c94bfa3, 9528 B, sidecar coincide; T1 124/124 EXIT_REAL=0 PID 2862943, T2 2113/50 EXIT_REAL=0 PID 2863338, tsc solo los 3 TS2307 previos; `/workspace/tabner` en f8c50faa; turno soltado a las 17:28:13, `turno.py ver` = libre; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos; r9 INFORME sha 3cb91965… intacto). Ya está en el chat de QA; no lo reenvío. No es un OK de publicación (siguen D1, D2/H1 y P1). A1 no se cierra aún como unidad de interfaz. No arranco UX-S1 ni la analítica. El r9 sigue en QA, en paquete aparte; no lo reenvío."
@@ -571,12 +576,7 @@
       "at": "2026-11-10T16:12:46+01:00",
       "actor": "Tabby nueva",
       "text": "ronda UX semanal contrastada (informe `/workspace/tabner-ops/ux/2026-11-10.md`, sha c3a9dbb40c73324f4eb45652ec374cd10422cca3e5b2a87db29ab36857796d01, 3578 B; sin sidecar). Sin hallazgos UX nuevos. Sin turno ni Chrome real, como estaba encargado. Decisiones de Tabby: UX-S1 aceptada (instantánea local al actualizarse la extensión, antes de migrar datos, sin permiso nuevo ni alarms, con la misma deduplicación de A1). No la encargo ahora: los flecos de A1 siguen en curso (turno Dev desde 15:27:18) y el lanzador r7 está en QA. La encargo en paquete aparte al cerrar esos flecos, sin reabrir A1 y sin mezclarla con ellos. No la llamo P1: P1 ya es la preservación local que bloquea la 1.10.8. Va en la 1.10.8, antes de la analítica opt-in. UX-S2 aceptada: entra en la auditoría UX completa (instalar/importar no toca grupos nativos; el dashboard no se queda en carga infinita tras actualizar). Esa auditoría no arranca ahora. No se encarga nada a Dev. No es un OK de publicación."
-    },
-    {
-      "at": "2026-11-10T16:12:00+01:00",
-      "actor": "Tabner UX",
-      "text": "ronda semanal reducida (instrucción de hoy: sin turno, sin Chrome real y sin encargos a Dev; turno en DEV por flecos A1 desde 15:27:18). Informe `/workspace/tabner-ops/ux/2026-11-10.md`. Sin hallazgos UX nuevos sobre los informes de unidad de hoy. Propuestas a Tabby: UX-S1 (instantánea local al actualizarse la extensión, sin permiso nuevo) y UX-S2 (verificación en la auditoría). No se encarga nada a Dev. No se tocó D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "fbab7993"
+  "contentHash": "6d5d76bb"
 }
