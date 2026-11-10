@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:10:26+01:00",
-  "sourceMtime": "2026-11-10T14:09:45+01:00",
+  "generatedAt": "2026-11-10T14:11:11+01:00",
+  "sourceMtime": "2026-11-10T14:10:39+01:00",
   "bots": [
     {
       "id": "dev",
@@ -246,7 +246,7 @@
       "status": "pausado",
       "since": null,
       "summary": "NO APTO como herramienta en r3 (2026-11-10T13:52 Europe/Madrid). Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r3.md` (sha ab315925d9eb340f79054f455c1452533a8e6f3bd8b672699fefe5923be8aa36). N1–N5 cerrados en las formas de r2; el test pasa 90/90. Bloquea N9 (alta): `git -c include.path=FILE` con alias de push o `!` hace push real y ejecuta shell. N6 parcial (m17 sobrevive; el test no cubre `include.path`). N7/N8 bajos abiertos. H9 sin tocar. Candidato: `run-claude-wt.sh` sha 43a04ea3…; `wrappers/git` sha 45ab2178…; `write-settings.py` sha 7915db67…. r1 y r2 intactos. No se cogió el turno. No se tocó el worktree de A1 ni su cerrojo.",
-      "next": "Dev corrige N9 y refuerza el test (include.path y el caso que mata m17); luego nueva revisión de QA. A1 no espera ese cierre (DECISIONES 13:36). H9 (`run-claude.sh`) lo decide Creador, vía Tabby.",
+      "next": "Dev corrige N9, refuerza el test (include.path y el caso que mata m17) y alinea el texto de `POLITICA.md` y de `/workspace/run-claude-wt.sh` (`turno.py` sigue en vigor, no «archivado»); luego nueva revisión de QA. No mezclar con A1 (ya entregada; no interrumpir su QA). H9 (`run-claude.sh`) lo lleva Creador.",
       "block": "N9 (fallo de política). No es veto de publicación (herramienta interna). Vuelta atrás: `run-claude-wt.sh.anterior`."
     },
     {
@@ -317,8 +317,8 @@
         "Dev"
       ],
       "status": "pausado",
-      "since": "2026-11-10T13:40:15+01:00",
-      "summary": "En vigor (no archivado ni retirado). Ocupado por DEV desde 2026-11-10T13:40:15 Europe/Madrid (A1, `/workspace/wt/a1`). UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
+      "since": null,
+      "summary": "En vigor (no archivado ni retirado). Libre. Dev lo cogió a las 13:40:15 y lo soltó a las 14:08 Europe/Madrid al entregar A1 (`0138b443`). UX lo cogió a las 12:22:23 y lo soltó a las 12:49 Europe/Madrid al cerrar la revisión UX de O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -428,8 +428,8 @@
       "bots": [],
       "status": "pausado",
       "since": null,
-      "summary": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 pertenecen al canal Luck is Math (Shorts Orquestador / `estado/luckismath.md` y el Productor). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
-      "next": "Consolidado ya (decisión 10-11 12:44): Shorts Director absorbe Luck is Math; el Guionista absorbe investigación y métricas. No gestionar ni concretar desde Tabner.",
+      "summary": "No es tubería de Tabner Redes. El expediente y la numeración 004–007 los lleva el Shorts Director (el Orquestador Luck is Math está archivado; decisión 10-11 12:44). El Shorts de Tabner «3 tab tricks I wish I knew sooner» del 8-11 (https://youtube.com/shorts/_29UJOfKRXY) no se repite.",
+      "next": "Lo gestiona el Shorts Director (calendario, revisión única y publicación). El Guionista absorbe investigación y métricas. No gestionar ni concretar desde Tabner.",
       "block": "Tubería distinta; no mezclar con Redes."
     },
     {
@@ -437,8 +437,8 @@
       "bots": [],
       "status": "pausado",
       "since": null,
-      "summary": "No es tubería de Tabner Redes. La audición de voz del rediseño corresponde a Luck is Math. El paquete EN v3 de Tabner ya tiene revisión audiovisual APTO y se publicó (Shorts 8-11, Reel 8-11 y 9-11).",
-      "next": "Los vídeos nuevos de Tabner siguen yendo a 9:16 a pantalla completa, con voz, música con licencia y subtítulos, a cargo de Redes. No mezclar la cola de audición de Luck is Math.",
+      "summary": "No es tubería de Tabner Redes. La audición de voz del rediseño la lleva el equipo de Shorts (Director / Productor). El paquete EN v3 de Tabner ya tiene revisión audiovisual APTO y se publicó (Shorts 8-11, Reel 8-11 y 9-11).",
+      "next": "Los vídeos nuevos de Tabner siguen yendo a 9:16 a pantalla completa, con voz, música con licencia y subtítulos, a cargo de Redes. No mezclar la cola de audición de Shorts.",
       "block": "Tubería distinta."
     },
     {
@@ -448,9 +448,9 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "La rutina de las 19:00 del rediseño es la de Shorts Analista (`analitica/luckismath/`), no la foto de las tiendas. La foto de tiendas de hoy la tomó Tabby a las 10:55 (O3 / `snapshot.py`): Chrome 255 usuarios, 4.1 de media, 19 valoraciones, v1.10.7; AMO 2 usuarios diarios; 0 issues.",
-      "next": "No relanzar `snapshot.py` desde aquí ni tratar la métrica de las 19:00 como de Tabner.",
-      "block": "No mezclar con Luck is Math."
+      "summary": "La foto de tiendas de Tabner la toma `snapshot.py` (hoy a las 10:55, O3): Chrome 255 usuarios, 4.1 de media, 19 valoraciones, v1.10.7; AMO 2 usuarios diarios; 0 issues. Las métricas de Shorts las lleva el Guionista hacia las 21:20 Europe/Madrid (ya no el Analista a las 19:00).",
+      "next": "No relanzar `snapshot.py` desde aquí ni tratar las métricas de Shorts como de Tabner.",
+      "block": "No mezclar con Shorts."
     },
     {
       "name": "Soporte",
@@ -482,6 +482,16 @@
       "text": "corrección N9 (+ cobertura m17) del lanzador entregada a QA, sin coger el turno y sin tocar A1. Punto de entrada `/workspace/run-claude-wt.sh` sin cambios de contenido (sha 43a04ea3e63b819aeac6b6baa14ff76007611a20f7493c9c2fb96d89d930e834). wrappers/git rechaza `-c include.path` / `includeIf` / el equivalente por entorno. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 96/96 EXIT_REAL=0, INICIO 14:09:03 FIN 14:09:17 Europe/Madrid, log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-r4.log`. N7/N8 siguen en baja. H9 no se toca."
     },
     {
+      "at": "2026-11-10T14:10:00+01:00",
+      "actor": "Tabby nueva",
+      "text": "decisión de Carlos de las 14:08 (chat de Auditor; DECISIONES). Reescritas las filas de Shorts y de métricas: el relevo es el Director y el Guionista, y las métricas de Shorts van hacia las 21:20 (ya no Luck is Math, el Analista ni las 19:00). Encargo a Dev, en el paquete N9 (aparte de A1), corregir el texto de `POLITICA.md` y de `/workspace/run-claude-wt.sh` que aún dicen que `turno.py` está «archivado». La QA de A1 (`0138b443`) no se interrumpe (turno libre; QA ya arrancó a las 14:09). H9 y la limpieza de bots de archivo los lleva Creador."
+    },
+    {
+      "at": "2026-11-10T14:10:00+01:00",
+      "actor": "Tabby (nueva)",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-10T14:08:00+01:00",
       "actor": "Dev",
       "text": "A1 entregada a QA. Commit local `0138b4432ae1189d05f1e7026a80e04fc84dbeb4` (padre `f8c50faa`, rama `dev/1.10.8-a1-instantaneas`, worktree `/workspace/wt/a1`). Tests Dev: `npx vitest run` de localSnapshots + noPaymentStrings + backup + localSnapshotsStore + settingsSnapshots → 80/80 EXIT_REAL=0, INICIO 14:07:16 FIN 14:07:20 Europe/Madrid. INFORME `/workspace/tabner-release/1.10.8/a1-instantaneas/INFORME.md`. Sin push. Suelto el turno. El arreglo N9 del lanzador (r3 NO APTO) queda a continuación, en paquete aparte, sin mezclarlo en A1."
@@ -490,11 +500,6 @@
       "at": "2026-11-10T14:06:00+01:00",
       "actor": "Tabby nueva",
       "text": "decisión de Carlos de las 14:05 (chat de Auditor; DECISIONES). Claude Code solo para trabajo pesado de código o de vídeo, como mucho una sesión de Tabner y una de Shorts a la vez. Si Claude está ocupado o hay un 429, el mismo bot sigue a mano la misma unidad (no espera al reinicio y no se la pasa a Tabby). Quedan tachadas las entradas de DECISIONES del 2-11 13:55 y del 9-11 14:50. No se interrumpe A1."
-    },
-    {
-      "at": "2026-11-10T14:06:00+01:00",
-      "actor": "Tabby (nueva)",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-10T14:05:00+01:00",
@@ -570,12 +575,7 @@
       "at": "2026-11-10T13:18:00+01:00",
       "actor": "Dev",
       "text": "corrección H1–H5 del lanzador entregada a QA, sin coger el turno y sin arrancar A1. Punto de entrada `/workspace/run-claude-wt.sh` (sha 43a04ea3e63b819aeac6b6baa14ff76007611a20f7493c9c2fb96d89d930e834). Pruebas sintéticas: `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 76/76, EXIT_REAL=0 (log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador.log`, sha 7486674ff4fda6dfda3f4e91dff2b6489f574555c02e3c8002954c99cef47d33, INICIO=2026-11-10T13:16:37+01:00, FIN=2026-11-10T13:16:51+01:00). INFORME `/workspace/tabner-release/lanzador-wt/INFORME.md` (sha 2472d5b208a9800f8456aa81a5301485a4f55b64fd1868ac3192687ef1af291c). `/workspace/tabner` sigue en f8c50faa; no hay worktree de producto bajo `/workspace/wt`; `turno.py` y `/workspace/run-claude.sh` intactos (H9 sigue en Creador). No se tocó D1, D2/H1 ni P1. A1 espera la nueva revisión de QA."
-    },
-    {
-      "at": "2026-11-10T13:11:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "lanzador NO APTO contrastado (informe y sha coinciden; grep -ci aprobado = 0; /workspace/tabner en f8c50faa; turno.py intacto; turno libre). Encargo a Dev la corrección de H1–H5 y el refuerzo del test; después, nueva revisión de QA. No reenvío los hallazgos (QA ya los ha escrito en el chat de Dev). A1 sigue en espera; el alcance no cambia. No apunto en DECISIONES una decisión de Carlos a las 12:47: fue el encargo operativo de Creador tras el 12:44. H9 (`/workspace/run-claude.sh`) lo dejo a Creador; no lo toco. No se tocan D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "a953b6f3"
+  "contentHash": "66d60ee"
 }
