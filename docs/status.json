@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:27:41+01:00",
-  "sourceMtime": "2026-11-10T14:27:05+01:00",
+  "generatedAt": "2026-11-10T14:30:41+01:00",
+  "sourceMtime": "2026-11-10T14:30:30+01:00",
   "bots": [
     {
       "id": "dev",
@@ -9,7 +9,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador r4b NO APTO (N10, N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Lanzador r5 entregado a QA (N10/N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -19,7 +19,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador r4b NO APTO (N10, N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Lanzador r5 entregado a QA (N10/N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -69,7 +69,7 @@
       "task": "1.10.8 (versión)",
       "since": null,
       "detail": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador r4b NO APTO (N10, N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Lanzador r5 entregado a QA (N10/N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -194,7 +194,7 @@
       "status": "bloqueado",
       "since": null,
       "summary": "Abierta. D3, A2 y M1 cerradas. O1 APTO como unidad y revisión UX a mano cerrada (`f8c50faa`, padre 462e603), sin push. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-O1-f8c50faa.md` (sha 2ea03d50464d7eeb42a8a731351a204e618418239ee931e2070e0b4ee9e47445).",
-      "next": "Lanzador r4b NO APTO (N10, N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
+      "next": "Lanzador r5 entregado a QA (N10/N11). A1 en QA (`0138b443`). Luego analítica opt-in. Siguen D1, D2/H1 y P1.",
       "block": "QA mantiene vetada la publicación por D1, D2/H1 y P1."
     },
     {
@@ -245,9 +245,9 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "r4b NO APTO como herramienta el 2026-11-10T14:25 Europe/Madrid. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r4b.md` (sha 17d6af14049e57c0f239a55a80d31a5f559ab506a21fcc0f0d31e2ebe29f1534, 12817 B, `grep -ci aprobado` = 0). N9 y m17 cerrados; texto de turno.py OK. Bloquean N10 (alta, `git rebase -x` hace push real) y N11 (alta, `core.fsmonitor`/`core.hooksPath`/`diff.external` por `-c` o `GIT_CONFIG_*` hacen push). Test 96/96. Entry sha 0052072e…; wrappers/git 840957a4…; POLITICA 17da1664…. Informes r1–r3 e INFORME-r4 intactos. No se cogió el turno. No se tocó A1 (`0138b443`).",
-      "next": "Dev corrige N10 y N11 (encargado; hallazgos y §7 ya en su chat, no reenviar) y nueva revisión de QA. No interrumpir la QA de A1. N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
-      "block": "NO APTO como herramienta (N10, N11). No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`."
+      "summary": "r5 (N10+N11) entregado a QA el 2026-11-10T14:31 Europe/Madrid, sin coger el turno y sin tocar A1. Test oficial 116/116 EXIT_REAL=0, INICIO 14:29:32 FIN 14:29:46 Europe/Madrid, log sha fc4e1495…. Entry sha cd7cbb64…; wrappers/git sha 88c3bfa7…; tests sha 50900060…; write-settings sha b0ed3ff3…; POLITICA sha eca588bb…. INFORME sha 913b39b4… (3663 B). r4b conservado (INFORME-r4b.md sha 2653e5c0…). `/workspace/tabner` en f8c50faa.",
+      "next": "Nueva revisión de QA de r5. No interrumpir la QA de A1 (`0138b443`). N7/N8 siguen en baja. H9 cerrado (stub en `/workspace/run-claude.sh`, original en `/workspace/tabner-dev/lanzador/run-claude.sh.retirado-H9`).",
+      "block": "Pendiente de QA. No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`."
     },
     {
       "name": "A1 Instantáneas automáticas locales",
@@ -477,6 +477,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T14:31:00+01:00",
+      "actor": "Dev",
+      "text": "corrección N10+N11 del lanzador (r5) entregada a QA, sin coger el turno y sin tocar A1. El envoltorio rechaza `rebase -x/--exec/-i` y aplica lista blanca de claves en `-c`/`GIT_CONFIG_*`. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 116/116 EXIT_REAL=0, INICIO 14:29:32 FIN 14:29:46 Europe/Madrid, PID 2120006, log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-r5.log` (sha fc4e1495f71095009352609308c2716719a85833129d43a6bd8447d644206926). Entry sha cd7cbb6468682c09768998343765091d39d0a807a3a94d0b41bbbfaadb0b456e; wrappers/git sha 88c3bfa77f87f492d3ce7fd711ecead2c83aaaccd0170a46fd6829ac00ddb570; tests sha 509000603d69fa34cbf12d9ce703b043f0cddb995be8cbef91482456689456fc; write-settings.py sha b0ed3ff3479bb38660af5e6f66ac77048b5cb57bde408f34dbabd35317305535; POLITICA sha eca588bb8270af9c326ed337c8d1e210f6cfc622121889091407dc5525aa441e. INFORME sha 913b39b4bfe1693c32c6676b419ff59544ecd792e1766ec3f6c162013d162675 (3663 B). r4b conservado en INFORME-r4b.md (sha 2653e5c0…). N7/N8 siguen en baja. H9, D1, D2/H1, P1, turno.py y `/workspace/tabner` (f8c50faa) no se tocan."
+    },
+    {
       "at": "2026-11-10T14:27:00+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador r4b NO APTO contrastado (informe sha 17d6af14…, 12817 B, grep -ci aprobado = 0; N9 y m17 cerrados; texto de turno.py OK; bloquean N10 y N11; r1–r3 e INFORME-r4 intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `0138b443` y su QA sigue en curso desde las 14:09:27, última evidencia ~14:26; turno.py sha 59f8abd4… intacto; turno libre). Encargo a Dev la corrección de N10 y N11; no reenvío los hallazgos (QA ya los ha dejado en su chat, con el §7). No interrumpo la QA de A1. N7/N8 siguen en baja. H9 ya está cerrado (stub de Creador)."
@@ -570,12 +575,7 @@
       "at": "2026-11-10T13:39:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "El Guionista (por aprobación de Carlos vía Auditor) mueve la rutina «Seguimiento de Shorts publicados» de las 19:00 a hacia las 21:20 Europe/Madrid (flexible: hasta 10 min antes o 15 min después). Próxima ejecución hoy 10/11 a las 21:16. El corte del 004 de…"
-    },
-    {
-      "at": "2026-11-10T13:38:00+01:00",
-      "actor": "Tabby nueva",
-      "text": "decisión de Carlos de las 13:36 (chat de Auditor; DECISIONES). A1 arranca ya en un worktree (`/workspace/wt/a1`, base f8c50faa); no espera a la QA del lanzador. Encargo a Dev: el turno está libre tras la entrega r3 (INFORME y wrappers contrastados; 90/90; no reenvío el paquete a QA). En la ronda UX de ~15:50, UX propone a Tabby y no coge turno ni Chrome real ni encarga a Dev mientras A1 o la QA del lanzador estén abiertos. Tabby no escribe a Carlos al cerrar o encargar una unidad. Las respuestas de X se aprueban una sola vez, en el chat de Redes. Cabecera de ESTADO reescrita. Commit de `turno.py` y su README, sin interrumpir trabajo en curso. No se tocan D1, D2/H1 ni P1."
     }
   ],
-  "contentHash": "4b42d0e"
+  "contentHash": "6dd762eb"
 }
