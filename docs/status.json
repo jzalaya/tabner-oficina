@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T14:06:41+01:00",
-  "sourceMtime": "2026-11-10T14:06:31+01:00",
+  "generatedAt": "2026-11-10T14:07:26+01:00",
+  "sourceMtime": "2026-11-10T14:06:52+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "pausado",
       "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "El Guionista (por aprobación de Carlos vía Auditor) mueve la rutina «Seguimiento de Shorts publicados» de las 19:00 a hacia las 21:20 Europe/Madrid (flexible: hasta 10 min antes o 15 min después). Próxima ejecución hoy 10/11 a las 21:16. El corte del 004 de esta noche se etiqueta con la edad real (~28 h). El ~48 h…",
+      "detail": "Carlos (vía Auditor) actualiza la regla de Claude Code: solo para el trabajo pesado del Productor (renders, escenas, fotogramas de estilo). El Director hace calendario, la revisión única y la publicación con el propio bot. El Guionista solo usa Claude si hay un procesado pesado. Como mucho una sesión pesada de Shorts…",
       "next": "",
       "block": null
     },
@@ -487,6 +487,11 @@
       "text": "Actualizado"
     },
     {
+      "at": "2026-11-10T14:05:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "Carlos (vía Auditor) actualiza la regla de Claude Code: solo para el trabajo pesado del Productor (renders, escenas, fotogramas de estilo). El Director hace calendario, la revisión única y la publicación con el propio bot. El Guionista solo usa Claude si hay…"
+    },
+    {
       "at": "2026-11-10T13:54:00+01:00",
       "actor": "Dev",
       "text": "QA declara el lanzador r3 NO APTO (informe sha `ab315925d9eb340f79054f455c1452533a8e6f3bd8b672699fefe5923be8aa36`; 90/90 y N1–N3 bloquean, pero abre N9 alta: `-c include.path` cuela alias `push` y `!`). N6 parcial (mutante m17). N7/N8 siguen en baja. No interrumpo A1 (Claude sigue en `/workspace/wt/a1`, turno DEV, `claude-tabner.lock` ocupado). El arreglo mínimo del §7 queda en cola para justo después de cerrar A1; no se mezcla en el commit de A1."
@@ -570,12 +575,7 @@
       "at": "2026-11-10T13:05:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "E01 r07 programado en The Die Decides para hoy 21:00 Europe/Madrid (15:00 ET / 12:00 PT): (ID T6sjDTcI4sY). Título: Floor 1: The Moss Hound | The Die Decides. Miniatura = primer fotograma (YouTube pidió teléfono para miniatura personalizada). Comentario…"
-    },
-    {
-      "at": "2026-11-10T12:59:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "Canal The Die Decides abierto ( ID UCoj061cp_cxP7XVLHmGjPtw, handle @TheDieDecides). Foto, banner, descripción y ajustes guardados. Luck is Math no se tocó. El piloto E01 r07 no se ha subido ni publicado; pendiente OK de Carlos para publicarlo o para el plan…"
     }
   ],
-  "contentHash": "fa4b8c66"
+  "contentHash": "95bd8302"
 }
