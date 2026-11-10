@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T21:15:49+01:00",
-  "sourceMtime": "2026-11-10T21:15:04+01:00",
+  "generatedAt": "2026-11-10T21:28:54+01:00",
+  "sourceMtime": "2026-11-10T21:28:52+01:00",
   "bots": [
     {
       "id": "dev",
@@ -98,7 +98,7 @@
       "status": "pausado",
       "task": "Orquestación de Shorts",
       "since": null,
-      "detail": "Confirmado el comentario de votación de E01 fijado por @TheDieDecides (Carlos lo fijó a mano).",
+      "detail": "El Guionista no pudo leer el corte ~28 h del 004 ( YouTube Studio responde «No tienes permiso para ver esta página» en Luck is Math (UCcCTsajBSdhSf6WvVvsf2Eg). Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista con la cuenta propietaria. El ~48 h del 004 (ancla 11/11 ~17:15) y…",
       "next": "",
       "block": null
     },
@@ -108,7 +108,7 @@
       "status": "pausado",
       "task": "Luck is Math: 004 publicado; 005, 006 y 007 en revisión",
       "since": null,
-      "detail": "La rutina de métricas del Guionista pasa de las 19:00 a hacia las 21:20 Europe/Madrid. El 004 se lee hoy con edad real (~28 h); el ~48 h sigue anclado al 11/11 ~17:15 (~52 h a las 21:20). Los cortes de 005–007 se leen hacia las 21:20 del día siguiente y del segundo día.",
+      "detail": "El Guionista no pudo leer el corte ~28 h del 004 ( Studio responde «No tienes permiso para ver esta página» en Luck is Math. Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista. El ~48 h del 004 y el de 7 días del 002 también lo necesitan.",
       "next": "Revisar las entregas del Productor: 005 r03 para el M 10/11 a las 12:00; 006 r04 para el J 12/11 a las 12:00; 007 r05 para el D 15/11 a las 12:00.",
       "block": null
     },
@@ -118,7 +118,7 @@
       "status": "pausado",
       "task": "Guiones de Shorts",
       "since": null,
-      "detail": "La rutina de métricas del Guionista pasa de las 19:00 a hacia las 21:20 Europe/Madrid. El 004 se lee hoy con edad real (~28 h); el ~48 h sigue anclado al 11/11 ~17:15 (~52 h a las 21:20). Los cortes de 005–007 se leen hacia las 21:20 del día siguiente y del segundo día.",
+      "detail": "El Guionista no pudo leer el corte ~28 h del 004 ( Studio responde «No tienes permiso para ver esta página» en Luck is Math. Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista. El ~48 h del 004 y el de 7 días del 002 también lo necesitan.",
       "next": "Sin encargo nuevo registrado.",
       "block": null
     },
@@ -478,6 +478,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-10T21:28:00+01:00",
+      "actor": "Luck is Math",
+      "text": "El Guionista no pudo leer el corte ~28 h del 004 ( Studio responde «No tienes permiso para ver esta página» en Luck is Math. Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista. El ~48 h del 004 y el de 7 días del 002…"
+    },
+    {
+      "at": "2026-11-10T21:28:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "El Guionista no pudo leer el corte ~28 h del 004 ( YouTube Studio responde «No tienes permiso para ver esta página» en Luck is Math (UCcCTsajBSdhSf6WvVvsf2Eg). Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista con la…"
+    },
+    {
       "at": "2026-11-10T21:15:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "Confirmado el comentario de votación de E01 fijado por @TheDieDecides (Carlos lo fijó a mano)."
@@ -566,17 +576,7 @@
       "at": "2026-11-10T18:13:08+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador r11 contrastado (INFORME sha f81e4ef67ef1f12744f2922de5fffe8b946eb0cdaa338a1157696bd79af1f06e, 5687 B; sidecar coincide (hash desnudo); INFORME.md == INFORME-r11.md; test oficial 368/368 EXIT_REAL=0, INICIO 18:09:38 FIN 18:09:54, PID 3127962, CWD `/workspace`, log sha 5a85e666e44bc8d61be03d942d6606d459a207a66ea1dd36bd72a59451fb7f3e (19113 B); entry sha 9f4d31a856a705ad0ced99961b49853f7098586b5b363a53c07b07393325882e (13464 B, modo 0555); wrappers/git sha d1d0b323c78f3f16deda44f95ec5f30e3fa29563829c479a67c16b517338be30 (28752 B, modo 0555); tests sha 1a940c3883efd4a18cf3e5297738ba241be8e0dc4ea3a53e1dee037e40f375a5; write-settings sin cambio sha 5fe1b5fa…; POLITICA sha 70d3bcc1…; INFORME-r10 sha 761df526… e informe QA r10 sha a75f7cc0… intactos; `/workspace/tabner` en f8c50faa; A1 sigue en `e9ff7c06`; turno.py sha 59f8abd4… e H9 stub 5c1e03cf… intactos; turno libre). Ya está en el chat de QA; no lo reenvío. N7/N8 siguen en baja. No es un OK de publicación (siguen D1, D2/H1 y P1). Decisión de Tabby (no de Carlos): A1 no se cierra aún como unidad de interfaz. Encargo a Dev el fleco UX-A1F-01 sobre `e9ff7c06` (contrastar en Chrome, no solo en jsdom). El turno está libre: que lo coja. H-14 y H-15 (baja) siguen aparcados, sin mezclarlos. No arranco UX-S1 ni la analítica. El r11 queda en QA, en paquete aparte."
-    },
-    {
-      "at": "2026-11-10T18:12:00+01:00",
-      "actor": "Dev",
-      "text": "corrección r11 del lanzador (N33, N34 y refuerzo del test N35) entregada a QA, sin coger el turno y sin tocar los flecos de A1 (`e9ff7c06`) ni UX-S1. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 368/368 EXIT_REAL=0, INICIO 18:09:38 FIN 18:09:54 Europe/Madrid, PID 3127962, CWD `/workspace`, log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-r11.log` sha 5a85e666e44bc8d61be03d942d6606d459a207a66ea1dd36bd72a59451fb7f3e (19113 B). Entry sha 9f4d31a856a705ad0ced99961b49853f7098586b5b363a53c07b07393325882e (13464 B, modo 0555, shebang `#!/bin/bash -p`): copia el envoltorio a `$RUN_ROOT/<unidad>/wrappers/` y escribe `session` con las rutas canónicas de la sesión. wrappers/git sha d1d0b323c78f3f16deda44f95ec5f30e3fa29563829c479a67c16b517338be30 (28752 B, modo 0555): no lee `CLAUDE_INTEGRATION_REPO`, `CLAUDE_WT_UNIDAD` ni `CLAUDE_WT_ROOT` del entorno del hijo. tests sha 1a940c3883efd4a18cf3e5297738ba241be8e0dc4ea3a53e1dee037e40f375a5 (67219 B). write-settings sin cambio sha 5fe1b5fa4308bf69deb3471cd0588fec6765a5a2a14a03716e46bae3ab72347c. POLITICA sha 70d3bcc1af44bddd0ec7acf7439d5f4581a0b529f6040d115d2c29dc303e62a1 (10627 B). INFORME sha f81e4ef67ef1f12744f2922de5fffe8b946eb0cdaa338a1157696bd79af1f06e (5687 B). INFORME-r10 sha 761df526… e informe QA r10 sha a75f7cc0… intactos. `/workspace/tabner` en f8c50faa. turno.py e H9 intactos. N7/N8 siguen en baja. No es un OK de publicación."
-    },
-    {
-      "at": "2026-11-10T18:11:35+01:00",
-      "actor": "Tabby nueva",
-      "text": "revisión UX a mano de flecos A1 H-11/H-4/UX-A1F-01 contrastada (informe sha a0de4719862a7c9c508d3ce48be5b340c9a70572d45bba00c893f944668926b0, 8079 B, sin sidecar; capturas 01–03, 05–18 y 18b en `ux/capturas/2026-11-10-a1-flecos-h11/`; 18 ficheros; no hay 04). Confirmados en Chrome: H-11 y H-4. UX-A1F-01 sigue abierto en Chrome (medio: tras solo plegar, el diálogo dijo «Antes se guarda una copia del estado actual.» y no «Tu estado actual ya está entre las copias.»; al restaurar la más reciente se escribió 17:05:00 y salió 17:00:30). Sin altos. Solo Chrome. Turno soltado a las 18:09 (`turno.py ver` = libre). `/workspace/tabner` en f8c50faa; A1 sigue en `e9ff7c06`. No es un OK de publicación (siguen D1, D2/H1 y P1). Decisión de Tabby (no de Carlos): A1 no se cierra aún como unidad de interfaz. El r11 del lanzador sigue encargado y en curso; no lo interrumpo ni mezclo. El siguiente paquete de flecos (UX-A1F-01, a contrastar en Chrome, no solo en jsdom) queda aparcado hasta que Dev entregue el r11; no lo encargo ahora. H-14 y H-15 (baja) siguen aparcados. No arranco UX-S1 ni la analítica."
     }
   ],
-  "contentHash": "91b5f58a"
+  "contentHash": "5013f763"
 }
