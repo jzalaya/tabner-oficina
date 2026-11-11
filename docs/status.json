@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T10:10:49+01:00",
-  "sourceMtime": "2026-11-11T10:10:01+01:00",
+  "generatedAt": "2026-11-11T10:13:49+01:00",
+  "sourceMtime": "2026-11-11T10:13:45+01:00",
   "bots": [
     {
       "id": "dev",
@@ -452,6 +452,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-11T10:15:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "sin cambios ni bloqueos nuevos. 005 sale hoy 21:00 (rutina activa), 006 y 007 aprobados. Ritmo 3/semana en LiM + TDD los martes, OK. Acceso a Studio de LiM sigue pendiente."
+    },
+    {
       "at": "2026-11-11T10:09:31+01:00",
       "actor": "Tabby nueva",
       "text": "remate QA-AN-01b de analítica opt-in `78bf68cc3eff72e027a8cf95bf8cdb32e07b4848` (padre `496afa386cbd620ca25634f0ef8dcf018b471540`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar, sin push) APTO como unidad, contrastado. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-analitica-78bf68cc.md` sha `7cf6ba351011457584d2ac5287a102e0e0a2f9be241d16c316d7eca60f78000b` (10068 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/analitica-78bf68cc-contraste/` (38 ficheros). INFORME Dev `/workspace/tabner-release/1.10.8/analitica-qa-an-01b/INFORME.md` sha `258fd5e3ba808bdbd15624338d846b2ec722f3b33d8185154d90d379fb4ed558` (6687 B, sidecar GNU idéntico). T1 170 ok y 2 omitidos, PID 267084 (09:59:01–09:59:03, log sha `b6f7a605…`); tsc EXIT_REAL=2 solo los 3 TS2307 previos, PID 267549 (09:59:03–09:59:08, log sha `5fcc7bdb…`); T2 2243 ok y 50 omitidos, PID 267665 (09:59:08–09:59:47, log sha `0b194f28…`). Frente al padre +2 tests (E3 y E4), ninguno retirado. `flushUsage` es byte a byte F2 (sha `70273d35…`). Flag apagado e inerte; QA-AN-01 y QA-AN-01b quedan cerrados en jsdom. QA-AN-06 no es el mismo defecto que QA-AN-01b (permiso nativo de Firefox en about:addons, no el «No permitir» de Tabner) y se aparca para la activación, junto con QA-AN-03, QA-AN-04 y QA-AN-05; se verifica en Firefox real con P07. Encargo a UX la revisión a mano en Chrome de `78bf68cc`. No se cierra como unidad de interfaz. Turno libre (`turno.py ver` = libre). `/workspace/tabner` sigue en `f8c50faa`; `/workspace/wt/ux-s1` en `26c84751`; `/workspace/wt/a1` en `6fde85b0`. No es un OK de publicación (siguen D1, D2/H1 y P1). Esta unidad no bloquea P1."
@@ -545,12 +550,7 @@
       "at": "2026-11-11T08:01:11+01:00",
       "actor": "Dev",
       "text": "remate GE-1 del lanzador entregado a QA, sin coger ni soltar el turno de producto (lo tiene UX desde 07:57:49 Europe/Madrid, motivo `revisión UX Chrome UX-S1 26c84751`). No es un r13 de residuales. INFORME `/workspace/tabner-release/lanzador-wt/INFORME-ge-1.md` sha `bfa981130a91dae439e2fdd76ea2166a4718c2edbf9d55871decfb7523eb2589` (6607 B); sidecar `INFORME-lanzador-ge-1.md` idéntico. Test oficial 448/448 EXIT_REAL=0 (INICIO 2026-11-11T07:59:17 Europe/Madrid, FIN 07:59:48, PID 3908338, CWD `/workspace`, log sha `1296e6bd2bed58b3e58d48325f2fcb928eab4cbfe4bc9b16f6c32fbbaf65678b`, 23716 B). Frente al paquete GIT_EDITOR: +9 casos, ninguno retirado. Elección: `trap` de TERM/INT/HUP que reenvía al hijo y a su árbol, espera, escribe aviso con `CORTE=senal` y mantiene el cerrojo durante el remate. No se ha dejado el fd 200 en el vigilante (esa vía ya dejó el carril cogido en la batería oficial de este paquete). Entry sha `c6a44c5040c1cd3026354c7de44f9c656c9afcfdb76c644f418f6e09afb87862` (22230 B, 0555). wrappers/git y write-settings.py sin cambio. tests sha `41256b6c15f6b85833cc17fa32e9f048caa623098bd56c81cedd8539a5af587f` (85512 B). POLITICA sha `5465025bc4800f4ce94afc3b8c0f06bb101e29582743152487a82e16582452dc` (12344 B). GE-2 (semántica a Tabby), GE-3, GE-4, GE-5, GE-6 y GE-7 siguen abiertos y no entran en este remate. N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. No se han tocado `/workspace/wt/ux-s1` (`26c84751`), `/workspace/wt/a1` (`6fde85b0`) ni `/workspace/tabner` (`f8c50faa`). INFORME-git-editor, INFORME-r12 e INFORME.md intactos. No es un OK de publicación (siguen D1, D2/H1 y P1)."
-    },
-    {
-      "at": "2026-11-11T07:56:57+01:00",
-      "actor": "Tabby nueva",
-      "text": "paquete del lanzador (GIT_EDITOR seguro, aviso al terminar, corte por estancamiento) NO APTO como herramienta, contrastado, por GE-1 (media-alta, regresión de este paquete). Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-git-editor.md` sha `96c1151d047aa847a5a033692b4f17711ba949ac6443fabfedc769febe883fda` (14340 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/lanzador-wt/contraste-git-editor/` (25 ficheros). Q01 439/439 EXIT_REAL=0 PID 3720644 (07:24:08–07:24:37, log sha `349ab1a87c69b80e416645063881297610f3db5be058198d407d49eb999a0187`, 23318 B); Q02 439/439 EXIT_REAL=0 PID 3725527 (07:24:37–07:25:05, log sha `1325fdbc7f4f726ff1bbca15f0dc40bb91cd85eca5f68ddd4aad844f5428fdc3`, 23312 B); diffs frente al log oficial vacíos (salvo el nombre de `/tmp`). Q06 PID 3750776 (07:33:38–07:33:46, log sha `184c4707038bdf7f0631db73ad92ca18b0a969c5e8263bda196c7a588b39997f`, 830 B): TERM al `PID=` del log deja a Claude vivo, el cerrojo libre, sin aviso, y la segunda sesión sale EXIT 0. Artefactos de la entrega intactos (entry sha `c50084d9…`, wrappers/git `f6019702…`, tests `3434cf14…`, POLITICA `43393235…`, write-settings `5fe1b5fa…`, INFORME-git-editor `e36bcc13…`, log oficial `762c499f…`). INFORME-r12 sha `09e30022fc254732ac2ddd095a7b2a10510bb02ddce00f785ae9f823604acead` (5971 B) e informe QA r12 sha `eab08b73212c0497d2c8c37cceb128d9b87b44b2aab0c142a3ca1339328a0037` intactos. Encargo a Dev el remate de GE-1, sin coger el turno de producto ni tocar `/workspace/wt/ux-s1`, `/workspace/wt/a1` ni `/workspace/tabner`. No es un r13. GE-2, GE-3, GE-4, GE-5, GE-6 y GE-7 no son la puerta (GE-2 queda aparcado; la semántica la decido yo). Residuales N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. No es un OK de publicación (siguen D1, D2/H1 y P1)."
     }
   ],
-  "contentHash": "c74cbe5f"
+  "contentHash": "d8a82a72"
 }
