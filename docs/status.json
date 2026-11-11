@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-11T07:25:56+01:00",
+  "generatedAt": "2026-11-11T07:27:26+01:00",
   "sourceMtime": "2026-11-11T07:25:48+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "bloqueado",
-      "task": "D1 (servidor)",
-      "since": null,
-      "detail": "Abierto. QA lo describe como cambio de lado servidor, sin tocar en D3. Fuera del manifiesto de D3 (`p1TobySync.test.ts`).",
+      "status": "activo",
+      "task": "UX-S1 QA-S1-01 install_meta recordVisit",
+      "since": "2026-11-11T07:27:02+01:00",
+      "detail": "Turno DEV desde 2026-11-11T07:27:02+01:00: UX-S1 QA-S1-01 install_meta recordVisit",
       "next": "Decisión e implementación de servidor (sin producción hasta autorización) y QA independiente.",
-      "block": "Bloquea publicar 1.10.8, según QA. No confundir con el corte C2 de `turno.py` (ese D1 ya está aplicado)."
+      "block": null
     },
     {
       "id": "qa",
@@ -551,5 +551,5 @@
       "text": "Confirmado el comentario de votación de E01 fijado por @TheDieDecides (Carlos lo fijó a mano)."
     }
   ],
-  "contentHash": "3ede2f03"
+  "contentHash": "9445bd6e"
 }
