@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T09:14:05+01:00",
-  "sourceMtime": "2026-11-11T09:13:44+01:00",
+  "generatedAt": "2026-11-11T09:32:32+01:00",
+  "sourceMtime": "2026-11-11T09:32:11+01:00",
   "bots": [
     {
       "id": "dev",
@@ -243,9 +243,9 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Encargada a Dev el 2026-11-11T08:11:38 Europe/Madrid, tras el cierre de UX-S1 como unidad de interfaz. Opt-in explícito en todos los navegadores, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente, sin captura previa ni recuperación retroactiva.",
-      "next": "Worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c847511f915019d89dce25cbf248601fb53142`. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Diseño conservador vigente (DECISIONES 7-11, 9-11 11:54 y 12:16). 9 idiomas en textos nuevos. No mezclar P1, D1, D2 ni flecos aparcados. Coger `turno.py`. Si Claude está ocupado o salta un 429, seguir a mano la misma unidad.",
-      "block": "Entregada a QA el 2026-11-11T09:13:44 Europe/Madrid. Commit local `15fd8785c7363aa0ce466ff2167d3674f46baa2b` (padre `26c84751`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar, sin push). INFORME `/workspace/tabner-release/1.10.8/analitica/INFORME.md` sha `d02e4da891522d1eb1067665e4eaa529d33a370a60592b0c0807310b2e8b0417` (8455 B). Flag apagado. Turno DEV soltado al entregar. No es un OK de publicación."
+      "summary": "NO APTO como unidad el 2026-11-11T09:32:11 Europe/Madrid sobre `15fd8785c7363aa0ce466ff2167d3674f46baa2b` (padre `26c847511f915019d89dce25cbf248601fb53142`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar, sin push), por QA-AN-01 (P05 y P11): «No permitir» no corta el envío de varios días pendientes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-analitica-15fd8785.md` (sha e841dd1425589560806124bad697c56112a398a44e0f5ba3bfbca304f8cf6e05, 17221 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/analitica-15fd8785-contraste/` (64 ficheros). T1 157/2 PID 166073, T2 2230/50 PID 166579, tsc EXIT 2 solo los 3 TS2307 PID 166507. Flag apagado: código inerte. Turno QA no cogido (solo jsdom). Encargo del 2026-11-11T08:11:38 y diseño conservador (DECISIONES 7-11, 9-11 11:54 y 12:16) siguen vigentes.",
+      "next": "Tabby decide el remate. Propuesta: Dev aplica F1 (`/workspace/tabner-qa/1.10.8/analitica-15fd8785-contraste/F1-arreglo-propuesto.diff`) o equivalente, añade tests con ≥2 días pendientes (misma página y entre páginas) y las sondas de importación, y hace un commit nuevo; QA contrasta de forma acotada. Flecos no bloqueantes: QA-AN-02 (huecos de test del remate: m11, m12, m17, m19), QA-AN-03 (infracuenta de `open_group` por «Abrir todo» del popup y de una búsqueda antes del «sí») y QA-AN-04 (para la activación: aviso sin finalidad/destinatario/plazo, espera entre páginas, permiso nativo de Firefox, tope/dedupe del SQL, fichas y STORE-PRIVACY). Flag apagado: no activar ni tocar producción ni gastar. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. No mezclar P1, D1, D2 ni flecos aparcados.",
+      "block": "No es un OK de publicación. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. Esta unidad NO APTO no bloquea P1 (la analítica sigue apagada e inerte; DECISIONES 7-11)."
     },
     {
       "name": "D1 (servidor)",
@@ -451,14 +451,19 @@
   ],
   "log": [
     {
-      "at": "2026-11-11T09:13:44+01:00",
-      "actor": "Dev",
-      "text": "analítica opt-in entregada a QA. Commit local `15fd8785c7363aa0ce466ff2167d3674f46baa2b` (padre `26c847511f915019d89dce25cbf248601fb53142`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar `26c84751` ni A1, sin push). INFORME `/workspace/tabner-release/1.10.8/analitica/INFORME.md` sha `d02e4da891522d1eb1067665e4eaa529d33a370a60592b0c0807310b2e8b0417` (8455 B); sidecar `INFORME-analitica.md` idéntico. T1 157 tests ok, 2 omitidos, 11 ficheros, EXIT_REAL=0, PID 155721, INICIO 09:10:58 FIN 09:11:00, log sha `db5accfa02a3db3c34cd9d550bdef7325792b8d49fba6f6bebad6ea647145cf8`. T2 2230 tests ok, 50 omitidos, 211 ficheros ok, 6 omitidos, EXIT_REAL=0, PID 156404, INICIO 09:11:24 FIN 09:12:04, log sha `725ac07f80586027f9290a51633599168279158f08352a67e36f961fd9b5bad0`. tsc EXIT_REAL=2, solo los 3 TS2307 previos, PID 156228, INICIO 09:11:06 FIN 09:11:11, log sha `da7739ef6362e4a046bf92cd8cf7ece57644fd4834fc190b21de7b2dfb9784b3`. Flag apagado; SQL de propuesta no aplicado; no se lanzó Chrome. Turno DEV soltado al entregar. No es un OK de publicación."
+      "at": "2026-11-11T09:32:11+01:00",
+      "actor": "QA",
+      "text": "analítica opt-in (`15fd8785c7363aa0ce466ff2167d3674f46baa2b`, padre `26c847511f915019d89dce25cbf248601fb53142`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar, sin push) NO APTO como unidad, por QA-AN-01 (P05 y P11): al pulsar «No permitir» con varios días pendientes el envío no se corta y salen los que quedaban (sondas B5, misma página, y B6, popup y dashboard: 2 peticiones después de la retirada). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-analitica-15fd8785.md` (sha e841dd1425589560806124bad697c56112a398a44e0f5ba3bfbca304f8cf6e05, 17221 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/analitica-15fd8785-contraste/` (64 ficheros). T1 157 ok y 2 omitidos, PID 166073 (09:18:16–09:18:18, log sha 47cbda7c8dd03a0d28c1e131ef0ca81d20d4576896395dadd02fb40fdeb7fba5); tsc EXIT_REAL=2 solo los 3 TS2307 previos, PID 166507 (09:18:18–09:18:23, log sha 655f23765b5dc6f5444adbebf59f6a10f90bf922560626204f81b19771eb2732); T2 2230 ok y 50 omitidos, PID 166579 (09:18:23–09:19:03, log sha d687d2441fb8caf7d7b49b9b2ee6715847dcf5445467ce7d9872d36d193324fa). T2 del padre 2161/50, PID 171845. Con el flag apagado el código está inerte (0 lecturas, escrituras, red y permisos). Turno no cogido ni soltado (solo jsdom). Según DECISIONES 7-11, la analítica no bloquea P1: sigue apagada. No es un OK de publicación (siguen D1, D2/H1 y P1). Flecos no bloqueantes: QA-AN-02, QA-AN-03 y QA-AN-04. Propuesta a Tabby: Dev aplica F1 o equivalente, añade tests de ≥2 días pendientes y las sondas de importación, y hace un commit nuevo; QA contrasta de forma acotada."
+    },
+    {
+      "at": "2026-11-11T09:32:11+01:00",
+      "actor": "QA",
+      "text": "Actualizado"
     },
     {
       "at": "2026-11-11T09:13:44+01:00",
       "actor": "Dev",
-      "text": "Actualizado"
+      "text": "analítica opt-in entregada a QA. Commit local `15fd8785c7363aa0ce466ff2167d3674f46baa2b` (padre `26c847511f915019d89dce25cbf248601fb53142`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar `26c84751` ni A1, sin push). INFORME `/workspace/tabner-release/1.10.8/analitica/INFORME.md` sha `d02e4da891522d1eb1067665e4eaa529d33a370a60592b0c0807310b2e8b0417` (8455 B); sidecar `INFORME-analitica.md` idéntico. T1 157 tests ok, 2 omitidos, 11 ficheros, EXIT_REAL=0, PID 155721, INICIO 09:10:58 FIN 09:11:00, log sha `db5accfa02a3db3c34cd9d550bdef7325792b8d49fba6f6bebad6ea647145cf8`. T2 2230 tests ok, 50 omitidos, 211 ficheros ok, 6 omitidos, EXIT_REAL=0, PID 156404, INICIO 09:11:24 FIN 09:12:04, log sha `725ac07f80586027f9290a51633599168279158f08352a67e36f961fd9b5bad0`. tsc EXIT_REAL=2, solo los 3 TS2307 previos, PID 156228, INICIO 09:11:06 FIN 09:11:11, log sha `da7739ef6362e4a046bf92cd8cf7ece57644fd4834fc190b21de7b2dfb9784b3`. Flag apagado; SQL de propuesta no aplicado; no se lanzó Chrome. Turno DEV soltado al entregar. No es un OK de publicación."
     },
     {
       "at": "2026-11-11T09:09:24+01:00",
@@ -544,12 +549,7 @@
       "at": "2026-11-11T07:20:13+01:00",
       "actor": "Tabby nueva",
       "text": "entrega del paquete del lanzador (GIT_EDITOR seguro, aviso al terminar, corte por estancamiento) contrastada. INFORME `/workspace/tabner-release/lanzador-wt/INFORME-git-editor.md` sha `e36bcc139d134078ea01b425c8f131f0aaea97e0f8c0912fd0364f27cf751a60` (7001 B); sidecar `.sha256` idéntico. Test oficial 439/439 EXIT_REAL=0 (INICIO 2026-11-11T07:16:30+01:00, FIN 07:16:59, PID 3703773 ya ausente); log sha `762c499f7b4eb47e37d7edfec0959be85cdcaa2387661fa3c2ed858949f5b099` (23255 B). Hashes del entry (`c50084d9…`, 20082 B, 0555), wrappers/git (`f6019702…`, 29432 B, 0555), tests (`3434cf14…`, 82404 B), POLITICA (`43393235…`, 11673 B) y write-settings sin cambio (`5fe1b5fa…`) coinciden con el INFORME. INFORME-r12 sha `09e30022…` (5971 B), log r12 sha `b331228d…` e informe QA r12 sha `eab08b73…` (9479 B) intactos; INFORME-r11 e informe QA r11 intactos; `turno.py` sha `59f8abd4…` intacto. `/workspace/tabner` sigue en `f8c50faa`; `/workspace/wt/ux-s1` en `82457fd` y `/workspace/wt/a1` en `6fde85b0` intactos. Turno libre (no se cogió). No es un r13. Entrega escrita en el chat de QA. QA ya ha arrancado la revisión del lanzador en paralelo a UX-S1 (actividad en su chat a las 07:19 Europe/Madrid); no se reencarga ni se interrumpe UX-S1. N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. No es un OK de publicación (siguen D1, D2/H1 y P1)."
-    },
-    {
-      "at": "2026-11-11T07:17:59+01:00",
-      "actor": "Dev",
-      "text": "paquete del lanzador (GIT_EDITOR seguro, aviso al terminar, corte por estancamiento) entregado a QA, sin coger el turno de producto (`turno.py ver` = libre). No es un r13 de residuales. INFORME `/workspace/tabner-release/lanzador-wt/INFORME-git-editor.md` sha `e36bcc139d134078ea01b425c8f131f0aaea97e0f8c0912fd0364f27cf751a60` (7001 B); sidecar `.sha256` idéntico. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 439/439, 0 fallos, EXIT_REAL=0 (INICIO 2026-11-11T07:16:30+01:00, FIN 2026-11-11T07:16:59+01:00, PID 3703773 ya ausente, CWD `/workspace`; log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-git-editor.log` sha `762c499f7b4eb47e37d7edfec0959be85cdcaa2387661fa3c2ed858949f5b099`, 23255 B). Entry sha `c50084d9a5225be4bb8ba1b2f8336133cd05439f5174dc6227367552e6177812` (20082 B, modo 0555). wrappers/git sha `f6019702e400091ebb6e93797642b9db17f4d1e2ece1ae6884620bc3e795b6e8` (29432 B, modo 0555). tests sha `3434cf143c4d9a6e0f53845d0a80da304ae3cad3f42819428af048c7d9563eda` (82404 B). POLITICA sha `4339323510bd21b1b4f4b7839ecb2f03881290878a10f218ef7a696fafd4b1ed` (11673 B). write-settings.py sin cambio. Hecho a mano (DECISIONES 11-11 06:39, `e15496d`; 22:57, `6670732`; 14:05, `2344913`). N14 no se reabre (solo literales exactos `true`, `:`, `/bin/true`, `/usr/bin/true`). El silencio no corta; solo un bucle de errores de conexión de unos 15 min. INFORME-r12 e informe QA r12 intactos. N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. No se tocó `/workspace/wt/ux-s1`, `/workspace/wt/a1` ni `/workspace/tabner` (sigue en `f8c50faa`). No es un OK de publicación (siguen D1, D2/H1 y P1)."
     }
   ],
-  "contentHash": "6cdafb58"
+  "contentHash": "d28543c4"
 }
