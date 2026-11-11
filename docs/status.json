@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-11T09:55:48+01:00",
+  "generatedAt": "2026-11-11T09:56:33+01:00",
   "sourceMtime": "2026-11-11T09:55:36+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "activo",
-      "task": "remate QA-AN-01b analitica 496afa38",
-      "since": "2026-11-11T09:52:00+01:00",
-      "detail": "Turno DEV desde 2026-11-11T09:52:00+01:00: remate QA-AN-01b analitica 496afa38",
+      "status": "pausado",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": null,
+      "detail": "Turno libre.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -551,5 +551,5 @@
       "text": "paquete del lanzador (GIT_EDITOR seguro, aviso al terminar, corte por estancamiento) NO APTO como herramienta, por GE-1 (media-alta, regresión de este paquete). Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-git-editor.md` (sha 96c1151d047aa847a5a033692b4f17711ba949ac6443fabfedc769febe883fda, 14340 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/lanzador-wt/contraste-git-editor/` (25 ficheros). Si se mata el entry (`PID=` del log) con la sesión viva, Claude sigue, el cerrojo del carril queda libre, no se escribe aviso y una segunda sesión arranca con EXIT 0 (en r11/r12 el cerrojo seguía cogido y la segunda salía con EXIT 75). Q06 PID 3750776 (07:33:38–07:33:46, log sha 184c4707038bdf7f0631db73ad92ca18b0a969c5e8263bda196c7a588b39997f). Q01/Q02 439/439 EXIT_REAL=0, idénticos al log oficial salvo el nombre de /tmp (Q01 PID 3720644, 07:24:08–07:24:37, sha 349ab1a87c69b80e416645063881297610f3db5be058198d407d49eb999a0187, 23318 B; Q02 PID 3725527, 07:24:37–07:25:05, sha 1325fdbc7f4f726ff1bbca15f0dc40bb91cd85eca5f68ddd4aad844f5428fdc3, 23312 B). GIT_EDITOR cierra sin reabrir N14 (N14 exacta y 34 equivalentes EXIT 2; literales seguros EXIT 0; N14b y N24 cierran). El aviso y el corte funcionan en el camino normal. Sin regresión en las 254 sondas ni en las de session del r12; N37 y N41 no empeoran. Flecos no bloqueantes: GE-2 (media, falso positivo: tropiezo de red seguido de silencio sano corta; Tabby decide la semántica), GE-3 (media, falsos negativos con líneas de pila), GE-4, GE-5, GE-6 y GE-7 (bajos). Residuales N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. Turno no cogido. `/workspace/tabner` en f8c50faa. UX-S1 `26c84751` no se toca (sigue APTO como unidad). No es un r13. No es un OK de publicación (siguen D1, D2/H1 y P1)."
     }
   ],
-  "contentHash": "178cb713"
+  "contentHash": "d9683899"
 }
