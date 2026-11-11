@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T08:03:56+01:00",
+  "generatedAt": "2026-11-11T08:08:26+01:00",
   "sourceMtime": "2026-11-11T08:03:17+01:00",
   "bots": [
     {
@@ -25,10 +25,10 @@
     {
       "id": "ux",
       "name": "UX",
-      "status": "activo",
-      "task": "revisión UX Chrome UX-S1 26c84751",
-      "since": "2026-11-11T07:57:49+01:00",
-      "detail": "Turno UX desde 2026-11-11T07:57:49+01:00: revisión UX Chrome UX-S1 26c84751",
+      "status": "pausado",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": null,
+      "detail": "Turno libre.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -551,5 +551,5 @@
       "text": "revisión a mano en Chrome del residual UX-A1F-01 (`6fde85b0`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-10-a1-flecos-a1f-01-chrome-6fde85b0.md` (sha 4525b4a8cdf6610f898d03881dbb83ea97c7cc013611f2fa96447bdf7452971a, 10651 B); capturas 01–21 en `ux/capturas/2026-11-10-a1-flecos-a1f-01-chrome/`. El residual queda cerrado para el gate de dos pestañas (pasos 2, 6 y 7, Ajustes reabiertos en cada llegada). H-4, el texto «ya está entre las copias» al pulsar la más reciente (sin gastar hueco) y H-11 confirmados. Paso 8 no visto a mano (debounce de ~2 s). Observación baja: copia extra 22:13:43 al reabrir Ajustes tras el restore de H-11 (fotos 20 y 21). Sin altos ni medios nuevos. Solo Chrome. Turno UX cogido a las 22:57:29 y soltado a las 23:18:35 (`turno.py ver` = libre). A1 no se cierra desde aquí como unidad de interfaz (lo decide Tabby). No es un OK de publicación. No se encargó nada a Dev. No se arrancó UX-S1 ni la auditoría."
     }
   ],
-  "contentHash": "c004ae28"
+  "contentHash": "8088caa8"
 }
