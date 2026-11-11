@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T07:33:26+01:00",
-  "sourceMtime": "2026-11-11T07:32:47+01:00",
+  "generatedAt": "2026-11-11T07:53:25+01:00",
+  "sourceMtime": "2026-11-11T07:53:06+01:00",
   "bots": [
     {
       "id": "dev",
@@ -28,8 +28,8 @@
       "status": "pausado",
       "task": "UX-S1 Instantánea al actualizar",
       "since": null,
-      "detail": "Remate QA-S1-01 reentregado a QA el 2026-11-11T07:32:47 Europe/Madrid sobre `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1-qa-s1-01/INFORME.md` sha b425053f0e8eda1123bcb68302e5165d38a0c65898f1da32f5d80a62e1fdbead (8073 B, sidecar idéntico). T1 172/172 EXIT_REAL=0; T2 2161/50 EXIT_REAL=0; tsc EXIT 2 solo los 3 TS2307 previos. La revisión QA de `82457fd` (NO APTO por QA-S1-01) queda en `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md`. No es cierre de unidad de interfaz.",
-      "next": "QA revisa el remate (H1–H3 y QA-S1-01). No arrancar analítica.",
+      "detail": "APTO como unidad el 2026-11-11T07:53:06 Europe/Madrid sobre `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-26c84751.md` (sha 369a9c8c0edb41e9c08b8fa3118f5b3a1e8f6058e18581b33fa21d7d3bed4daa, 14371 B, sidecar idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/ux-s1-26c84751-contraste/` (58 ficheros). QA-S1-01 queda cerrado en jsdom (H1–H3 de QA, rojas en `82457fd`, ahora verdes; los mutantes que quitan `previousLastSeenVersion` las vuelven a rojo). T1 172/172 PID 3796192 (07:37:56–07:38:01), T2 2161/50 PID 3858255 (07:45:19–07:49:00), tsc EXIT 2 solo los 3 TS2307 PID 3898808 (07:49:00–07:49:05); padre T1 167/167 PID 3799770, T2 2156/50 PID 3858256; +5/−0. Sondas 28/28 (PID 3799632); contrato S1a–S1j 10/10. 16/16 mutantes mueren. Flecos no bloqueantes: QA-S1-02 (bajo, sigue), QA-S1-03 (bajo, sigue; v05 solo lo mata la sonda QA), QA-S1-04 (documental, atribución del WAL corregida; copia del INFORME sin sidecar), QA-S1-05 (documental, bajo: la clave real es `tabner_usage_days`, no `tabner_review_usage_days`). El contraste de toma/dedup en Chrome sigue sin pasada nueva y no se da por cerrado en Chrome. No se cierra como unidad de interfaz.",
+      "next": "Pendiente revisión a mano de UX cuando Tabby la encargue. No se arranca la analítica. El paquete del lanzador GIT_EDITOR sigue en revisión de QA (no se reencarga). No se mezclan los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No se toca D1, D2/H1 ni P1. Sin programar en `/workspace/tabner` (sigue en `f8c50faa`). Turno no cogido por QA (Dev lo soltó al entregar, a las 07:32:47).",
       "block": null
     },
     {
@@ -231,9 +231,9 @@
       ],
       "status": "pausado",
       "since": null,
-      "summary": "Remate QA-S1-01 reentregado a QA el 2026-11-11T07:32:47 Europe/Madrid sobre `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1-qa-s1-01/INFORME.md` sha b425053f0e8eda1123bcb68302e5165d38a0c65898f1da32f5d80a62e1fdbead (8073 B, sidecar idéntico). T1 172/172 EXIT_REAL=0; T2 2161/50 EXIT_REAL=0; tsc EXIT 2 solo los 3 TS2307 previos. La revisión QA de `82457fd` (NO APTO por QA-S1-01) queda en `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md`. No es cierre de unidad de interfaz.",
-      "next": "QA revisa el remate (H1–H3 y QA-S1-01). No arrancar analítica.",
-      "block": "No es un OK de publicación (siguen D1, D2/H1 y P1). QA-S1-02, QA-S1-03 y el resto documental de QA-S1-04 siguen como bajos. Sin pasada Chrome nueva en este remate. `/workspace/wt/a1` en `6fde85b0`; `/workspace/tabner` en `f8c50faa`."
+      "summary": "APTO como unidad el 2026-11-11T07:53:06 Europe/Madrid sobre `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-26c84751.md` (sha 369a9c8c0edb41e9c08b8fa3118f5b3a1e8f6058e18581b33fa21d7d3bed4daa, 14371 B, sidecar idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/ux-s1-26c84751-contraste/` (58 ficheros). QA-S1-01 queda cerrado en jsdom (H1–H3 de QA, rojas en `82457fd`, ahora verdes; los mutantes que quitan `previousLastSeenVersion` las vuelven a rojo). T1 172/172 PID 3796192 (07:37:56–07:38:01), T2 2161/50 PID 3858255 (07:45:19–07:49:00), tsc EXIT 2 solo los 3 TS2307 PID 3898808 (07:49:00–07:49:05); padre T1 167/167 PID 3799770, T2 2156/50 PID 3858256; +5/−0. Sondas 28/28 (PID 3799632); contrato S1a–S1j 10/10. 16/16 mutantes mueren. Flecos no bloqueantes: QA-S1-02 (bajo, sigue), QA-S1-03 (bajo, sigue; v05 solo lo mata la sonda QA), QA-S1-04 (documental, atribución del WAL corregida; copia del INFORME sin sidecar), QA-S1-05 (documental, bajo: la clave real es `tabner_usage_days`, no `tabner_review_usage_days`). El contraste de toma/dedup en Chrome sigue sin pasada nueva y no se da por cerrado en Chrome. No se cierra como unidad de interfaz.",
+      "next": "Pendiente revisión a mano de UX cuando Tabby la encargue. No se arranca la analítica. El paquete del lanzador GIT_EDITOR sigue en revisión de QA (no se reencarga). No se mezclan los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No se toca D1, D2/H1 ni P1. Sin programar en `/workspace/tabner` (sigue en `f8c50faa`). Turno no cogido por QA (Dev lo soltó al entregar, a las 07:32:47).",
+      "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. UX-S1 no se cierra como unidad de interfaz hasta la revisión a mano de UX. No es un OK de publicación a usuarios."
     },
     {
       "name": "Analítica opt-in (con idioma)",
@@ -451,6 +451,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-11T07:53:06+01:00",
+      "actor": "QA",
+      "text": "remate QA-S1-01 de UX-S1 (`26c847511f915019d89dce25cbf248601fb53142`, padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push) APTO como unidad. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-26c84751.md` (sha 369a9c8c0edb41e9c08b8fa3118f5b3a1e8f6058e18581b33fa21d7d3bed4daa, 14371 B, sidecar idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/ux-s1-26c84751-contraste/` (58 ficheros). QA-S1-01 queda cerrado en jsdom: las sondas H1–H3 que dieron rojo sobre `82457fd` pasan, y los mutantes que quitan el respaldo `previousLastSeenVersion` las vuelven a rojo. Contrato S1a–S1j 10/10. T1 172/172 PID 3796192 (07:37:56–07:38:01, log sha 7fc63fea5d8fbdb386409a6f724738e34958c9982f2b1916244360849089af59), T2 2161/50 PID 3858255 (07:45:19–07:49:00, log sha a8b699ae06376eac6436b313427c76af5730d83ebee59da8128c9f67e1da6cbf), tsc EXIT 2 solo los 3 TS2307 previos PID 3898808 (07:49:00–07:49:05, log sha c9bb56d6930ded1df9fd32089425e636f252ced81ed74898769ed637a873d1ac); padre T1 167/167 PID 3799770, T2 2156/50 PID 3858256; +5/−0. Sondas 28/28 PID 3799632. 16/16 mutantes mueren. Flecos no bloqueantes: QA-S1-02 (bajo, sigue), QA-S1-03 (bajo, sigue; v05 solo lo mata la sonda QA), QA-S1-04 (documental, atribución del WAL corregida; la copia del INFORME sigue sin sidecar) y QA-S1-05 (documental, bajo: la clave real es `tabner_usage_days`, no `tabner_review_usage_days`). El contraste de toma/dedup en Chrome sigue sin pasada nueva y no se da por cerrado en Chrome. Turno no cogido (Dev lo soltó al entregar, a las 07:32:47). `/workspace/tabner` en f8c50faa. El paquete del lanzador GIT_EDITOR sigue en revisión. No se cierra como unidad de interfaz. No es un OK de publicación (siguen D1, D2/H1 y P1)."
+    },
+    {
+      "at": "2026-11-11T07:53:06+01:00",
+      "actor": "QA",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-11T07:32:47+01:00",
       "actor": "Dev",
       "text": "remate QA-S1-01 de UX-S1 reentregado a QA. Commit local `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar `82457fd` ni A1, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1-qa-s1-01/INFORME.md` sha `b425053f0e8eda1123bcb68302e5165d38a0c65898f1da32f5d80a62e1fdbead` (8073 B); sidecar idéntico `INFORME-UX-S1-QA-S1-01.md` y `INFORME.md.sha256`. T1 172/172 EXIT_REAL=0 (INICIO 2026-11-11T07:30:21 Europe/Madrid, FIN 07:30:23, PID 3741853 ya ausente), log sha `328f96e590d5f6ceb2757b4c5681485bee8b69394f530a0d469dec21e462ce55` (1034 B). T2 2161/50 EXIT_REAL=0 (INICIO 2026-11-11T07:30:31 Europe/Madrid, FIN 07:31:09, PID 3742463 ya ausente), log sha `bad5f55a03ea97829b9b2f06fd21d8048fc92afd8990b4092eb6830d71f6979a` (27525 B). tsc EXIT_REAL=2 solo los 3 TS2307 previos (INICIO 2026-11-11T07:31:14 Europe/Madrid, FIN 07:31:19, PID 3748344 ya ausente), log sha `26b61fdac6c122b7507715e7ecf8d07e5062e575a9c6f0ae5cae774ac05e4d50` (631 B). Arreglo: `previousLastSeenVersion` en `install_meta` y la página no marca `seen` en first-install; tests de regresión H1–H3. Sin pasada Chrome nueva en este remate. Sobre el WAL de las 06:01:24Z: no confirmo si incluía `tabner_review_usage_days` (los volcados no lo listan; no he tocado el perfil). QA-S1-02, QA-S1-03 y el resto de QA-S1-04 (nombres de capturas) siguen como bajos, no cerrados. El INFORME de `82457fd` se deja intacto. El paquete del lanzador no se ha tocado. No es un OK de publicación (siguen D1, D2/H1 y P1). Se suelta el turno al entregar."
@@ -459,11 +469,6 @@
       "at": "2026-11-11T07:27:38+01:00",
       "actor": "Tabby nueva",
       "text": "UX-S1 en `82457fd564fbf92981cfd177476ace0835e30c34` (padre `6fde85b0`, rama `dev/1.10.8-ux-s1`) NO APTO como unidad, contrastado. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md` sha `a04b7f3a0c7513643aa152ee0cddcd5555d12e31944ae94dde1b267efba13acb` (21864 B, sidecar idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/ux-s1-82457fd-contraste/` (75 ficheros). Bloquea QA-S1-01 (medio), reproducido en jsdom (H1–H3, sonda PID 3696155, 3/3 rojos, EXIT_REAL=1). T1 167/167 EXIT_REAL=0 PID 3695726 (07:13:35–07:13:40, log sha `37d1d144…`); T2 2156/50 EXIT_REAL=0 PID 3703566 (07:16:25–07:20:12, log sha `5f03bec0…`); tsc EXIT 2 solo los 3 TS2307 previos PID 3716532 (log sha `716ff6de…`). `/workspace/wt/ux-s1` sigue en `82457fd`; `/workspace/wt/a1` en `6fde85b0`; `/workspace/tabner` en `f8c50faa`. No se cierra como unidad de interfaz. No se arranca la analítica. QA-S1-02, QA-S1-03 y QA-S1-04 siguen aparcados. El paquete del lanzador sigue en revisión de QA; no se reencarga ni se interrumpe. No es un OK de publicación (siguen D1, D2/H1 y P1). Dev ya había recibido los hallazgos en su chat y ha arrancado el remate de QA-S1-01: turno cogido a las 07:27:02 Europe/Madrid (motivo `UX-S1 QA-S1-01 install_meta recordVisit`). No se reencarga ni se interrumpe el trabajo en curso."
-    },
-    {
-      "at": "2026-11-11T07:27:38+01:00",
-      "actor": "Tabby",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-11T07:25:48+01:00",
@@ -544,12 +549,7 @@
       "at": "2026-11-10T22:15:30+01:00",
       "actor": "Tabby nueva",
       "text": "residual UX-A1F-01 en Chrome parado tras el arranque de Dev. Turno DEV cogido a las 19:15:43 (motivo `fleco residual UX-A1F-01 Chrome sobre 818764f`). Claude Code sesión `d09f2cb4-12bb-4e1e-a3a6-7056b46e89de` terminó a las 19:25:35; no hay proceso de Claude. HEAD de `/workspace/wt/a1` sigue en `818764f`. Hay un arreglo sin commit (localSnapshots.ts sha 71fb160e307b9e6b5a4fa36da037b150f9843ce9206e20fca9ea62233d42b60e; tests sha 796a11a58a91cceee4139353314571cba193d6d0240f594df0322518ce2ecd82 y 02b97374136911a2f5b6ee423dc055988cb3381442f5406525dd466ce872d276) e INFORME `/workspace/wt/a1/INFORME-A1-flecos-a1f-01-chrome.md` sha 8c0eac909e476b60cee88cd7b6504284f23e2360c5392e1194347eda9cd2c294. Sin contraste en Chrome (no hay perfil nuevo) ni commit ni entrega a QA. Desatasco a Dev: que siga a mano la misma unidad (DECISIONES 10-11 14:05), revise el diff, borre los restos temporales del §6, contraste en Chrome real con perfil nuevo (no el de UX `chrome-profile-a1-flecos-a1f-01-818764f2` ni el de QA), haga commit sin enmendar ni push y entregue a QA. A1 no se cierra aún como unidad de interfaz. H-17, H-18/§9, H-19, H-20, H-21, H-14 y H-15 siguen aparcados. No arranco UX-S1 ni la analítica. Residuales del lanzador r12 (APTO) siguen aparcados; no encargo r13. No es un OK de publicación (siguen D1, D2/H1 y P1)."
-    },
-    {
-      "at": "2026-11-10T21:28:00+01:00",
-      "actor": "Luck is Math",
-      "text": "El Guionista no pudo leer el corte ~28 h del 004 ( Studio responde «No tienes permiso para ver esta página» en Luck is Math. Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista. El ~48 h del 004 y el de 7 días del 002…"
     }
   ],
-  "contentHash": "58e603a6"
+  "contentHash": "6537c5a6"
 }
