@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-11T09:51:18+01:00",
+  "generatedAt": "2026-11-11T09:52:03+01:00",
   "sourceMtime": "2026-11-11T09:51:06+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "pausado",
-      "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": null,
-      "detail": "Turno libre.",
+      "status": "activo",
+      "task": "remate QA-AN-01b analitica 496afa38",
+      "since": "2026-11-11T09:52:00+01:00",
+      "detail": "Turno DEV desde 2026-11-11T09:52:00+01:00: remate QA-AN-01b analitica 496afa38",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -551,5 +551,5 @@
       "text": "remate QA-S1-01 de UX-S1 reentregado a QA. Commit local `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar `82457fd` ni A1, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1-qa-s1-01/INFORME.md` sha `b425053f0e8eda1123bcb68302e5165d38a0c65898f1da32f5d80a62e1fdbead` (8073 B); sidecar idéntico `INFORME-UX-S1-QA-S1-01.md` y `INFORME.md.sha256`. T1 172/172 EXIT_REAL=0 (INICIO 2026-11-11T07:30:21 Europe/Madrid, FIN 07:30:23, PID 3741853 ya ausente), log sha `328f96e590d5f6ceb2757b4c5681485bee8b69394f530a0d469dec21e462ce55` (1034 B). T2 2161/50 EXIT_REAL=0 (INICIO 2026-11-11T07:30:31 Europe/Madrid, FIN 07:31:09, PID 3742463 ya ausente), log sha `bad5f55a03ea97829b9b2f06fd21d8048fc92afd8990b4092eb6830d71f6979a` (27525 B). tsc EXIT_REAL=2 solo los 3 TS2307 previos (INICIO 2026-11-11T07:31:14 Europe/Madrid, FIN 07:31:19, PID 3748344 ya ausente), log sha `26b61fdac6c122b7507715e7ecf8d07e5062e575a9c6f0ae5cae774ac05e4d50` (631 B). Arreglo: `previousLastSeenVersion` en `install_meta` y la página no marca `seen` en first-install; tests de regresión H1–H3. Sin pasada Chrome nueva en este remate. Sobre el WAL de las 06:01:24Z: no confirmo si incluía `tabner_review_usage_days` (los volcados no lo listan; no he tocado el perfil). QA-S1-02, QA-S1-03 y el resto de QA-S1-04 (nombres de capturas) siguen como bajos, no cerrados. El INFORME de `82457fd` se deja intacto. El paquete del lanzador no se ha tocado. No es un OK de publicación (siguen D1, D2/H1 y P1). Se suelta el turno al entregar."
     }
   ],
-  "contentHash": "af8caac3"
+  "contentHash": "5f0b91ad"
 }
