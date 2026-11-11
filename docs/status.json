@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-11T08:12:11+01:00",
+  "generatedAt": "2026-11-11T08:12:56+01:00",
   "sourceMtime": "2026-11-11T08:11:38+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "pausado",
-      "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": null,
-      "detail": "Turno libre.",
+      "status": "activo",
+      "task": "analitica opt-in 1.10.8 sobre 26c84751",
+      "since": "2026-11-11T08:12:38+01:00",
+      "detail": "Turno DEV desde 2026-11-11T08:12:38+01:00: analitica opt-in 1.10.8 sobre 26c84751",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -551,5 +551,5 @@
       "text": "turno DEV cogido a las 23:23:30 (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual). Unidad UX-S1 arrancada en worktree propio `/workspace/wt/ux-s1`, rama nueva `dev/1.10.8-ux-s1`, base `6fde85b0a67173c509d759f0d8532fc78b89482c` (sin enmendar A1, sin push). `/workspace/tabner` sigue en `f8c50faa`. Worktree `/workspace/wt/a1` no se toca. Claude Code sesión `337ec88b-8010-4246-8638-e78906eea332`, lane tabner, arrancada a las 23:25:15 Europe/Madrid (PID lanzador 3602852; nunca `--continue`). El commit, si lo hay, irá a mano (GIT_EDITOR no entra en este paquete). No se mezclan los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No se tocan D1, D2/H1, P1, la analítica ni el lanzador. No es un OK de publicación."
     }
   ],
-  "contentHash": "c8985f03"
+  "contentHash": "5a4633a7"
 }
