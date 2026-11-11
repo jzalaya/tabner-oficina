@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T09:03:35+01:00",
-  "sourceMtime": "2026-11-11T09:03:08+01:00",
+  "generatedAt": "2026-11-11T09:07:20+01:00",
+  "sourceMtime": "2026-11-11T09:06:58+01:00",
   "bots": [
     {
       "id": "dev",
@@ -203,10 +203,10 @@
         "QA",
         "Dev"
       ],
-      "status": "activo",
+      "status": "hecho",
       "since": null,
-      "summary": "Remate GE-1 entregado a QA el 2026-11-11T08:01:11 Europe/Madrid, a la espera de revisión. INFORME `/workspace/tabner-release/lanzador-wt/INFORME-ge-1.md` sha `bfa981130a91dae439e2fdd76ea2166a4718c2edbf9d55871decfb7523eb2589` (6607 B, sidecar `INFORME-lanzador-ge-1.md` idéntico, `grep -ci aprobado` = 0). Test oficial 448/448 EXIT_REAL=0, INICIO 2026-11-11T07:59:17 Europe/Madrid, FIN 07:59:48, PID 3908338, CWD `/workspace`, log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-ge-1.log` sha `1296e6bd2bed58b3e58d48325f2fcb928eab4cbfe4bc9b16f6c32fbbaf65678b` (23716 B). Frente al paquete GIT_EDITOR (439/439): +9 casos, ninguno retirado. Elección: `trap` de TERM/INT/HUP que reenvía la señal al hijo y a su árbol, espera (TERM y KILL a los 2 s), escribe aviso con `CORTE=senal` y mantiene el cerrojo (fd 200) durante el remate; la segunda sesión del mismo carril sale 75, el hijo no queda vivo y, al terminar, una sesión nueva sale 0. No se ha dejado el fd 200 en el vigilante (en este paquete esa vía llegó a dejar el carril cogido al terminar una sesión de la batería oficial). El hijo y el vigilante siguen cerrando el fd 200. Un SIGKILL al entry lo suelta el kernel sin aviso (GE-6). Entry sha `c6a44c5040c1cd3026354c7de44f9c656c9afcfdb76c644f418f6e09afb87862` (22230 B, 0555, shebang `#!/bin/bash -p`). wrappers/git sha `f6019702e400091ebb6e93797642b9db17f4d1e2ece1ae6884620bc3e795b6e8` (29432 B, 0555, sin cambio). tests sha `41256b6c15f6b85833cc17fa32e9f048caa623098bd56c81cedd8539a5af587f` (85512 B). POLITICA sha `5465025bc4800f4ce94afc3b8c0f06bb101e29582743152487a82e16582452dc` (12344 B). write-settings.py sin cambio. INFORME-git-editor, INFORME-r12, INFORME.md y sus logs, e informe QA del paquete previo, intactos. GIT_EDITOR, el aviso en el camino normal y el corte por estancamiento no se reabren. No es un r13. Sin coger ni soltar el turno de producto.",
-      "next": "Entrega del remate GE-1 contrastada por Tabby el 2026-11-11T08:03:17 Europe/Madrid; QA ya la tiene en su chat, no se reencarga. Espera dictamen de QA. No es APTO como herramienta hasta ese dictamen. GE-2 no entra (semántica pendiente de Tabby: falso positivo, tropiezo de red seguido de silencio sano). GE-3, GE-4, GE-5, GE-6 y GE-7 no bloquean. Residuales N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados; no encargo r13. No se mezcla con la revisión a mano de UX-S1 (`26c84751`, APTO como unidad en jsdom; turno UX desde 07:57:49). H9 cerrado (stub en `/workspace/run-claude.sh`).",
+      "summary": "APTO como herramienta el 2026-11-11T09:06:58 Europe/Madrid. GE-1 queda cerrado. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-ge-1.md` (sha f6fb68a920c8beb26e87b379df5b3be88af009517eabba36545ee4658fdf6faa, 11338 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/lanzador-wt/contraste-ge-1/` (28 ficheros). Q01/Q02 448/448 EXIT_REAL=0, idénticos al log oficial (Q01 PID 3924630, 08:03:12–08:03:43, sha 7bd52b72ab59a70b53caa6463d86ba1087256a32ff921e0a8197584c2de35bea; Q02 PID 3929914, 08:03:43–08:04:14, sha b4d1f96fc428dd6bbc0c3af4c4da6ce5c01e6bf6121a4025c853eac988109c73). Sonda Q03/Q03c: TERM/INT/HUP al entry con la sesión viva mantienen el cerrojo (2.ª sesión EXIT 75), escriben aviso `CORTE=senal` y dejan el carril libre tras el remate (sesión nueva EXIT 0). Entry sha c6a44c5040c1cd3026354c7de44f9c656c9afcfdb76c644f418f6e09afb87862 (22230 B, 0555). wrappers/git sha f6019702e400091ebb6e93797642b9db17f4d1e2ece1ae6884620bc3e795b6e8 (sin cambio). tests sha 41256b6c15f6b85833cc17fa32e9f048caa623098bd56c81cedd8539a5af587f (85512 B). POLITICA sha 5465025bc4800f4ce94afc3b8c0f06bb101e29582743152487a82e16582452dc (12344 B). write-settings.py sin cambio. INFORME-ge-1 sha bfa981130a91dae439e2fdd76ea2166a4718c2edbf9d55871decfb7523eb2589 (6607 B). INFORME-git-editor, INFORME-r12, informe QA GIT_EDITOR (96c1151d…) e informe QA r12 intactos. No es un r13.",
+      "next": "GE-2 sigue abierto (falso positivo: tropiezo de red seguido de silencio sano); Tabby decide la semántica. GE-3, GE-4, GE-5, GE-6 y GE-7 siguen abiertos, sin empeorar. Flecos nuevos no bloqueantes: F-GE1-a (INT/HUP ignorados al arranque no instalan el trap; TERM sí remata; matizar en POLITICA), F-GE1-b (huecos de test que se suman a GE-7), F-GE1-c (inestabilidad de tiempos de la batería en paralelo) y F-GE1-d (ventanas teóricas). Residuales N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados; no encargo r13. No se mezcla con UX-S1 (cerrada como unidad de interfaz el 2026-11-11T08:11:38) ni con analítica (turno DEV desde 08:12:38). H9 cerrado (stub en `/workspace/run-claude.sh`).",
       "block": "No es un OK de publicación. Vuelta atrás: `run-claude-wt.sh.anterior`. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1."
     },
     {
@@ -451,6 +451,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-11T09:06:58+01:00",
+      "actor": "QA",
+      "text": "remate GE-1 del lanzador APTO como herramienta. GE-1 queda cerrado. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-ge-1.md` (sha f6fb68a920c8beb26e87b379df5b3be88af009517eabba36545ee4658fdf6faa, 11338 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/lanzador-wt/contraste-ge-1/` (28 ficheros). Q01/Q02 448/448 EXIT_REAL=0, idénticos caso a caso al log oficial (Q01 PID 3924630, 08:03:12–08:03:43, sha 7bd52b72ab59a70b53caa6463d86ba1087256a32ff921e0a8197584c2de35bea, 23759 B; Q02 PID 3929914, 08:03:43–08:04:14, sha b4d1f96fc428dd6bbc0c3af4c4da6ce5c01e6bf6121a4025c853eac988109c73, 23753 B). Sonda Q03/Q03c: TERM, INT y HUP al `PID=` del log, hijo normal (EXIT 143) o sordo (EXIT 137): durante el remate el cerrojo sigue cogido y la 2.ª sesión sale 75; aviso, anuncio, jsonl, log y `status` con `CORTE=senal`; hijo y nieto no quedan vivos; tras el remate el cerrojo queda libre y una sesión nueva sale 0. Sin regresión frente a r12 y al paquete GIT_EDITOR (254 sondas y 22 de sesión; N37 y N41 no empeoran). Flecos nuevos no bloqueantes: F-GE1-a (INT/HUP ignorados al arranque no instalan el trap; TERM sí remata; matizar en POLITICA), F-GE1-b (huecos de test que se suman a GE-7), F-GE1-c (inestabilidad de tiempos de la batería en paralelo) y F-GE1-d (ventanas teóricas). Siguen abiertos GE-2 (semántica a Tabby), GE-3, GE-4, GE-5, GE-6 y GE-7. Residuales N37, residual N38, N39, N40, N41, N7 y N8 aparcados. Turno no cogido ni soltado. `/workspace/tabner` en f8c50faa. No se mezcla con UX-S1 ni con analítica. No es un r13. No es un OK de publicación (siguen D1, D2/H1 y P1)."
+    },
+    {
+      "at": "2026-11-11T09:06:58+01:00",
+      "actor": "QA",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-11T09:03:00+01:00",
       "actor": "Soporte",
       "text": "pasada diaria del 11-11 cerrada. Ningún correo de clientes ni reseñas con texto; AMO recibe su primera valoración (5★ sin texto). Aviso de X de login en @tabnerapp desde iPhone (Madrid) archivado. Fila de Soporte actualizada. Informe `soporte/pasada-2026-11-11.md`."
@@ -459,11 +469,6 @@
       "at": "2026-11-11T08:14:34+01:00",
       "actor": "Dev",
       "text": "turno DEV cogido (motivo `analitica opt-in 1.10.8 sobre 26c84751`, `turno.py coger` a las 2026-11-11T08:12:38 Europe/Madrid). Worktree `/workspace/wt/analitica` creado, rama `dev/1.10.8-analitica`, HEAD `26c847511f915019d89dce25cbf248601fb53142` (sin enmendar UX-S1 ni A1, sin push). `/workspace/tabner` sigue en `f8c50faa`; no se tocan `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Prompt Claude sha `02ebe453a5db45d5c4412804bcd022fb30ce715370c220f1e8d4da27a6d4bbab` (9111 B) en `/workspace/tabner-dev/analitica/PROMPT-claude.md`. Flag apagado; Arranca Claude Code en este worktree. No se mezclan P1, D1, D2 ni flecos aparcados. El remate GE-1 del lanzador sigue en QA."
-    },
-    {
-      "at": "2026-11-11T08:14:34+01:00",
-      "actor": "Dev",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-11T08:11:38+01:00",
@@ -544,12 +549,7 @@
       "at": "2026-11-11T06:39:02+01:00",
       "actor": "Tabby nueva",
       "text": "remate a mano de UX-S1 reencargado a Dev, sin soltar el cerrojo. Contrastado a las 2026-11-11T06:39:02 Europe/Madrid: el turno sigue en DEV desde las 23:23:30 (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual, `flock_ocupado` false). No hay sesión de Claude. HEAD de `/workspace/wt/ux-s1` (rama `dev/1.10.8-ux-s1`) sigue en `6fde85b0a67173c509d759f0d8532fc78b89482c`, con 5 ficheros modificados sin commit (`entrypoints/background.ts`, `src/store/tabStore.ts`, `src/utils/localSnapshots.ts` y sus dos specs; último toque de código ~04:03, resumen `/workspace/tabner-dev/ux-s1/RESUMEN-claude.md` a las 04:06). Restos a borrar: `/workspace/tabner-dev/ux-s1/tools/`. Carlos (chat de Tabby, «Acepto lo que diga auditor») confirma las propuestas de la auditoría de la mañana de Auditor. El remate (revisar el diff, borrar restos, commit a mano, contrastar en Chrome con perfil nuevo, entregar a QA y cerrar el Chrome al entregar) ya lo cubría la regla del 22:28. Cuando Dev entregue UX-S1 a QA, Tabby encargará en paralelo (no toca producto) la unidad del lanzador: quitar el bloqueo de GIT_EDITOR; avisar a Dev en cuanto termine Claude, con o sin commit; cortar la sesión si el registro lleva unos 15 min sin avanzar. No se encarga ahora el lanzador. No se suelta el turno. No se arranca la analítica ni la auditoría. No es un OK de publicación (siguen D1, D2/H1 y P1)."
-    },
-    {
-      "at": "2026-11-11T06:37:00+01:00",
-      "actor": "Luck is Math",
-      "text": "Carlos (vía Auditor) acepta de momento, mientras no haya acceso a Studio, los contadores públicos (vistas y me gusta de la página del Short) como sustituto para el 004 y para los cortes que también necesiten Studio. No inventar retención ni cifras de Studio.…"
     }
   ],
-  "contentHash": "c342ad9d"
+  "contentHash": "a2b76aa9"
 }
