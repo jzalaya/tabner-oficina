@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-11-11T09:32:32+01:00",
+  "generatedAt": "2026-11-11T09:34:02+01:00",
   "sourceMtime": "2026-11-11T09:32:11+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "pausado",
-      "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": null,
-      "detail": "Turno libre.",
+      "status": "activo",
+      "task": "remate QA-AN-01 analitica 15fd8785",
+      "since": "2026-11-11T09:33:48+01:00",
+      "detail": "Turno DEV desde 2026-11-11T09:33:48+01:00: remate QA-AN-01 analitica 15fd8785",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -551,5 +551,5 @@
       "text": "entrega del paquete del lanzador (GIT_EDITOR seguro, aviso al terminar, corte por estancamiento) contrastada. INFORME `/workspace/tabner-release/lanzador-wt/INFORME-git-editor.md` sha `e36bcc139d134078ea01b425c8f131f0aaea97e0f8c0912fd0364f27cf751a60` (7001 B); sidecar `.sha256` idéntico. Test oficial 439/439 EXIT_REAL=0 (INICIO 2026-11-11T07:16:30+01:00, FIN 07:16:59, PID 3703773 ya ausente); log sha `762c499f7b4eb47e37d7edfec0959be85cdcaa2387661fa3c2ed858949f5b099` (23255 B). Hashes del entry (`c50084d9…`, 20082 B, 0555), wrappers/git (`f6019702…`, 29432 B, 0555), tests (`3434cf14…`, 82404 B), POLITICA (`43393235…`, 11673 B) y write-settings sin cambio (`5fe1b5fa…`) coinciden con el INFORME. INFORME-r12 sha `09e30022…` (5971 B), log r12 sha `b331228d…` e informe QA r12 sha `eab08b73…` (9479 B) intactos; INFORME-r11 e informe QA r11 intactos; `turno.py` sha `59f8abd4…` intacto. `/workspace/tabner` sigue en `f8c50faa`; `/workspace/wt/ux-s1` en `82457fd` y `/workspace/wt/a1` en `6fde85b0` intactos. Turno libre (no se cogió). No es un r13. Entrega escrita en el chat de QA. QA ya ha arrancado la revisión del lanzador en paralelo a UX-S1 (actividad en su chat a las 07:19 Europe/Madrid); no se reencarga ni se interrumpe UX-S1. N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. No es un OK de publicación (siguen D1, D2/H1 y P1)."
     }
   ],
-  "contentHash": "d28543c4"
+  "contentHash": "212f85aa"
 }
