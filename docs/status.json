@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-11T07:28:11+01:00",
-  "sourceMtime": "2026-11-11T07:27:38+01:00",
+  "generatedAt": "2026-11-11T07:33:26+01:00",
+  "sourceMtime": "2026-11-11T07:32:47+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "activo",
-      "task": "UX-S1 QA-S1-01 install_meta recordVisit",
-      "since": "2026-11-11T07:27:02+01:00",
-      "detail": "Turno DEV desde 2026-11-11T07:27:02+01:00: UX-S1 QA-S1-01 install_meta recordVisit",
-      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
-      "block": null
+      "status": "bloqueado",
+      "task": "D1 (servidor)",
+      "since": null,
+      "detail": "Abierto. QA lo describe como cambio de lado servidor, sin tocar en D3. Fuera del manifiesto de D3 (`p1TobySync.test.ts`).",
+      "next": "Decisión e implementación de servidor (sin producción hasta autorización) y QA independiente.",
+      "block": "Bloquea publicar 1.10.8, según QA. No confundir con el corte C2 de `turno.py` (ese D1 ya está aplicado)."
     },
     {
       "id": "qa",
@@ -27,9 +27,9 @@
       "name": "UX",
       "status": "pausado",
       "task": "UX-S1 Instantánea al actualizar",
-      "since": "2026-11-11T07:27:02+01:00",
-      "detail": "NO APTO como unidad el 2026-11-11T07:25:48 Europe/Madrid sobre `82457fd564fbf92981cfd177476ace0835e30c34` (padre `6fde85b0a67173c509d759f0d8532fc78b89482c`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar A1, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md` (sha a04b7f3a0c7513643aa152ee0cddcd5555d12e31944ae94dde1b267efba13acb, 21864 B, sidecar idéntico, `grep -ci aprobado` = 0). Bloquea QA-S1-01 (medio): el dashboard o newtab puede perder para siempre la copia de actualización (`ReviewPromptToast` → `recordVisit` anula el respaldo `install_meta`; `first-install` marca `seen` sin copiar; H1–H3 en rojo; el WAL de Chrome de Dev es una instancia de H1). Cuando el fondo anota a tiempo, el contrato se cumple en jsdom (`take()` antes de NEW-05). T1 167/167 PID 3695726 (07:13:35–07:13:40), T2 2156/50 PID 3703566 (07:16:25–07:20:12), tsc EXIT 2 solo los 3 TS2307 PID 3716532 (07:20:12–07:20:17); padre T1 148/148 PID 3696523, T2 2137/50 PID 3703565; +19/−0. Sonda contrato 10/10; huecos 3/3 rojos (PID 3696155). Flecos no bloqueantes QA-S1-02 (bajo), QA-S1-03 (bajo, tests), QA-S1-04 (documental). No se cierra como unidad de interfaz.",
-      "next": "Tabby contrastó el NO APTO el 2026-11-11T07:27:38. Dev ya ha arrancado el remate de QA-S1-01 (turno cogido a las 07:27:02 Europe/Madrid, motivo `UX-S1 QA-S1-01 install_meta recordVisit`); no se reencarga. QA-S1-02, QA-S1-03 y QA-S1-04 siguen aparcados. Pendiente revisión a mano de UX cuando Tabby la encargue, tras un APTO. No se arranca la analítica. El paquete del lanzador GIT_EDITOR sigue en revisión de QA (no se reencarga). No se mezclan los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No se toca D1, D2/H1 ni P1. Sin programar en `/workspace/tabner` (sigue en `f8c50faa`). Turno en DEV desde las 07:27:02 Europe/Madrid.",
+      "since": null,
+      "detail": "Remate QA-S1-01 reentregado a QA el 2026-11-11T07:32:47 Europe/Madrid sobre `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1-qa-s1-01/INFORME.md` sha b425053f0e8eda1123bcb68302e5165d38a0c65898f1da32f5d80a62e1fdbead (8073 B, sidecar idéntico). T1 172/172 EXIT_REAL=0; T2 2161/50 EXIT_REAL=0; tsc EXIT 2 solo los 3 TS2307 previos. La revisión QA de `82457fd` (NO APTO por QA-S1-01) queda en `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md`. No es cierre de unidad de interfaz.",
+      "next": "QA revisa el remate (H1–H3 y QA-S1-01). No arrancar analítica.",
       "block": null
     },
     {
@@ -230,10 +230,10 @@
         "Dev"
       ],
       "status": "pausado",
-      "since": "2026-11-11T07:27:02+01:00",
-      "summary": "NO APTO como unidad el 2026-11-11T07:25:48 Europe/Madrid sobre `82457fd564fbf92981cfd177476ace0835e30c34` (padre `6fde85b0a67173c509d759f0d8532fc78b89482c`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar A1, sin push). Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md` (sha a04b7f3a0c7513643aa152ee0cddcd5555d12e31944ae94dde1b267efba13acb, 21864 B, sidecar idéntico, `grep -ci aprobado` = 0). Bloquea QA-S1-01 (medio): el dashboard o newtab puede perder para siempre la copia de actualización (`ReviewPromptToast` → `recordVisit` anula el respaldo `install_meta`; `first-install` marca `seen` sin copiar; H1–H3 en rojo; el WAL de Chrome de Dev es una instancia de H1). Cuando el fondo anota a tiempo, el contrato se cumple en jsdom (`take()` antes de NEW-05). T1 167/167 PID 3695726 (07:13:35–07:13:40), T2 2156/50 PID 3703566 (07:16:25–07:20:12), tsc EXIT 2 solo los 3 TS2307 PID 3716532 (07:20:12–07:20:17); padre T1 148/148 PID 3696523, T2 2137/50 PID 3703565; +19/−0. Sonda contrato 10/10; huecos 3/3 rojos (PID 3696155). Flecos no bloqueantes QA-S1-02 (bajo), QA-S1-03 (bajo, tests), QA-S1-04 (documental). No se cierra como unidad de interfaz.",
-      "next": "Tabby contrastó el NO APTO el 2026-11-11T07:27:38. Dev ya ha arrancado el remate de QA-S1-01 (turno cogido a las 07:27:02 Europe/Madrid, motivo `UX-S1 QA-S1-01 install_meta recordVisit`); no se reencarga. QA-S1-02, QA-S1-03 y QA-S1-04 siguen aparcados. Pendiente revisión a mano de UX cuando Tabby la encargue, tras un APTO. No se arranca la analítica. El paquete del lanzador GIT_EDITOR sigue en revisión de QA (no se reencarga). No se mezclan los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No se toca D1, D2/H1 ni P1. Sin programar en `/workspace/tabner` (sigue en `f8c50faa`). Turno en DEV desde las 07:27:02 Europe/Madrid.",
-      "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. UX-S1 no se cierra. No es un OK de publicación a usuarios."
+      "since": null,
+      "summary": "Remate QA-S1-01 reentregado a QA el 2026-11-11T07:32:47 Europe/Madrid sobre `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1-qa-s1-01/INFORME.md` sha b425053f0e8eda1123bcb68302e5165d38a0c65898f1da32f5d80a62e1fdbead (8073 B, sidecar idéntico). T1 172/172 EXIT_REAL=0; T2 2161/50 EXIT_REAL=0; tsc EXIT 2 solo los 3 TS2307 previos. La revisión QA de `82457fd` (NO APTO por QA-S1-01) queda en `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md`. No es cierre de unidad de interfaz.",
+      "next": "QA revisa el remate (H1–H3 y QA-S1-01). No arrancar analítica.",
+      "block": "No es un OK de publicación (siguen D1, D2/H1 y P1). QA-S1-02, QA-S1-03 y el resto documental de QA-S1-04 siguen como bajos. Sin pasada Chrome nueva en este remate. `/workspace/wt/a1` en `6fde85b0`; `/workspace/tabner` en `f8c50faa`."
     },
     {
       "name": "Analítica opt-in (con idioma)",
@@ -290,9 +290,9 @@
         "QA",
         "Dev"
       ],
-      "status": "activo",
-      "since": "2026-11-11T07:27:02+01:00",
-      "summary": "En vigor (no archivado ni retirado). Cogido por DEV desde las 07:27:02 Europe/Madrid (motivo `UX-S1 QA-S1-01 install_meta recordVisit`). Estuvo libre desde las 07:06:43 Europe/Madrid (Dev lo soltó al entregar UX-S1 `82457fd`). Lo había cogido a las 23:23:30 Europe/Madrid (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual). Estuvo libre desde las 23:18:35 hasta las 23:23:30 (UX lo soltó a las 23:18:35 al cerrar la revisión a mano del residual UX-A1F-01 `6fde85b0` en Chrome). Lo había cogido a las 22:57:29 (motivo `revisión UX residual A1 UX-A1F-01 Chrome 6fde85b0`, reserva_manual). Estuvo libre desde las 22:38:34 hasta las 22:57:29 (Dev lo soltó a las 22:38:34 al entregar el residual UX-A1F-01 `6fde85b`). Lo había cogido a las 19:15:43 (motivo `fleco residual UX-A1F-01 Chrome sobre 818764f`, reserva_manual). Estuvo libre desde las 19:13 hasta las 19:15:43 (UX lo soltó a las 19:13 al cerrar la revisión a mano de fleco A1 UX-A1F-01 `818764f2`; lo había cogido a las 18:58:35, motivo `revisión UX flecos A1 UX-A1F-01 818764f2`, reserva_manual). Libre desde las 18:37:59 hasta las 18:58:35 (Dev lo soltó a las 18:37:59 al entregar el fleco UX-A1F-01 `818764f`). Lo había cogido a las 18:13:55 (motivo `flecos A1 UX-A1F-01 sobre e9ff7c06`). Libre desde las 18:09 hasta las 18:13:55 (UX lo soltó al cerrar la revisión a mano de flecos A1 H-11/H-4/UX-A1F-01 `e9ff7c06`; lo había cogido a las 17:49:55). Dev no había cogido ni soltado el turno en r11 ni en r10. Dev lo había soltado a las 17:28:13 al entregar los flecos H-11/H-4/UX-A1F-01 (`e9ff7c06`). Dev lo había cogido a las 17:19:20 (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "status": "pausado",
+      "since": null,
+      "summary": "En vigor (no archivado ni retirado). Dev lo suelta al reentregar el remate QA-S1-01 de UX-S1 (`26c847511f915019d89dce25cbf248601fb53142`) a las 07:32:47 Europe/Madrid. Lo había cogido a las 07:27:02 Europe/Madrid (motivo `UX-S1 QA-S1-01 install_meta recordVisit`).",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -451,6 +451,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-11T07:32:47+01:00",
+      "actor": "Dev",
+      "text": "remate QA-S1-01 de UX-S1 reentregado a QA. Commit local `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd564fbf92981cfd177476ace0835e30c34`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar `82457fd` ni A1, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1-qa-s1-01/INFORME.md` sha `b425053f0e8eda1123bcb68302e5165d38a0c65898f1da32f5d80a62e1fdbead` (8073 B); sidecar idéntico `INFORME-UX-S1-QA-S1-01.md` y `INFORME.md.sha256`. T1 172/172 EXIT_REAL=0 (INICIO 2026-11-11T07:30:21 Europe/Madrid, FIN 07:30:23, PID 3741853 ya ausente), log sha `328f96e590d5f6ceb2757b4c5681485bee8b69394f530a0d469dec21e462ce55` (1034 B). T2 2161/50 EXIT_REAL=0 (INICIO 2026-11-11T07:30:31 Europe/Madrid, FIN 07:31:09, PID 3742463 ya ausente), log sha `bad5f55a03ea97829b9b2f06fd21d8048fc92afd8990b4092eb6830d71f6979a` (27525 B). tsc EXIT_REAL=2 solo los 3 TS2307 previos (INICIO 2026-11-11T07:31:14 Europe/Madrid, FIN 07:31:19, PID 3748344 ya ausente), log sha `26b61fdac6c122b7507715e7ecf8d07e5062e575a9c6f0ae5cae774ac05e4d50` (631 B). Arreglo: `previousLastSeenVersion` en `install_meta` y la página no marca `seen` en first-install; tests de regresión H1–H3. Sin pasada Chrome nueva en este remate. Sobre el WAL de las 06:01:24Z: no confirmo si incluía `tabner_review_usage_days` (los volcados no lo listan; no he tocado el perfil). QA-S1-02, QA-S1-03 y el resto de QA-S1-04 (nombres de capturas) siguen como bajos, no cerrados. El INFORME de `82457fd` se deja intacto. El paquete del lanzador no se ha tocado. No es un OK de publicación (siguen D1, D2/H1 y P1). Se suelta el turno al entregar."
+    },
+    {
       "at": "2026-11-11T07:27:38+01:00",
       "actor": "Tabby nueva",
       "text": "UX-S1 en `82457fd564fbf92981cfd177476ace0835e30c34` (padre `6fde85b0`, rama `dev/1.10.8-ux-s1`) NO APTO como unidad, contrastado. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-UX-S1-82457fd.md` sha `a04b7f3a0c7513643aa152ee0cddcd5555d12e31944ae94dde1b267efba13acb` (21864 B, sidecar idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/1.10.8/ux-s1-82457fd-contraste/` (75 ficheros). Bloquea QA-S1-01 (medio), reproducido en jsdom (H1–H3, sonda PID 3696155, 3/3 rojos, EXIT_REAL=1). T1 167/167 EXIT_REAL=0 PID 3695726 (07:13:35–07:13:40, log sha `37d1d144…`); T2 2156/50 EXIT_REAL=0 PID 3703566 (07:16:25–07:20:12, log sha `5f03bec0…`); tsc EXIT 2 solo los 3 TS2307 previos PID 3716532 (log sha `716ff6de…`). `/workspace/wt/ux-s1` sigue en `82457fd`; `/workspace/wt/a1` en `6fde85b0`; `/workspace/tabner` en `f8c50faa`. No se cierra como unidad de interfaz. No se arranca la analítica. QA-S1-02, QA-S1-03 y QA-S1-04 siguen aparcados. El paquete del lanzador sigue en revisión de QA; no se reencarga ni se interrumpe. No es un OK de publicación (siguen D1, D2/H1 y P1). Dev ya había recibido los hallazgos en su chat y ha arrancado el remate de QA-S1-01: turno cogido a las 07:27:02 Europe/Madrid (motivo `UX-S1 QA-S1-01 install_meta recordVisit`). No se reencarga ni se interrumpe el trabajo en curso."
@@ -544,12 +549,7 @@
       "at": "2026-11-10T21:28:00+01:00",
       "actor": "Luck is Math",
       "text": "El Guionista no pudo leer el corte ~28 h del 004 ( Studio responde «No tienes permiso para ver esta página» en Luck is Math. Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista. El ~48 h del 004 y el de 7 días del 002…"
-    },
-    {
-      "at": "2026-11-10T21:28:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "El Guionista no pudo leer el corte ~28 h del 004 ( YouTube Studio responde «No tienes permiso para ver esta página» en Luck is Math (UCcCTsajBSdhSf6WvVvsf2Eg). Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista con la…"
     }
   ],
-  "contentHash": "1f5537a0"
+  "contentHash": "58e603a6"
 }
