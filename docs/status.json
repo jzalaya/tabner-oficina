@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T23:26:10+01:00",
-  "sourceMtime": "2026-11-10T23:26:01+01:00",
+  "generatedAt": "2026-11-11T06:37:54+01:00",
+  "sourceMtime": "2026-11-11T06:37:15+01:00",
   "bots": [
     {
       "id": "dev",
@@ -78,7 +78,7 @@
       "status": "pausado",
       "task": "Luck is Math: 004 publicado; 005, 006 y 007 en revisión",
       "since": null,
-      "detail": "El Guionista no pudo leer el corte ~28 h del 004 ( Studio responde «No tienes permiso para ver esta página» en Luck is Math. Sin cifras. Pendiente de que Carlos inicie sesión en Studio en el ordenador del Guionista. El ~48 h del 004 y el de 7 días del 002 también lo necesitan.",
+      "detail": "Carlos (vía Auditor) acepta de momento, mientras no haya acceso a Studio, los contadores públicos (vistas y me gusta de la página del Short) como sustituto para el 004 y para los cortes que también necesiten Studio. No inventar retención ni cifras de Studio. El 48 h del 004 sigue anclado al 11/11 ~17:15 (edad real…",
       "next": "Revisar las entregas del Productor: 005 r03 para el M 10/11 a las 12:00; 006 r04 para el J 12/11 a las 12:00; 007 r05 para el D 15/11 a las 12:00.",
       "block": null
     },
@@ -451,6 +451,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-11T06:37:00+01:00",
+      "actor": "Luck is Math",
+      "text": "Carlos (vía Auditor) acepta de momento, mientras no haya acceso a Studio, los contadores públicos (vistas y me gusta de la página del Short) como sustituto para el 004 y para los cortes que también necesiten Studio. No inventar retención ni cifras de Studio.…"
+    },
+    {
+      "at": "2026-11-11T06:37:00+01:00",
+      "actor": "Shorts Orquestador",
+      "text": "Carlos (vía Auditor) acepta de momento, mientras no haya acceso a Studio de Luck is Math, los contadores públicos (vistas y me gusta de la página del Short) como sustituto para el 004 y para los cortes que también necesiten Studio. No inventar retención ni…"
+    },
+    {
       "at": "2026-11-10T23:24:46+01:00",
       "actor": "Dev",
       "text": "Actualizado"
@@ -511,11 +521,6 @@
       "text": "Confirmado el comentario de votación de E01 fijado por @TheDieDecides (Carlos lo fijó a mano)."
     },
     {
-      "at": "2026-11-10T21:05:00+01:00",
-      "actor": "Shorts Orquestador",
-      "text": "TDD E01 Publicado y verificado por oEmbed (autor The Die Decides, una copia): . Comentario de votación publicado pero NO fijado: YouTube pide verificar teléfono (Carlos)."
-    },
-    {
       "at": "2026-11-10T19:19:47+01:00",
       "actor": "Dev",
       "text": "turno DEV cogido a las 19:15:43 (motivo `fleco residual UX-A1F-01 Chrome sobre 818764f`). Arranco el residual de UX-A1F-01 en Chrome sobre `818764f` en `/workspace/wt/a1` (rama `dev/1.10.8-a1-instantaneas`, sin enmendar y sin push). Claude Code sesión `d09f2cb4-12bb-4e1e-a3a6-7056b46e89de` (lane tabner, `--new-session`, prompt sha `7c1f4bb58b0d4121dd1b4235874c82d4c9b2665f6163e71d8a256129997709f1`). H-17, H-18/§9, H-19, H-20, H-21, H-14 y H-15 siguen aparcados. No se arranca UX-S1 ni la analítica. No se tocan D1, D2/H1, P1 ni el lanzador (r12 APTO; residuales en baja aparcados, no es un r13)."
@@ -544,12 +549,7 @@
       "at": "2026-11-10T18:58:09+01:00",
       "actor": "Tabby nueva",
       "text": "fleco UX-A1F-01 APTO como unidad contrastado (informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-flecos-a1f-01-818764f2.md` sha 81829cdb7e50240a06eb462ba865dcb6acfcde201b87b6d20e8b20a80e4eab2e, 19950 B, sidecar coincide (forma con nombre), `grep -ci aprobado` = 0). Commit `818764f26dea49de0dd59e7dbdb9f715cd3cfe13`, padre `e9ff7c06`, sin push. T1 137/137 PID 3263800 (18:44:24–31), T2 2126/50 PID 3277364 (18:47:11–18:51:31), sonda 36/36, sondas previas 67/67, tsc solo los 3 TS2307 previos PID 3293694. UX-A1F-01 cierra en jsdom para las formas modeladas. No es un OK de publicación (siguen D1, D2/H1 y P1). `/workspace/tabner` en f8c50faa; turno libre desde las 18:37:59. Decisión de Tabby (no de Carlos): A1 no se cierra aún como unidad de interfaz. Encargo a UX la revisión a mano en Chrome de `818764f` (perfil nuevo, build de 818764f2, pasos del INFORME §6; no reutilizar el perfil UX h11 ni los de QA); que coja el turno. H-17 (media), H-18/§9 (`nativeGroups`), H-19, H-20, H-21, H-14 y H-15 siguen aparcados: no se encargan a Dev ahora ni entran en esta revisión. H-22 informativo, anotado. No arranco UX-S1 ni la analítica. r12 sigue en QA, paquete aparte, sin reenviar ni mezclar."
-    },
-    {
-      "at": "2026-11-10T18:56:00+01:00",
-      "actor": "QA",
-      "text": "fleco A1 UX-A1F-01 (`818764f26dea49de0dd59e7dbdb9f715cd3cfe13`, padre `e9ff7c06`) APTO como unidad, sin fallos bloqueantes. Informe `/workspace/tabner-qa/1.10.8/REVISION-QA-A1-flecos-a1f-01-818764f2.md` (sha 81829cdb7e50240a06eb462ba865dcb6acfcde201b87b6d20e8b20a80e4eab2e, 19950 B, `grep -ci aprobado` = 0). T1 137/137 PID 3263800 (18:44:24–31), T2 2126/50 PID 3277364 (18:47:11–18:51:31), sonda 36/36, sondas previas 67/67, tsc solo los 3 TS2307 previos PID 3293694. Los tests nuevos fallan en el padre por la causa real. Cerrado UX-A1F-01 en jsdom para las formas modeladas. Falta contraste en Chrome real (perfil nuevo, build de 818764f2, INFORME §6). Fleco nuevo no bloqueante H-17 (media, favicon que no es http(s)). H-18 confirma la observación §9 (`nativeGroups`). H-19/H-20/H-21 baja a Dev; H-22 informativo a Tabby. Turno no cogido (sigue libre desde las 18:37:59). No se tocó `/workspace/wt/a1` ni `/workspace/tabner` (f8c50faa). r12 sigue en QA, sin mezclar. turno.py e informes QA previos de A1 y r11 intactos. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     }
   ],
-  "contentHash": "a7913ffa"
+  "contentHash": "5b530d74"
 }
