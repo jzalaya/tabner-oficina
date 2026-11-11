@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-11T06:39:24+01:00",
-  "sourceMtime": "2026-11-11T06:39:02+01:00",
+  "generatedAt": "2026-11-11T07:07:10+01:00",
+  "sourceMtime": "2026-11-11T07:07:05+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "activo",
-      "task": "UX-S1 instantanea al actualizar sobre 6fde85b0",
-      "since": "2026-11-10T23:23:30+01:00",
-      "detail": "Turno DEV desde 2026-11-10T23:23:30+01:00: UX-S1 instantanea al actualizar sobre 6fde85b0",
-      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
-      "block": null
+      "status": "bloqueado",
+      "task": "D1 (servidor)",
+      "since": null,
+      "detail": "Abierto. QA lo describe como cambio de lado servidor, sin tocar en D3. Fuera del manifiesto de D3 (`p1TobySync.test.ts`).",
+      "next": "Decisión e implementación de servidor (sin producción hasta autorización) y QA independiente.",
+      "block": "Bloquea publicar 1.10.8, según QA. No confundir con el corte C2 de `turno.py` (ese D1 ya está aplicado)."
     },
     {
       "id": "qa",
@@ -26,10 +26,10 @@
       "id": "ux",
       "name": "UX",
       "status": "pausado",
-      "task": "UX-S1 Instantánea al actualizar",
-      "since": "2026-11-11T23:23:30+01:00",
-      "detail": "Encargada por Tabby el 2026-11-10T23:21:33 Europe/Madrid. Paquete aparte sobre `6fde85b0` (padre `818764f`, rama base `dev/1.10.8-a1-instantaneas`, worktree de partida `/workspace/wt/a1`, sin reabrir A1). Escribir una instantánea local al detectar una versión nueva al arrancar, antes de cualquier migración de datos, sin permiso nuevo ni alarms; reutilizar la maquinaria y la deduplicación de A1. No es el P1 de preservación local. Dev cogió el turno a las 23:23:30 (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`). Worktree `/workspace/wt/ux-s1`, rama `dev/1.10.8-ux-s1`, base `6fde85b0`. Claude sesión `337ec88b-8010-4246-8638-e78906eea332` (desde 23:25:15) terminó sin commit ni contraste ni entrega (último toque ~04:06 Europe/Madrid; resumen `/workspace/tabner-dev/ux-s1/RESUMEN-claude.md`). HEAD sigue en `6fde85b0`, con 5 ficheros modificados sin commit. Tabby reencargó el remate a mano el 2026-11-11T06:39:02 Europe/Madrid (DECISIONES; regla 22:28), sin soltar el cerrojo.",
-      "next": "Remate a mano reencargado el 2026-11-11T06:39:02 Europe/Madrid, sin soltar el turno (sigue en DEV desde las 23:23:30). Revisar el diff, borrar restos (`/workspace/tabner-dev/ux-s1/tools/`), commit a mano, contrastar en Chrome con perfil nuevo, entregar en el chat de QA (texto y rutas, sin adjuntos) y cerrar el Chrome al entregar. Worktree `/workspace/wt/ux-s1`, rama `dev/1.10.8-ux-s1`, base `6fde85b0`. Sin programar en `/workspace/tabner` (sigue en `f8c50faa`). No mezcla los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No toca D1, D2/H1, P1 ni la analítica. El paquete del lanzador no entra ahora: Tabby lo encarga en paralelo cuando Dev entregue a QA (commit a mano mientras GIT_EDITOR siga bloqueado).",
+      "task": "Auditoría UX completa",
+      "since": null,
+      "detail": "54 ID abiertos. El runner de Playwright ya no es la vía (Carlos, 9-11). Encolada. El texto del aviso «No cierres ni recargues» (5b) se revisa en esta auditoría. La UX a mano de A2 ya está cerrada.",
+      "next": "Ronda reducida del 10-11 cerrada (`ux/2026-11-10.md`, sha c3a9dbb4…). UX-S2 entra en esta auditoría (instalar/importar no toca grupos nativos; el dashboard no se queda en carga infinita tras actualizar). No arranca ahora: sigue encolada; no coger turno ni Chrome real ni encargar a Dev mientras UX-S1 esté en Dev/QA/UX.",
       "block": null
     },
     {
@@ -229,10 +229,10 @@
         "QA",
         "Dev"
       ],
-      "status": "pausado",
-      "since": "2026-11-11T23:23:30+01:00",
-      "summary": "Encargada por Tabby el 2026-11-10T23:21:33 Europe/Madrid. Paquete aparte sobre `6fde85b0` (padre `818764f`, rama base `dev/1.10.8-a1-instantaneas`, worktree de partida `/workspace/wt/a1`, sin reabrir A1). Escribir una instantánea local al detectar una versión nueva al arrancar, antes de cualquier migración de datos, sin permiso nuevo ni alarms; reutilizar la maquinaria y la deduplicación de A1. No es el P1 de preservación local. Dev cogió el turno a las 23:23:30 (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`). Worktree `/workspace/wt/ux-s1`, rama `dev/1.10.8-ux-s1`, base `6fde85b0`. Claude sesión `337ec88b-8010-4246-8638-e78906eea332` (desde 23:25:15) terminó sin commit ni contraste ni entrega (último toque ~04:06 Europe/Madrid; resumen `/workspace/tabner-dev/ux-s1/RESUMEN-claude.md`). HEAD sigue en `6fde85b0`, con 5 ficheros modificados sin commit. Tabby reencargó el remate a mano el 2026-11-11T06:39:02 Europe/Madrid (DECISIONES; regla 22:28), sin soltar el cerrojo.",
-      "next": "Remate a mano reencargado el 2026-11-11T06:39:02 Europe/Madrid, sin soltar el turno (sigue en DEV desde las 23:23:30). Revisar el diff, borrar restos (`/workspace/tabner-dev/ux-s1/tools/`), commit a mano, contrastar en Chrome con perfil nuevo, entregar en el chat de QA (texto y rutas, sin adjuntos) y cerrar el Chrome al entregar. Worktree `/workspace/wt/ux-s1`, rama `dev/1.10.8-ux-s1`, base `6fde85b0`. Sin programar en `/workspace/tabner` (sigue en `f8c50faa`). No mezcla los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No toca D1, D2/H1, P1 ni la analítica. El paquete del lanzador no entra ahora: Tabby lo encarga en paralelo cuando Dev entregue a QA (commit a mano mientras GIT_EDITOR siga bloqueado).",
+      "status": "hecho",
+      "since": null,
+      "summary": "Entregada a QA el 2026-11-11T07:06:43 Europe/Madrid. Commit local `82457fd564fbf92981cfd177476ace0835e30c34` (padre `6fde85b0a67173c509d759f0d8532fc78b89482c`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar A1, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1/INFORME.md` sha `5b32f1cf41c407813eeae741d536770dfaae456b01e0a6a675f9f15462cbf236` (19317 B); sidecar idéntico `INFORME-UX-S1.md`. T1 167/167 EXIT_REAL=0, T2 2156/50 EXIT_REAL=0, tsc EXIT_REAL=2 solo los 3 TS2307 previos. Contraste Chrome 156, perfiles nuevos (instalación id `bapbgaeaaphidjalhkpdceacdjepokgm` y actualización 1.10.7→1.10.8 id `anmfglnlffalnjkckhpmmakgfhfoohmk`). La pasada de actualización no demuestra por sí sola la toma de copia ni la deduplicación (límite del INFORME §5/§7: al sustituir la carpeta sin empaquetar con Chrome cerrado, `onInstalled` no anotó `previousVersion=1.10.7`); el contrato (incluida la copia antes de NEW-05) está en jsdom. Encargo original de Tabby el 2026-11-10T23:21:33; remate a mano reencargado el 2026-11-11T06:39:02 (DECISIONES, regla 22:28).",
+      "next": "Revisión de QA (jsdom y contraste). Turno DEV soltado a las 07:06:43 Europe/Madrid (`turno.py ver` = libre). Pendiente revisión a mano de UX cuando Tabby la encargue. No se arranca la analítica desde Dev. El paquete del lanzador (GIT_EDITOR, aviso al terminar Claude, corte a ~15 min) lo encarga Tabby en paralelo; Dev no lo arranca. No se mezclan los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No se toca D1, D2/H1 ni P1. Sin programar en `/workspace/tabner` (sigue en `f8c50faa`).",
       "block": "La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     },
     {
@@ -290,9 +290,9 @@
         "QA",
         "Dev"
       ],
-      "status": "activo",
-      "since": "2026-11-11T23:23:30+01:00",
-      "summary": "En vigor (no archivado ni retirado). Cogido por DEV desde las 23:23:30 Europe/Madrid (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual). Estuvo libre desde las 23:18:35 hasta las 23:23:30 (UX lo soltó a las 23:18:35 al cerrar la revisión a mano del residual UX-A1F-01 `6fde85b0` en Chrome). Lo había cogido a las 22:57:29 (motivo `revisión UX residual A1 UX-A1F-01 Chrome 6fde85b0`, reserva_manual). Estuvo libre desde las 22:38:34 hasta las 22:57:29 (Dev lo soltó a las 22:38:34 al entregar el residual UX-A1F-01 `6fde85b`). Lo había cogido a las 19:15:43 (motivo `fleco residual UX-A1F-01 Chrome sobre 818764f`, reserva_manual). Estuvo libre desde las 19:13 hasta las 19:15:43 (UX lo soltó a las 19:13 al cerrar la revisión a mano de fleco A1 UX-A1F-01 `818764f2`; lo había cogido a las 18:58:35, motivo `revisión UX flecos A1 UX-A1F-01 818764f2`, reserva_manual). Libre desde las 18:37:59 hasta las 18:58:35 (Dev lo soltó a las 18:37:59 al entregar el fleco UX-A1F-01 `818764f`). Lo había cogido a las 18:13:55 (motivo `flecos A1 UX-A1F-01 sobre e9ff7c06`). Libre desde las 18:09 hasta las 18:13:55 (UX lo soltó al cerrar la revisión a mano de flecos A1 H-11/H-4/UX-A1F-01 `e9ff7c06`; lo había cogido a las 17:49:55). Dev no había cogido ni soltado el turno en r11 ni en r10. Dev lo había soltado a las 17:28:13 al entregar los flecos H-11/H-4/UX-A1F-01 (`e9ff7c06`). Dev lo había cogido a las 17:19:20 (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
+      "status": "pausado",
+      "since": "2026-11-11T07:06:43+01:00",
+      "summary": "En vigor (no archivado ni retirado). Libre desde las 07:06:43 Europe/Madrid (Dev lo soltó al entregar UX-S1 `82457fd`). Lo había cogido a las 23:23:30 Europe/Madrid (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual). Estuvo libre desde las 23:18:35 hasta las 23:23:30 (UX lo soltó a las 23:18:35 al cerrar la revisión a mano del residual UX-A1F-01 `6fde85b0` en Chrome). Lo había cogido a las 22:57:29 (motivo `revisión UX residual A1 UX-A1F-01 Chrome 6fde85b0`, reserva_manual). Estuvo libre desde las 22:38:34 hasta las 22:57:29 (Dev lo soltó a las 22:38:34 al entregar el residual UX-A1F-01 `6fde85b`). Lo había cogido a las 19:15:43 (motivo `fleco residual UX-A1F-01 Chrome sobre 818764f`, reserva_manual). Estuvo libre desde las 19:13 hasta las 19:15:43 (UX lo soltó a las 19:13 al cerrar la revisión a mano de fleco A1 UX-A1F-01 `818764f2`; lo había cogido a las 18:58:35, motivo `revisión UX flecos A1 UX-A1F-01 818764f2`, reserva_manual). Libre desde las 18:37:59 hasta las 18:58:35 (Dev lo soltó a las 18:37:59 al entregar el fleco UX-A1F-01 `818764f`). Lo había cogido a las 18:13:55 (motivo `flecos A1 UX-A1F-01 sobre e9ff7c06`). Libre desde las 18:09 hasta las 18:13:55 (UX lo soltó al cerrar la revisión a mano de flecos A1 H-11/H-4/UX-A1F-01 `e9ff7c06`; lo había cogido a las 17:49:55). Dev no había cogido ni soltado el turno en r11 ni en r10. Dev lo había soltado a las 17:28:13 al entregar los flecos H-11/H-4/UX-A1F-01 (`e9ff7c06`). Dev lo había cogido a las 17:19:20 (motivo `flecos A1 H-11 H-4 UX-A1F-01 sobre 0553079e`). UX lo había soltado a las 17:17 al cerrar la revisión a mano de flecos A1 `0553079e`; lo había cogido a las 16:45:07. Dev lo había soltado a las 16:20:57 al entregarlos. UX lo había cogido antes a las 14:32:59 para la revisión A1 y lo soltó a las 15:19 al cerrar. Dev lo había cogido antes a las 13:40:15 y lo soltó a las 14:08 al entregar A1. UX lo había cogido antes a las 12:22:23 y lo soltó a las 12:49 al cerrar O1 (`f8c50faa`). Commit `94f8286`.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -451,14 +451,19 @@
   ],
   "log": [
     {
-      "at": "2026-11-11T06:39:02+01:00",
-      "actor": "Tabby nueva",
-      "text": "remate a mano de UX-S1 reencargado a Dev, sin soltar el cerrojo. Contrastado a las 2026-11-11T06:39:02 Europe/Madrid: el turno sigue en DEV desde las 23:23:30 (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual, `flock_ocupado` false). No hay sesión de Claude. HEAD de `/workspace/wt/ux-s1` (rama `dev/1.10.8-ux-s1`) sigue en `6fde85b0a67173c509d759f0d8532fc78b89482c`, con 5 ficheros modificados sin commit (`entrypoints/background.ts`, `src/store/tabStore.ts`, `src/utils/localSnapshots.ts` y sus dos specs; último toque de código ~04:03, resumen `/workspace/tabner-dev/ux-s1/RESUMEN-claude.md` a las 04:06). Restos a borrar: `/workspace/tabner-dev/ux-s1/tools/`. Carlos (chat de Tabby, «Acepto lo que diga auditor») confirma las propuestas de la auditoría de la mañana de Auditor. El remate (revisar el diff, borrar restos, commit a mano, contrastar en Chrome con perfil nuevo, entregar a QA y cerrar el Chrome al entregar) ya lo cubría la regla del 22:28. Cuando Dev entregue UX-S1 a QA, Tabby encargará en paralelo (no toca producto) la unidad del lanzador: quitar el bloqueo de GIT_EDITOR; avisar a Dev en cuanto termine Claude, con o sin commit; cortar la sesión si el registro lleva unos 15 min sin avanzar. No se encarga ahora el lanzador. No se suelta el turno. No se arranca la analítica ni la auditoría. No es un OK de publicación (siguen D1, D2/H1 y P1)."
+      "at": "2026-11-11T07:06:43+01:00",
+      "actor": "Dev",
+      "text": "UX-S1 entregada a QA. Commit local `82457fd564fbf92981cfd177476ace0835e30c34` (padre `6fde85b0a67173c509d759f0d8532fc78b89482c`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar A1, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1/INFORME.md` sha `5b32f1cf41c407813eeae741d536770dfaae456b01e0a6a675f9f15462cbf236` (19317 B); sidecar idéntico `INFORME-UX-S1.md`. T1 167/167 EXIT_REAL=0 (INICIO 2026-11-11T06:40:52 Europe/Madrid, FIN 06:40:57, PID 3635749); T2 2156 pasan / 50 saltados EXIT_REAL=0 (INICIO 06:41:08, FIN 06:41:47, PID 3636224); tsc EXIT_REAL=2 solo los 3 TS2307 previos (INICIO 06:41:54, FIN 06:41:59, PID 3641460). Contraste Chrome 156.0.8078.47, perfiles nuevos (instalación y 1.10.7→1.10.8); la pasada de actualización no demuestra por sí sola la toma de copia (límite del INFORME §5/§7). Chrome de contraste cerrado. Turno DEV soltado a las 07:06:43 (`turno.py ver` = libre). Avisada Tabby: el paquete del lanzador lo encarga ella en paralelo; no lo arranco yo. No se tocó D1, D2/H1, P1, la analítica ni los aparcados. No es un OK de publicación."
+    },
+    {
+      "at": "2026-11-11T07:06:43+01:00",
+      "actor": "Dev",
+      "text": "Actualizado"
     },
     {
       "at": "2026-11-11T06:39:02+01:00",
-      "actor": "Tabby",
-      "text": "Actualizado"
+      "actor": "Tabby nueva",
+      "text": "remate a mano de UX-S1 reencargado a Dev, sin soltar el cerrojo. Contrastado a las 2026-11-11T06:39:02 Europe/Madrid: el turno sigue en DEV desde las 23:23:30 (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual, `flock_ocupado` false). No hay sesión de Claude. HEAD de `/workspace/wt/ux-s1` (rama `dev/1.10.8-ux-s1`) sigue en `6fde85b0a67173c509d759f0d8532fc78b89482c`, con 5 ficheros modificados sin commit (`entrypoints/background.ts`, `src/store/tabStore.ts`, `src/utils/localSnapshots.ts` y sus dos specs; último toque de código ~04:03, resumen `/workspace/tabner-dev/ux-s1/RESUMEN-claude.md` a las 04:06). Restos a borrar: `/workspace/tabner-dev/ux-s1/tools/`. Carlos (chat de Tabby, «Acepto lo que diga auditor») confirma las propuestas de la auditoría de la mañana de Auditor. El remate (revisar el diff, borrar restos, commit a mano, contrastar en Chrome con perfil nuevo, entregar a QA y cerrar el Chrome al entregar) ya lo cubría la regla del 22:28. Cuando Dev entregue UX-S1 a QA, Tabby encargará en paralelo (no toca producto) la unidad del lanzador: quitar el bloqueo de GIT_EDITOR; avisar a Dev en cuanto termine Claude, con o sin commit; cortar la sesión si el registro lleva unos 15 min sin avanzar. No se encarga ahora el lanzador. No se suelta el turno. No se arranca la analítica ni la auditoría. No es un OK de publicación (siguen D1, D2/H1 y P1)."
     },
     {
       "at": "2026-11-11T06:37:00+01:00",
@@ -544,12 +549,7 @@
       "at": "2026-11-10T19:05:29+01:00",
       "actor": "Tabby nueva",
       "text": "lanzador r12 APTO como herramienta contrastado (informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r12.md` sha eab08b73212c0497d2c8c37cceb128d9b87b44b2aab0c142a3ca1339328a0037, 9479 B, sidecar coincide (forma con nombre), `grep -ci aprobado` = 0). Q01/Q02 392/392, diffs vacíos frente al log r12 (Q01 PID 3281990, 18:50:17–18:50:34, sha 90ac2b8f67c7f094907c4fe3e10e0ddfa70f494db2cbb49034d1616868568444, 20689 B; Q02 PID 3286393, 18:50:34–18:50:50, sha e0ee735deeada34891e59ee023cc0b3b651d28c10a21ec643f1bda2018aad96a, 20738 B). N36 cierra. N38 cierra lo encargado. INFORME-r12 sha 09e30022… e informe QA r11 sha 446dc8f3… intactos. `/workspace/tabner` en f8c50faa; A1 sigue en `818764f`. No es un OK de publicación (siguen D1, D2/H1 y P1). Decisión de Tabby (no de Carlos): residuales en baja N37 (V5 y V10), N41 (V11, misma clase que N37), residual N38, N39, N40, N7 y N8 siguen aparcados; no encargo r13 ahora. Hallazgos ya están en el informe de QA; no los reenvío. No interrumpo la revisión UX a mano en Chrome de `818764f` (turno cogido por UX a las 18:58:35, motivo `revisión UX flecos A1 UX-A1F-01 818764f2`). A1 no se cierra aún como unidad de interfaz. No arranco UX-S1 ni la analítica. H-14, H-15, H-17, H-18/§9, H-19, H-20 y H-21 siguen aparcados."
-    },
-    {
-      "at": "2026-11-10T19:04:00+01:00",
-      "actor": "QA",
-      "text": "lanzador r12 APTO como herramienta, con residuales en baja. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-r12.md` (sha eab08b73212c0497d2c8c37cceb128d9b87b44b2aab0c142a3ca1339328a0037, 9479 B, `grep -ci aprobado` = 0). Q01/Q02 392/392, idénticos al log r12 (Q01 PID 3281990, 18:50:17–18:50:34, sha 90ac2b8f67c7f094907c4fe3e10e0ddfa70f494db2cbb49034d1616868568444, 20689 B; Q02 PID 3286393, 18:50:34–18:50:50, sha e0ee735deeada34891e59ee023cc0b3b651d28c10a21ec643f1bda2018aad96a, 20738 B). N36 cierra (sondas exactas V1/V2/V3/V6 y equivalentes: copia sin sellar, copia literal, enlace al entry; EXIT 2, sin refs `v1-symlink`/`v2-hardlink`/`v3-tmp`/`v6-path`, u2 en `init`). N38 cierra lo encargado (`tr`/`dirname` relativos dentro de `\"$(…)\"` y backticks); residual de comprobador en baja (m107 `#`, `eval`/`bash -c` en comillas simples, indirección, herramienta sin argumentos antes de `)`). Sin regresión en N19–N35. No bloquean N37 (baja, V5 sigue y V10 nueva), N41 (baja, nueva, misma clase que N37: relanzar el entry con otro `CLAUDE_LOCKS_DIR` reescribe el `session` vivo, push `v11-entry`, con prompt; no empeora frente a r11), N39, N40, N7 y N8. Turno no cogido (sigue libre desde las 18:37:59). No se tocó `/workspace/wt/a1` (`818764f`) ni `/workspace/tabner` (f8c50faa). turno.py, H9, INFORME-r11 e informe QA r11 intactos. La 1.10.8 sigue bloqueada por D1, D2/H1 y P1. No es un OK de publicación a usuarios."
     }
   ],
-  "contentHash": "b46b44d2"
+  "contentHash": "656dabb5"
 }
