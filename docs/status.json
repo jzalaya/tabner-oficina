@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T08:12:56+01:00",
-  "sourceMtime": "2026-11-11T08:11:38+01:00",
+  "generatedAt": "2026-11-11T08:15:11+01:00",
+  "sourceMtime": "2026-11-11T08:14:34+01:00",
   "bots": [
     {
       "id": "dev",
@@ -9,17 +9,17 @@
       "task": "analitica opt-in 1.10.8 sobre 26c84751",
       "since": "2026-11-11T08:12:38+01:00",
       "detail": "Turno DEV desde 2026-11-11T08:12:38+01:00: analitica opt-in 1.10.8 sobre 26c84751",
-      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
+      "next": "Worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c847511f915019d89dce25cbf248601fb53142`. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Diseño conservador vigente (DECISIONES 7-11, 9-11 11:54 y 12:16). 9 idiomas en textos nuevos. No mezclar P1, D1, D2 ni flecos aparcados. Coger `turno.py`. Si Claude está ocupado o salta un 429, seguir a mano la misma unidad.",
       "block": null
     },
     {
       "id": "qa",
       "name": "QA",
-      "status": "pausado",
-      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "status": "activo",
+      "task": "Analítica opt-in (con idioma)",
       "since": null,
-      "detail": "Turno libre.",
-      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
+      "detail": "Encargada a Dev el 2026-11-11T08:11:38 Europe/Madrid, tras el cierre de UX-S1 como unidad de interfaz. Opt-in explícito en todos los navegadores, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente, sin captura previa ni recuperación retroactiva.",
+      "next": "Worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c847511f915019d89dce25cbf248601fb53142`. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Diseño conservador vigente (DECISIONES 7-11, 9-11 11:54 y 12:16). 9 idiomas en textos nuevos. No mezclar P1, D1, D2 ni flecos aparcados. Coger `turno.py`. Si Claude está ocupado o salta un 429, seguir a mano la misma unidad.",
       "block": null
     },
     {
@@ -241,11 +241,11 @@
         "QA",
         "Dev"
       ],
-      "status": "pausado",
+      "status": "activo",
       "since": null,
       "summary": "Encargada a Dev el 2026-11-11T08:11:38 Europe/Madrid, tras el cierre de UX-S1 como unidad de interfaz. Opt-in explícito en todos los navegadores, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente, sin captura previa ni recuperación retroactiva.",
       "next": "Worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c847511f915019d89dce25cbf248601fb53142`. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Diseño conservador vigente (DECISIONES 7-11, 9-11 11:54 y 12:16). 9 idiomas en textos nuevos. No mezclar P1, D1, D2 ni flecos aparcados. Coger `turno.py`. Si Claude está ocupado o salta un 429, seguir a mano la misma unidad.",
-      "block": "Encargada; a la espera de que Dev arranque. No es un OK de publicación."
+      "block": "En curso: turno DEV cogido 08:12:38 Europe/Madrid; worktree `/workspace/wt/analitica` en `26c84751`, rama `dev/1.10.8-analitica`; Claude Code arrancando. Flag apagado. No es un OK de publicación."
     },
     {
       "name": "D1 (servidor)",
@@ -292,7 +292,7 @@
       ],
       "status": "activo",
       "since": null,
-      "summary": "En vigor (no archivado ni retirado). UX lo soltó a las 08:08:12 Europe/Madrid tras la revisión Chrome de UX-S1 `26c84751` (lo había cogido a las 07:57:49, motivo `revisión UX Chrome UX-S1 26c84751`, reserva_manual). `turno.py ver` = libre. Dev lo había soltado al reentregar el remate QA-S1-01 de UX-S1 (`26c847511f915019d89dce25cbf248601fb53142`) a las 07:32:47 Europe/Madrid, tras cogerlo a las 07:27:02 (motivo `UX-S1 QA-S1-01 install_meta recordVisit`). El remate GE-1 del lanzador no ha cogido ni soltado el turno de producto.",
+      "summary": "En vigor (no archivado ni retirado). UX lo soltó a las 08:08:12 Europe/Madrid tras la revisión Chrome de UX-S1 `26c84751` (lo había cogido a las 07:57:49, motivo `revisión UX Chrome UX-S1 26c84751`, reserva_manual). Dev lo cogió a las 08:12:38 Europe/Madrid (motivo `analitica opt-in 1.10.8 sobre 26c84751`, reserva_manual). Dev lo había soltado al reentregar el remate QA-S1-01 de UX-S1 (`26c847511f915019d89dce25cbf248601fb53142`) a las 07:32:47 Europe/Madrid, tras cogerlo a las 07:27:02 (motivo `UX-S1 QA-S1-01 install_meta recordVisit`). El remate GE-1 del lanzador no ha cogido ni soltado el turno de producto.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -451,14 +451,19 @@
   ],
   "log": [
     {
-      "at": "2026-11-11T08:11:38+01:00",
-      "actor": "Tabby nueva",
-      "text": "revisión UX a mano en Chrome del remate UX-S1 `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin push) contrastada. Informe `/workspace/tabner-ops/ux/2026-11-11-ux-s1-26c84751.md` sha `d053c0762e7cbaf4e236ced10e9ab54572132f24a2321334ceb247cab8611d22` (11881 B, `grep -ci aprobado` = 0; sin sidecar `.sha256`). Capturas 01–08 en `/workspace/tabner-ops/ux/capturas/2026-11-11-ux-s1-26c84751/` contrastadas con el fichero (05: dashboard 1.10.7 abierto, ID `dmfnndkgbagdnhagnjnoidkgmoiniomc`; 06: 1.10.8, mismo ID, esa pestaña pasó a «New Tab»; 07: dashboard nuevo con Previa-UXS1; 08: las mismas 3 etiquetas 07:01:59, 07:01:39 y 07:01:11). Almacenamiento: `wal.md` sha `62c84be40429c6c5464504c3d7a858c472d551dda2466b88b1f4408cfc359f79` (3474 B); `wal-resumen.json` sha `056c21a6e23ac8472a17be0d07a97a003748139a0647eb3dbfbe71394d9e3e64`; `snapshots-final.json` sha `47e389d235d36dd6301cd2c47de0127ba87c21500ec2b3a5b5d4caee575c1c7b`; LevelDB `000003.log` sha `747d247dc78258fdc21e65457341242c10dbc714902b5b1914a98675e9e4fc75` (5770 B). Pendiente `1.10.7→1.10.8` escrito antes de `lastSeenVersion=1.10.8`, con `previousLastSeenVersion=1.10.7` y `seen=1.10.8`; sin cuarta escritura de copias (coherente con deduplicación). Perfil `chrome-profile-ux-s1-26c84751` (nuevo, no reutilizado). `/workspace/wt/ux-s1` sigue en `26c84751` (solo `?? node_modules`); `/workspace/wt/a1` en `6fde85b0`; `/workspace/tabner` en `f8c50faa`. Chrome del perfil ausente. `turno.py ver` = libre. Sin altos ni medios nuevos. UX-S1 queda cerrada como unidad de interfaz. Se aparca la observación de que la carrera H1 en la pestaña ya abierta no se vio (Recargar mata esa pestaña; es el comportamiento habitual de Chrome, no un fleco a Dev). No se reencarga la pasada ni se afirma un fallo de toma. Se encarga a Dev la analítica opt-in (última unidad de la 1.10.8), worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c84751`, sin programar en `/workspace/tabner` ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. No se arranca la auditoría UX completa. El remate GE-1 del lanzador sigue en QA (no se mezcla). No es un OK de publicación (siguen D1, D2/H1 y P1)."
+      "at": "2026-11-11T08:14:34+01:00",
+      "actor": "Dev",
+      "text": "turno DEV cogido (motivo `analitica opt-in 1.10.8 sobre 26c84751`, `turno.py coger` a las 2026-11-11T08:12:38 Europe/Madrid). Worktree `/workspace/wt/analitica` creado, rama `dev/1.10.8-analitica`, HEAD `26c847511f915019d89dce25cbf248601fb53142` (sin enmendar UX-S1 ni A1, sin push). `/workspace/tabner` sigue en `f8c50faa`; no se tocan `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Prompt Claude sha `02ebe453a5db45d5c4412804bcd022fb30ce715370c220f1e8d4da27a6d4bbab` (9111 B) en `/workspace/tabner-dev/analitica/PROMPT-claude.md`. Flag apagado; Arranca Claude Code en este worktree. No se mezclan P1, D1, D2 ni flecos aparcados. El remate GE-1 del lanzador sigue en QA."
+    },
+    {
+      "at": "2026-11-11T08:14:34+01:00",
+      "actor": "Dev",
+      "text": "Actualizado"
     },
     {
       "at": "2026-11-11T08:11:38+01:00",
-      "actor": "Tabby",
-      "text": "Actualizado"
+      "actor": "Tabby nueva",
+      "text": "revisión UX a mano en Chrome del remate UX-S1 `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin push) contrastada. Informe `/workspace/tabner-ops/ux/2026-11-11-ux-s1-26c84751.md` sha `d053c0762e7cbaf4e236ced10e9ab54572132f24a2321334ceb247cab8611d22` (11881 B, `grep -ci aprobado` = 0; sin sidecar `.sha256`). Capturas 01–08 en `/workspace/tabner-ops/ux/capturas/2026-11-11-ux-s1-26c84751/` contrastadas con el fichero (05: dashboard 1.10.7 abierto, ID `dmfnndkgbagdnhagnjnoidkgmoiniomc`; 06: 1.10.8, mismo ID, esa pestaña pasó a «New Tab»; 07: dashboard nuevo con Previa-UXS1; 08: las mismas 3 etiquetas 07:01:59, 07:01:39 y 07:01:11). Almacenamiento: `wal.md` sha `62c84be40429c6c5464504c3d7a858c472d551dda2466b88b1f4408cfc359f79` (3474 B); `wal-resumen.json` sha `056c21a6e23ac8472a17be0d07a97a003748139a0647eb3dbfbe71394d9e3e64`; `snapshots-final.json` sha `47e389d235d36dd6301cd2c47de0127ba87c21500ec2b3a5b5d4caee575c1c7b`; LevelDB `000003.log` sha `747d247dc78258fdc21e65457341242c10dbc714902b5b1914a98675e9e4fc75` (5770 B). Pendiente `1.10.7→1.10.8` escrito antes de `lastSeenVersion=1.10.8`, con `previousLastSeenVersion=1.10.7` y `seen=1.10.8`; sin cuarta escritura de copias (coherente con deduplicación). Perfil `chrome-profile-ux-s1-26c84751` (nuevo, no reutilizado). `/workspace/wt/ux-s1` sigue en `26c84751` (solo `?? node_modules`); `/workspace/wt/a1` en `6fde85b0`; `/workspace/tabner` en `f8c50faa`. Chrome del perfil ausente. `turno.py ver` = libre. Sin altos ni medios nuevos. UX-S1 queda cerrada como unidad de interfaz. Se aparca la observación de que la carrera H1 en la pestaña ya abierta no se vio (Recargar mata esa pestaña; es el comportamiento habitual de Chrome, no un fleco a Dev). No se reencarga la pasada ni se afirma un fallo de toma. Se encarga a Dev la analítica opt-in (última unidad de la 1.10.8), worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c84751`, sin programar en `/workspace/tabner` ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. No se arranca la auditoría UX completa. El remate GE-1 del lanzador sigue en QA (no se mezcla). No es un OK de publicación (siguen D1, D2/H1 y P1)."
     },
     {
       "at": "2026-11-11T08:08:12+01:00",
@@ -544,12 +549,7 @@
       "at": "2026-11-11T06:37:00+01:00",
       "actor": "Shorts Orquestador",
       "text": "Carlos (vía Auditor) acepta de momento, mientras no haya acceso a Studio de Luck is Math, los contadores públicos (vistas y me gusta de la página del Short) como sustituto para el 004 y para los cortes que también necesiten Studio. No inventar retención ni…"
-    },
-    {
-      "at": "2026-11-10T23:23:30+01:00",
-      "actor": "Dev",
-      "text": "turno DEV cogido a las 23:23:30 (motivo `UX-S1 instantanea al actualizar sobre 6fde85b0`, reserva_manual). Unidad UX-S1 arrancada en worktree propio `/workspace/wt/ux-s1`, rama nueva `dev/1.10.8-ux-s1`, base `6fde85b0a67173c509d759f0d8532fc78b89482c` (sin enmendar A1, sin push). `/workspace/tabner` sigue en `f8c50faa`. Worktree `/workspace/wt/a1` no se toca. Claude Code sesión `337ec88b-8010-4246-8638-e78906eea332`, lane tabner, arrancada a las 23:25:15 Europe/Madrid (PID lanzador 3602852; nunca `--continue`). El commit, si lo hay, irá a mano (GIT_EDITOR no entra en este paquete). No se mezclan los aparcados (H-14, H-15, H-17, H-18/§9, H-19, H-20, H-21, H-23, H-24, H-25, H-26, H-27). No se tocan D1, D2/H1, P1, la analítica ni el lanzador. No es un OK de publicación."
     }
   ],
-  "contentHash": "5a4633a7"
+  "contentHash": "6e8565f"
 }
