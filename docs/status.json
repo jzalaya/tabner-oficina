@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-11-11T09:09:35+01:00",
-  "sourceMtime": "2026-11-11T09:09:24+01:00",
+  "generatedAt": "2026-11-11T09:14:05+01:00",
+  "sourceMtime": "2026-11-11T09:13:44+01:00",
   "bots": [
     {
       "id": "dev",
       "name": "Dev",
-      "status": "activo",
-      "task": "analitica opt-in 1.10.8 sobre 26c84751",
-      "since": "2026-11-11T08:12:38+01:00",
-      "detail": "Turno DEV desde 2026-11-11T08:12:38+01:00: analitica opt-in 1.10.8 sobre 26c84751",
-      "next": "Worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c847511f915019d89dce25cbf248601fb53142`. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Diseño conservador vigente (DECISIONES 7-11, 9-11 11:54 y 12:16). 9 idiomas en textos nuevos. No mezclar P1, D1, D2 ni flecos aparcados. Coger `turno.py`. Si Claude está ocupado o salta un 429, seguir a mano la misma unidad.",
+      "status": "pausado",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
+      "since": null,
+      "detail": "Turno libre.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
       "id": "qa",
       "name": "QA",
-      "status": "activo",
-      "task": "Analítica opt-in (con idioma)",
+      "status": "pausado",
+      "task": "Cerrojo de pruebas (`turno.py` V3)",
       "since": null,
-      "detail": "Encargada a Dev el 2026-11-11T08:11:38 Europe/Madrid, tras el cierre de UX-S1 como unidad de interfaz. Opt-in explícito en todos los navegadores, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente, sin captura previa ni recuperación retroactiva.",
-      "next": "Worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c847511f915019d89dce25cbf248601fb53142`. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Diseño conservador vigente (DECISIONES 7-11, 9-11 11:54 y 12:16). 9 idiomas en textos nuevos. No mezclar P1, D1, D2 ni flecos aparcados. Coger `turno.py`. Si Claude está ocupado o salta un 429, seguir a mano la misma unidad.",
+      "detail": "Turno libre.",
+      "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
     {
@@ -241,11 +241,11 @@
         "QA",
         "Dev"
       ],
-      "status": "activo",
+      "status": "pausado",
       "since": null,
       "summary": "Encargada a Dev el 2026-11-11T08:11:38 Europe/Madrid, tras el cierre de UX-S1 como unidad de interfaz. Opt-in explícito en todos los navegadores, contadores por función, idioma del navegador y de la interfaz, sin identificador persistente, sin captura previa ni recuperación retroactiva.",
       "next": "Worktree `/workspace/wt/analitica`, rama `dev/1.10.8-analitica` desde `26c847511f915019d89dce25cbf248601fb53142`. No programar en `/workspace/tabner` (sigue en `f8c50faa`) ni tocar `/workspace/wt/ux-s1` ni `/workspace/wt/a1`. Diseño conservador vigente (DECISIONES 7-11, 9-11 11:54 y 12:16). 9 idiomas en textos nuevos. No mezclar P1, D1, D2 ni flecos aparcados. Coger `turno.py`. Si Claude está ocupado o salta un 429, seguir a mano la misma unidad.",
-      "block": "Turno DEV sigue cogido desde 08:12:38 Europe/Madrid. Sesión de Claude terminó a las 08:41:35 sin commit (HEAD sigue en `26c84751`, árbol sucio). Tabby reencargó el remate a mano a las 09:08:21, sin soltar el cerrojo. Flag apagado. No es un OK de publicación."
+      "block": "Entregada a QA el 2026-11-11T09:13:44 Europe/Madrid. Commit local `15fd8785c7363aa0ce466ff2167d3674f46baa2b` (padre `26c84751`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar, sin push). INFORME `/workspace/tabner-release/1.10.8/analitica/INFORME.md` sha `d02e4da891522d1eb1067665e4eaa529d33a370a60592b0c0807310b2e8b0417` (8455 B). Flag apagado. Turno DEV soltado al entregar. No es un OK de publicación."
     },
     {
       "name": "D1 (servidor)",
@@ -292,7 +292,7 @@
       ],
       "status": "activo",
       "since": null,
-      "summary": "En vigor (no archivado ni retirado). UX lo soltó a las 08:08:12 Europe/Madrid tras la revisión Chrome de UX-S1 `26c84751` (lo había cogido a las 07:57:49, motivo `revisión UX Chrome UX-S1 26c84751`, reserva_manual). Dev lo cogió a las 08:12:38 Europe/Madrid (motivo `analitica opt-in 1.10.8 sobre 26c84751`, reserva_manual). Dev lo había soltado al reentregar el remate QA-S1-01 de UX-S1 (`26c847511f915019d89dce25cbf248601fb53142`) a las 07:32:47 Europe/Madrid, tras cogerlo a las 07:27:02 (motivo `UX-S1 QA-S1-01 install_meta recordVisit`). El remate GE-1 del lanzador no ha cogido ni soltado el turno de producto.",
+      "summary": "En vigor (no archivado ni retirado). UX lo soltó a las 08:08:12 Europe/Madrid tras la revisión Chrome de UX-S1 `26c84751` (lo había cogido a las 07:57:49, motivo `revisión UX Chrome UX-S1 26c84751`, reserva_manual). Dev lo cogió a las 08:12:38 Europe/Madrid (motivo `analitica opt-in 1.10.8 sobre 26c84751`, reserva_manual) y lo soltó al entregar la analítica opt-in (`15fd8785c7363aa0ce466ff2167d3674f46baa2b`) a las 2026-11-11T09:13:44 Europe/Madrid. Dev lo había soltado al reentregar el remate QA-S1-01 de UX-S1 (`26c847511f915019d89dce25cbf248601fb53142`) a las 07:32:47 Europe/Madrid, tras cogerlo a las 07:27:02 (motivo `UX-S1 QA-S1-01 install_meta recordVisit`). El remate GE-1 del lanzador no ha cogido ni soltado el turno de producto.",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": ""
     },
@@ -451,6 +451,16 @@
   ],
   "log": [
     {
+      "at": "2026-11-11T09:13:44+01:00",
+      "actor": "Dev",
+      "text": "analítica opt-in entregada a QA. Commit local `15fd8785c7363aa0ce466ff2167d3674f46baa2b` (padre `26c847511f915019d89dce25cbf248601fb53142`, rama `dev/1.10.8-analitica`, worktree `/workspace/wt/analitica`, sin enmendar `26c84751` ni A1, sin push). INFORME `/workspace/tabner-release/1.10.8/analitica/INFORME.md` sha `d02e4da891522d1eb1067665e4eaa529d33a370a60592b0c0807310b2e8b0417` (8455 B); sidecar `INFORME-analitica.md` idéntico. T1 157 tests ok, 2 omitidos, 11 ficheros, EXIT_REAL=0, PID 155721, INICIO 09:10:58 FIN 09:11:00, log sha `db5accfa02a3db3c34cd9d550bdef7325792b8d49fba6f6bebad6ea647145cf8`. T2 2230 tests ok, 50 omitidos, 211 ficheros ok, 6 omitidos, EXIT_REAL=0, PID 156404, INICIO 09:11:24 FIN 09:12:04, log sha `725ac07f80586027f9290a51633599168279158f08352a67e36f961fd9b5bad0`. tsc EXIT_REAL=2, solo los 3 TS2307 previos, PID 156228, INICIO 09:11:06 FIN 09:11:11, log sha `da7739ef6362e4a046bf92cd8cf7ece57644fd4834fc190b21de7b2dfb9784b3`. Flag apagado; SQL de propuesta no aplicado; no se lanzó Chrome. Turno DEV soltado al entregar. No es un OK de publicación."
+    },
+    {
+      "at": "2026-11-11T09:13:44+01:00",
+      "actor": "Dev",
+      "text": "Actualizado"
+    },
+    {
       "at": "2026-11-11T09:09:24+01:00",
       "actor": "Tabby nueva",
       "text": "remate a mano de la analítica opt-in reencargado a Dev, sin soltar el cerrojo. Contrastado a las 2026-11-11T09:08:21 Europe/Madrid: el turno sigue en DEV desde las 08:12:38 (motivo `analitica opt-in 1.10.8 sobre 26c84751`, reserva_manual, `flock_ocupado` false). No hay sesión de Claude. La sesión de `/workspace/wt/analitica` terminó a las 08:41:35 (aviso-fin: EXIT_REAL=0, COMMIT=no, CORTE=no, HEAD_INICIO=HEAD_FIN=`26c847511f915019d89dce25cbf248601fb53142`, SESSION_ID `bf97dbee-321e-40d6-907a-ee52fcf4e237`, log `/workspace/wt/.run/analitica/claude.out`). HEAD sigue en `26c84751`, con el árbol sucio (locales, SearchBar.vue, SettingsModal.vue, PopupApp.vue, features.ts, tabStore.ts, saveSession.ts, wxt.config.ts, más `usageAnalytics.ts`, tests y `supabase/proposals/` sin seguimiento). Resumen `/workspace/tabner-dev/analitica/RESUMEN-claude.md` (última escritura 08:41:17). Último toque de código ~08:38:43. No hay INFORME ni entrega. En el chat de Dev no hay actividad desde el encargo. Restos a borrar si no se usaron: `/workspace/tabner-dev/analitica/tools/`. El remate (revisar el diff, verificar las corridas, commit a mano, entregar a QA y cerrar el Chrome al entregar) ya lo cubría la regla del 22:28. No se suelta el turno. No se encarga otra unidad. Flag apagado. No es un OK de publicación (siguen D1, D2/H1 y P1)."
@@ -459,11 +469,6 @@
       "at": "2026-11-11T09:09:24+01:00",
       "actor": "Tabby nueva",
       "text": "remate GE-1 del lanzador APTO como herramienta, contrastado. Informe `/workspace/tabner-qa/lanzador-wt/REVISION-QA-lanzador-ge-1.md` sha `f6fb68a920c8beb26e87b379df5b3be88af009517eabba36545ee4658fdf6faa` (11338 B, sidecar GNU idéntico, `grep -ci aprobado` = 0). Evidencias en `/workspace/tabner-qa/lanzador-wt/contraste-ge-1/` (28 ficheros). Q01 448/448 EXIT_REAL=0 PID 3924630 (08:03:12–08:03:43, log sha `7bd52b72ab59a70b53caa6463d86ba1087256a32ff921e0a8197584c2de35bea`, 23759 B); Q02 448/448 EXIT_REAL=0 PID 3929914 (08:03:43–08:04:14, log sha `b4d1f96fc428dd6bbc0c3af4c4da6ce5c01e6bf6121a4025c853eac988109c73`, 23753 B). GE-1 queda cerrado. INFORME-ge-1 sha `bfa981130a91dae439e2fdd76ea2166a4718c2edbf9d55871decfb7523eb2589` (6607 B), log oficial sha `1296e6bd2bed58b3e58d48325f2fcb928eab4cbfe4bc9b16f6c32fbbaf65678b`, entry sha `c6a44c5040c1cd3026354c7de44f9c656c9afcfdb76c644f418f6e09afb87862`; INFORME-git-editor sha `e36bcc139d134078ea01b425c8f131f0aaea97e0f8c0912fd0364f27cf751a60`, INFORME-r12 / INFORME.md sha `09e30022fc254732ac2ddd095a7b2a10510bb02ddce00f785ae9f823604acead`, informe QA GIT_EDITOR sha `96c1151d047aa847a5a033692b4f17711ba949ac6443fabfedc769febe883fda` e informe QA r12 sha `eab08b73212c0497d2c8c37cceb128d9b87b44b2aab0c142a3ca1339328a0037` intactos (hashes P0=P1). `/workspace/wt/ux-s1` en `26c84751`; `/workspace/wt/a1` en `6fde85b0`; `/workspace/tabner` en `f8c50faa`. No es un r13. No se reencarga ni se mezcla con la analítica. GE-2, GE-3, GE-4, GE-5, GE-6, GE-7 y F-GE1-a/b/c/d no son la puerta (GE-2 sigue aparcado; la semántica la decido yo, no ahora). Residuales N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. No es un OK de publicación (siguen D1, D2/H1 y P1)."
-    },
-    {
-      "at": "2026-11-11T09:09:24+01:00",
-      "actor": "Tabby",
-      "text": "Actualizado"
     },
     {
       "at": "2026-11-11T09:06:58+01:00",
@@ -544,12 +549,7 @@
       "at": "2026-11-11T07:17:59+01:00",
       "actor": "Dev",
       "text": "paquete del lanzador (GIT_EDITOR seguro, aviso al terminar, corte por estancamiento) entregado a QA, sin coger el turno de producto (`turno.py ver` = libre). No es un r13 de residuales. INFORME `/workspace/tabner-release/lanzador-wt/INFORME-git-editor.md` sha `e36bcc139d134078ea01b425c8f131f0aaea97e0f8c0912fd0364f27cf751a60` (7001 B); sidecar `.sha256` idéntico. Test oficial `bash /workspace/tabner-dev/lanzador/tests/test-lanzador.sh` → 439/439, 0 fallos, EXIT_REAL=0 (INICIO 2026-11-11T07:16:30+01:00, FIN 2026-11-11T07:16:59+01:00, PID 3703773 ya ausente, CWD `/workspace`; log `/workspace/tabner-release/lanzador-wt/logs/test-lanzador-git-editor.log` sha `762c499f7b4eb47e37d7edfec0959be85cdcaa2387661fa3c2ed858949f5b099`, 23255 B). Entry sha `c50084d9a5225be4bb8ba1b2f8336133cd05439f5174dc6227367552e6177812` (20082 B, modo 0555). wrappers/git sha `f6019702e400091ebb6e93797642b9db17f4d1e2ece1ae6884620bc3e795b6e8` (29432 B, modo 0555). tests sha `3434cf143c4d9a6e0f53845d0a80da304ae3cad3f42819428af048c7d9563eda` (82404 B). POLITICA sha `4339323510bd21b1b4f4b7839ecb2f03881290878a10f218ef7a696fafd4b1ed` (11673 B). write-settings.py sin cambio. Hecho a mano (DECISIONES 11-11 06:39, `e15496d`; 22:57, `6670732`; 14:05, `2344913`). N14 no se reabre (solo literales exactos `true`, `:`, `/bin/true`, `/usr/bin/true`). El silencio no corta; solo un bucle de errores de conexión de unos 15 min. INFORME-r12 e informe QA r12 intactos. N37, residual N38, N39, N40, N41, N7 y N8 siguen aparcados. No se tocó `/workspace/wt/ux-s1`, `/workspace/wt/a1` ni `/workspace/tabner` (sigue en `f8c50faa`). No es un OK de publicación (siguen D1, D2/H1 y P1)."
-    },
-    {
-      "at": "2026-11-11T07:08:27+01:00",
-      "actor": "Tabby nueva",
-      "text": "entrega de UX-S1 a QA contrastada. Commit `82457fd564fbf92981cfd177476ace0835e30c34` (padre `6fde85b0` intacto en `/workspace/wt/a1`, rama `dev/1.10.8-ux-s1`, worktree `/workspace/wt/ux-s1`, sin enmendar, sin push). INFORME `/workspace/tabner-release/1.10.8/ux-s1/INFORME.md` sha `5b32f1cf41c407813eeae741d536770dfaae456b01e0a6a675f9f15462cbf236` (19317 B); sidecar `INFORME-UX-S1.md` idéntico. T1 167/167 EXIT_REAL=0, T2 2156/50 EXIT_REAL=0, tsc EXIT_REAL=2 solo los 3 TS2307 previos; hashes de logs y de los 5 ficheros coinciden con el INFORME. Chrome de contraste de los perfiles UX-S1 cerrado (`turno.py ver` = libre). Entrega escrita en el chat de QA. QA ya ha arrancado la revisión (actividad en su chat a las 07:07 Europe/Madrid); no se reencarga. Tabby encarga en paralelo a Dev el paquete del lanzador (DECISIONES 11-11 06:39, commit `e15496d`): quitar el bloqueo de GIT_EDITOR; avisar a Dev en cuanto termine Claude, con o sin commit; cortar la sesión si el registro lleva unos 15 min sin avanzar. No toca producto y no coge el turno de producto. Residuales N37, N38, N39, N40, N41, N7 y N8 siguen aparcados; no es un r13. No se cierra UX-S1 como unidad de interfaz: sigue QA y luego la revisión a mano de UX. No se arranca la analítica ni la auditoría. No es un OK de publicación (siguen D1, D2/H1 y P1)."
     }
   ],
-  "contentHash": "c380f615"
+  "contentHash": "6cdafb58"
 }
