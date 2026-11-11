@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T10:28:50+01:00",
+  "generatedAt": "2026-11-11T10:29:35+01:00",
   "sourceMtime": "2026-11-11T10:28:23+01:00",
   "bots": [
     {
@@ -25,10 +25,10 @@
     {
       "id": "ux",
       "name": "UX",
-      "status": "pausado",
-      "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": null,
-      "detail": "Turno libre.",
+      "status": "activo",
+      "task": "auditoría UX completa 54 ID",
+      "since": "2026-11-11T10:29:29+01:00",
+      "detail": "Turno UX desde 2026-11-11T10:29:29+01:00: auditoría UX completa 54 ID",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -552,5 +552,5 @@
       "text": "revisión UX a mano en Chrome del remate UX-S1 `26c847511f915019d89dce25cbf248601fb53142` (padre `82457fd`, rama `dev/1.10.8-ux-s1`) cerrada. Informe `/workspace/tabner-ops/ux/2026-11-11-ux-s1-26c84751.md` (sha d053c0762e7cbaf4e236ced10e9ab54572132f24a2321334ceb247cab8611d22, 11881 B); capturas 01–08 en `ux/capturas/2026-11-11-ux-s1-26c84751/`; almacenamiento en `ux/storage-ux-s1-26c84751/` (wal.md sha 62c84be40429c6c5464504c3d7a858c472d551dda2466b88b1f4408cfc359f79). Recargar 1.10.7→1.10.8, mismo ID `dmfnndkgbagdnhagnjnoidkgmoiniomc`, perfil nuevo `chrome-profile-ux-s1-26c84751`. El contraste de toma/dedup queda limitado: la pestaña del dashboard no sobrevivió al Recargar (pasó a «New Tab» de Google) y el caso H1 en esa pestaña no se observó. Un dashboard abierto después con Ctrl+T conservó Previa-UXS1; la lista siguió en las mismas 3 copias (07:01:59, 07:01:39, 07:01:11 UTC). El LevelDB, con Chrome ya cerrado, muestra pendiente `{\"from\":\"1.10.7\",\"to\":\"1.10.8\"}`, `previousLastSeenVersion=1.10.7`, `lastSeenVersion=1.10.8` y `seen=1.10.8`, sin cuarta escritura de copias (coherente con deduplicación). No se afirma que H1 quede cerrado en Chrome. Sin altos ni medios nuevos. Turno UX cogido a las 07:57:49 y soltado a las 08:08:12 (`turno.py ver` = libre). Chrome 3913608 cerrado con SIGTERM a las 08:05:29 (cmdline verificado; no killall ni Fork-10). UX-S1 no se cierra desde aquí como unidad de interfaz. No se encargó nada a Dev. No se reabrió A1. No se arrancó la analítica ni la auditoría. No es un OK de publicación (siguen D1, D2/H1 y P1)."
     }
   ],
-  "contentHash": "b13425be"
+  "contentHash": "306538ee"
 }
