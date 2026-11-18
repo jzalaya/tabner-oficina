@@ -381,11 +381,11 @@ const FLOORS = [
       { id:"operaciones",  name:"Operaciones",  ids:["soporte"],                o:[9.4, 8.4], cols:1, tint:"#ef5b4b" }
     ] },
   { id:"shorts", name:"Shorts", n:"2", label:"Planta 2", theme:"studio", sub:"PLANTA 2 · ESTUDIO",
-    zones:[ { id:"estudio", name:"Estudio", ids:["shorts-director","shorts-guionista","shorts-productor"], o:[2.6, 2.8], cols:3, sx:3.0, sy:4.4, tint:"#e94f9b", nosign:true } ] },
+    zones:[ { id:"estudio", name:"Estudio", ids:["shorts-director","shorts-guionista","shorts-productor","tdd-comentarios"], o:[2.6, 2.8], cols:3, sx:3.0, sy:4.4, tint:"#e94f9b", nosign:true } ] },
   { id:"julietas", name:"Julietas", n:"1", label:"Planta 1", theme:"boutique", sub:"PLANTA 1 · TALLER",
-    zones:[ { id:"taller", name:"Taller", ids:["julieta"], o:[3.4, 3.0], cols:1, tint:"#d9707f", nosign:true } ] },
+    zones:[ { id:"taller", name:"Taller", ids:["julieta","julietas-redes","julietas-pinterest","julietas-crecimiento"], o:[2.4, 2.4], cols:2, sx:2.7, sy:2.7, tint:"#d9707f", nosign:true } ] },
   { id:"mas", name:"Más", n:"+", label:"Anexo", theme:"annex", sub:"ANEXO · MADRID",
-    zones:[ { id:"anexo", name:"Anexo", ids:["sabueso","creador","auditor"], o:[2.6, 3.0], cols:3, sx:2.8, sy:3.8, tint:"#9b6a3f", nosign:true, catchall:true } ] }
+    zones:[ { id:"anexo", name:"Anexo", ids:["sabueso","creador","auditor","rebalanceo"], o:[2.6, 3.0], cols:3, sx:2.8, sy:3.8, tint:"#9b6a3f", nosign:true, catchall:true } ] }
 ];
 const FLOOR_BY = {}, FLOOR_OF = {}, ZONE_OF = {};
 FLOORS.forEach(f => { FLOOR_BY[f.id] = f; f.zones.forEach(z => z.ids.forEach(id => { FLOOR_OF[id] = f.id; ZONE_OF[id] = z; })); });
@@ -408,8 +408,13 @@ const LOOK = {
   "shorts-productor":    { c:"#e94f9b", sh:"figure" },
   "sabueso":             { c:"#9b6a3f", sh:"egg" },
   "julieta":             { c:"#e23d5f", sh:"heart" },
+  "julietas-redes":      { c:"#c45b8c", sh:"star" },
+  "julietas-pinterest":  { c:"#c7504a", sh:"pent" },
+  "julietas-crecimiento":{ c:"#3aaf8c", sh:"capsule" },
+  "tdd-comentarios":     { c:"#6b5ce7", sh:"cone" },
   "creador":             { c:"#b07cf0", sh:"pent" },
-  "auditor":             { c:"#4a6d8c", sh:"diamond" }
+  "auditor":             { c:"#4a6d8c", sh:"diamond" },
+  "rebalanceo":          { c:"#c9a227", sh:"cylinder" }
 };
 const LEFTOVER = ["cone", "tri", "pent", "octa", "cube", "cylinder", "pyramid"];
 
@@ -874,7 +879,7 @@ function studioDecor(){
 function boutiqueDecor(){
   let b = "", f = "";
   // warm rose rug under the bench
-  b += `<g transform="${M("floor", 4.4, 4.1)}"><ellipse rx="${f1(2.7 * S)}" ry="${f1(2.1 * S)}" fill="#e7a0ac" fill-opacity=".22" stroke="#d98896" stroke-opacity=".45" stroke-width="2"/><ellipse rx="${f1(2.35 * S)}" ry="${f1(1.78 * S)}" fill="none" stroke="#d98896" stroke-opacity=".3" stroke-width="1.2" stroke-dasharray="3 5"/></g>`;
+  b += `<g transform="${M("floor", 4.8, 4.8)}"><ellipse rx="${f1(2.7 * S)}" ry="${f1(2.1 * S)}" fill="#e7a0ac" fill-opacity=".22" stroke="#d98896" stroke-opacity=".45" stroke-width="2"/><ellipse rx="${f1(2.35 * S)}" ry="${f1(1.78 * S)}" fill="none" stroke="#d98896" stroke-opacity=".3" stroke-width="1.2" stroke-dasharray="3 5"/></g>`;
   // oval mirror with a gold frame
   b += `<g transform="${M("back", 6.75, 0, 2.95)}"><ellipse cx="0" cy="0" rx="25" ry="36" fill="url(#gMirror)" stroke="#c9a24a" stroke-width="4"/><path d="M-10,-18 Q-4,-26 4,-24" fill="none" stroke="#fff" stroke-width="2" opacity=".8" stroke-linecap="round"/></g>`;
   // tall glass cabinet on the back wall
@@ -893,10 +898,10 @@ function boutiqueDecor(){
   b += box(x0 + w - .07, 0.04, 0, .07, d, h, WOODW) + box(x0, 0.04, h, w, d, .06, WOODW, 1);
   b += `<polygon points="${Q([[x0 + .07, d + .04, .42], [x0 + w - .07, d + .04, .42], [x0 + w - .07, d + .04, h], [x0 + .07, d + .04, h]])}" fill="url(#gGlass)" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>`;
   // gift boxes by the bench
-  b += box(5.55, 3.1, 0, .55, .55, .42, ["#f3b7c2", "#e79aa8", "#d47f8e"], 2) + box(5.62, 3.17, .42, .4, .4, .3, ["#fbf3e6", "#eee1cc", "#dccbb1"], 2);
-  [[5.825, 3.1, 5.825, 3.65, .42], [5.55, 3.375, 6.1, 3.375, .42]].forEach(([a, c, e, g, z]) => { const p1 = P(a, c, z), p2 = P(e, g, z); b += `<line x1="${f1(p1[0])}" y1="${f1(p1[1])}" x2="${f1(p2[0])}" y2="${f1(p2[1])}" stroke="#c9a24a" stroke-width="1.6"/>`; });
+  b += box(8.0, 1.15, 0, .55, .55, .42, ["#f3b7c2", "#e79aa8", "#d47f8e"], 2) + box(8.07, 1.22, .42, .4, .4, .3, ["#fbf3e6", "#eee1cc", "#dccbb1"], 2);
+  [[8.275, 1.15, 8.275, 1.70, .42], [8.0, 1.425, 8.55, 1.425, .42]].forEach(([a, c, e, g, z]) => { const p1 = P(a, c, z), p2 = P(e, g, z); b += `<line x1="${f1(p1[0])}" y1="${f1(p1[1])}" x2="${f1(p2[0])}" y2="${f1(p2[1])}" stroke="#c9a24a" stroke-width="1.6"/>`; });
   // display case (vitrina), front right
-  const vx = 6.5, vy = 5.2, vw = 2.7, vd = 1.15;
+  const vx = 8.2, vy = 7.0, vw = 2.7, vd = 1.15;
   f += `<rect transform="${M("floor", vx - .3, vy - .25)}" width="${f1((vw + .6) * S)}" height="${f1((vd + .5) * S)}" rx="30" fill="url(#gShadow)"/>`;
   f += `<g transform="${M("floor", vx + vw / 2, vy + vd / 2)}"><ellipse class="nightonly" rx="${f1(2.4 * S)}" ry="${f1(1.6 * S)}" fill="url(#gLamp)"/></g>`;
   f += box(vx, vy, 0, vw, vd, .82, WOODW, 2) + box(vx + .06, vy + .06, .82, vw - .12, vd - .12, .04, VELVET, 1);
@@ -911,10 +916,10 @@ function boutiqueDecor(){
   const g1 = P(vx + .06, vy + vd - .06, 1.36), g2 = P(vx + vw - .06, vy + vd - .06, 1.36), g3 = P(vx + vw - .06, vy + .06, 1.36);
   f += `<polyline points="${f1(g1[0])},${f1(g1[1])} ${f1(g2[0])},${f1(g2[1])} ${f1(g3[0])},${f1(g3[1])}" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.3"/>`;
   // velvet armchair + side table with flowers, front left
-  f += box(1.0, 5.55, 0, 1.0, .24, .66, VELVET, 6) + box(1.0, 5.75, 0, .3, 1.05, 1.08, VELVET, 8);
-  f += box(1.25, 5.8, 0, .78, .98, .44, VELVET, 8) + box(1.0, 6.8, 0, 1.0, .24, .66, VELVET, 6);
-  f += cyl(1.6, 7.75, 0, .34, .56, "#c99a74", 24) + cyl(1.6, 7.75, .56, .1, .32, "#f6eee9", 16);
-  const fl = P(1.6, 7.75, .95);
+  f += box(0.7, 7.5, 0, 1.0, .24, .66, VELVET, 6) + box(0.7, 7.7, 0, .3, 1.05, 1.08, VELVET, 8);
+  f += box(0.95, 7.75, 0, .78, .98, .44, VELVET, 8) + box(0.7, 8.75, 0, 1.0, .24, .66, VELVET, 6);
+  f += cyl(1.3, 9.55, 0, .34, .56, "#c99a74", 24) + cyl(1.3, 9.55, .56, .1, .32, "#f6eee9", 16);
+  const fl = P(1.3, 9.55, .95);
   f += `<g class="sway" style="animation-delay:-1.3s">` + [[0, -6, 5, "#f08aa0"], [-6, -2, 4.4, "#f6b3c1"], [6, -1, 4.4, "#e76f8a"], [-2, -12, 4, "#f6b3c1"], [4, -9, 3.6, "#f08aa0"]].map(([a, c, r, col]) => `<circle cx="${f1(fl[0] + a)}" cy="${f1(fl[1] + c)}" r="${r}" fill="${col}" stroke="#fff" stroke-width=".6"/>`).join("") +
        `<circle cx="${f1(fl[0] - 8)}" cy="${f1(fl[1] + 3)}" r="3.4" fill="#88ca6c"/><circle cx="${f1(fl[0] + 8)}" cy="${f1(fl[1] + 4)}" r="3" fill="#6bb457"/></g>`;
   f += plant(W - .7, D - .7, .95, "#f3e6dc");

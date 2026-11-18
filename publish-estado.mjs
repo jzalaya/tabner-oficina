@@ -242,10 +242,15 @@ const ROSTER = [
   { id: "shorts-director", name: "Shorts Director", task: "Dirección de Shorts" },
   { id: "shorts-guionista", name: "Shorts Guionista", task: "Guiones de Shorts" },
   { id: "shorts-productor", name: "Shorts Productor", task: "Producción de vídeo" },
+  { id: "tdd-comentarios", name: "TDD Comentarios", task: "Comentarios de The Die Decides" },
   { id: "sabueso", name: "Sabueso", task: "Investigación de startups", detail: "Equipo nocturno. Sin parte reciente en el tablero." },
   { id: "julieta", name: "Julieta", task: "Julietas (thejulietas.com)" },
+  { id: "julietas-redes", name: "Julietas Redes", task: "Auditoría de TikTok e Instagram de Julietas" },
+  { id: "julietas-pinterest", name: "Julietas Pinterest", task: "Pins de Julietas" },
+  { id: "julietas-crecimiento", name: "Julietas Crecimiento", task: "Propuestas de crecimiento de Julietas" },
   { id: "creador", name: "Creador", task: "Diseño de Grok Bots" },
   { id: "auditor", name: "Auditor", task: "Auditoría de la flota" },
+  { id: "rebalanceo", name: "Rebalanceo", task: "Simulación rebalanceo 50/50 EUR/BTC (Kraken)" },
 ];
 const NO_PARTE = "Sin parte reciente en el tablero.";
 
