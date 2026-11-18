@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-18T15:34:59+01:00",
-  "sourceMtime": "2026-11-18T15:34:40+01:00",
+  "generatedAt": "2026-11-18T16:37:18+01:00",
+  "sourceMtime": "2026-11-18T16:37:07+01:00",
   "bots": [
     {
       "id": "dev",
@@ -602,5 +602,5 @@
       "text": "receta de huérfanos ajustada por QA (huerfanos-7.md 657bc4c0…): expected 6 fijo, DELETE acotado a los 6 ids, SELECT previo con parada. Lista para el corte."
     }
   ],
-  "contentHash": "e7289aa8"
+  "contentHash": "b9f9078b"
 }
