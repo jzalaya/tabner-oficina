@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T10:19:01+01:00",
-  "sourceMtime": "2026-11-19T10:18:35+01:00",
+  "generatedAt": "2026-11-19T10:21:16+01:00",
+  "sourceMtime": "2026-11-19T10:20:51+01:00",
   "bots": [
     {
       "id": "dev",
@@ -602,5 +602,5 @@
       "text": "descubr r2 sin KO en Chromium (UX, ux/2026-11-16-descubr-r2-en-vivo.md). UXD-06 entra en 1.10.10 («Consejos restablecidos», role=status, 9 idiomas, §6), junto con la corrección de tipT1BodyFirefox (§5). Firefox en vivo: hueco para QA en el corte."
     }
   ],
-  "contentHash": "4ec0e1d5"
+  "contentHash": "1250dad2"
 }
