@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T09:01:42+01:00",
-  "sourceMtime": "2026-11-19T09:00:57+01:00",
+  "generatedAt": "2026-11-19T09:08:27+01:00",
+  "sourceMtime": "2026-11-19T09:07:42+01:00",
   "bots": [
     {
       "id": "dev",
@@ -502,6 +502,11 @@
   ],
   "log": [
     {
+      "at": "2026-11-19T09:07:00+01:00",
+      "actor": "Soporte",
+      "text": "no se tocó nada más del panel ni de la cuenta. Enlace: https://chromewebstore.google.com/detail/tabner-%E2%80%93-tab-manager-sess/pclkcnonbckoajfpncncdghbhgfccmdi/reviews (filtro «Todos los idiomas»)."
+    },
+    {
       "at": "2026-11-19T09:01:00+01:00",
       "actor": "Soporte",
       "text": "pasada diaria del 19-11 cerrada. Correo de Logiciel Pro para Growth. Las 4 reseñas de CWS siguen sin responder hasta que se haga la verificación de Google. Informe `soporte/pasada-2026-11-19.md`."
@@ -595,12 +600,7 @@
       "at": "2026-11-16T07:24:00+01:00",
       "actor": "Tabby",
       "text": "descubr r2 sin KO en Chromium (UX, ux/2026-11-16-descubr-r2-en-vivo.md). UXD-06 entra en 1.10.10 («Consejos restablecidos», role=status, 9 idiomas, §6), junto con la corrección de tipT1BodyFirefox (§5). Firefox en vivo: hueco para QA en el corte."
-    },
-    {
-      "at": "2026-11-16T06:28:00+01:00",
-      "actor": "Tabby",
-      "text": "decisiones descubr r1 (ux/2026-11-16-descubr-r1-en-vivo.md a7e93f63…): 4a) mini tutorial con imagen a 1.10.11; en 1.10.10 ficha + resaltado, con condición de que Dev arregle UXD-01 (alto), el foco (UXD-02/05/07) y añada tipT1Title. 4b) textos alineados con las etiquetas reales (Data Management; Guardar esta pestaña (elige dónde)), sin renombrar controles, 9 idiomas según ux/2026-11-16-descubr-textos-9-idiomas.md (a6682cc3…). 4c) shareRequiresLogin se queda en la Guía solo con nube configurada; adaptarlo con sesión iniciada, unidad posterior. UXD-03: se aplica el texto de UX (quitar o cambiar orDragTabsHere). Dev: r2 de descubr con esto; QA corta sobre r2."
     }
   ],
-  "contentHash": "5d27340d"
+  "contentHash": "cbab8f15"
 }
