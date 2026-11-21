@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-21T17:03:58+01:00",
-  "sourceMtime": "2026-11-21T17:03:21+01:00",
+  "generatedAt": "2026-11-21T17:04:44+01:00",
+  "sourceMtime": "2026-11-21T17:03:59+01:00",
   "bots": [
     {
       "id": "dev",
@@ -602,5 +602,5 @@
       "text": "contrastada la entrega de Dev para el corte 1.10.10: dev/1110 715a392, INFORME version/r1 ea5765ee…, y los sha de 15a, postcheck, rollbacks, 15b y verify coinciden. Decisiones: (1) MAINTAIN se aplica como lo hizo Dev: la 15a quita MAINTAIN solo si puede y nunca falla, y el postcheck va aparte; si postgres lo conserva por una concesión de supabase_admin, se acepta como residuo y se anota (RESTORE.md). (2) Novedades no se abre en 1.10.10. Antes de aplicar, se repiten en producción los SELECT de QA. Pendiente: corte de QA sobre 715a392."
     }
   ],
-  "contentHash": "7def2e5b"
+  "contentHash": "a4e4bc20"
 }
