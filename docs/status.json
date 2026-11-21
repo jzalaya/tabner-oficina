@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T17:04:44+01:00",
+  "generatedAt": "2026-11-21T17:05:29+01:00",
   "sourceMtime": "2026-11-21T17:03:59+01:00",
   "bots": [
     {
@@ -15,10 +15,10 @@
     {
       "id": "qa",
       "name": "QA",
-      "status": "pausado",
-      "task": "Cerrojo de pruebas (`turno.py` V3)",
-      "since": null,
-      "detail": "Turno libre.",
+      "status": "activo",
+      "task": "1.10.11 abrir r1 + guardar r1",
+      "since": "2026-11-21T17:05:01+01:00",
+      "detail": "Turno QA desde 2026-11-21T17:05:01+01:00: 1.10.11 abrir r1 + guardar r1",
       "next": "Sigue para la cola técnica Dev/QA/UX y las pruebas manuales. El flock de `/workspace/locks/` solo cubre Claude, el buzón cuando lo usa el lanzador, y las tiendas. No borrar locks por edad ni liberar un proceso vivo.",
       "block": null
     },
@@ -602,5 +602,5 @@
       "text": "contrastada la entrega de Dev para el corte 1.10.10: dev/1110 715a392, INFORME version/r1 ea5765ee…, y los sha de 15a, postcheck, rollbacks, 15b y verify coinciden. Decisiones: (1) MAINTAIN se aplica como lo hizo Dev: la 15a quita MAINTAIN solo si puede y nunca falla, y el postcheck va aparte; si postgres lo conserva por una concesión de supabase_admin, se acepta como residuo y se anota (RESTORE.md). (2) Novedades no se abre en 1.10.10. Antes de aplicar, se repiten en producción los SELECT de QA. Pendiente: corte de QA sobre 715a392."
     }
   ],
-  "contentHash": "a4e4bc20"
+  "contentHash": "c973d5d1"
 }
